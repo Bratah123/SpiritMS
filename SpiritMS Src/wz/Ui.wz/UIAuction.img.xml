@@ -1,0 +1,4137 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<imgdir name="UIAuction.img">
+	<imgdir name="main">
+		<canvas name="backgrnd" width="1024" height="768">
+			<vector name="origin" x="267" y="88"/>
+			<int name="z" value="-1"/>
+		</canvas>
+		<imgdir name="Exit:button">
+			<int name="id" value="1000"/>
+			<imgdir name="normal">
+				<canvas name="0" width="22" height="21">
+					<vector name="origin" x="-989" y="-14"/>
+				</canvas>
+			</imgdir>
+			<imgdir name="pressed">
+				<canvas name="0" width="22" height="21">
+					<vector name="origin" x="-989" y="-14"/>
+				</canvas>
+			</imgdir>
+			<imgdir name="disabled">
+				<canvas name="0" width="22" height="21">
+					<vector name="origin" x="-989" y="-14"/>
+				</canvas>
+			</imgdir>
+			<imgdir name="mouseOver">
+				<canvas name="0" width="22" height="21">
+					<vector name="origin" x="-989" y="-14"/>
+				</canvas>
+			</imgdir>
+			<string name="ToolTip" value="Exit Maple Auction."/>
+		</imgdir>
+		<imgdir name="SlotUI:button">
+			<imgdir name="normal">
+				<canvas name="0" width="56" height="25">
+					<vector name="origin" x="-954" y="-45"/>
+				</canvas>
+			</imgdir>
+			<imgdir name="pressed">
+				<canvas name="0" width="56" height="25">
+					<vector name="origin" x="-954" y="-45"/>
+				</canvas>
+			</imgdir>
+			<imgdir name="disabled">
+				<canvas name="0" width="56" height="25">
+					<vector name="origin" x="-954" y="-45"/>
+				</canvas>
+			</imgdir>
+			<imgdir name="mouseOver">
+				<canvas name="0" width="56" height="25">
+					<vector name="origin" x="-954" y="-45"/>
+				</canvas>
+			</imgdir>
+			<int name="id" value="9001"/>
+			<string name="ToolTip" value="Sale and purchase slot info."/>
+		</imgdir>
+		<imgdir name="slotUI">
+			<canvas name="backgrnd" width="269" height="106">
+				<vector name="origin" x="0" y="0"/>
+				<int name="z" value="1"/>
+			</canvas>
+			<imgdir name="gauge">
+				<canvas name="0" width="2" height="3">
+					<vector name="origin" x="0" y="0"/>
+					<string name="source" value="UI/FarmUI.img/profile/gauge/1"/>
+				</canvas>
+				<canvas name="1" width="1" height="3">
+					<vector name="origin" x="0" y="0"/>
+					<string name="source" value="UI/FarmUI.img/profile/gauge/2"/>
+				</canvas>
+				<canvas name="2" width="2" height="3">
+					<vector name="origin" x="0" y="0"/>
+					<string name="source" value="UI/FarmUI.img/profile/gauge/3"/>
+				</canvas>
+			</imgdir>
+			<imgdir name="gauge_full">
+				<canvas name="0" width="149" height="9">
+					<vector name="origin" x="0" y="0"/>
+					<int name="z" value="2"/>
+					<int name="delay" value="120"/>
+				</canvas>
+				<canvas name="1" width="149" height="9">
+					<vector name="origin" x="0" y="0"/>
+					<int name="z" value="2"/>
+					<int name="delay" value="120"/>
+				</canvas>
+				<canvas name="2" width="149" height="9">
+					<vector name="origin" x="0" y="0"/>
+					<int name="z" value="2"/>
+					<int name="delay" value="120"/>
+				</canvas>
+				<canvas name="3" width="149" height="9">
+					<vector name="origin" x="0" y="0"/>
+					<int name="z" value="2"/>
+					<int name="delay" value="120"/>
+				</canvas>
+				<canvas name="4" width="149" height="9">
+					<vector name="origin" x="0" y="0"/>
+					<int name="z" value="2"/>
+					<int name="delay" value="120"/>
+				</canvas>
+				<canvas name="5" width="149" height="9">
+					<vector name="origin" x="0" y="0"/>
+					<int name="z" value="2"/>
+					<int name="delay" value="120"/>
+				</canvas>
+			</imgdir>
+			<imgdir name="TTsell:tooltip">
+				<string name="text" value="Your sale slots. Listed items, unclaimed items, and unsold items all take up a slot."/>
+				<vector name="lt" x="16" y="19"/>
+				<vector name="rb" x="215" y="35"/>
+			</imgdir>
+			<imgdir name="TTbuy:tooltip">
+				<string name="text" value="Your purchase slots. Items you're bidding on, unclaimed items, and refunded items all take up a slot."/>
+				<vector name="lt" x="17" y="40"/>
+				<vector name="rb" x="215" y="50"/>
+			</imgdir>
+			<imgdir name="TTpremium:tooltip">
+				<string name="text" value="Bonus slot info. "/>
+				<vector name="lt" x="15" y="58"/>
+				<vector name="rb" x="254" y="77"/>
+			</imgdir>
+		</imgdir>
+		<canvas name="Search:edit" width="151" height="11">
+			<vector name="origin" x="-100" y="-51"/>
+			<int name="z" value="1"/>
+			<int name="id" value="1020"/>
+			<int name="maxlen" value="24"/>
+			<string name="color" value="ffff0000"/>
+		</canvas>
+		<imgdir name="Search:button">
+			<imgdir name="disabled">
+				<canvas name="0" width="244" height="36">
+					<vector name="origin" x="-15" y="-78"/>
+				</canvas>
+			</imgdir>
+			<imgdir name="normal">
+				<canvas name="0" width="244" height="36">
+					<vector name="origin" x="-15" y="-78"/>
+				</canvas>
+			</imgdir>
+			<int name="id" value="1010"/>
+			<string name="ToolTip" value="Search auctions."/>
+		</imgdir>
+		<imgdir name="Sell:button">
+			<imgdir name="disabled">
+				<canvas name="0" width="244" height="36">
+					<vector name="origin" x="-265" y="-78"/>
+				</canvas>
+			</imgdir>
+			<imgdir name="normal">
+				<canvas name="0" width="244" height="36">
+					<vector name="origin" x="-265" y="-78"/>
+				</canvas>
+			</imgdir>
+			<int name="id" value="1011"/>
+			<string name="ToolTip" value="Sell items and view your listed auctions."/>
+		</imgdir>
+		<imgdir name="Bid:button">
+			<imgdir name="disabled">
+				<canvas name="0" width="244" height="36">
+					<vector name="origin" x="-515" y="-78"/>
+				</canvas>
+			</imgdir>
+			<imgdir name="normal">
+				<canvas name="0" width="244" height="36">
+					<vector name="origin" x="-515" y="-78"/>
+				</canvas>
+			</imgdir>
+			<int name="id" value="1012"/>
+			<string name="ToolTip" value="Check current bids."/>
+		</imgdir>
+		<imgdir name="Complete:button">
+			<imgdir name="disabled">
+				<canvas name="0" width="244" height="36">
+					<vector name="origin" x="-765" y="-78"/>
+				</canvas>
+			</imgdir>
+			<imgdir name="normal">
+				<canvas name="0" width="244" height="36">
+					<vector name="origin" x="-765" y="-78"/>
+				</canvas>
+			</imgdir>
+			<int name="id" value="1013"/>
+			<string name="ToolTip" value="Collect completed auction items."/>
+		</imgdir>
+		<imgdir name="mesoNumber">
+			<canvas name="0" width="7" height="11">
+				<vector name="origin" x="0" y="0"/>
+				<int name="z" value="0"/>
+			</canvas>
+			<canvas name="1" width="7" height="11">
+				<vector name="origin" x="0" y="0"/>
+				<int name="z" value="0"/>
+			</canvas>
+			<canvas name="2" width="7" height="11">
+				<vector name="origin" x="0" y="0"/>
+				<int name="z" value="0"/>
+			</canvas>
+			<canvas name="3" width="7" height="11">
+				<vector name="origin" x="0" y="0"/>
+				<int name="z" value="0"/>
+			</canvas>
+			<canvas name="4" width="7" height="11">
+				<vector name="origin" x="0" y="0"/>
+				<int name="z" value="0"/>
+			</canvas>
+			<canvas name="5" width="7" height="11">
+				<vector name="origin" x="0" y="0"/>
+				<int name="z" value="0"/>
+			</canvas>
+			<canvas name="6" width="7" height="11">
+				<vector name="origin" x="0" y="0"/>
+				<int name="z" value="0"/>
+			</canvas>
+			<canvas name="7" width="7" height="11">
+				<vector name="origin" x="0" y="0"/>
+				<int name="z" value="0"/>
+			</canvas>
+			<canvas name="8" width="7" height="11">
+				<vector name="origin" x="0" y="0"/>
+				<int name="z" value="0"/>
+			</canvas>
+			<canvas name="9" width="7" height="11">
+				<vector name="origin" x="0" y="0"/>
+				<int name="z" value="0"/>
+			</canvas>
+			<canvas name="comma" width="2" height="5">
+				<vector name="origin" x="-3" y="-6"/>
+				<int name="z" value="0"/>
+			</canvas>
+		</imgdir>
+		<imgdir name="TTquickSearch:tooltip">
+			<string name="text" value="Enter partial item names to look up full names."/>
+			<vector name="lt" x="15" y="48"/>
+			<vector name="rb" x="81" y="65"/>
+		</imgdir>
+		<imgdir name="TTmeso:tooltip">
+			<string name="text" value="Your current mesos."/>
+			<vector name="lt" x="747" y="49"/>
+			<vector name="rb" x="866" y="67"/>
+		</imgdir>
+		<imgdir name="TTsearchCount:tooltip">
+			<string name="text" value="Your current search count and the time until you get a new search."/>
+			<vector name="lt" x="270" y="46"/>
+			<vector name="rb" x="467" y="63"/>
+		</imgdir>
+		<imgdir name="TTPC:tooltip">
+			<string name="text" value="Unlimited searches \nBonus slots: PC Café +3, Purchased +5 \r\nAdvanced search options available"/>
+			<vector name="lt" x="621" y="49"/>
+			<vector name="rb" x="643" y="65"/>
+		</imgdir>
+	</imgdir>
+	<imgdir name="tab_search">
+		<canvas name="bg:layer" width="999" height="636">
+			<vector name="origin" x="-12" y="-120"/>
+			<int name="z" value="1"/>
+			<int name="overlay" value="1"/>
+		</canvas>
+		<imgdir name="armor">
+			<canvas name="backgrnd:layer" width="246" height="452">
+				<vector name="origin" x="-14" y="-158"/>
+				<int name="z" value="1"/>
+				<int name="overlay" value="1"/>
+			</canvas>
+			<canvas name="buy_enabled:layer" width="227" height="23">
+				<vector name="origin" x="-24" y="-404"/>
+				<int name="z" value="1"/>
+				<int name="overlay" value="1"/>
+			</canvas>
+			<canvas name="MinLev:edit" width="19" height="10">
+				<vector name="origin" x="-101" y="-330"/>
+				<int name="z" value="2"/>
+				<int name="id" value="0"/>
+				<int name="maxlen" value="3"/>
+				<int name="number" value="1"/>
+			</canvas>
+			<canvas name="MaxLev:edit" width="19" height="10">
+				<vector name="origin" x="-186" y="-330"/>
+				<int name="z" value="2"/>
+				<int name="id" value="0"/>
+				<int name="maxlen" value="3"/>
+				<int name="number" value="1"/>
+			</canvas>
+			<canvas name="Search:edit" width="123" height="11">
+				<vector name="origin" x="-117" y="-302"/>
+				<int name="z" value="2"/>
+				<int name="id" value="0"/>
+				<int name="maxlen" value="20"/>
+			</canvas>
+			<canvas name="PriceMin:edit" width="88" height="11">
+				<vector name="origin" x="-34" y="-410"/>
+				<int name="z" value="0"/>
+				<int name="maxlen" value="10"/>
+				<int name="number" value="1"/>
+			</canvas>
+			<canvas name="PriceMax:edit" width="88" height="11">
+				<vector name="origin" x="-152" y="-410"/>
+				<int name="z" value="0"/>
+				<int name="maxlen" value="10"/>
+				<int name="number" value="1"/>
+			</canvas>
+			<canvas name="SearchOption1:edit" width="27" height="10">
+				<vector name="origin" x="-210" y="-466"/>
+				<int name="z" value="0"/>
+				<int name="maxlen" value="4"/>
+				<int name="number" value="1"/>
+			</canvas>
+			<canvas name="SearchOption2:edit" width="27" height="10">
+				<vector name="origin" x="-210" y="-498"/>
+				<int name="z" value="0"/>
+				<int name="maxlen" value="4"/>
+				<int name="number" value="1"/>
+			</canvas>
+			<canvas name="SearchOption3:edit" width="27" height="10">
+				<vector name="origin" x="-210" y="-530"/>
+				<int name="z" value="0"/>
+				<int name="maxlen" value="4"/>
+				<int name="number" value="1"/>
+			</canvas>
+			<imgdir name="HeungJung:button">
+				<imgdir name="normal">
+					<canvas name="0" width="50" height="22">
+						<vector name="origin" x="-87" y="-353"/>
+						<string name="z" value="2"/>
+					</canvas>
+				</imgdir>
+				<imgdir name="checked">
+					<canvas name="0" width="50" height="22">
+						<vector name="origin" x="-87" y="-353"/>
+						<int name="z" value="2"/>
+					</canvas>
+				</imgdir>
+				<int name="toggle" value="1"/>
+				<string name="ToolTip" value="Show only items that can be haggled."/>
+			</imgdir>
+			<imgdir name="saveFilter:button">
+				<imgdir name="normal">
+					<canvas name="0" width="12" height="12">
+						<vector name="origin" x="-25" y="-557"/>
+					</canvas>
+				</imgdir>
+				<imgdir name="checked">
+					<canvas name="0" width="12" height="12">
+						<vector name="origin" x="-25" y="-557"/>
+						<int name="z" value="0"/>
+					</canvas>
+				</imgdir>
+				<int name="toggle" value="1"/>
+				<string name="ToolTip" value="Check to save search filter."/>
+			</imgdir>
+			<imgdir name="reset:button">
+				<imgdir name="normal">
+					<canvas name="0" width="97" height="26">
+						<vector name="origin" x="-24" y="-574"/>
+					</canvas>
+				</imgdir>
+				<imgdir name="pressed">
+					<canvas name="0" width="97" height="26">
+						<vector name="origin" x="-24" y="-574"/>
+					</canvas>
+				</imgdir>
+				<imgdir name="disabled">
+					<canvas name="0" width="97" height="26">
+						<vector name="origin" x="-24" y="-574"/>
+					</canvas>
+				</imgdir>
+				<imgdir name="mouseOver">
+					<canvas name="0" width="97" height="26">
+						<vector name="origin" x="-24" y="-574"/>
+					</canvas>
+				</imgdir>
+				<int name="id" value="1116"/>
+				<string name="ToolTip" value="Reset search parameters."/>
+			</imgdir>
+			<imgdir name="search:button">
+				<imgdir name="normal">
+					<canvas name="0" width="122" height="42">
+						<vector name="origin" x="-130" y="-560"/>
+					</canvas>
+				</imgdir>
+				<imgdir name="pressed">
+					<canvas name="0" width="122" height="42">
+						<vector name="origin" x="-130" y="-560"/>
+					</canvas>
+				</imgdir>
+				<imgdir name="disabled">
+					<canvas name="0" width="122" height="42">
+						<vector name="origin" x="-130" y="-560"/>
+					</canvas>
+				</imgdir>
+				<imgdir name="mouseOver">
+					<canvas name="0" width="122" height="42">
+						<vector name="origin" x="-130" y="-560"/>
+					</canvas>
+				</imgdir>
+				<int name="id" value="1115"/>
+				<string name="ToolTip" value="Search using current search options."/>
+			</imgdir>
+			<imgdir name="TTcomboBasic:tooltip">
+				<string name="text" value="Search by item type and grade."/>
+				<vector name="lt" x="25" y="169"/>
+				<vector name="rb" x="85" y="185"/>
+			</imgdir>
+			<imgdir name="TTitemName:tooltip">
+				<string name="text" value="Search by item name."/>
+				<vector name="lt" x="25" y="299"/>
+				<vector name="rb" x="84" y="315"/>
+			</imgdir>
+			<imgdir name="TTreqLev:tooltip">
+				<string name="text" value="Search by level range."/>
+				<vector name="lt" x="24" y="327"/>
+				<vector name="rb" x="72" y="342"/>
+			</imgdir>
+			<imgdir name="TTbargain:tooltip">
+				<string name="text" value="Show only items that can be haggled."/>
+				<vector name="lt" x="23" y="356"/>
+				<vector name="rb" x="72" y="371"/>
+			</imgdir>
+			<imgdir name="TTprice:tooltip">
+				<string name="text" value="Search by Buy Now prices."/>
+				<vector name="lt" x="25" y="384"/>
+				<vector name="rb" x="84" y="400"/>
+			</imgdir>
+			<imgdir name="TTcomboDetail:tooltip">
+				<string name="text" value="Search by item stats, bonus stats, potential, and bonus potential."/>
+				<vector name="lt" x="23" y="439"/>
+				<vector name="rb" x="74" y="454"/>
+			</imgdir>
+			<imgdir name="TTcomboDetail2:tooltip">
+				<string name="text" value="Search by minimum values."/>
+				<vector name="lt" x="198" y="438"/>
+				<vector name="rb" x="249" y="454"/>
+			</imgdir>
+			<imgdir name="TTfilter:tooltip">
+				<string name="text" value="Check to save search preferences."/>
+				<vector name="lt" x="40" y="554"/>
+				<vector name="rb" x="93" y="570"/>
+			</imgdir>
+		</imgdir>
+		<imgdir name="weapon">
+			<canvas name="backgrnd:layer" width="246" height="452">
+				<vector name="origin" x="-14" y="-194"/>
+				<int name="z" value="1"/>
+				<int name="overlay" value="1"/>
+			</canvas>
+			<canvas name="buy_enabled:layer" width="227" height="23">
+				<vector name="origin" x="-24" y="-440"/>
+				<int name="z" value="1"/>
+				<int name="overlay" value="1"/>
+			</canvas>
+			<canvas name="MinLev:edit" width="19" height="10">
+				<vector name="origin" x="-101" y="-366"/>
+				<int name="z" value="2"/>
+				<int name="id" value="0"/>
+				<int name="maxlen" value="3"/>
+				<int name="number" value="1"/>
+			</canvas>
+			<canvas name="MaxLev:edit" width="19" height="10">
+				<vector name="origin" x="-186" y="-366"/>
+				<int name="z" value="2"/>
+				<int name="id" value="0"/>
+				<int name="maxlen" value="3"/>
+				<int name="number" value="1"/>
+			</canvas>
+			<canvas name="Search:edit" width="123" height="11">
+				<vector name="origin" x="-117" y="-338"/>
+				<int name="z" value="2"/>
+				<int name="id" value="0"/>
+				<int name="maxlen" value="20"/>
+			</canvas>
+			<canvas name="PriceMin:edit" width="88" height="11">
+				<vector name="origin" x="-34" y="-446"/>
+				<int name="z" value="0"/>
+				<int name="maxlen" value="10"/>
+				<int name="number" value="1"/>
+			</canvas>
+			<canvas name="PriceMax:edit" width="88" height="11">
+				<vector name="origin" x="-152" y="-446"/>
+				<int name="z" value="0"/>
+				<int name="maxlen" value="10"/>
+				<int name="number" value="1"/>
+			</canvas>
+			<canvas name="SearchOption1:edit" width="27" height="10">
+				<vector name="origin" x="-210" y="-502"/>
+				<int name="z" value="0"/>
+				<int name="maxlen" value="4"/>
+				<int name="number" value="1"/>
+			</canvas>
+			<canvas name="SearchOption2:edit" width="27" height="10">
+				<vector name="origin" x="-210" y="-534"/>
+				<int name="z" value="0"/>
+				<int name="maxlen" value="4"/>
+				<int name="number" value="1"/>
+			</canvas>
+			<canvas name="SearchOption3:edit" width="27" height="10">
+				<vector name="origin" x="-210" y="-566"/>
+				<int name="z" value="0"/>
+				<int name="maxlen" value="4"/>
+				<int name="number" value="1"/>
+			</canvas>
+			<imgdir name="HeungJung:button">
+				<imgdir name="normal">
+					<canvas name="0" width="50" height="22">
+						<vector name="origin" x="-87" y="-389"/>
+						<string name="z" value="2"/>
+					</canvas>
+				</imgdir>
+				<imgdir name="checked">
+					<canvas name="0" width="50" height="22">
+						<vector name="origin" x="-89" y="-389"/>
+						<int name="z" value="2"/>
+					</canvas>
+				</imgdir>
+				<int name="toggle" value="1"/>
+				<string name="ToolTip" value="Show only items that can be haggled."/>
+			</imgdir>
+			<imgdir name="saveFilter:button">
+				<imgdir name="normal">
+					<canvas name="0" width="12" height="12">
+						<vector name="origin" x="-25" y="-593"/>
+					</canvas>
+				</imgdir>
+				<imgdir name="checked">
+					<canvas name="0" width="12" height="12">
+						<vector name="origin" x="-25" y="-593"/>
+						<int name="z" value="0"/>
+					</canvas>
+				</imgdir>
+				<int name="toggle" value="1"/>
+				<string name="ToolTip" value="Check to save search filter."/>
+			</imgdir>
+			<imgdir name="reset:button">
+				<imgdir name="normal">
+					<canvas name="0" width="97" height="26">
+						<vector name="origin" x="-24" y="-610"/>
+					</canvas>
+				</imgdir>
+				<imgdir name="pressed">
+					<canvas name="0" width="97" height="26">
+						<vector name="origin" x="-24" y="-610"/>
+					</canvas>
+				</imgdir>
+				<imgdir name="disabled">
+					<canvas name="0" width="97" height="26">
+						<vector name="origin" x="-24" y="-610"/>
+					</canvas>
+				</imgdir>
+				<imgdir name="mouseOver">
+					<canvas name="0" width="97" height="26">
+						<vector name="origin" x="-24" y="-610"/>
+					</canvas>
+				</imgdir>
+				<int name="id" value="1116"/>
+				<string name="ToolTip" value="Reset search parameters."/>
+			</imgdir>
+			<imgdir name="search:button">
+				<imgdir name="normal">
+					<canvas name="0" width="122" height="42">
+						<vector name="origin" x="-130" y="-596"/>
+					</canvas>
+				</imgdir>
+				<imgdir name="pressed">
+					<canvas name="0" width="122" height="42">
+						<vector name="origin" x="-130" y="-596"/>
+					</canvas>
+				</imgdir>
+				<imgdir name="disabled">
+					<canvas name="0" width="122" height="42">
+						<vector name="origin" x="-130" y="-596"/>
+					</canvas>
+				</imgdir>
+				<imgdir name="mouseOver">
+					<canvas name="0" width="122" height="42">
+						<vector name="origin" x="-130" y="-596"/>
+					</canvas>
+				</imgdir>
+				<int name="id" value="1115"/>
+				<string name="ToolTip" value="Search using current search options."/>
+			</imgdir>
+			<imgdir name="TTcomboBasic:tooltip">
+				<string name="text" value="Search by item type and grade."/>
+				<vector name="lt" x="25" y="206"/>
+				<vector name="rb" x="85" y="221"/>
+			</imgdir>
+			<imgdir name="TTitemName:tooltip">
+				<string name="text" value="Search by item name."/>
+				<vector name="lt" x="25" y="335"/>
+				<vector name="rb" x="84" y="351"/>
+			</imgdir>
+			<imgdir name="TTreqLev:tooltip">
+				<string name="text" value="Search by level range."/>
+				<vector name="lt" x="24" y="363"/>
+				<vector name="rb" x="72" y="378"/>
+			</imgdir>
+			<imgdir name="TTbargain:tooltip">
+				<string name="text" value="Show only items that can be haggled."/>
+				<vector name="lt" x="23" y="392"/>
+				<vector name="rb" x="72" y="407"/>
+			</imgdir>
+			<imgdir name="TTprice:tooltip">
+				<string name="text" value="Search by Buy Now prices."/>
+				<vector name="lt" x="25" y="420"/>
+				<vector name="rb" x="84" y="436"/>
+			</imgdir>
+			<imgdir name="TTcomboDetail:tooltip">
+				<string name="text" value="Search by item stats, bonus stats, potential, and bonus potential."/>
+				<vector name="lt" x="23" y="475"/>
+				<vector name="rb" x="74" y="490"/>
+			</imgdir>
+			<imgdir name="TTfilter:tooltip">
+				<string name="text" value="Check to save search preferences."/>
+				<vector name="lt" x="40" y="590"/>
+				<vector name="rb" x="93" y="606"/>
+			</imgdir>
+			<imgdir name="TTcomboDetail2:tooltip">
+				<string name="text" value="Search by minimum values."/>
+				<vector name="lt" x="198" y="474"/>
+				<vector name="rb" x="249" y="490"/>
+			</imgdir>
+		</imgdir>
+		<imgdir name="consume">
+			<canvas name="backgrnd:layer" width="246" height="452">
+				<vector name="origin" x="-14" y="-230"/>
+				<int name="z" value="1"/>
+				<int name="overlay" value="1"/>
+			</canvas>
+			<canvas name="Search:edit" width="121" height="12">
+				<vector name="origin" x="-119" y="-384"/>
+				<int name="z" value="0"/>
+				<int name="maxlen" value="20"/>
+			</canvas>
+			<imgdir name="search:button">
+				<imgdir name="normal">
+					<canvas name="0" width="122" height="42">
+						<vector name="origin" x="-75" y="-438"/>
+					</canvas>
+				</imgdir>
+				<imgdir name="pressed">
+					<canvas name="0" width="122" height="42">
+						<vector name="origin" x="-75" y="-438"/>
+					</canvas>
+				</imgdir>
+				<imgdir name="disabled">
+					<canvas name="0" width="122" height="42">
+						<vector name="origin" x="-75" y="-438"/>
+					</canvas>
+				</imgdir>
+				<imgdir name="mouseOver">
+					<canvas name="0" width="122" height="42">
+						<vector name="origin" x="-75" y="-438"/>
+					</canvas>
+				</imgdir>
+				<int name="id" value="1115"/>
+				<string name="ToolTip" value="Search using current search options."/>
+			</imgdir>
+			<imgdir name="TTcomboBasic:tooltip">
+				<string name="text" value="Search by item type and grade."/>
+				<vector name="lt" x="26" y="243"/>
+				<vector name="rb" x="84" y="257"/>
+			</imgdir>
+			<imgdir name="TTitemName:tooltip">
+				<string name="text" value="Search by item name."/>
+				<vector name="lt" x="26" y="381"/>
+				<vector name="rb" x="84" y="396"/>
+			</imgdir>
+			<imgdir name="TTcomboDetail:tooltip">
+				<string name="text" value="Search by item stats, bonus stats, potential, and bonus potential."/>
+				<vector name="lt" x="25" y="300"/>
+				<vector name="rb" x="73" y="315"/>
+			</imgdir>
+		</imgdir>
+		<imgdir name="cash">
+			<canvas name="backgrnd:layer" width="246" height="452">
+				<vector name="origin" x="-14" y="-266"/>
+				<int name="z" value="1"/>
+				<int name="overlay" value="1"/>
+			</canvas>
+			<canvas name="Search:edit" width="121" height="12">
+				<vector name="origin" x="-119" y="-420"/>
+				<int name="z" value="0"/>
+				<int name="maxlen" value="20"/>
+			</canvas>
+			<imgdir name="search:button">
+				<imgdir name="normal">
+					<canvas name="0" width="122" height="42">
+						<vector name="origin" x="-75" y="-474"/>
+					</canvas>
+				</imgdir>
+				<imgdir name="pressed">
+					<canvas name="0" width="122" height="42">
+						<vector name="origin" x="-75" y="-474"/>
+					</canvas>
+				</imgdir>
+				<imgdir name="disabled">
+					<canvas name="0" width="122" height="42">
+						<vector name="origin" x="-75" y="-474"/>
+					</canvas>
+				</imgdir>
+				<imgdir name="mouseOver">
+					<canvas name="0" width="122" height="42">
+						<vector name="origin" x="-75" y="-474"/>
+					</canvas>
+				</imgdir>
+				<int name="id" value="1115"/>
+				<string name="ToolTip" value="Search using current search options."/>
+			</imgdir>
+			<imgdir name="TTcomboBasic:tooltip">
+				<string name="text" value="Search by item type and grade."/>
+				<vector name="lt" x="26" y="279"/>
+				<vector name="rb" x="84" y="293"/>
+			</imgdir>
+			<imgdir name="TTitemName:tooltip">
+				<string name="text" value="Search by item name."/>
+				<vector name="lt" x="26" y="417"/>
+				<vector name="rb" x="84" y="432"/>
+			</imgdir>
+			<imgdir name="TTcomboDetail:tooltip">
+				<string name="text" value="Search by item stats, bonus stats, potential, and bonus potential."/>
+				<vector name="lt" x="25" y="336"/>
+				<vector name="rb" x="73" y="351"/>
+			</imgdir>
+		</imgdir>
+		<imgdir name="etc">
+			<canvas name="backgrnd:layer" width="246" height="452">
+				<vector name="origin" x="-14" y="-302"/>
+				<int name="z" value="1"/>
+				<int name="overlay" value="1"/>
+			</canvas>
+			<canvas name="Search:edit" width="121" height="12">
+				<vector name="origin" x="-119" y="-456"/>
+				<int name="z" value="0"/>
+				<int name="maxlen" value="10"/>
+			</canvas>
+			<imgdir name="search:button">
+				<imgdir name="normal">
+					<canvas name="0" width="122" height="42">
+						<vector name="origin" x="-75" y="-510"/>
+					</canvas>
+				</imgdir>
+				<imgdir name="pressed">
+					<canvas name="0" width="122" height="42">
+						<vector name="origin" x="-75" y="-510"/>
+					</canvas>
+				</imgdir>
+				<imgdir name="disabled">
+					<canvas name="0" width="122" height="42">
+						<vector name="origin" x="-75" y="-510"/>
+					</canvas>
+				</imgdir>
+				<imgdir name="mouseOver">
+					<canvas name="0" width="122" height="42">
+						<vector name="origin" x="-75" y="-510"/>
+					</canvas>
+				</imgdir>
+				<int name="id" value="1115"/>
+				<string name="ToolTip" value="Search using current search options."/>
+			</imgdir>
+			<imgdir name="TTcomboBasic:tooltip">
+				<string name="text" value="Search by item type and grade."/>
+				<vector name="lt" x="26" y="315"/>
+				<vector name="rb" x="84" y="329"/>
+			</imgdir>
+			<imgdir name="TTitemName:tooltip">
+				<string name="text" value="Search by item name."/>
+				<vector name="lt" x="26" y="453"/>
+				<vector name="rb" x="84" y="468"/>
+			</imgdir>
+			<imgdir name="TTcomboDetail:tooltip">
+				<string name="text" value="Search by item stats, bonus stats, potential, and bonus potential."/>
+				<vector name="lt" x="25" y="372"/>
+				<vector name="rb" x="73" y="387"/>
+			</imgdir>
+		</imgdir>
+		<imgdir name="armor:button">
+			<imgdir name="normal">
+				<canvas name="0" width="246" height="37">
+					<vector name="origin" x="-14" y="-122"/>
+				</canvas>
+			</imgdir>
+			<imgdir name="disabled">
+				<canvas name="0" width="246" height="37">
+					<vector name="origin" x="-14" y="-122"/>
+				</canvas>
+			</imgdir>
+			<int name="id" value="1100"/>
+			<string name="ToolTip" value="Search armor and accessories."/>
+		</imgdir>
+		<imgdir name="weapon:button">
+			<imgdir name="normal">
+				<canvas name="0" width="246" height="37">
+					<vector name="origin" x="-14" y="-158"/>
+				</canvas>
+			</imgdir>
+			<imgdir name="disabled">
+				<canvas name="0" width="246" height="37">
+					<vector name="origin" x="-14" y="-158"/>
+				</canvas>
+			</imgdir>
+			<int name="id" value="1101"/>
+			<string name="ToolTip" value="Search weapons and secondary weapons."/>
+		</imgdir>
+		<imgdir name="consume:button">
+			<imgdir name="normal">
+				<canvas name="0" width="246" height="37">
+					<vector name="origin" x="-14" y="-194"/>
+				</canvas>
+			</imgdir>
+			<imgdir name="disabled">
+				<canvas name="0" width="246" height="37">
+					<vector name="origin" x="-14" y="-194"/>
+				</canvas>
+			</imgdir>
+			<int name="id" value="1102"/>
+			<string name="ToolTip" value="Search Use items."/>
+		</imgdir>
+		<imgdir name="cash:button">
+			<imgdir name="normal">
+				<canvas name="0" width="246" height="37">
+					<vector name="origin" x="-14" y="-230"/>
+				</canvas>
+			</imgdir>
+			<imgdir name="disabled">
+				<canvas name="0" width="246" height="37">
+					<vector name="origin" x="-14" y="-230"/>
+				</canvas>
+			</imgdir>
+			<int name="id" value="1103"/>
+			<string name="ToolTip" value="Search Cash items."/>
+		</imgdir>
+		<imgdir name="etc:button">
+			<imgdir name="normal">
+				<canvas name="0" width="246" height="37">
+					<vector name="origin" x="-14" y="-266"/>
+				</canvas>
+			</imgdir>
+			<imgdir name="disabled">
+				<canvas name="0" width="246" height="37">
+					<vector name="origin" x="-14" y="-266"/>
+				</canvas>
+			</imgdir>
+			<int name="id" value="1104"/>
+			<string name="ToolTip" value="Search Set-up items."/>
+		</imgdir>
+		<imgdir name="result_empty">
+			<canvas name="noResult:layer" width="435" height="134">
+				<vector name="origin" x="-432" y="-368"/>
+				<int name="z" value="2"/>
+			</canvas>
+		</imgdir>
+		<imgdir name="result_equip">
+			<canvas name="result_bg:layer" width="743" height="501">
+				<vector name="origin" x="-263" y="-123"/>
+			</canvas>
+			<imgdir name="etc">
+				<imgdir name="sort1">
+					<canvas name="0" width="7" height="11">
+						<vector name="origin" x="-453" y="-158"/>
+						<string name="source" value="UI/Basic.img/Sort1/0"/>
+					</canvas>
+					<canvas name="1" width="8" height="6">
+						<vector name="origin" x="-453" y="-160"/>
+						<string name="source" value="UI/Basic.img/Sort1/1"/>
+					</canvas>
+					<canvas name="2" width="8" height="5">
+						<vector name="origin" x="-453" y="-160"/>
+						<string name="source" value="UI/Basic.img/Sort1/2"/>
+					</canvas>
+				</imgdir>
+				<imgdir name="sort2">
+					<canvas name="0" width="7" height="11">
+						<vector name="origin" x="-644" y="-158"/>
+						<string name="source" value="UI/Basic.img/Sort1/0"/>
+					</canvas>
+					<canvas name="1" width="8" height="6">
+						<vector name="origin" x="-644" y="-160"/>
+						<string name="source" value="UI/Basic.img/Sort1/1"/>
+					</canvas>
+					<canvas name="2" width="8" height="5">
+						<vector name="origin" x="-644" y="-160"/>
+						<string name="source" value="UI/Basic.img/Sort1/2"/>
+					</canvas>
+				</imgdir>
+				<imgdir name="sort3">
+					<canvas name="0" width="7" height="11">
+						<vector name="origin" x="-773" y="-158"/>
+						<string name="source" value="UI/Basic.img/Sort1/0"/>
+					</canvas>
+					<canvas name="1" width="8" height="6">
+						<vector name="origin" x="-773" y="-160"/>
+						<string name="source" value="UI/Basic.img/Sort1/1"/>
+					</canvas>
+					<canvas name="2" width="8" height="5">
+						<vector name="origin" x="-773" y="-160"/>
+						<string name="source" value="UI/Basic.img/Sort1/2"/>
+					</canvas>
+				</imgdir>
+				<imgdir name="sort4">
+					<canvas name="0" width="7" height="11">
+						<vector name="origin" x="-895" y="-158"/>
+						<string name="source" value="UI/Basic.img/Sort1/0"/>
+					</canvas>
+					<canvas name="1" width="8" height="6">
+						<vector name="origin" x="-895" y="-160"/>
+						<string name="source" value="UI/Basic.img/Sort1/1"/>
+					</canvas>
+					<canvas name="2" width="8" height="5">
+						<vector name="origin" x="-895" y="-160"/>
+						<string name="source" value="UI/Basic.img/Sort1/2"/>
+					</canvas>
+				</imgdir>
+				<imgdir name="sort5">
+					<canvas name="0" width="7" height="11">
+						<vector name="origin" x="-975" y="-158"/>
+						<string name="source" value="UI/Basic.img/Sort1/0"/>
+					</canvas>
+					<canvas name="1" width="8" height="6">
+						<vector name="origin" x="-975" y="-160"/>
+						<string name="source" value="UI/Basic.img/Sort1/1"/>
+					</canvas>
+					<canvas name="2" width="8" height="5">
+						<vector name="origin" x="-975" y="-160"/>
+						<string name="source" value="UI/Basic.img/Sort1/2"/>
+					</canvas>
+				</imgdir>
+				<imgdir name="bars">
+					<canvas name="iconCover" width="40" height="22">
+						<vector name="origin" x="-6" y="-6"/>
+						<int name="z" value="1"/>
+					</canvas>
+					<canvas name="list" width="729" height="52">
+						<vector name="origin" x="0" y="0"/>
+						<int name="z" value="0"/>
+					</canvas>
+					<canvas name="select" width="729" height="52">
+						<vector name="origin" x="0" y="0"/>
+						<int name="z" value="0"/>
+					</canvas>
+					<canvas name="bidding" width="729" height="52">
+						<vector name="origin" x="0" y="0"/>
+						<int name="z" value="0"/>
+					</canvas>
+				</imgdir>
+			</imgdir>
+			<imgdir name="Front:button">
+				<imgdir name="normal">
+					<canvas name="0" width="18" height="13">
+						<vector name="origin" x="-570" y="-129"/>
+					</canvas>
+				</imgdir>
+				<imgdir name="pressed">
+					<canvas name="0" width="18" height="13">
+						<vector name="origin" x="-570" y="-129"/>
+					</canvas>
+				</imgdir>
+				<imgdir name="disabled">
+					<canvas name="0" width="18" height="13">
+						<vector name="origin" x="-570" y="-129"/>
+					</canvas>
+				</imgdir>
+				<imgdir name="mouseOver">
+					<canvas name="0" width="18" height="13">
+						<vector name="origin" x="-570" y="-129"/>
+					</canvas>
+				</imgdir>
+				<int name="id" value="1015"/>
+				<string name="ToolTip" value="Move to first page."/>
+			</imgdir>
+			<imgdir name="Forward:button">
+				<imgdir name="normal">
+					<canvas name="0" width="18" height="13">
+						<vector name="origin" x="-591" y="-129"/>
+					</canvas>
+				</imgdir>
+				<imgdir name="pressed">
+					<canvas name="0" width="18" height="13">
+						<vector name="origin" x="-591" y="-129"/>
+					</canvas>
+				</imgdir>
+				<imgdir name="disabled">
+					<canvas name="0" width="18" height="13">
+						<vector name="origin" x="-591" y="-129"/>
+					</canvas>
+				</imgdir>
+				<imgdir name="mouseOver">
+					<canvas name="0" width="18" height="13">
+						<vector name="origin" x="-591" y="-129"/>
+					</canvas>
+				</imgdir>
+				<int name="id" value="1016"/>
+				<string name="ToolTip" value="Move to previous page."/>
+			</imgdir>
+			<imgdir name="Backward:button">
+				<imgdir name="normal">
+					<canvas name="0" width="18" height="13">
+						<vector name="origin" x="-668" y="-129"/>
+					</canvas>
+				</imgdir>
+				<imgdir name="pressed">
+					<canvas name="0" width="18" height="13">
+						<vector name="origin" x="-668" y="-129"/>
+					</canvas>
+				</imgdir>
+				<imgdir name="disabled">
+					<canvas name="0" width="18" height="13">
+						<vector name="origin" x="-668" y="-129"/>
+					</canvas>
+				</imgdir>
+				<imgdir name="mouseOver">
+					<canvas name="0" width="18" height="13">
+						<vector name="origin" x="-668" y="-129"/>
+					</canvas>
+				</imgdir>
+				<int name="id" value="1017"/>
+				<string name="ToolTip" value="Move to next page."/>
+			</imgdir>
+			<imgdir name="Back:button">
+				<imgdir name="normal">
+					<canvas name="0" width="18" height="13">
+						<vector name="origin" x="-689" y="-129"/>
+					</canvas>
+				</imgdir>
+				<imgdir name="pressed">
+					<canvas name="0" width="18" height="13">
+						<vector name="origin" x="-689" y="-129"/>
+					</canvas>
+				</imgdir>
+				<imgdir name="disabled">
+					<canvas name="0" width="18" height="13">
+						<vector name="origin" x="-689" y="-129"/>
+					</canvas>
+				</imgdir>
+				<imgdir name="mouseOver">
+					<canvas name="0" width="18" height="13">
+						<vector name="origin" x="-689" y="-129"/>
+					</canvas>
+				</imgdir>
+				<int name="id" value="1018"/>
+				<string name="ToolTip" value="Move to last page."/>
+			</imgdir>
+			<canvas name="iteminfo_bg:layer" width="735" height="128">
+				<vector name="origin" x="-271" y="-622"/>
+				<int name="z" value="1"/>
+				<int name="overlay" value="1"/>
+			</canvas>
+			<canvas name="iteminfo_cover:layer" width="591" height="73">
+				<vector name="origin" x="-284" y="-635"/>
+				<int name="z" value="2"/>
+			</canvas>
+			<canvas name="iteminfo_noresult:layer" width="735" height="128">
+				<vector name="origin" x="-271" y="-622"/>
+				<int name="z" value="2"/>
+			</canvas>
+			<imgdir name="iteminfo_etc">
+				<imgdir name="VScr">
+					<imgdir name="enabled">
+						<canvas name="prev0" width="8" height="8">
+							<vector name="origin" x="0" y="0"/>
+							<string name="source" value="UI/Basic.img/VScr18/enabled/prev0"/>
+						</canvas>
+						<canvas name="prev1" width="8" height="8">
+							<vector name="origin" x="0" y="0"/>
+							<string name="source" value="UI/Basic.img/VScr18/enabled/prev0"/>
+						</canvas>
+						<canvas name="prev2" width="8" height="8">
+							<vector name="origin" x="0" y="0"/>
+							<string name="source" value="UI/Basic.img/VScr18/enabled/prev0"/>
+						</canvas>
+						<canvas name="base" width="8" height="8">
+							<vector name="origin" x="0" y="0"/>
+							<string name="source" value="UI/Basic.img/VScr18/enabled/base"/>
+						</canvas>
+						<canvas name="thumb0" width="8" height="39">
+							<vector name="origin" x="0" y="0"/>
+							<string name="source" value="UI/Basic.img/VScr18/enabled/thumb0"/>
+						</canvas>
+						<canvas name="thumb1" width="8" height="39">
+							<vector name="origin" x="0" y="0"/>
+							<string name="source" value="UI/Basic.img/VScr18/enabled/thumb0"/>
+						</canvas>
+						<canvas name="thumb2" width="8" height="39">
+							<vector name="origin" x="0" y="0"/>
+							<string name="source" value="UI/Basic.img/VScr18/enabled/thumb0"/>
+						</canvas>
+						<canvas name="next0" width="8" height="8">
+							<vector name="origin" x="0" y="0"/>
+							<string name="source" value="UI/Basic.img/VScr18/enabled/next0"/>
+						</canvas>
+						<canvas name="next1" width="8" height="8">
+							<vector name="origin" x="0" y="0"/>
+							<string name="source" value="UI/Basic.img/VScr18/enabled/next0"/>
+						</canvas>
+						<canvas name="next2" width="8" height="8">
+							<vector name="origin" x="0" y="0"/>
+							<string name="source" value="UI/Basic.img/VScr18/enabled/next0"/>
+						</canvas>
+					</imgdir>
+					<imgdir name="disabled">
+						<canvas name="prev" width="8" height="8">
+							<vector name="origin" x="0" y="0"/>
+							<string name="source" value="UI/Basic.img/VScr18/enabled/prev0"/>
+						</canvas>
+						<canvas name="base" width="8" height="8">
+							<vector name="origin" x="0" y="0"/>
+							<string name="source" value="UI/Basic.img/VScr18/enabled/base"/>
+						</canvas>
+						<canvas name="next" width="8" height="8">
+							<vector name="origin" x="0" y="0"/>
+							<string name="source" value="UI/Basic.img/VScr18/enabled/next0"/>
+						</canvas>
+					</imgdir>
+				</imgdir>
+			</imgdir>
+			<imgdir name="Bid:button">
+				<imgdir name="normal">
+					<canvas name="0" width="109" height="33">
+						<vector name="origin" x="-886" y="-634"/>
+					</canvas>
+				</imgdir>
+				<imgdir name="pressed">
+					<canvas name="0" width="109" height="33">
+						<vector name="origin" x="-886" y="-634"/>
+					</canvas>
+				</imgdir>
+				<imgdir name="disabled">
+					<canvas name="0" width="109" height="33">
+						<vector name="origin" x="-886" y="-634"/>
+					</canvas>
+				</imgdir>
+				<imgdir name="mouseOver">
+					<canvas name="0" width="109" height="33">
+						<vector name="origin" x="-886" y="-634"/>
+					</canvas>
+				</imgdir>
+				<int name="id" value="1110"/>
+				<string name="ToolTip" value="Bid on the selected item."/>
+			</imgdir>
+			<imgdir name="Rebid">
+				<imgdir name="normal">
+					<canvas name="0" width="109" height="33">
+						<vector name="origin" x="-886" y="-634"/>
+					</canvas>
+				</imgdir>
+				<imgdir name="pressed">
+					<canvas name="0" width="109" height="33">
+						<vector name="origin" x="-886" y="-634"/>
+					</canvas>
+				</imgdir>
+				<imgdir name="disabled">
+					<canvas name="0" width="109" height="33">
+						<vector name="origin" x="-886" y="-634"/>
+					</canvas>
+				</imgdir>
+				<imgdir name="mouseOver">
+					<canvas name="0" width="109" height="33">
+						<vector name="origin" x="-886" y="-634"/>
+					</canvas>
+				</imgdir>
+				<int name="id" value="1110"/>
+			</imgdir>
+			<imgdir name="Bargain:button">
+				<imgdir name="normal">
+					<canvas name="0" width="109" height="33">
+						<vector name="origin" x="-886" y="-670"/>
+					</canvas>
+				</imgdir>
+				<imgdir name="pressed">
+					<canvas name="0" width="109" height="33">
+						<vector name="origin" x="-886" y="-670"/>
+					</canvas>
+				</imgdir>
+				<imgdir name="disabled">
+					<canvas name="0" width="109" height="33">
+						<vector name="origin" x="-886" y="-670"/>
+					</canvas>
+				</imgdir>
+				<imgdir name="mouseOver">
+					<canvas name="0" width="109" height="33">
+						<vector name="origin" x="-886" y="-670"/>
+					</canvas>
+				</imgdir>
+				<int name="id" value="1112"/>
+				<string name="ToolTip" value="Requests haggling if the item can be haggled."/>
+			</imgdir>
+			<imgdir name="Buy:button">
+				<imgdir name="normal">
+					<canvas name="0" width="109" height="33">
+						<vector name="origin" x="-886" y="-706"/>
+					</canvas>
+				</imgdir>
+				<imgdir name="pressed">
+					<canvas name="0" width="109" height="33">
+						<vector name="origin" x="-886" y="-706"/>
+					</canvas>
+				</imgdir>
+				<imgdir name="disabled">
+					<canvas name="0" width="109" height="33">
+						<vector name="origin" x="-886" y="-706"/>
+					</canvas>
+				</imgdir>
+				<imgdir name="mouseOver">
+					<canvas name="0" width="109" height="33">
+						<vector name="origin" x="-886" y="-706"/>
+					</canvas>
+				</imgdir>
+				<int name="id" value="1111"/>
+				<string name="ToolTip" value="Buy the selected item now."/>
+			</imgdir>
+			<imgdir name="TTmain:tooltip">
+				<string name="text" value="Searched item list."/>
+				<vector name="lt" x="271" y="129"/>
+				<vector name="rb" x="336" y="145"/>
+			</imgdir>
+			<imgdir name="TTbarColor:tooltip">
+				<string name="text" value="Selected items and items you've bid on are highlighted in different colors."/>
+				<vector name="lt" x="785" y="129"/>
+				<vector name="rb" x="1005" y="144"/>
+			</imgdir>
+			<imgdir name="TTitemName:tooltip">
+				<string name="text" value="Searched item list. Click the arrows to sort."/>
+				<vector name="lt" x="385" y="154"/>
+				<vector name="rb" x="448" y="170"/>
+			</imgdir>
+			<imgdir name="TTcurrentPrice:tooltip">
+				<string name="text" value="Current bid price. Click the arrows to sort."/>
+				<vector name="lt" x="578" y="154"/>
+				<vector name="rb" x="640" y="169"/>
+			</imgdir>
+			<imgdir name="TTbuyPrice:tooltip">
+				<string name="text" value="Buy Now price. Click the arrows to sort."/>
+				<vector name="lt" x="708" y="153"/>
+				<vector name="rb" x="769" y="169"/>
+			</imgdir>
+			<imgdir name="TTtimeRemain:tooltip">
+				<string name="text" value="Time remaining on the auction. Click the arrows to sort."/>
+				<vector name="lt" x="844" y="155"/>
+				<vector name="rb" x="891" y="170"/>
+			</imgdir>
+			<imgdir name="TTbargain:tooltip">
+				<string name="text" value="Haggle status. Click the arrows to sort."/>
+				<vector name="lt" x="946" y="154"/>
+				<vector name="rb" x="970" y="168"/>
+			</imgdir>
+		</imgdir>
+		<imgdir name="result_consume">
+			<canvas name="result_bg:layer" width="744" height="468">
+				<vector name="origin" x="-267" y="-130"/>
+				<int name="z" value="1"/>
+			</canvas>
+			<imgdir name="etc">
+				<imgdir name="sort1">
+					<canvas name="0" width="7" height="11">
+						<vector name="origin" x="-453" y="-158"/>
+					</canvas>
+					<canvas name="1" width="8" height="6">
+						<vector name="origin" x="-453" y="-160"/>
+					</canvas>
+					<canvas name="2" width="8" height="5">
+						<vector name="origin" x="-453" y="-160"/>
+						<string name="source" value="UI/Basic.img/Sort1/2"/>
+					</canvas>
+				</imgdir>
+				<imgdir name="sort2">
+					<canvas name="0" width="7" height="11">
+						<vector name="origin" x="-773" y="-158"/>
+						<string name="source" value="UI/UIAuction.img/tab_search/result_consume/etc/sort1/0"/>
+					</canvas>
+					<canvas name="1" width="8" height="6">
+						<vector name="origin" x="-773" y="-160"/>
+						<string name="source" value="UI/UIAuction.img/tab_search/result_consume/etc/sort1/1"/>
+					</canvas>
+					<canvas name="2" width="8" height="5">
+						<vector name="origin" x="-773" y="-160"/>
+						<string name="source" value="UI/Basic.img/Sort1/2"/>
+					</canvas>
+				</imgdir>
+				<imgdir name="sort3">
+					<canvas name="0" width="7" height="11">
+						<vector name="origin" x="-927" y="-158"/>
+						<string name="source" value="UI/UIAuction.img/tab_search/result_consume/etc/sort1/0"/>
+					</canvas>
+					<canvas name="1" width="8" height="6">
+						<vector name="origin" x="-927" y="-160"/>
+						<string name="source" value="UI/UIAuction.img/tab_search/result_consume/etc/sort1/1"/>
+					</canvas>
+					<canvas name="2" width="8" height="5">
+						<vector name="origin" x="-927" y="-160"/>
+						<string name="source" value="UI/Basic.img/Sort1/2"/>
+					</canvas>
+				</imgdir>
+				<imgdir name="bars">
+					<canvas name="iconCover" width="40" height="22">
+						<vector name="origin" x="-6" y="-6"/>
+						<int name="z" value="1"/>
+						<string name="source" value="UI/UIAuction.img/tab_search/result_equip/etc/bars/iconCover"/>
+					</canvas>
+					<canvas name="list" width="729" height="52">
+						<vector name="origin" x="0" y="0"/>
+						<int name="z" value="0"/>
+					</canvas>
+					<canvas name="select" width="729" height="52">
+						<vector name="origin" x="0" y="0"/>
+						<int name="z" value="0"/>
+						<string name="source" value="UI/UIAuction.img/tab_search/result_equip/etc/bars/select"/>
+					</canvas>
+					<canvas name="bidding" width="729" height="52">
+						<vector name="origin" x="0" y="0"/>
+						<int name="z" value="0"/>
+						<string name="source" value="UI/UIAuction.img/tab_search/result_equip/etc/bars/bidding"/>
+					</canvas>
+				</imgdir>
+			</imgdir>
+			<imgdir name="Front:button">
+				<imgdir name="normal">
+					<canvas name="0" width="18" height="13">
+						<vector name="origin" x="-570" y="-129"/>
+						<string name="source" value="UI/UIAuction.img/tab_search/result_equip/Front:button/normal/0"/>
+					</canvas>
+				</imgdir>
+				<imgdir name="pressed">
+					<canvas name="0" width="18" height="13">
+						<vector name="origin" x="-570" y="-129"/>
+						<string name="source" value="UI/UIAuction.img/tab_search/result_equip/Front:button/pressed/0"/>
+					</canvas>
+				</imgdir>
+				<imgdir name="disabled">
+					<canvas name="0" width="18" height="13">
+						<vector name="origin" x="-570" y="-129"/>
+						<string name="source" value="UI/UIAuction.img/tab_search/result_equip/Front:button/disabled/0"/>
+					</canvas>
+				</imgdir>
+				<imgdir name="mouseOver">
+					<canvas name="0" width="18" height="13">
+						<vector name="origin" x="-570" y="-129"/>
+						<string name="source" value="UI/UIAuction.img/tab_search/result_equip/Front:button/mouseOver/0"/>
+					</canvas>
+				</imgdir>
+				<int name="id" value="1015"/>
+				<string name="ToolTip" value="Move to first page."/>
+			</imgdir>
+			<imgdir name="Forward:button">
+				<imgdir name="normal">
+					<canvas name="0" width="18" height="13">
+						<vector name="origin" x="-591" y="-129"/>
+						<string name="source" value="UI/UIAuction.img/tab_search/result_equip/Forward:button/normal/0"/>
+					</canvas>
+				</imgdir>
+				<imgdir name="pressed">
+					<canvas name="0" width="18" height="13">
+						<vector name="origin" x="-591" y="-129"/>
+						<string name="source" value="UI/UIAuction.img/tab_search/result_equip/Forward:button/pressed/0"/>
+					</canvas>
+				</imgdir>
+				<imgdir name="disabled">
+					<canvas name="0" width="18" height="13">
+						<vector name="origin" x="-591" y="-129"/>
+						<string name="source" value="UI/UIAuction.img/tab_search/result_equip/Forward:button/disabled/0"/>
+					</canvas>
+				</imgdir>
+				<imgdir name="mouseOver">
+					<canvas name="0" width="18" height="13">
+						<vector name="origin" x="-591" y="-129"/>
+						<string name="source" value="UI/UIAuction.img/tab_search/result_equip/Forward:button/mouseOver/0"/>
+					</canvas>
+				</imgdir>
+				<int name="id" value="1016"/>
+				<string name="ToolTip" value="Move to previous page."/>
+			</imgdir>
+			<imgdir name="Backward:button">
+				<imgdir name="normal">
+					<canvas name="0" width="18" height="13">
+						<vector name="origin" x="-668" y="-129"/>
+						<string name="source" value="UI/UIAuction.img/tab_search/result_equip/Backward:button/normal/0"/>
+					</canvas>
+				</imgdir>
+				<imgdir name="pressed">
+					<canvas name="0" width="18" height="13">
+						<vector name="origin" x="-668" y="-129"/>
+						<string name="source" value="UI/UIAuction.img/tab_search/result_equip/Backward:button/pressed/0"/>
+					</canvas>
+				</imgdir>
+				<imgdir name="disabled">
+					<canvas name="0" width="18" height="13">
+						<vector name="origin" x="-668" y="-129"/>
+						<string name="source" value="UI/UIAuction.img/tab_search/result_equip/Backward:button/disabled/0"/>
+					</canvas>
+				</imgdir>
+				<imgdir name="mouseOver">
+					<canvas name="0" width="18" height="13">
+						<vector name="origin" x="-668" y="-129"/>
+						<string name="source" value="UI/UIAuction.img/tab_search/result_equip/Backward:button/mouseOver/0"/>
+					</canvas>
+				</imgdir>
+				<int name="id" value="1017"/>
+				<string name="ToolTip" value="Move to next page."/>
+			</imgdir>
+			<imgdir name="Back:button">
+				<imgdir name="normal">
+					<canvas name="0" width="18" height="13">
+						<vector name="origin" x="-689" y="-129"/>
+						<string name="source" value="UI/UIAuction.img/tab_search/result_equip/Back:button/normal/0"/>
+					</canvas>
+				</imgdir>
+				<imgdir name="pressed">
+					<canvas name="0" width="18" height="13">
+						<vector name="origin" x="-689" y="-129"/>
+						<string name="source" value="UI/UIAuction.img/tab_search/result_equip/Back:button/pressed/0"/>
+					</canvas>
+				</imgdir>
+				<imgdir name="disabled">
+					<canvas name="0" width="18" height="13">
+						<vector name="origin" x="-689" y="-129"/>
+						<string name="source" value="UI/UIAuction.img/tab_search/result_equip/Back:button/disabled/0"/>
+					</canvas>
+				</imgdir>
+				<imgdir name="mouseOver">
+					<canvas name="0" width="18" height="13">
+						<vector name="origin" x="-689" y="-129"/>
+						<string name="source" value="UI/UIAuction.img/tab_search/result_equip/Back:button/mouseOver/0"/>
+					</canvas>
+				</imgdir>
+				<int name="id" value="1018"/>
+				<string name="ToolTip" value="Move to last page."/>
+			</imgdir>
+			<canvas name="iteminfo_bg:layer" width="735" height="128">
+				<vector name="origin" x="-271" y="-458"/>
+				<int name="z" value="1"/>
+			</canvas>
+			<canvas name="iteminfo_cover:layer" width="710" height="73">
+				<vector name="origin" x="-284" y="-471"/>
+				<int name="z" value="2"/>
+			</canvas>
+			<canvas name="iteminfo_noresult:layer" width="735" height="128">
+				<vector name="origin" x="-271" y="-458"/>
+				<int name="z" value="2"/>
+				<string name="source" value="UI/UIAuction.img/tab_search/result_equip/iteminfo_noresult:layer"/>
+			</canvas>
+			<canvas name="Number:edit" width="27" height="10">
+				<vector name="origin" x="-561" y="-680"/>
+				<int name="z" value="0"/>
+				<int name="id" value="1113"/>
+				<int name="maxlen" value="4"/>
+				<int name="number" value="1"/>
+			</canvas>
+			<imgdir name="Buy:button">
+				<imgdir name="normal">
+					<canvas name="0" width="175" height="38">
+						<vector name="origin" x="-454" y="-706"/>
+					</canvas>
+				</imgdir>
+				<imgdir name="pressed">
+					<canvas name="0" width="179" height="42">
+						<vector name="origin" x="-452" y="-704"/>
+					</canvas>
+				</imgdir>
+				<imgdir name="disabled">
+					<canvas name="0" width="175" height="38">
+						<vector name="origin" x="-454" y="-706"/>
+					</canvas>
+				</imgdir>
+				<imgdir name="mouseOver">
+					<canvas name="0" width="175" height="38">
+						<vector name="origin" x="-454" y="-706"/>
+					</canvas>
+				</imgdir>
+				<int name="id" value="1111"/>
+				<int name="enable" value="0"/>
+				<string name="ToolTip" value="Attempt to purchase for your reserve price. If item is purchased for less, difference will be refunded."/>
+			</imgdir>
+			<canvas name="buy_bg:layer" width="371" height="158">
+				<vector name="origin" x="-265" y="-597"/>
+				<int name="z" value="1"/>
+			</canvas>
+			<canvas name="info_bg:layer" width="367" height="154">
+				<vector name="origin" x="-643" y="-599"/>
+				<int name="z" value="1"/>
+			</canvas>
+			<imgdir name="TTmain:tooltip">
+				<string name="text" value="Searched item list."/>
+				<vector name="lt" x="271" y="129"/>
+				<vector name="rb" x="336" y="145"/>
+			</imgdir>
+			<imgdir name="TTbarColor:tooltip">
+				<string name="text" value="Selected items and items you've bid on are highlighted in different colors."/>
+				<vector name="lt" x="785" y="129"/>
+				<vector name="rb" x="1005" y="144"/>
+			</imgdir>
+			<imgdir name="TTitemName:tooltip">
+				<string name="text" value="Searched item list. Click the arrows to sort."/>
+				<vector name="lt" x="385" y="154"/>
+				<vector name="rb" x="448" y="170"/>
+			</imgdir>
+			<imgdir name="TTmeso:tooltip">
+				<string name="text" value="Final price after multiplying quantity with average price."/>
+				<vector name="lt" x="274" y="669"/>
+				<vector name="rb" x="448" y="746"/>
+			</imgdir>
+		</imgdir>
+	</imgdir>
+	<imgdir name="tab_bid">
+		<canvas name="result_bg:layer" width="1002" height="635">
+			<vector name="origin" x="-13" y="-121"/>
+		</canvas>
+		<canvas name="iteminfo_bg:layer" width="988" height="128">
+			<vector name="origin" x="-18" y="-622"/>
+			<int name="z" value="1"/>
+			<int name="overlay" value="1"/>
+		</canvas>
+		<canvas name="iteminfo_noresult:layer" width="988" height="128">
+			<vector name="origin" x="-18" y="-622"/>
+			<int name="z" value="3"/>
+		</canvas>
+		<canvas name="iteminfo_cover:layer" width="844" height="73">
+			<vector name="origin" x="-31" y="-635"/>
+			<int name="z" value="2"/>
+		</canvas>
+		<imgdir name="Bid:button">
+			<imgdir name="normal">
+				<canvas name="0" width="109" height="33">
+					<vector name="origin" x="-886" y="-634"/>
+				</canvas>
+			</imgdir>
+			<imgdir name="pressed">
+				<canvas name="0" width="109" height="33">
+					<vector name="origin" x="-886" y="-634"/>
+				</canvas>
+			</imgdir>
+			<imgdir name="disabled">
+				<canvas name="0" width="109" height="33">
+					<vector name="origin" x="-886" y="-634"/>
+				</canvas>
+			</imgdir>
+			<imgdir name="mouseOver">
+				<canvas name="0" width="109" height="33">
+					<vector name="origin" x="-886" y="-634"/>
+				</canvas>
+			</imgdir>
+			<int name="id" value="1307"/>
+			<string name="ToolTip" value="Bid on the selected item."/>
+		</imgdir>
+		<imgdir name="Rebid">
+			<imgdir name="normal">
+				<canvas name="0" width="109" height="33">
+					<vector name="origin" x="-886" y="-634"/>
+				</canvas>
+			</imgdir>
+			<imgdir name="pressed">
+				<canvas name="0" width="109" height="33">
+					<vector name="origin" x="-886" y="-634"/>
+				</canvas>
+			</imgdir>
+			<imgdir name="disabled">
+				<canvas name="0" width="109" height="33">
+					<vector name="origin" x="-886" y="-634"/>
+				</canvas>
+			</imgdir>
+			<imgdir name="mouseOver">
+				<canvas name="0" width="109" height="33">
+					<vector name="origin" x="-886" y="-634"/>
+				</canvas>
+			</imgdir>
+			<int name="id" value="1307"/>
+		</imgdir>
+		<imgdir name="Bargain:button">
+			<imgdir name="normal">
+				<canvas name="0" width="109" height="33">
+					<vector name="origin" x="-886" y="-670"/>
+				</canvas>
+			</imgdir>
+			<imgdir name="pressed">
+				<canvas name="0" width="109" height="33">
+					<vector name="origin" x="-886" y="-670"/>
+				</canvas>
+			</imgdir>
+			<imgdir name="disabled">
+				<canvas name="0" width="109" height="33">
+					<vector name="origin" x="-886" y="-670"/>
+				</canvas>
+			</imgdir>
+			<imgdir name="mouseOver">
+				<canvas name="0" width="109" height="33">
+					<vector name="origin" x="-886" y="-670"/>
+				</canvas>
+			</imgdir>
+			<int name="id" value="1309"/>
+			<string name="ToolTip" value="Requests haggling if the item can be haggled."/>
+		</imgdir>
+		<imgdir name="Buy:button">
+			<imgdir name="normal">
+				<canvas name="0" width="109" height="33">
+					<vector name="origin" x="-886" y="-706"/>
+				</canvas>
+			</imgdir>
+			<imgdir name="pressed">
+				<canvas name="0" width="109" height="33">
+					<vector name="origin" x="-886" y="-706"/>
+				</canvas>
+			</imgdir>
+			<imgdir name="disabled">
+				<canvas name="0" width="109" height="33">
+					<vector name="origin" x="-886" y="-706"/>
+				</canvas>
+			</imgdir>
+			<imgdir name="mouseOver">
+				<canvas name="0" width="109" height="33">
+					<vector name="origin" x="-886" y="-706"/>
+				</canvas>
+			</imgdir>
+			<int name="id" value="1308"/>
+			<string name="ToolTip" value="Buy the selected item now."/>
+		</imgdir>
+		<imgdir name="Front:button">
+			<imgdir name="normal">
+				<canvas name="0" width="18" height="13">
+					<vector name="origin" x="-443" y="-129"/>
+					<string name="source" value="UI/UIAuction.img/tab_search/result_equip/Front:button/normal/0"/>
+				</canvas>
+			</imgdir>
+			<imgdir name="pressed">
+				<canvas name="0" width="18" height="13">
+					<vector name="origin" x="-443" y="-129"/>
+					<string name="source" value="UI/UIAuction.img/tab_search/result_equip/Front:button/pressed/0"/>
+				</canvas>
+			</imgdir>
+			<imgdir name="disabled">
+				<canvas name="0" width="18" height="13">
+					<vector name="origin" x="-443" y="-129"/>
+					<string name="source" value="UI/UIAuction.img/tab_search/result_equip/Front:button/disabled/0"/>
+				</canvas>
+			</imgdir>
+			<imgdir name="mouseOver">
+				<canvas name="0" width="18" height="13">
+					<vector name="origin" x="-443" y="-129"/>
+					<string name="source" value="UI/UIAuction.img/tab_search/result_equip/Front:button/mouseOver/0"/>
+				</canvas>
+			</imgdir>
+			<int name="id" value="1015"/>
+			<string name="ToolTip" value="Move to first page."/>
+		</imgdir>
+		<imgdir name="Forward:button">
+			<imgdir name="normal">
+				<canvas name="0" width="18" height="13">
+					<vector name="origin" x="-464" y="-129"/>
+					<string name="source" value="UI/UIAuction.img/tab_search/result_equip/Forward:button/normal/0"/>
+				</canvas>
+			</imgdir>
+			<imgdir name="pressed">
+				<canvas name="0" width="18" height="13">
+					<vector name="origin" x="-464" y="-129"/>
+					<string name="source" value="UI/UIAuction.img/tab_search/result_equip/Forward:button/pressed/0"/>
+				</canvas>
+			</imgdir>
+			<imgdir name="disabled">
+				<canvas name="0" width="18" height="13">
+					<vector name="origin" x="-464" y="-129"/>
+					<string name="source" value="UI/UIAuction.img/tab_search/result_equip/Forward:button/disabled/0"/>
+				</canvas>
+			</imgdir>
+			<imgdir name="mouseOver">
+				<canvas name="0" width="18" height="13">
+					<vector name="origin" x="-464" y="-129"/>
+					<string name="source" value="UI/UIAuction.img/tab_search/result_equip/Forward:button/mouseOver/0"/>
+				</canvas>
+			</imgdir>
+			<int name="id" value="1016"/>
+			<string name="ToolTip" value="Move to previous page."/>
+		</imgdir>
+		<imgdir name="Backward:button">
+			<imgdir name="normal">
+				<canvas name="0" width="18" height="13">
+					<vector name="origin" x="-541" y="-129"/>
+					<string name="source" value="UI/UIAuction.img/tab_search/result_equip/Backward:button/normal/0"/>
+				</canvas>
+			</imgdir>
+			<imgdir name="pressed">
+				<canvas name="0" width="18" height="13">
+					<vector name="origin" x="-541" y="-129"/>
+					<string name="source" value="UI/UIAuction.img/tab_search/result_equip/Backward:button/pressed/0"/>
+				</canvas>
+			</imgdir>
+			<imgdir name="disabled">
+				<canvas name="0" width="18" height="13">
+					<vector name="origin" x="-541" y="-129"/>
+					<string name="source" value="UI/UIAuction.img/tab_search/result_equip/Backward:button/disabled/0"/>
+				</canvas>
+			</imgdir>
+			<imgdir name="mouseOver">
+				<canvas name="0" width="18" height="13">
+					<vector name="origin" x="-541" y="-129"/>
+					<string name="source" value="UI/UIAuction.img/tab_search/result_equip/Backward:button/mouseOver/0"/>
+				</canvas>
+			</imgdir>
+			<int name="id" value="1017"/>
+			<string name="ToolTip" value="Move to next page."/>
+		</imgdir>
+		<imgdir name="Back:button">
+			<imgdir name="normal">
+				<canvas name="0" width="18" height="13">
+					<vector name="origin" x="-562" y="-129"/>
+					<string name="source" value="UI/UIAuction.img/tab_search/result_equip/Back:button/normal/0"/>
+				</canvas>
+			</imgdir>
+			<imgdir name="pressed">
+				<canvas name="0" width="18" height="13">
+					<vector name="origin" x="-562" y="-129"/>
+					<string name="source" value="UI/UIAuction.img/tab_search/result_equip/Back:button/pressed/0"/>
+				</canvas>
+			</imgdir>
+			<imgdir name="disabled">
+				<canvas name="0" width="18" height="13">
+					<vector name="origin" x="-562" y="-129"/>
+					<string name="source" value="UI/UIAuction.img/tab_search/result_equip/Back:button/disabled/0"/>
+				</canvas>
+			</imgdir>
+			<imgdir name="mouseOver">
+				<canvas name="0" width="18" height="13">
+					<vector name="origin" x="-562" y="-129"/>
+					<string name="source" value="UI/UIAuction.img/tab_search/result_equip/Back:button/mouseOver/0"/>
+				</canvas>
+			</imgdir>
+			<int name="id" value="1018"/>
+			<string name="ToolTip" value="Move to last page."/>
+		</imgdir>
+		<imgdir name="etc">
+			<imgdir name="bars">
+				<canvas name="iconCover" width="40" height="22">
+					<vector name="origin" x="-6" y="-6"/>
+					<int name="z" value="1"/>
+					<string name="source" value="UI/UIAuction.img/tab_search/result_equip/etc/bars/iconCover"/>
+				</canvas>
+				<canvas name="list" width="982" height="52">
+					<vector name="origin" x="0" y="0"/>
+					<int name="z" value="0"/>
+				</canvas>
+				<canvas name="select" width="982" height="52">
+					<vector name="origin" x="0" y="0"/>
+					<int name="z" value="0"/>
+				</canvas>
+			</imgdir>
+		</imgdir>
+		<imgdir name="TTmain:tooltip">
+			<string name="text" value="Items you're bidding on."/>
+			<vector name="lt" x="19" y="127"/>
+			<vector name="rb" x="124" y="146"/>
+		</imgdir>
+		<imgdir name="TTbarColor:tooltip">
+			<string name="text" value="Selected items and items you've bid on are highlighted in different colors."/>
+			<vector name="lt" x="909" y="129"/>
+			<vector name="rb" x="1005" y="144"/>
+		</imgdir>
+		<imgdir name="TTitemName:tooltip">
+			<string name="text" value="Searched item list. Click the arrows to sort."/>
+			<vector name="lt" x="133" y="154"/>
+			<vector name="rb" x="195" y="169"/>
+		</imgdir>
+		<imgdir name="TTitemStatus:tooltip">
+			<string name="text" value="Bid status. Click the arrows to sort."/>
+			<vector name="lt" x="329" y="154"/>
+			<vector name="rb" x="356" y="170"/>
+		</imgdir>
+		<imgdir name="TTmyPrice:tooltip">
+			<string name="text" value="Your bid price. Click the arrows to sort."/>
+			<vector name="lt" x="427" y="154"/>
+			<vector name="rb" x="489" y="170"/>
+		</imgdir>
+		<imgdir name="TTcurrentPrice:tooltip">
+			<string name="text" value="Current bid price. Click the arrows to sort."/>
+			<vector name="lt" x="589" y="155"/>
+			<vector name="rb" x="649" y="170"/>
+		</imgdir>
+		<imgdir name="TTbuyPrice:tooltip">
+			<string name="text" value="Buy Now price. Click the arrows to sort."/>
+			<vector name="lt" x="746" y="153"/>
+			<vector name="rb" x="805" y="170"/>
+		</imgdir>
+		<imgdir name="TTtimeRemain:tooltip">
+			<string name="text" value="Time remaining on the auction. Click the arrows to sort."/>
+			<vector name="lt" x="898" y="154"/>
+			<vector name="rb" x="946" y="170"/>
+		</imgdir>
+	</imgdir>
+	<imgdir name="tab_sell">
+		<canvas name="inventory_bg:layer" width="665" height="232">
+			<vector name="origin" x="-12" y="-120"/>
+			<int name="z" value="1"/>
+		</canvas>
+		<canvas name="iconDisabled" width="48" height="48">
+			<vector name="origin" x="0" y="0"/>
+			<int name="z" value="0"/>
+		</canvas>
+		<imgdir name="Equip:button">
+			<imgdir name="normal">
+				<canvas name="0" width="59" height="43">
+					<vector name="origin" x="-14" y="-122"/>
+					<int name="z" value="2"/>
+				</canvas>
+			</imgdir>
+			<imgdir name="disabled">
+				<canvas name="0" width="48" height="42">
+					<vector name="origin" x="-14" y="-122"/>
+					<int name="z" value="2"/>
+				</canvas>
+			</imgdir>
+			<int name="id" value="1212"/>
+			<string name="ToolTip" value="The items in your Equip tab."/>
+		</imgdir>
+		<imgdir name="Consume:button">
+			<imgdir name="normal">
+				<canvas name="0" width="59" height="43">
+					<vector name="origin" x="-14" y="-169"/>
+					<int name="z" value="2"/>
+				</canvas>
+			</imgdir>
+			<imgdir name="disabled">
+				<canvas name="0" width="48" height="42">
+					<vector name="origin" x="-14" y="-169"/>
+					<int name="z" value="2"/>
+				</canvas>
+			</imgdir>
+			<int name="id" value="1213"/>
+			<string name="ToolTip" value="The items in your Use tab."/>
+		</imgdir>
+		<imgdir name="Install:button">
+			<imgdir name="normal">
+				<canvas name="0" width="59" height="43">
+					<vector name="origin" x="-14" y="-216"/>
+					<int name="z" value="2"/>
+				</canvas>
+			</imgdir>
+			<imgdir name="disabled">
+				<canvas name="0" width="48" height="42">
+					<vector name="origin" x="-14" y="-216"/>
+					<int name="z" value="2"/>
+				</canvas>
+			</imgdir>
+			<int name="id" value="1214"/>
+			<string name="ToolTip" value="The items in your Set-up tab."/>
+		</imgdir>
+		<imgdir name="Etc:button">
+			<imgdir name="normal">
+				<canvas name="0" width="59" height="43">
+					<vector name="origin" x="-14" y="-263"/>
+					<int name="z" value="2"/>
+				</canvas>
+			</imgdir>
+			<imgdir name="disabled">
+				<canvas name="0" width="48" height="42">
+					<vector name="origin" x="-14" y="-263"/>
+					<int name="z" value="2"/>
+				</canvas>
+			</imgdir>
+			<int name="id" value="1215"/>
+			<string name="ToolTip" value="The items in your Etc tab."/>
+		</imgdir>
+		<imgdir name="Cash:button">
+			<imgdir name="normal">
+				<canvas name="0" width="60" height="43">
+					<vector name="origin" x="-14" y="-310"/>
+					<int name="z" value="2"/>
+				</canvas>
+			</imgdir>
+			<imgdir name="disabled">
+				<canvas name="0" width="48" height="41">
+					<vector name="origin" x="-14" y="-310"/>
+					<int name="z" value="2"/>
+				</canvas>
+			</imgdir>
+			<int name="id" value="1216"/>
+			<string name="ToolTip" value="The items in your Cash tab."/>
+		</imgdir>
+		<canvas name="item_bg:layer" width="329" height="229">
+			<vector name="origin" x="-679" y="-119"/>
+		</canvas>
+		<canvas name="item_over" width="329" height="229">
+			<vector name="origin" x="-679" y="-119"/>
+		</canvas>
+		<imgdir name="item_equip">
+			<canvas name="bg:layer" width="329" height="229">
+				<vector name="origin" x="-679" y="-119"/>
+				<int name="z" value="1"/>
+			</canvas>
+			<canvas name="price_enabled:layer" width="131" height="50">
+				<vector name="origin" x="-874" y="-187"/>
+				<int name="z" value="1"/>
+			</canvas>
+			<canvas name="bid:edit" width="88" height="10">
+				<vector name="origin" x="-903" y="-192"/>
+				<int name="z" value="0"/>
+				<int name="maxlen" value="10"/>
+				<int name="id" value="1233"/>
+				<int name="number" value="1"/>
+			</canvas>
+			<canvas name="buy:edit" width="88" height="10">
+				<vector name="origin" x="-903" y="-219"/>
+				<int name="z" value="0"/>
+				<int name="maxlen" value="10"/>
+				<int name="id" value="1234"/>
+				<int name="number" value="1"/>
+				<string name="source" value="UI/UIAuction.img/tab_sell/item_equip/bid:edit"/>
+			</canvas>
+			<canvas name="iconCover" width="102" height="73">
+				<vector name="origin" x="-693" y="-132"/>
+				<int name="z" value="2"/>
+			</canvas>
+			<imgdir name="Confirm:button">
+				<imgdir name="normal">
+					<canvas name="0" width="136" height="47">
+						<vector name="origin" x="-866" y="-296"/>
+					</canvas>
+				</imgdir>
+				<imgdir name="pressed">
+					<canvas name="0" width="136" height="47">
+						<vector name="origin" x="-866" y="-296"/>
+					</canvas>
+				</imgdir>
+				<imgdir name="disabled">
+					<canvas name="0" width="136" height="47">
+						<vector name="origin" x="-866" y="-296"/>
+					</canvas>
+				</imgdir>
+				<imgdir name="mouseOver">
+					<canvas name="0" width="136" height="47">
+						<vector name="origin" x="-866" y="-296"/>
+					</canvas>
+				</imgdir>
+				<int name="id" value="1200"/>
+				<string name="ToolTip" value="List the item using the settings above."/>
+			</imgdir>
+			<imgdir name="nego:button">
+				<imgdir name="normal">
+					<canvas name="0" width="50" height="22">
+						<vector name="origin" x="-743" y="-243"/>
+						<string name="z" value="2"/>
+						<string name="source" value="UI/UIAuction.img/tab_search/armor/HeungJung:button/normal/0"/>
+					</canvas>
+				</imgdir>
+				<imgdir name="checked">
+					<canvas name="0" width="50" height="22">
+						<vector name="origin" x="-745" y="-243"/>
+						<int name="z" value="2"/>
+						<string name="source" value="UI/UIAuction.img/tab_search/armor/HeungJung:button/checked/0"/>
+					</canvas>
+				</imgdir>
+				<int name="toggle" value="1"/>
+				<int name="id" value="1209"/>
+				<string name="ToolTip" value="Choose whether to allow haggling on the item. (On = haggle; Off = normal auction)"/>
+			</imgdir>
+			<imgdir name="6hour:button">
+				<imgdir name="normal">
+					<canvas name="0" width="55" height="14">
+						<vector name="origin" x="-746" y="-273"/>
+						<string name="z" value="2"/>
+					</canvas>
+				</imgdir>
+				<imgdir name="checked">
+					<canvas name="0" width="55" height="14">
+						<vector name="origin" x="-746" y="-273"/>
+						<int name="z" value="2"/>
+					</canvas>
+				</imgdir>
+				<int name="id" value="1205"/>
+			</imgdir>
+			<imgdir name="12hour:button">
+				<imgdir name="normal">
+					<canvas name="0" width="55" height="14">
+						<vector name="origin" x="-809" y="-273"/>
+						<string name="z" value="2"/>
+						<string name="source" value="UI/UIAuction.img/tab_sell/item_equip/6hour:button/normal/0"/>
+					</canvas>
+				</imgdir>
+				<imgdir name="checked">
+					<canvas name="0" width="55" height="14">
+						<vector name="origin" x="-809" y="-273"/>
+						<int name="z" value="2"/>
+						<string name="source" value="UI/UIAuction.img/tab_sell/item_equip/6hour:button/checked/0"/>
+					</canvas>
+				</imgdir>
+				<int name="id" value="1206"/>
+			</imgdir>
+			<imgdir name="24hour:button">
+				<imgdir name="normal">
+					<canvas name="0" width="55" height="14">
+						<vector name="origin" x="-872" y="-273"/>
+						<string name="z" value="2"/>
+						<string name="source" value="UI/UIAuction.img/tab_sell/item_equip/6hour:button/normal/0"/>
+					</canvas>
+				</imgdir>
+				<imgdir name="checked">
+					<canvas name="0" width="55" height="14">
+						<vector name="origin" x="-872" y="-273"/>
+						<int name="z" value="2"/>
+						<string name="source" value="UI/UIAuction.img/tab_sell/item_equip/6hour:button/checked/0"/>
+					</canvas>
+				</imgdir>
+				<imgdir name="disabled">
+					<canvas name="0" width="55" height="14">
+						<vector name="origin" x="-872" y="-273"/>
+						<int name="z" value="2"/>
+						<string name="source" value="UI/UIAuction.img/tab_sell/item_equip/6hour:button/checked/0"/>
+					</canvas>
+				</imgdir>
+				<int name="id" value="1207"/>
+				<int name="selfdisable" value="1"/>
+			</imgdir>
+			<imgdir name="48hour:button">
+				<imgdir name="normal">
+					<canvas name="0" width="55" height="14">
+						<vector name="origin" x="-935" y="-273"/>
+						<string name="z" value="2"/>
+						<string name="source" value="UI/UIAuction.img/tab_sell/item_equip/6hour:button/normal/0"/>
+					</canvas>
+				</imgdir>
+				<imgdir name="checked">
+					<canvas name="0" width="55" height="14">
+						<vector name="origin" x="-935" y="-273"/>
+						<int name="z" value="2"/>
+						<string name="source" value="UI/UIAuction.img/tab_sell/item_equip/6hour:button/checked/0"/>
+					</canvas>
+				</imgdir>
+				<imgdir name="disabled">
+					<canvas name="0" width="55" height="14">
+						<vector name="origin" x="-935" y="-273"/>
+						<int name="z" value="2"/>
+						<string name="source" value="UI/UIAuction.img/tab_sell/item_equip/6hour:button/checked/0"/>
+					</canvas>
+				</imgdir>
+				<int name="id" value="1208"/>
+				<int name="selfdisable" value="1"/>
+			</imgdir>
+			<imgdir name="TTstartPrice:tooltip">
+				<string name="text" value="Starting bid price. Must be set."/>
+				<vector name="lt" x="805" y="189"/>
+				<vector name="rb" x="865" y="205"/>
+			</imgdir>
+			<imgdir name="TTbuyPrice:tooltip">
+				<string name="text" value="Buy Now price. Leave blank if you don't want to set a Buy Now price."/>
+				<vector name="lt" x="805" y="216"/>
+				<vector name="rb" x="865" y="232"/>
+			</imgdir>
+			<imgdir name="TTnego:tooltip">
+				<string name="text" value="Choose whether to allow haggling on the item. (On = haggle; Off = normal auction)"/>
+				<vector name="lt" x="688" y="247"/>
+				<vector name="rb" x="738" y="262"/>
+			</imgdir>
+			<imgdir name="TTtime:tooltip">
+				<string name="text" value="Auction end time."/>
+				<vector name="lt" x="688" y="270"/>
+				<vector name="rb" x="739" y="287"/>
+			</imgdir>
+			<imgdir name="TTsetting:tooltip">
+				<string name="text" value="Auction fee and deposit. The deposit will be refunded if the item fails to sell."/>
+				<vector name="lt" x="691" y="299"/>
+				<vector name="rb" x="861" y="341"/>
+			</imgdir>
+		</imgdir>
+		<imgdir name="item_consume">
+			<canvas name="bg:layer" width="329" height="229">
+				<vector name="origin" x="-679" y="-119"/>
+				<int name="z" value="1"/>
+			</canvas>
+			<canvas name="sellCount:edit" width="27" height="10">
+				<vector name="origin" x="-761" y="-253"/>
+				<int name="z" value="0"/>
+				<int name="maxlen" value="4"/>
+				<int name="id" value="1231"/>
+				<int name="number" value="1"/>
+				<string name="source" value="UI/UIAuction.img/tab_search/result_consume/Number:edit"/>
+			</canvas>
+			<canvas name="buy:edit" width="88" height="10">
+				<vector name="origin" x="-902" y="-253"/>
+				<int name="z" value="0"/>
+				<int name="maxlen" value="10"/>
+				<int name="id" value="1232"/>
+				<int name="number" value="1"/>
+			</canvas>
+			<canvas name="iconCover" width="46" height="46">
+				<vector name="origin" x="-692" y="-133"/>
+				<int name="z" value="2"/>
+				<string name="source" value="UI/CashShop.img/CSNotice/iconCover"/>
+			</canvas>
+			<imgdir name="Confirm:button">
+				<imgdir name="normal">
+					<canvas name="0" width="136" height="47">
+						<vector name="origin" x="-866" y="-296"/>
+					</canvas>
+				</imgdir>
+				<imgdir name="pressed">
+					<canvas name="0" width="136" height="47">
+						<vector name="origin" x="-866" y="-296"/>
+					</canvas>
+				</imgdir>
+				<imgdir name="disabled">
+					<canvas name="0" width="136" height="47">
+						<vector name="origin" x="-866" y="-296"/>
+					</canvas>
+				</imgdir>
+				<imgdir name="mouseOver">
+					<canvas name="0" width="136" height="47">
+						<vector name="origin" x="-866" y="-296"/>
+					</canvas>
+				</imgdir>
+				<int name="id" value="1200"/>
+				<string name="ToolTip" value="List the item using the settings above."/>
+			</imgdir>
+			<imgdir name="6hour:button">
+				<imgdir name="normal">
+					<canvas name="0" width="55" height="14">
+						<vector name="origin" x="-746" y="-279"/>
+						<string name="z" value="2"/>
+						<string name="source" value="UI/UIAuction.img/tab_sell/item_equip/6hour:button/normal/0"/>
+					</canvas>
+				</imgdir>
+				<imgdir name="checked">
+					<canvas name="0" width="55" height="14">
+						<vector name="origin" x="-746" y="-279"/>
+						<int name="z" value="2"/>
+						<string name="source" value="UI/UIAuction.img/tab_sell/item_equip/6hour:button/checked/0"/>
+					</canvas>
+				</imgdir>
+				<int name="id" value="1205"/>
+			</imgdir>
+			<imgdir name="12hour:button">
+				<imgdir name="normal">
+					<canvas name="0" width="55" height="14">
+						<vector name="origin" x="-809" y="-279"/>
+						<string name="z" value="2"/>
+						<string name="source" value="UI/UIAuction.img/tab_sell/item_equip/6hour:button/normal/0"/>
+					</canvas>
+				</imgdir>
+				<imgdir name="checked">
+					<canvas name="0" width="55" height="14">
+						<vector name="origin" x="-809" y="-279"/>
+						<int name="z" value="2"/>
+						<string name="source" value="UI/UIAuction.img/tab_sell/item_equip/6hour:button/checked/0"/>
+					</canvas>
+				</imgdir>
+				<int name="id" value="1206"/>
+			</imgdir>
+			<imgdir name="24hour:button">
+				<imgdir name="normal">
+					<canvas name="0" width="55" height="14">
+						<vector name="origin" x="-872" y="-279"/>
+						<string name="z" value="2"/>
+						<string name="source" value="UI/UIAuction.img/tab_sell/item_equip/6hour:button/normal/0"/>
+					</canvas>
+				</imgdir>
+				<imgdir name="checked">
+					<canvas name="0" width="55" height="14">
+						<vector name="origin" x="-872" y="-279"/>
+						<int name="z" value="2"/>
+						<string name="source" value="UI/UIAuction.img/tab_sell/item_equip/6hour:button/checked/0"/>
+					</canvas>
+				</imgdir>
+				<imgdir name="disabled">
+					<canvas name="0" width="55" height="14">
+						<vector name="origin" x="-872" y="-279"/>
+						<int name="z" value="2"/>
+						<string name="source" value="UI/UIAuction.img/tab_sell/item_equip/6hour:button/checked/0"/>
+					</canvas>
+				</imgdir>
+				<int name="id" value="1207"/>
+				<int name="selfdisable" value="1"/>
+			</imgdir>
+			<imgdir name="48hour:button">
+				<imgdir name="normal">
+					<canvas name="0" width="55" height="14">
+						<vector name="origin" x="-935" y="-279"/>
+						<string name="z" value="2"/>
+						<string name="source" value="UI/UIAuction.img/tab_sell/item_equip/6hour:button/normal/0"/>
+					</canvas>
+				</imgdir>
+				<imgdir name="checked">
+					<canvas name="0" width="55" height="14">
+						<vector name="origin" x="-935" y="-279"/>
+						<int name="z" value="2"/>
+						<string name="source" value="UI/UIAuction.img/tab_sell/item_equip/6hour:button/checked/0"/>
+					</canvas>
+				</imgdir>
+				<imgdir name="disabled">
+					<canvas name="0" width="55" height="14">
+						<vector name="origin" x="-935" y="-279"/>
+						<int name="z" value="2"/>
+						<string name="source" value="UI/UIAuction.img/tab_sell/item_equip/6hour:button/checked/0"/>
+					</canvas>
+				</imgdir>
+				<int name="id" value="1208"/>
+				<int name="selfdisable" value="1"/>
+			</imgdir>
+			<imgdir name="TTsellCount:tooltip">
+				<string name="text" value="Quantity you'd like to sell."/>
+				<vector name="lt" x="689" y="250"/>
+				<vector name="rb" x="742" y="266"/>
+			</imgdir>
+			<imgdir name="TTprice:tooltip">
+				<string name="text" value="Sell price per item."/>
+				<vector name="lt" x="836" y="250"/>
+				<vector name="rb" x="883" y="265"/>
+			</imgdir>
+			<imgdir name="TTtime:tooltip">
+				<string name="text" value="Auction end time."/>
+				<vector name="lt" x="690" y="277"/>
+				<vector name="rb" x="739" y="294"/>
+			</imgdir>
+			<imgdir name="TTsetting:tooltip">
+				<string name="text" value="Auction fee and deposit. The deposit will be refunded if the item fails to sell."/>
+				<vector name="lt" x="691" y="299"/>
+				<vector name="rb" x="861" y="341"/>
+			</imgdir>
+		</imgdir>
+		<canvas name="sellingList_bg:layer" width="998" height="397">
+			<vector name="origin" x="-13" y="-356"/>
+			<int name="z" value="0"/>
+		</canvas>
+		<imgdir name="Front:button">
+			<imgdir name="normal">
+				<canvas name="0" width="18" height="13">
+					<vector name="origin" x="-443" y="-368"/>
+					<string name="source" value="UI/UIAuction.img/tab_search/result_equip/Front:button/normal/0"/>
+				</canvas>
+			</imgdir>
+			<imgdir name="pressed">
+				<canvas name="0" width="18" height="13">
+					<vector name="origin" x="-443" y="-368"/>
+					<string name="source" value="UI/UIAuction.img/tab_search/result_equip/Front:button/pressed/0"/>
+				</canvas>
+			</imgdir>
+			<imgdir name="disabled">
+				<canvas name="0" width="18" height="13">
+					<vector name="origin" x="-443" y="-368"/>
+					<string name="source" value="UI/UIAuction.img/tab_search/result_equip/Front:button/disabled/0"/>
+				</canvas>
+			</imgdir>
+			<imgdir name="mouseOver">
+				<canvas name="0" width="18" height="13">
+					<vector name="origin" x="-443" y="-368"/>
+					<string name="source" value="UI/UIAuction.img/tab_search/result_equip/Front:button/mouseOver/0"/>
+				</canvas>
+			</imgdir>
+			<int name="id" value="1015"/>
+			<string name="ToolTip" value="Move to first page."/>
+		</imgdir>
+		<imgdir name="Forward:button">
+			<imgdir name="normal">
+				<canvas name="0" width="18" height="13">
+					<vector name="origin" x="-464" y="-368"/>
+					<string name="source" value="UI/UIAuction.img/tab_search/result_equip/Forward:button/normal/0"/>
+				</canvas>
+			</imgdir>
+			<imgdir name="pressed">
+				<canvas name="0" width="18" height="13">
+					<vector name="origin" x="-464" y="-368"/>
+					<string name="source" value="UI/UIAuction.img/tab_search/result_equip/Forward:button/pressed/0"/>
+				</canvas>
+			</imgdir>
+			<imgdir name="disabled">
+				<canvas name="0" width="18" height="13">
+					<vector name="origin" x="-464" y="-368"/>
+					<string name="source" value="UI/UIAuction.img/tab_search/result_equip/Forward:button/disabled/0"/>
+				</canvas>
+			</imgdir>
+			<imgdir name="mouseOver">
+				<canvas name="0" width="18" height="13">
+					<vector name="origin" x="-464" y="-368"/>
+					<string name="source" value="UI/UIAuction.img/tab_search/result_equip/Forward:button/mouseOver/0"/>
+				</canvas>
+			</imgdir>
+			<int name="id" value="1016"/>
+			<string name="ToolTip" value="Move to previous page."/>
+		</imgdir>
+		<imgdir name="Backward:button">
+			<imgdir name="normal">
+				<canvas name="0" width="18" height="13">
+					<vector name="origin" x="-541" y="-368"/>
+					<string name="source" value="UI/UIAuction.img/tab_search/result_equip/Backward:button/normal/0"/>
+				</canvas>
+			</imgdir>
+			<imgdir name="pressed">
+				<canvas name="0" width="18" height="13">
+					<vector name="origin" x="-541" y="-368"/>
+					<string name="source" value="UI/UIAuction.img/tab_search/result_equip/Backward:button/pressed/0"/>
+				</canvas>
+			</imgdir>
+			<imgdir name="disabled">
+				<canvas name="0" width="18" height="13">
+					<vector name="origin" x="-541" y="-368"/>
+					<string name="source" value="UI/UIAuction.img/tab_search/result_equip/Backward:button/disabled/0"/>
+				</canvas>
+			</imgdir>
+			<imgdir name="mouseOver">
+				<canvas name="0" width="18" height="13">
+					<vector name="origin" x="-541" y="-368"/>
+					<string name="source" value="UI/UIAuction.img/tab_search/result_equip/Backward:button/mouseOver/0"/>
+				</canvas>
+			</imgdir>
+			<int name="id" value="1017"/>
+			<string name="ToolTip" value="Move to next page."/>
+		</imgdir>
+		<imgdir name="Back:button">
+			<imgdir name="normal">
+				<canvas name="0" width="18" height="13">
+					<vector name="origin" x="-562" y="-368"/>
+					<string name="source" value="UI/UIAuction.img/tab_search/result_equip/Back:button/normal/0"/>
+				</canvas>
+			</imgdir>
+			<imgdir name="pressed">
+				<canvas name="0" width="18" height="13">
+					<vector name="origin" x="-562" y="-368"/>
+					<string name="source" value="UI/UIAuction.img/tab_search/result_equip/Back:button/pressed/0"/>
+				</canvas>
+			</imgdir>
+			<imgdir name="disabled">
+				<canvas name="0" width="18" height="13">
+					<vector name="origin" x="-562" y="-368"/>
+					<string name="source" value="UI/UIAuction.img/tab_search/result_equip/Back:button/disabled/0"/>
+				</canvas>
+			</imgdir>
+			<imgdir name="mouseOver">
+				<canvas name="0" width="18" height="13">
+					<vector name="origin" x="-562" y="-368"/>
+					<string name="source" value="UI/UIAuction.img/tab_search/result_equip/Back:button/mouseOver/0"/>
+				</canvas>
+			</imgdir>
+			<int name="id" value="1018"/>
+			<string name="ToolTip" value="Move to last page."/>
+		</imgdir>
+		<imgdir name="sellingList_etc">
+			<imgdir name="sort1">
+				<canvas name="0" width="7" height="11">
+					<vector name="origin" x="-200" y="-397"/>
+					<string name="source" value="UI/UIAuction.img/tab_search/result_consume/etc/sort1/0"/>
+				</canvas>
+				<canvas name="1" width="8" height="6">
+					<vector name="origin" x="-200" y="-399"/>
+					<string name="source" value="UI/UIAuction.img/tab_search/result_consume/etc/sort1/1"/>
+				</canvas>
+				<canvas name="2" width="8" height="5">
+					<vector name="origin" x="-200" y="-399"/>
+					<string name="source" value="UI/Basic.img/Sort1/2"/>
+				</canvas>
+			</imgdir>
+			<imgdir name="sort2">
+				<canvas name="0" width="7" height="11">
+					<vector name="origin" x="-492" y="-397"/>
+					<string name="source" value="UI/UIAuction.img/tab_search/result_consume/etc/sort1/0"/>
+				</canvas>
+				<canvas name="1" width="8" height="6">
+					<vector name="origin" x="-492" y="-399"/>
+					<string name="source" value="UI/UIAuction.img/tab_search/result_consume/etc/sort1/1"/>
+				</canvas>
+				<canvas name="2" width="8" height="5">
+					<vector name="origin" x="-492" y="-399"/>
+					<string name="source" value="UI/Basic.img/Sort1/2"/>
+				</canvas>
+			</imgdir>
+			<imgdir name="sort3">
+				<canvas name="0" width="7" height="11">
+					<vector name="origin" x="-652" y="-397"/>
+					<string name="source" value="UI/UIAuction.img/tab_search/result_consume/etc/sort1/0"/>
+				</canvas>
+				<canvas name="1" width="8" height="6">
+					<vector name="origin" x="-652" y="-399"/>
+					<string name="source" value="UI/UIAuction.img/tab_search/result_consume/etc/sort1/1"/>
+				</canvas>
+				<canvas name="2" width="8" height="5">
+					<vector name="origin" x="-652" y="-399"/>
+					<string name="source" value="UI/Basic.img/Sort1/2"/>
+				</canvas>
+			</imgdir>
+			<imgdir name="sort4">
+				<canvas name="0" width="7" height="11">
+					<vector name="origin" x="-809" y="-397"/>
+					<string name="source" value="UI/UIAuction.img/tab_search/result_consume/etc/sort1/0"/>
+				</canvas>
+				<canvas name="1" width="8" height="6">
+					<vector name="origin" x="-809" y="-399"/>
+					<string name="source" value="UI/UIAuction.img/tab_search/result_consume/etc/sort1/1"/>
+				</canvas>
+				<canvas name="2" width="8" height="5">
+					<vector name="origin" x="-809" y="-399"/>
+					<string name="source" value="UI/Basic.img/Sort1/2"/>
+				</canvas>
+			</imgdir>
+			<imgdir name="sort5">
+				<canvas name="0" width="7" height="11">
+					<vector name="origin" x="-939" y="-397"/>
+					<string name="source" value="UI/UIAuction.img/tab_search/result_consume/etc/sort1/0"/>
+				</canvas>
+				<canvas name="1" width="8" height="6">
+					<vector name="origin" x="-939" y="-399"/>
+					<string name="source" value="UI/UIAuction.img/tab_search/result_consume/etc/sort1/1"/>
+				</canvas>
+				<canvas name="2" width="8" height="5">
+					<vector name="origin" x="-939" y="-399"/>
+					<string name="source" value="UI/Basic.img/Sort1/2"/>
+				</canvas>
+			</imgdir>
+			<imgdir name="bars">
+				<canvas name="iconCover" width="40" height="22">
+					<vector name="origin" x="-6" y="-6"/>
+					<int name="z" value="1"/>
+					<string name="source" value="UI/UIAuction.img/tab_search/result_equip/etc/bars/iconCover"/>
+				</canvas>
+				<canvas name="list" width="982" height="52">
+					<vector name="origin" x="0" y="0"/>
+					<int name="z" value="0"/>
+					<string name="source" value="UI/UIAuction.img/tab_bid/etc/bars/list"/>
+				</canvas>
+				<canvas name="select" width="982" height="52">
+					<vector name="origin" x="0" y="0"/>
+					<int name="z" value="0"/>
+					<string name="source" value="UI/UIAuction.img/tab_bid/etc/bars/select"/>
+				</canvas>
+				<canvas name="bidding" width="982" height="52">
+					<vector name="origin" x="0" y="0"/>
+					<int name="z" value="0"/>
+				</canvas>
+			</imgdir>
+		</imgdir>
+		<canvas name="inventoryiconCover:layer" width="576" height="205">
+			<vector name="origin" x="-78" y="-134"/>
+			<int name="z" value="2"/>
+		</canvas>
+		<imgdir name="etc">
+			<canvas name="Cancel" width="26" height="25">
+				<vector name="origin" x="0" y="0"/>
+			</canvas>
+			<imgdir name="CancelBtn">
+				<imgdir name="normal">
+					<canvas name="0" width="26" height="25">
+						<vector name="origin" x="0" y="0"/>
+						<string name="source" value="UI/UIAuction.img/tab_sell/etc/Cancel"/>
+					</canvas>
+				</imgdir>
+				<imgdir name="pressed">
+					<canvas name="0" width="26" height="25">
+						<vector name="origin" x="0" y="0"/>
+					</canvas>
+				</imgdir>
+				<imgdir name="disabled">
+					<canvas name="0" width="26" height="25">
+						<vector name="origin" x="0" y="0"/>
+					</canvas>
+				</imgdir>
+				<imgdir name="mouseOver">
+					<canvas name="0" width="26" height="25">
+						<vector name="origin" x="0" y="0"/>
+					</canvas>
+				</imgdir>
+			</imgdir>
+		</imgdir>
+		<imgdir name="TTitemName:tooltip">
+			<string name="text" value="Searched item list. Click the arrows to sort."/>
+			<vector name="lt" x="133" y="393"/>
+			<vector name="rb" x="195" y="409"/>
+		</imgdir>
+		<imgdir name="TTbarColor:tooltip">
+			<string name="text" value="Selected items and items you've bid on are highlighted in different colors."/>
+			<vector name="lt" x="783" y="366"/>
+			<vector name="rb" x="1005" y="384"/>
+		</imgdir>
+		<imgdir name="TTcurrentPrice:tooltip">
+			<string name="text" value="Current bid price. Click the arrows to sort."/>
+			<vector name="lt" x="426" y="392"/>
+			<vector name="rb" x="489" y="409"/>
+		</imgdir>
+		<imgdir name="TTbuyPrice:tooltip">
+			<string name="text" value="Buy Now price. Click the arrows to sort."/>
+			<vector name="lt" x="585" y="392"/>
+			<vector name="rb" x="649" y="408"/>
+		</imgdir>
+		<imgdir name="TTtimeRemain:tooltip">
+			<string name="text" value="Time remaining on the auction. Click the arrows to sort."/>
+			<vector name="lt" x="749" y="393"/>
+			<vector name="rb" x="801" y="408"/>
+		</imgdir>
+		<imgdir name="TTbargain:tooltip">
+			<string name="text" value="Haggle status. Click the arrows to sort."/>
+			<vector name="lt" x="909" y="393"/>
+			<vector name="rb" x="934" y="409"/>
+		</imgdir>
+	</imgdir>
+	<imgdir name="tab_complete">
+		<canvas name="complete_bg:layer" width="998" height="634">
+			<vector name="origin" x="-12" y="-120"/>
+			<int name="z" value="0"/>
+		</canvas>
+		<imgdir name="All:button">
+			<imgdir name="disabled">
+				<canvas name="0" width="77" height="26">
+					<vector name="origin" x="-17" y="-125"/>
+				</canvas>
+			</imgdir>
+			<imgdir name="normal">
+				<canvas name="0" width="77" height="26">
+					<vector name="origin" x="-17" y="-125"/>
+				</canvas>
+			</imgdir>
+			<int name="id" value="1411"/>
+			<string name="ToolTip" value="Show both purchased and sold items."/>
+		</imgdir>
+		<imgdir name="SellComplete:button">
+			<imgdir name="disabled">
+				<canvas name="0" width="77" height="26">
+					<vector name="origin" x="-95" y="-125"/>
+				</canvas>
+			</imgdir>
+			<imgdir name="normal">
+				<canvas name="0" width="77" height="26">
+					<vector name="origin" x="-95" y="-125"/>
+				</canvas>
+			</imgdir>
+			<int name="id" value="1412"/>
+			<string name="ToolTip" value="Show sold items."/>
+		</imgdir>
+		<imgdir name="BuyComplete:button">
+			<imgdir name="disabled">
+				<canvas name="0" width="77" height="26">
+					<vector name="origin" x="-173" y="-125"/>
+				</canvas>
+			</imgdir>
+			<imgdir name="normal">
+				<canvas name="0" width="77" height="26">
+					<vector name="origin" x="-173" y="-125"/>
+				</canvas>
+			</imgdir>
+			<int name="id" value="1413"/>
+			<string name="ToolTip" value="Show purchased items."/>
+		</imgdir>
+		<imgdir name="Failed:button">
+			<imgdir name="disabled">
+				<canvas name="0" width="77" height="26">
+					<vector name="origin" x="-251" y="-125"/>
+				</canvas>
+			</imgdir>
+			<imgdir name="normal">
+				<canvas name="0" width="77" height="26">
+					<vector name="origin" x="-251" y="-125"/>
+				</canvas>
+			</imgdir>
+			<int name="id" value="1414"/>
+			<string name="ToolTip" value="Show items that failed to sell or be traded."/>
+		</imgdir>
+		<imgdir name="Front:button">
+			<imgdir name="normal">
+				<canvas name="0" width="18" height="13">
+					<vector name="origin" x="-442" y="-735"/>
+					<string name="source" value="UI/UIAuction.img/tab_search/result_equip/Front:button/normal/0"/>
+				</canvas>
+			</imgdir>
+			<imgdir name="pressed">
+				<canvas name="0" width="18" height="13">
+					<vector name="origin" x="-442" y="-735"/>
+					<string name="source" value="UI/UIAuction.img/tab_search/result_equip/Front:button/pressed/0"/>
+				</canvas>
+			</imgdir>
+			<imgdir name="disabled">
+				<canvas name="0" width="18" height="13">
+					<vector name="origin" x="-442" y="-735"/>
+					<string name="source" value="UI/UIAuction.img/tab_search/result_equip/Front:button/disabled/0"/>
+				</canvas>
+			</imgdir>
+			<imgdir name="mouseOver">
+				<canvas name="0" width="18" height="13">
+					<vector name="origin" x="-442" y="-735"/>
+					<string name="source" value="UI/UIAuction.img/tab_search/result_equip/Front:button/mouseOver/0"/>
+				</canvas>
+			</imgdir>
+			<int name="id" value="1015"/>
+			<string name="ToolTip" value="Move to first page."/>
+		</imgdir>
+		<imgdir name="Forward:button">
+			<imgdir name="normal">
+				<canvas name="0" width="18" height="13">
+					<vector name="origin" x="-463" y="-735"/>
+					<string name="source" value="UI/UIAuction.img/tab_search/result_equip/Forward:button/normal/0"/>
+				</canvas>
+			</imgdir>
+			<imgdir name="pressed">
+				<canvas name="0" width="18" height="13">
+					<vector name="origin" x="-463" y="-735"/>
+					<string name="source" value="UI/UIAuction.img/tab_search/result_equip/Forward:button/pressed/0"/>
+				</canvas>
+			</imgdir>
+			<imgdir name="disabled">
+				<canvas name="0" width="18" height="13">
+					<vector name="origin" x="-463" y="-735"/>
+					<string name="source" value="UI/UIAuction.img/tab_search/result_equip/Forward:button/disabled/0"/>
+				</canvas>
+			</imgdir>
+			<imgdir name="mouseOver">
+				<canvas name="0" width="18" height="13">
+					<vector name="origin" x="-463" y="-735"/>
+					<string name="source" value="UI/UIAuction.img/tab_search/result_equip/Forward:button/mouseOver/0"/>
+				</canvas>
+			</imgdir>
+			<int name="id" value="1016"/>
+			<string name="ToolTip" value="Move to previous page."/>
+		</imgdir>
+		<imgdir name="Backward:button">
+			<imgdir name="normal">
+				<canvas name="0" width="18" height="13">
+					<vector name="origin" x="-540" y="-735"/>
+					<string name="source" value="UI/UIAuction.img/tab_search/result_equip/Backward:button/normal/0"/>
+				</canvas>
+			</imgdir>
+			<imgdir name="pressed">
+				<canvas name="0" width="18" height="13">
+					<vector name="origin" x="-540" y="-735"/>
+					<string name="source" value="UI/UIAuction.img/tab_search/result_equip/Backward:button/pressed/0"/>
+				</canvas>
+			</imgdir>
+			<imgdir name="disabled">
+				<canvas name="0" width="18" height="13">
+					<vector name="origin" x="-540" y="-735"/>
+					<string name="source" value="UI/UIAuction.img/tab_search/result_equip/Backward:button/disabled/0"/>
+				</canvas>
+			</imgdir>
+			<imgdir name="mouseOver">
+				<canvas name="0" width="18" height="13">
+					<vector name="origin" x="-540" y="-735"/>
+					<string name="source" value="UI/UIAuction.img/tab_search/result_equip/Backward:button/mouseOver/0"/>
+				</canvas>
+			</imgdir>
+			<int name="id" value="1017"/>
+			<string name="ToolTip" value="Move to next page."/>
+		</imgdir>
+		<imgdir name="Back:button">
+			<imgdir name="normal">
+				<canvas name="0" width="18" height="13">
+					<vector name="origin" x="-561" y="-735"/>
+					<string name="source" value="UI/UIAuction.img/tab_search/result_equip/Back:button/normal/0"/>
+				</canvas>
+			</imgdir>
+			<imgdir name="pressed">
+				<canvas name="0" width="18" height="13">
+					<vector name="origin" x="-561" y="-735"/>
+					<string name="source" value="UI/UIAuction.img/tab_search/result_equip/Back:button/pressed/0"/>
+				</canvas>
+			</imgdir>
+			<imgdir name="disabled">
+				<canvas name="0" width="18" height="13">
+					<vector name="origin" x="-561" y="-735"/>
+					<string name="source" value="UI/UIAuction.img/tab_search/result_equip/Back:button/disabled/0"/>
+				</canvas>
+			</imgdir>
+			<imgdir name="mouseOver">
+				<canvas name="0" width="18" height="13">
+					<vector name="origin" x="-561" y="-735"/>
+					<string name="source" value="UI/UIAuction.img/tab_search/result_equip/Back:button/mouseOver/0"/>
+				</canvas>
+			</imgdir>
+			<int name="id" value="1018"/>
+			<string name="ToolTip" value="Move to last page."/>
+		</imgdir>
+		<imgdir name="etc">
+			<canvas name="Return" width="70" height="26">
+				<vector name="origin" x="0" y="0"/>
+			</canvas>
+			<canvas name="Collect" width="70" height="26">
+				<vector name="origin" x="0" y="0"/>
+			</canvas>
+			<canvas name="Refund" width="70" height="26">
+				<vector name="origin" x="0" y="0"/>
+			</canvas>
+			<canvas name="Receipt" width="70" height="26">
+				<vector name="origin" x="0" y="0"/>
+			</canvas>
+			<imgdir name="btReturn">
+				<imgdir name="normal">
+					<canvas name="0" width="70" height="26">
+						<vector name="origin" x="0" y="0"/>
+						<string name="source" value="UI/UIAuction.img/tab_complete/etc/Return"/>
+					</canvas>
+				</imgdir>
+				<imgdir name="pressed">
+					<canvas name="0" width="70" height="26">
+						<vector name="origin" x="0" y="0"/>
+					</canvas>
+				</imgdir>
+				<imgdir name="disabled">
+					<canvas name="0" width="70" height="26">
+						<vector name="origin" x="0" y="0"/>
+					</canvas>
+				</imgdir>
+				<imgdir name="mouseOver">
+					<canvas name="0" width="70" height="26">
+						<vector name="origin" x="0" y="0"/>
+					</canvas>
+				</imgdir>
+			</imgdir>
+			<imgdir name="btCollect">
+				<imgdir name="normal">
+					<canvas name="0" width="70" height="26">
+						<vector name="origin" x="0" y="0"/>
+						<string name="source" value="UI/UIAuction.img/tab_complete/etc/Collect"/>
+					</canvas>
+				</imgdir>
+				<imgdir name="pressed">
+					<canvas name="0" width="70" height="26">
+						<vector name="origin" x="0" y="0"/>
+					</canvas>
+				</imgdir>
+				<imgdir name="disabled">
+					<canvas name="0" width="70" height="26">
+						<vector name="origin" x="0" y="0"/>
+					</canvas>
+				</imgdir>
+				<imgdir name="mouseOver">
+					<canvas name="0" width="70" height="26">
+						<vector name="origin" x="0" y="0"/>
+					</canvas>
+				</imgdir>
+			</imgdir>
+			<imgdir name="btRefund">
+				<imgdir name="normal">
+					<canvas name="0" width="70" height="26">
+						<vector name="origin" x="0" y="0"/>
+						<string name="source" value="UI/UIAuction.img/tab_complete/etc/Refund"/>
+					</canvas>
+				</imgdir>
+				<imgdir name="pressed">
+					<canvas name="0" width="70" height="26">
+						<vector name="origin" x="0" y="0"/>
+					</canvas>
+				</imgdir>
+				<imgdir name="disabled">
+					<canvas name="0" width="70" height="26">
+						<vector name="origin" x="0" y="0"/>
+					</canvas>
+				</imgdir>
+				<imgdir name="mouseOver">
+					<canvas name="0" width="70" height="26">
+						<vector name="origin" x="0" y="0"/>
+					</canvas>
+				</imgdir>
+			</imgdir>
+			<imgdir name="btReceipt">
+				<imgdir name="normal">
+					<canvas name="0" width="70" height="26">
+						<vector name="origin" x="0" y="0"/>
+						<string name="source" value="UI/UIAuction.img/tab_complete/etc/Receipt"/>
+					</canvas>
+				</imgdir>
+				<imgdir name="pressed">
+					<canvas name="0" width="70" height="26">
+						<vector name="origin" x="0" y="0"/>
+					</canvas>
+				</imgdir>
+				<imgdir name="disabled">
+					<canvas name="0" width="70" height="26">
+						<vector name="origin" x="0" y="0"/>
+					</canvas>
+				</imgdir>
+				<imgdir name="mouseOver">
+					<canvas name="0" width="70" height="26">
+						<vector name="origin" x="0" y="0"/>
+					</canvas>
+				</imgdir>
+			</imgdir>
+			<imgdir name="sort1">
+				<canvas name="0" width="7" height="11">
+					<vector name="origin" x="-112" y="-162"/>
+					<string name="source" value="UI/Basic.img/Sort1/0"/>
+				</canvas>
+				<canvas name="1" width="8" height="6">
+					<vector name="origin" x="-112" y="-164"/>
+					<string name="source" value="UI/Basic.img/Sort1/1"/>
+				</canvas>
+				<canvas name="2" width="8" height="5">
+					<vector name="origin" x="-112" y="-164"/>
+					<string name="source" value="UI/Basic.img/Sort1/2"/>
+				</canvas>
+			</imgdir>
+			<imgdir name="sort2">
+				<canvas name="0" width="7" height="11">
+					<vector name="origin" x="-352" y="-162"/>
+					<string name="source" value="UI/UIAuction.img/tab_search/result_consume/etc/sort1/0"/>
+				</canvas>
+				<canvas name="1" width="8" height="6">
+					<vector name="origin" x="-352" y="-164"/>
+					<string name="source" value="UI/Basic.img/Sort1/1"/>
+				</canvas>
+				<canvas name="2" width="8" height="5">
+					<vector name="origin" x="-352" y="-164"/>
+					<string name="source" value="UI/Basic.img/Sort1/2"/>
+				</canvas>
+			</imgdir>
+			<imgdir name="sort3">
+				<canvas name="0" width="7" height="11">
+					<vector name="origin" x="-636" y="-162"/>
+					<string name="source" value="UI/UIAuction.img/tab_search/result_consume/etc/sort1/0"/>
+				</canvas>
+				<canvas name="1" width="8" height="6">
+					<vector name="origin" x="-636" y="-164"/>
+					<string name="source" value="UI/Basic.img/Sort1/1"/>
+				</canvas>
+				<canvas name="2" width="8" height="5">
+					<vector name="origin" x="-636" y="-164"/>
+					<string name="source" value="UI/Basic.img/Sort1/2"/>
+				</canvas>
+			</imgdir>
+			<imgdir name="sort4">
+				<canvas name="0" width="7" height="11">
+					<vector name="origin" x="-790" y="-162"/>
+					<string name="source" value="UI/UIAuction.img/tab_search/result_consume/etc/sort1/0"/>
+				</canvas>
+				<canvas name="1" width="8" height="6">
+					<vector name="origin" x="-790" y="-164"/>
+					<string name="source" value="UI/Basic.img/Sort1/1"/>
+				</canvas>
+				<canvas name="2" width="8" height="5">
+					<vector name="origin" x="-790" y="-164"/>
+					<string name="source" value="UI/Basic.img/Sort1/2"/>
+				</canvas>
+			</imgdir>
+			<imgdir name="sort5">
+				<canvas name="0" width="7" height="11">
+					<vector name="origin" x="-938" y="-162"/>
+					<string name="source" value="UI/UIAuction.img/tab_search/result_consume/etc/sort1/0"/>
+				</canvas>
+				<canvas name="1" width="8" height="6">
+					<vector name="origin" x="-938" y="-164"/>
+					<string name="source" value="UI/Basic.img/Sort1/1"/>
+				</canvas>
+				<canvas name="2" width="8" height="5">
+					<vector name="origin" x="-938" y="-164"/>
+					<string name="source" value="UI/Basic.img/Sort1/2"/>
+				</canvas>
+			</imgdir>
+			<imgdir name="bars">
+				<canvas name="iconCover" width="40" height="22">
+					<vector name="origin" x="-154" y="-6"/>
+					<int name="z" value="1"/>
+					<string name="source" value="UI/UIAuction.img/tab_search/result_equip/etc/bars/iconCover"/>
+				</canvas>
+				<canvas name="list" width="982" height="52">
+					<vector name="origin" x="0" y="0"/>
+					<int name="z" value="0"/>
+				</canvas>
+				<canvas name="select" width="982" height="52">
+					<vector name="origin" x="0" y="0"/>
+					<int name="z" value="0"/>
+				</canvas>
+			</imgdir>
+		</imgdir>
+		<imgdir name="TTdate:tooltip">
+			<string name="text" value="Auction end date."/>
+			<vector name="lt" x="82" y="158"/>
+			<vector name="rb" x="107" y="173"/>
+		</imgdir>
+		<imgdir name="TTitemName:tooltip">
+			<string name="text" value="Completed auctions. Click the arrows to sort."/>
+			<vector name="lt" x="289" y="159"/>
+			<vector name="rb" x="348" y="173"/>
+		</imgdir>
+		<imgdir name="TTitemStatus:tooltip">
+			<string name="text" value="Auction status. Click the arrows to sort."/>
+			<vector name="lt" x="604" y="158"/>
+			<vector name="rb" x="630" y="174"/>
+		</imgdir>
+		<imgdir name="TTmyPrice:tooltip">
+			<string name="text" value="Final price. Click the arrows to sort."/>
+			<vector name="lt" x="762" y="158"/>
+			<vector name="rb" x="788" y="174"/>
+		</imgdir>
+		<imgdir name="TTitemStatus2:tooltip">
+			<string name="text" value="Check item status and collect items.\nClick the arrows to sort."/>
+			<vector name="lt" x="908" y="158"/>
+			<vector name="rb" x="933" y="173"/>
+		</imgdir>
+	</imgdir>
+	<imgdir name="manageUI">
+		<canvas name="backgrnd" width="596" height="515">
+			<vector name="origin" x="0" y="0"/>
+			<int name="z" value="0"/>
+		</canvas>
+		<canvas name="noResult" width="409" height="135">
+			<vector name="origin" x="-90" y="-211"/>
+			<int name="z" value="0"/>
+		</canvas>
+		<canvas name="noBid" width="269" height="145">
+			<vector name="origin" x="-153" y="-211"/>
+			<int name="z" value="0"/>
+		</canvas>
+		<canvas name="noSell" width="435" height="134">
+			<vector name="origin" x="-78" y="-211"/>
+			<int name="z" value="0"/>
+		</canvas>
+		<imgdir name="BargainList:button">
+			<imgdir name="disabled">
+				<canvas name="0" width="186" height="28">
+					<vector name="origin" x="-14" y="-53"/>
+				</canvas>
+			</imgdir>
+			<imgdir name="normal">
+				<canvas name="0" width="186" height="28">
+					<vector name="origin" x="-14" y="-53"/>
+				</canvas>
+			</imgdir>
+			<int name="id" value="1010"/>
+		</imgdir>
+		<imgdir name="BidList:button">
+			<imgdir name="disabled">
+				<canvas name="0" width="186" height="28">
+					<vector name="origin" x="-205" y="-53"/>
+				</canvas>
+			</imgdir>
+			<imgdir name="normal">
+				<canvas name="0" width="186" height="28">
+					<vector name="origin" x="-205" y="-53"/>
+				</canvas>
+			</imgdir>
+			<imgdir name="normal2">
+				<canvas name="0" width="186" height="28">
+					<vector name="origin" x="-205" y="-53"/>
+				</canvas>
+			</imgdir>
+			<int name="id" value="1011"/>
+			<string name="ToolTip" value="This menu cannot be used right now."/>
+		</imgdir>
+		<imgdir name="SellList:button">
+			<imgdir name="disabled">
+				<canvas name="0" width="186" height="28">
+					<vector name="origin" x="-396" y="-53"/>
+				</canvas>
+			</imgdir>
+			<imgdir name="normal">
+				<canvas name="0" width="186" height="28">
+					<vector name="origin" x="-396" y="-53"/>
+				</canvas>
+			</imgdir>
+			<imgdir name="normal2">
+				<canvas name="0" width="186" height="28">
+					<vector name="origin" x="-396" y="-53"/>
+				</canvas>
+			</imgdir>
+			<int name="id" value="1012"/>
+			<string name="ToolTip" value="This menu cannot be used right now."/>
+		</imgdir>
+		<imgdir name="Exit:button">
+			<int name="id" value="1000"/>
+			<imgdir name="normal">
+				<canvas name="0" width="22" height="21">
+					<vector name="origin" x="-562" y="-13"/>
+				</canvas>
+			</imgdir>
+			<imgdir name="pressed">
+				<canvas name="0" width="22" height="21">
+					<vector name="origin" x="-562" y="-13"/>
+				</canvas>
+			</imgdir>
+			<imgdir name="disabled">
+				<canvas name="0" width="22" height="21">
+					<vector name="origin" x="-562" y="-13"/>
+				</canvas>
+			</imgdir>
+			<imgdir name="mouseOver">
+				<canvas name="0" width="22" height="21">
+					<vector name="origin" x="-562" y="-13"/>
+				</canvas>
+			</imgdir>
+			<string name="ToolTip" value="Exit Auction management menu."/>
+		</imgdir>
+		<imgdir name="BargainList">
+			<imgdir name="take">
+				<canvas name="backgrnd" width="541" height="101">
+					<vector name="origin" x="0" y="0"/>
+					<int name="z" value="0"/>
+				</canvas>
+				<canvas name="iconCover" width="48" height="41">
+					<vector name="origin" x="-12" y="-12"/>
+					<int name="z" value="0"/>
+				</canvas>
+				<imgdir name="Confirm:button">
+					<int name="id" value="1000"/>
+					<imgdir name="normal">
+						<canvas name="0" width="82" height="82">
+							<vector name="origin" x="-450" y="-9"/>
+						</canvas>
+					</imgdir>
+					<imgdir name="pressed">
+						<canvas name="0" width="82" height="82">
+							<vector name="origin" x="-450" y="-9"/>
+						</canvas>
+					</imgdir>
+					<imgdir name="disabled">
+						<canvas name="0" width="82" height="82">
+							<vector name="origin" x="-450" y="-9"/>
+						</canvas>
+					</imgdir>
+					<imgdir name="mouseOver">
+						<canvas name="0" width="82" height="82">
+							<vector name="origin" x="-450" y="-9"/>
+						</canvas>
+					</imgdir>
+				</imgdir>
+			</imgdir>
+			<imgdir name="send">
+				<canvas name="backgrnd" width="537" height="96">
+					<vector name="origin" x="0" y="0"/>
+					<int name="z" value="0"/>
+				</canvas>
+				<canvas name="iconCover" width="48" height="41">
+					<vector name="origin" x="-10" y="-10"/>
+					<int name="z" value="0"/>
+				</canvas>
+				<imgdir name="status">
+					<canvas name="0" width="96" height="16">
+						<vector name="origin" x="-298" y="-37"/>
+						<int name="z" value="0"/>
+					</canvas>
+					<canvas name="1" width="82" height="17">
+						<vector name="origin" x="-297" y="-38"/>
+						<int name="z" value="0"/>
+					</canvas>
+					<canvas name="2" width="75" height="15">
+						<vector name="origin" x="-300" y="-38"/>
+						<int name="z" value="0"/>
+					</canvas>
+				</imgdir>
+				<imgdir name="Confirm:button">
+					<int name="id" value="1000"/>
+					<imgdir name="normal">
+						<canvas name="0" width="82" height="82">
+							<vector name="origin" x="-448" y="-7"/>
+						</canvas>
+					</imgdir>
+					<imgdir name="pressed">
+						<canvas name="0" width="82" height="82">
+							<vector name="origin" x="-448" y="-7"/>
+						</canvas>
+					</imgdir>
+					<imgdir name="disabled">
+						<canvas name="0" width="82" height="82">
+							<vector name="origin" x="-448" y="-7"/>
+						</canvas>
+					</imgdir>
+					<imgdir name="mouseOver">
+						<canvas name="0" width="82" height="82">
+							<vector name="origin" x="-448" y="-7"/>
+						</canvas>
+					</imgdir>
+				</imgdir>
+			</imgdir>
+		</imgdir>
+		<imgdir name="BidList">
+			<canvas name="backgrnd" width="560" height="399">
+				<vector name="origin" x="-18" y="-94"/>
+				<int name="z" value="1"/>
+			</canvas>
+		</imgdir>
+		<imgdir name="SellList">
+			<canvas name="backgrnd" width="560" height="399">
+				<vector name="origin" x="-18" y="-94"/>
+				<int name="z" value="1"/>
+			</canvas>
+		</imgdir>
+	</imgdir>
+	<imgdir name="popup_bid">
+		<canvas name="backgrnd" width="399" height="295">
+			<vector name="origin" x="0" y="0"/>
+			<int name="z" value="2"/>
+		</canvas>
+		<canvas name="iconCover" width="46" height="46">
+			<vector name="origin" x="-83" y="-44"/>
+			<int name="z" value="0"/>
+		</canvas>
+		<canvas name="bid:edit" width="88" height="11">
+			<vector name="origin" x="-242" y="-152"/>
+			<int name="z" value="0"/>
+			<int name="maxlen" value="10"/>
+			<int name="number" value="1"/>
+		</canvas>
+		<imgdir name="Yes:button">
+			<imgdir name="normal">
+				<canvas name="0" width="83" height="26">
+					<vector name="origin" x="-109" y="-249"/>
+				</canvas>
+			</imgdir>
+			<imgdir name="pressed">
+				<canvas name="0" width="83" height="26">
+					<vector name="origin" x="-109" y="-249"/>
+				</canvas>
+			</imgdir>
+			<imgdir name="disabled">
+				<canvas name="0" width="83" height="26">
+					<vector name="origin" x="-109" y="-249"/>
+				</canvas>
+			</imgdir>
+			<imgdir name="mouseOver">
+				<canvas name="0" width="83" height="26">
+					<vector name="origin" x="-109" y="-249"/>
+				</canvas>
+			</imgdir>
+			<int name="id" value="1"/>
+		</imgdir>
+		<imgdir name="No:button">
+			<imgdir name="normal">
+				<canvas name="0" width="83" height="26">
+					<vector name="origin" x="-198" y="-249"/>
+				</canvas>
+			</imgdir>
+			<imgdir name="pressed">
+				<canvas name="0" width="83" height="26">
+					<vector name="origin" x="-198" y="-249"/>
+				</canvas>
+			</imgdir>
+			<imgdir name="disabled">
+				<canvas name="0" width="83" height="26">
+					<vector name="origin" x="-198" y="-249"/>
+				</canvas>
+			</imgdir>
+			<imgdir name="mouseOver">
+				<canvas name="0" width="83" height="26">
+					<vector name="origin" x="-198" y="-249"/>
+				</canvas>
+			</imgdir>
+			<int name="id" value="2"/>
+		</imgdir>
+	</imgdir>
+	<imgdir name="popup_rebid">
+		<canvas name="backgrnd" width="399" height="295">
+			<vector name="origin" x="0" y="0"/>
+			<int name="z" value="2"/>
+		</canvas>
+		<canvas name="iconCover" width="46" height="46">
+			<vector name="origin" x="-83" y="-44"/>
+			<int name="z" value="0"/>
+			<string name="source" value="UI/UIAuction.img/popup_bid/iconCover"/>
+		</canvas>
+		<canvas name="bid:edit" width="88" height="11">
+			<vector name="origin" x="-242" y="-152"/>
+			<int name="z" value="0"/>
+			<int name="maxlen" value="10"/>
+			<int name="number" value="1"/>
+			<string name="source" value="UI/UIAuction.img/popup_bid/bid:edit"/>
+		</canvas>
+		<imgdir name="Yes:button">
+			<imgdir name="normal">
+				<canvas name="0" width="83" height="26">
+					<vector name="origin" x="-109" y="-249"/>
+					<string name="source" value="UI/UIAuction.img/popup_bid/Yes:button/normal/0"/>
+				</canvas>
+			</imgdir>
+			<imgdir name="pressed">
+				<canvas name="0" width="83" height="26">
+					<vector name="origin" x="-109" y="-249"/>
+					<string name="source" value="UI/UIAuction.img/popup_bid/Yes:button/pressed/0"/>
+				</canvas>
+			</imgdir>
+			<imgdir name="disabled">
+				<canvas name="0" width="83" height="26">
+					<vector name="origin" x="-109" y="-249"/>
+					<string name="source" value="UI/UIAuction.img/popup_bid/Yes:button/disabled/0"/>
+				</canvas>
+			</imgdir>
+			<imgdir name="mouseOver">
+				<canvas name="0" width="83" height="26">
+					<vector name="origin" x="-109" y="-249"/>
+					<string name="source" value="UI/UIAuction.img/popup_bid/Yes:button/mouseOver/0"/>
+				</canvas>
+			</imgdir>
+			<int name="id" value="1"/>
+		</imgdir>
+		<imgdir name="No:button">
+			<imgdir name="normal">
+				<canvas name="0" width="83" height="26">
+					<vector name="origin" x="-198" y="-249"/>
+					<string name="source" value="UI/UIAuction.img/popup_bid/No:button/normal/0"/>
+				</canvas>
+			</imgdir>
+			<imgdir name="pressed">
+				<canvas name="0" width="83" height="26">
+					<vector name="origin" x="-198" y="-249"/>
+					<string name="source" value="UI/UIAuction.img/popup_bid/No:button/pressed/0"/>
+				</canvas>
+			</imgdir>
+			<imgdir name="disabled">
+				<canvas name="0" width="83" height="26">
+					<vector name="origin" x="-198" y="-249"/>
+					<string name="source" value="UI/UIAuction.img/popup_bid/No:button/disabled/0"/>
+				</canvas>
+			</imgdir>
+			<imgdir name="mouseOver">
+				<canvas name="0" width="83" height="26">
+					<vector name="origin" x="-198" y="-249"/>
+					<string name="source" value="UI/UIAuction.img/popup_bid/No:button/mouseOver/0"/>
+				</canvas>
+			</imgdir>
+			<int name="id" value="2"/>
+		</imgdir>
+	</imgdir>
+	<imgdir name="popup_buy">
+		<canvas name="backgrnd" width="399" height="295">
+			<vector name="origin" x="0" y="0"/>
+			<int name="z" value="2"/>
+		</canvas>
+		<canvas name="iconCover" width="46" height="46">
+			<vector name="origin" x="-83" y="-44"/>
+			<int name="z" value="0"/>
+			<string name="source" value="UI/UIAuction.img/popup_bid/iconCover"/>
+		</canvas>
+		<imgdir name="Yes:button">
+			<imgdir name="normal">
+				<canvas name="0" width="83" height="26">
+					<vector name="origin" x="-109" y="-249"/>
+					<string name="source" value="UI/UIAuction.img/popup_bid/Yes:button/normal/0"/>
+				</canvas>
+			</imgdir>
+			<imgdir name="pressed">
+				<canvas name="0" width="83" height="26">
+					<vector name="origin" x="-109" y="-249"/>
+					<string name="source" value="UI/UIAuction.img/popup_bid/Yes:button/pressed/0"/>
+				</canvas>
+			</imgdir>
+			<imgdir name="disabled">
+				<canvas name="0" width="83" height="26">
+					<vector name="origin" x="-109" y="-249"/>
+					<string name="source" value="UI/UIAuction.img/popup_bid/Yes:button/disabled/0"/>
+				</canvas>
+			</imgdir>
+			<imgdir name="mouseOver">
+				<canvas name="0" width="83" height="26">
+					<vector name="origin" x="-109" y="-249"/>
+					<string name="source" value="UI/UIAuction.img/popup_bid/Yes:button/mouseOver/0"/>
+				</canvas>
+			</imgdir>
+			<int name="id" value="1"/>
+		</imgdir>
+		<imgdir name="No:button">
+			<imgdir name="normal">
+				<canvas name="0" width="83" height="26">
+					<vector name="origin" x="-198" y="-249"/>
+					<string name="source" value="UI/UIAuction.img/popup_bid/No:button/normal/0"/>
+				</canvas>
+			</imgdir>
+			<imgdir name="pressed">
+				<canvas name="0" width="83" height="26">
+					<vector name="origin" x="-198" y="-249"/>
+					<string name="source" value="UI/UIAuction.img/popup_bid/No:button/pressed/0"/>
+				</canvas>
+			</imgdir>
+			<imgdir name="disabled">
+				<canvas name="0" width="83" height="26">
+					<vector name="origin" x="-198" y="-249"/>
+					<string name="source" value="UI/UIAuction.img/popup_bid/No:button/disabled/0"/>
+				</canvas>
+			</imgdir>
+			<imgdir name="mouseOver">
+				<canvas name="0" width="83" height="26">
+					<vector name="origin" x="-198" y="-249"/>
+					<string name="source" value="UI/UIAuction.img/popup_bid/No:button/mouseOver/0"/>
+				</canvas>
+			</imgdir>
+			<int name="id" value="2"/>
+		</imgdir>
+	</imgdir>
+	<imgdir name="popup_alertBox">
+		<canvas name="backgrnd" width="429" height="151">
+			<vector name="origin" x="0" y="0"/>
+			<int name="z" value="2"/>
+		</canvas>
+		<imgdir name="Yes:button">
+			<imgdir name="normal">
+				<canvas name="0" width="83" height="26">
+					<vector name="origin" x="-129" y="-105"/>
+					<string name="source" value="UI/UIAuction.img/popup_bid/Yes:button/normal/0"/>
+				</canvas>
+			</imgdir>
+			<imgdir name="pressed">
+				<canvas name="0" width="83" height="26">
+					<vector name="origin" x="-129" y="-105"/>
+					<string name="source" value="UI/UIAuction.img/popup_bid/Yes:button/pressed/0"/>
+				</canvas>
+			</imgdir>
+			<imgdir name="disabled">
+				<canvas name="0" width="83" height="26">
+					<vector name="origin" x="-129" y="-105"/>
+					<string name="source" value="UI/UIAuction.img/popup_bid/Yes:button/disabled/0"/>
+				</canvas>
+			</imgdir>
+			<imgdir name="mouseOver">
+				<canvas name="0" width="83" height="26">
+					<vector name="origin" x="-129" y="-105"/>
+					<string name="source" value="UI/UIAuction.img/popup_bid/Yes:button/mouseOver/0"/>
+				</canvas>
+			</imgdir>
+			<int name="id" value="1"/>
+		</imgdir>
+		<imgdir name="No:button">
+			<imgdir name="normal">
+				<canvas name="0" width="83" height="26">
+					<vector name="origin" x="-218" y="-105"/>
+					<string name="source" value="UI/UIAuction.img/popup_bid/No:button/normal/0"/>
+				</canvas>
+			</imgdir>
+			<imgdir name="pressed">
+				<canvas name="0" width="83" height="26">
+					<vector name="origin" x="-218" y="-105"/>
+					<string name="source" value="UI/UIAuction.img/popup_bid/No:button/pressed/0"/>
+				</canvas>
+			</imgdir>
+			<imgdir name="disabled">
+				<canvas name="0" width="83" height="26">
+					<vector name="origin" x="-218" y="-105"/>
+					<string name="source" value="UI/UIAuction.img/popup_bid/No:button/disabled/0"/>
+				</canvas>
+			</imgdir>
+			<imgdir name="mouseOver">
+				<canvas name="0" width="83" height="26">
+					<vector name="origin" x="-218" y="-105"/>
+					<string name="source" value="UI/UIAuction.img/popup_bid/No:button/mouseOver/0"/>
+				</canvas>
+			</imgdir>
+			<int name="id" value="2"/>
+		</imgdir>
+	</imgdir>
+	<imgdir name="popup_noti">
+		<canvas name="backgrnd" width="353" height="106">
+			<vector name="origin" x="0" y="0"/>
+			<int name="z" value="2"/>
+		</canvas>
+		<canvas name="backgrnd2" width="353" height="106">
+			<vector name="origin" x="0" y="0"/>
+			<int name="z" value="2"/>
+		</canvas>
+		<canvas name="backgrnd3" width="413" height="136">
+			<vector name="origin" x="0" y="0"/>
+			<int name="z" value="0"/>
+		</canvas>
+	</imgdir>
+	<imgdir name="bargain_ask">
+		<canvas name="backgrnd" width="419" height="305">
+			<vector name="origin" x="0" y="0"/>
+			<int name="z" value="2"/>
+		</canvas>
+		<canvas name="iconCover" width="46" height="46">
+			<vector name="origin" x="-93" y="-44"/>
+			<int name="z" value="0"/>
+			<string name="source" value="UI/CashShop.img/CSNotice/iconCover"/>
+		</canvas>
+		<imgdir name="Yes:button">
+			<imgdir name="normal">
+				<canvas name="0" width="83" height="26">
+					<vector name="origin" x="-124" y="-259"/>
+					<string name="source" value="UI/UIAuction.img/popup_bid/Yes:button/normal/0"/>
+				</canvas>
+			</imgdir>
+			<imgdir name="pressed">
+				<canvas name="0" width="83" height="26">
+					<vector name="origin" x="-124" y="-259"/>
+					<string name="source" value="UI/UIAuction.img/popup_bid/Yes:button/pressed/0"/>
+				</canvas>
+			</imgdir>
+			<imgdir name="disabled">
+				<canvas name="0" width="83" height="26">
+					<vector name="origin" x="-124" y="-259"/>
+					<string name="source" value="UI/UIAuction.img/popup_bid/Yes:button/disabled/0"/>
+				</canvas>
+			</imgdir>
+			<imgdir name="mouseOver">
+				<canvas name="0" width="83" height="26">
+					<vector name="origin" x="-124" y="-259"/>
+					<string name="source" value="UI/UIAuction.img/popup_bid/Yes:button/mouseOver/0"/>
+				</canvas>
+			</imgdir>
+			<int name="id" value="1"/>
+		</imgdir>
+		<imgdir name="No:button">
+			<imgdir name="normal">
+				<canvas name="0" width="83" height="26">
+					<vector name="origin" x="-213" y="-259"/>
+					<string name="source" value="UI/UIAuction.img/popup_bid/No:button/normal/0"/>
+				</canvas>
+			</imgdir>
+			<imgdir name="pressed">
+				<canvas name="0" width="83" height="26">
+					<vector name="origin" x="-213" y="-259"/>
+					<string name="source" value="UI/UIAuction.img/popup_bid/No:button/pressed/0"/>
+				</canvas>
+			</imgdir>
+			<imgdir name="disabled">
+				<canvas name="0" width="83" height="26">
+					<vector name="origin" x="-213" y="-259"/>
+					<string name="source" value="UI/UIAuction.img/popup_bid/No:button/disabled/0"/>
+				</canvas>
+			</imgdir>
+			<imgdir name="mouseOver">
+				<canvas name="0" width="83" height="26">
+					<vector name="origin" x="-213" y="-259"/>
+					<string name="source" value="UI/UIAuction.img/popup_bid/No:button/mouseOver/0"/>
+				</canvas>
+			</imgdir>
+			<int name="id" value="2"/>
+		</imgdir>
+		<canvas name="bid:edit" width="88" height="11">
+			<vector name="origin" x="-227" y="-129"/>
+			<int name="z" value="3"/>
+			<int name="maxlen" value="10"/>
+			<int name="number" value="1"/>
+		</canvas>
+		<canvas name="message:edit" width="348" height="12">
+			<vector name="origin" x="-35" y="-216"/>
+			<int name="z" value="0"/>
+			<int name="maxlen" value="60"/>
+			<string name="font" value="MD모리스9"/>
+			<string name="color" value="ff555555"/>
+			<int name="height" value="11"/>
+		</canvas>
+	</imgdir>
+	<imgdir name="bargain_confirm">
+		<canvas name="backgrnd" width="420" height="305">
+			<vector name="origin" x="0" y="0"/>
+			<int name="z" value="2"/>
+		</canvas>
+		<canvas name="iconCover" width="46" height="46">
+			<vector name="origin" x="-93" y="-44"/>
+			<int name="z" value="0"/>
+			<string name="source" value="UI/UIAuction.img/popup_bid/iconCover"/>
+		</canvas>
+		<imgdir name="Yes:button">
+			<imgdir name="normal">
+				<canvas name="0" width="83" height="26">
+					<vector name="origin" x="-124" y="-259"/>
+				</canvas>
+			</imgdir>
+			<imgdir name="pressed">
+				<canvas name="0" width="83" height="26">
+					<vector name="origin" x="-124" y="-259"/>
+				</canvas>
+			</imgdir>
+			<imgdir name="disabled">
+				<canvas name="0" width="83" height="26">
+					<vector name="origin" x="-124" y="-259"/>
+				</canvas>
+			</imgdir>
+			<imgdir name="mouseOver">
+				<canvas name="0" width="83" height="26">
+					<vector name="origin" x="-124" y="-259"/>
+				</canvas>
+			</imgdir>
+			<int name="id" value="1"/>
+		</imgdir>
+		<imgdir name="No:button">
+			<imgdir name="normal">
+				<canvas name="0" width="83" height="26">
+					<vector name="origin" x="-213" y="-259"/>
+				</canvas>
+			</imgdir>
+			<imgdir name="pressed">
+				<canvas name="0" width="83" height="26">
+					<vector name="origin" x="-213" y="-259"/>
+				</canvas>
+			</imgdir>
+			<imgdir name="disabled">
+				<canvas name="0" width="83" height="26">
+					<vector name="origin" x="-213" y="-259"/>
+				</canvas>
+			</imgdir>
+			<imgdir name="mouseOver">
+				<canvas name="0" width="83" height="26">
+					<vector name="origin" x="-213" y="-259"/>
+				</canvas>
+			</imgdir>
+			<int name="id" value="2"/>
+		</imgdir>
+	</imgdir>
+	<imgdir name="bargain_refuse">
+		<canvas name="backgrnd" width="420" height="305">
+			<vector name="origin" x="0" y="0"/>
+			<int name="z" value="0"/>
+		</canvas>
+		<canvas name="iconCover" width="46" height="46">
+			<vector name="origin" x="-93" y="-44"/>
+			<int name="z" value="0"/>
+			<string name="source" value="UI/CashShop.img/CSNotice/iconCover"/>
+		</canvas>
+		<imgdir name="Yes:button">
+			<imgdir name="normal">
+				<canvas name="0" width="83" height="26">
+					<vector name="origin" x="-124" y="-259"/>
+					<string name="source" value="UI/UIAuction.img/popup_bid/Yes:button/normal/0"/>
+				</canvas>
+			</imgdir>
+			<imgdir name="pressed">
+				<canvas name="0" width="83" height="26">
+					<vector name="origin" x="-124" y="-259"/>
+					<string name="source" value="UI/UIAuction.img/popup_bid/Yes:button/pressed/0"/>
+				</canvas>
+			</imgdir>
+			<imgdir name="disabled">
+				<canvas name="0" width="83" height="26">
+					<vector name="origin" x="-124" y="-259"/>
+					<string name="source" value="UI/UIAuction.img/popup_bid/Yes:button/disabled/0"/>
+				</canvas>
+			</imgdir>
+			<imgdir name="mouseOver">
+				<canvas name="0" width="83" height="26">
+					<vector name="origin" x="-124" y="-259"/>
+					<string name="source" value="UI/UIAuction.img/popup_bid/Yes:button/mouseOver/0"/>
+				</canvas>
+			</imgdir>
+			<int name="id" value="1"/>
+		</imgdir>
+		<imgdir name="No:button">
+			<imgdir name="normal">
+				<canvas name="0" width="83" height="26">
+					<vector name="origin" x="-213" y="-259"/>
+					<string name="source" value="UI/UIAuction.img/popup_bid/No:button/normal/0"/>
+				</canvas>
+			</imgdir>
+			<imgdir name="pressed">
+				<canvas name="0" width="83" height="26">
+					<vector name="origin" x="-213" y="-259"/>
+					<string name="source" value="UI/UIAuction.img/popup_bid/No:button/pressed/0"/>
+				</canvas>
+			</imgdir>
+			<imgdir name="disabled">
+				<canvas name="0" width="83" height="26">
+					<vector name="origin" x="-213" y="-259"/>
+					<string name="source" value="UI/UIAuction.img/popup_bid/No:button/disabled/0"/>
+				</canvas>
+			</imgdir>
+			<imgdir name="mouseOver">
+				<canvas name="0" width="83" height="26">
+					<vector name="origin" x="-213" y="-259"/>
+					<string name="source" value="UI/UIAuction.img/popup_bid/No:button/mouseOver/0"/>
+				</canvas>
+			</imgdir>
+			<int name="id" value="2"/>
+		</imgdir>
+		<canvas name="message:edit" width="348" height="12">
+			<vector name="origin" x="-35" y="-216"/>
+			<int name="z" value="0"/>
+			<int name="maxlen" value="60"/>
+			<string name="font" value="MD모리스9"/>
+			<string name="color" value="ff555555"/>
+			<int name="height" value="11"/>
+			<string name="source" value="UI/UIAuction.img/bargain_ask/message:edit"/>
+		</canvas>
+	</imgdir>
+	<imgdir name="bargain_complete">
+		<canvas name="backgrnd" width="353" height="106">
+			<vector name="origin" x="0" y="0"/>
+			<int name="z" value="0"/>
+		</canvas>
+	</imgdir>
+	<imgdir name="bargain_failed">
+		<canvas name="backgrnd" width="429" height="151">
+			<vector name="origin" x="0" y="0"/>
+			<int name="z" value="0"/>
+		</canvas>
+		<imgdir name="Yes:button">
+			<imgdir name="normal">
+				<canvas name="0" width="83" height="26">
+					<vector name="origin" x="-173" y="-105"/>
+					<string name="source" value="UI/UIAuction.img/popup_bid/Yes:button/normal/0"/>
+				</canvas>
+			</imgdir>
+			<imgdir name="pressed">
+				<canvas name="0" width="83" height="26">
+					<vector name="origin" x="-173" y="-105"/>
+					<string name="source" value="UI/UIAuction.img/popup_bid/Yes:button/pressed/0"/>
+				</canvas>
+			</imgdir>
+			<imgdir name="disabled">
+				<canvas name="0" width="83" height="26">
+					<vector name="origin" x="-173" y="-105"/>
+					<string name="source" value="UI/UIAuction.img/popup_bid/Yes:button/disabled/0"/>
+				</canvas>
+			</imgdir>
+			<imgdir name="mouseOver">
+				<canvas name="0" width="83" height="26">
+					<vector name="origin" x="-173" y="-105"/>
+					<string name="source" value="UI/UIAuction.img/popup_bid/Yes:button/mouseOver/0"/>
+				</canvas>
+			</imgdir>
+			<int name="id" value="1"/>
+		</imgdir>
+	</imgdir>
+	<imgdir name="btNotsail">
+		<canvas name="0" width="320" height="19">
+			<vector name="origin" x="0" y="0"/>
+			<int name="z" value="0"/>
+			<int name="delay" value="150"/>
+		</canvas>
+		<canvas name="1" width="322" height="28">
+			<vector name="origin" x="1" y="-4"/>
+			<int name="z" value="0"/>
+			<int name="delay" value="150"/>
+		</canvas>
+		<canvas name="2" width="322" height="28">
+			<vector name="origin" x="1" y="-13"/>
+			<int name="z" value="0"/>
+			<int name="delay" value="150"/>
+		</canvas>
+		<canvas name="3" width="322" height="28">
+			<vector name="origin" x="1" y="-10"/>
+			<int name="z" value="0"/>
+			<int name="delay" value="150"/>
+			<string name="source" value="UI/UIAuction.img/btNotsail/2"/>
+		</canvas>
+		<canvas name="4" width="322" height="28">
+			<vector name="origin" x="1" y="-12"/>
+			<int name="z" value="0"/>
+			<int name="delay" value="150"/>
+			<string name="source" value="UI/UIAuction.img/btNotsail/2"/>
+		</canvas>
+		<canvas name="5" width="322" height="28">
+			<vector name="origin" x="1" y="-11"/>
+			<int name="z" value="0"/>
+			<int name="delay" value="5000"/>
+			<string name="source" value="UI/UIAuction.img/btNotsail/2"/>
+		</canvas>
+	</imgdir>
+	<imgdir name="btOutbid">
+		<canvas name="0" width="320" height="19">
+			<vector name="origin" x="0" y="0"/>
+			<int name="z" value="0"/>
+			<int name="delay" value="150"/>
+		</canvas>
+		<canvas name="1" width="322" height="28">
+			<vector name="origin" x="1" y="-4"/>
+			<int name="z" value="0"/>
+			<int name="delay" value="150"/>
+		</canvas>
+		<canvas name="2" width="322" height="28">
+			<vector name="origin" x="1" y="-13"/>
+			<int name="z" value="0"/>
+			<int name="delay" value="150"/>
+		</canvas>
+		<canvas name="3" width="322" height="28">
+			<vector name="origin" x="1" y="-10"/>
+			<int name="z" value="0"/>
+			<int name="delay" value="150"/>
+			<string name="source" value="UI/UIAuction.img/btOutbid/2"/>
+		</canvas>
+		<canvas name="4" width="322" height="28">
+			<vector name="origin" x="1" y="-12"/>
+			<int name="z" value="0"/>
+			<int name="delay" value="150"/>
+			<string name="source" value="UI/UIAuction.img/btOutbid/2"/>
+		</canvas>
+		<canvas name="5" width="322" height="28">
+			<vector name="origin" x="1" y="-11"/>
+			<int name="z" value="0"/>
+			<int name="delay" value="5000"/>
+			<string name="source" value="UI/UIAuction.img/btOutbid/2"/>
+		</canvas>
+	</imgdir>
+	<imgdir name="btSold">
+		<canvas name="0" width="320" height="19">
+			<vector name="origin" x="0" y="0"/>
+			<int name="z" value="0"/>
+			<int name="delay" value="150"/>
+		</canvas>
+		<canvas name="1" width="322" height="28">
+			<vector name="origin" x="1" y="-4"/>
+			<int name="z" value="0"/>
+			<int name="delay" value="150"/>
+		</canvas>
+		<canvas name="2" width="322" height="28">
+			<vector name="origin" x="1" y="-13"/>
+			<int name="z" value="0"/>
+			<int name="delay" value="150"/>
+		</canvas>
+		<canvas name="3" width="322" height="28">
+			<vector name="origin" x="1" y="-10"/>
+			<int name="z" value="0"/>
+			<int name="delay" value="150"/>
+			<string name="source" value="UI/UIAuction.img/btSold/2"/>
+		</canvas>
+		<canvas name="4" width="322" height="28">
+			<vector name="origin" x="1" y="-12"/>
+			<int name="z" value="0"/>
+			<int name="delay" value="150"/>
+			<string name="source" value="UI/UIAuction.img/btSold/2"/>
+		</canvas>
+		<canvas name="5" width="322" height="28">
+			<vector name="origin" x="1" y="-11"/>
+			<int name="z" value="0"/>
+			<int name="delay" value="5000"/>
+			<string name="source" value="UI/UIAuction.img/btSold/2"/>
+		</canvas>
+	</imgdir>
+	<imgdir name="btAskBargain">
+		<canvas name="0" width="320" height="19">
+			<vector name="origin" x="0" y="0"/>
+			<int name="z" value="0"/>
+			<int name="delay" value="150"/>
+		</canvas>
+		<canvas name="1" width="322" height="28">
+			<vector name="origin" x="1" y="-4"/>
+			<int name="z" value="0"/>
+			<int name="delay" value="150"/>
+		</canvas>
+		<canvas name="2" width="322" height="28">
+			<vector name="origin" x="1" y="-13"/>
+			<int name="z" value="0"/>
+			<int name="delay" value="150"/>
+		</canvas>
+		<canvas name="3" width="322" height="28">
+			<vector name="origin" x="1" y="-10"/>
+			<int name="z" value="0"/>
+			<int name="delay" value="150"/>
+			<string name="source" value="UI/UIAuction.img/btAskBargain/2"/>
+		</canvas>
+		<canvas name="4" width="322" height="28">
+			<vector name="origin" x="1" y="-12"/>
+			<int name="z" value="0"/>
+			<int name="delay" value="150"/>
+			<string name="source" value="UI/UIAuction.img/btAskBargain/2"/>
+		</canvas>
+		<canvas name="5" width="322" height="28">
+			<vector name="origin" x="1" y="-11"/>
+			<int name="z" value="0"/>
+			<int name="delay" value="5000"/>
+			<string name="source" value="UI/UIAuction.img/btAskBargain/2"/>
+		</canvas>
+	</imgdir>
+	<imgdir name="btAllowBargain">
+		<canvas name="0" width="320" height="19">
+			<vector name="origin" x="0" y="0"/>
+			<int name="z" value="0"/>
+			<int name="delay" value="150"/>
+		</canvas>
+		<canvas name="1" width="322" height="28">
+			<vector name="origin" x="1" y="-4"/>
+			<int name="z" value="0"/>
+			<int name="delay" value="150"/>
+		</canvas>
+		<canvas name="2" width="322" height="28">
+			<vector name="origin" x="1" y="-13"/>
+			<int name="z" value="0"/>
+			<int name="delay" value="150"/>
+		</canvas>
+		<canvas name="3" width="322" height="28">
+			<vector name="origin" x="1" y="-10"/>
+			<int name="z" value="0"/>
+			<int name="delay" value="150"/>
+			<string name="source" value="UI/UIAuction.img/btAllowBargain/2"/>
+		</canvas>
+		<canvas name="4" width="322" height="28">
+			<vector name="origin" x="1" y="-12"/>
+			<int name="z" value="0"/>
+			<int name="delay" value="150"/>
+			<string name="source" value="UI/UIAuction.img/btAllowBargain/2"/>
+		</canvas>
+		<canvas name="5" width="322" height="28">
+			<vector name="origin" x="1" y="-11"/>
+			<int name="z" value="0"/>
+			<int name="delay" value="5000"/>
+			<string name="source" value="UI/UIAuction.img/btAllowBargain/2"/>
+		</canvas>
+	</imgdir>
+	<imgdir name="btDenyBargain">
+		<canvas name="0" width="320" height="19">
+			<vector name="origin" x="0" y="0"/>
+			<int name="z" value="0"/>
+			<int name="delay" value="150"/>
+		</canvas>
+		<canvas name="1" width="322" height="28">
+			<vector name="origin" x="1" y="-4"/>
+			<int name="z" value="0"/>
+			<int name="delay" value="150"/>
+		</canvas>
+		<canvas name="2" width="322" height="28">
+			<vector name="origin" x="1" y="-13"/>
+			<int name="z" value="0"/>
+			<int name="delay" value="150"/>
+		</canvas>
+		<canvas name="3" width="322" height="28">
+			<vector name="origin" x="1" y="-10"/>
+			<int name="z" value="0"/>
+			<int name="delay" value="150"/>
+		</canvas>
+		<canvas name="4" width="322" height="28">
+			<vector name="origin" x="1" y="-12"/>
+			<int name="z" value="0"/>
+			<int name="delay" value="150"/>
+		</canvas>
+		<canvas name="5" width="322" height="28">
+			<vector name="origin" x="1" y="-11"/>
+			<int name="z" value="0"/>
+			<int name="delay" value="5000"/>
+		</canvas>
+	</imgdir>
+	<imgdir name="btMakebid">
+		<canvas name="0" width="320" height="19">
+			<vector name="origin" x="0" y="0"/>
+			<int name="z" value="0"/>
+			<int name="delay" value="150"/>
+		</canvas>
+		<canvas name="1" width="322" height="28">
+			<vector name="origin" x="1" y="-4"/>
+			<int name="z" value="0"/>
+			<int name="delay" value="150"/>
+		</canvas>
+		<canvas name="2" width="322" height="28">
+			<vector name="origin" x="1" y="-13"/>
+			<int name="z" value="0"/>
+			<int name="delay" value="150"/>
+		</canvas>
+		<canvas name="3" width="322" height="28">
+			<vector name="origin" x="1" y="-10"/>
+			<int name="z" value="0"/>
+			<int name="delay" value="150"/>
+			<string name="source" value="UI/UIAuction.img/btMakebid/2"/>
+		</canvas>
+		<canvas name="4" width="322" height="28">
+			<vector name="origin" x="1" y="-12"/>
+			<int name="z" value="0"/>
+			<int name="delay" value="150"/>
+			<string name="source" value="UI/UIAuction.img/btMakebid/2"/>
+		</canvas>
+		<canvas name="5" width="322" height="28">
+			<vector name="origin" x="1" y="-11"/>
+			<int name="z" value="0"/>
+			<int name="delay" value="5000"/>
+			<string name="source" value="UI/UIAuction.img/btMakebid/2"/>
+		</canvas>
+	</imgdir>
+	<imgdir name="mesoMarket">
+		<canvas name="backgrnd" width="608" height="444">
+			<vector name="origin" x="0" y="0"/>
+			<int name="z" value="0"/>
+		</canvas>
+		<canvas name="Point:edit" width="51" height="17">
+			<vector name="origin" x="-114" y="-209"/>
+			<int name="z" value="1"/>
+			<int name="number" value="1"/>
+			<int name="maxlen" value="5"/>
+			<string name="font" value="나눔고딕 ExtraBold"/>
+			<string name="color" value="ffffffff"/>
+			<int name="height" value="16"/>
+			<int name="id" value="1033"/>
+		</canvas>
+		<canvas name="Disabled:layer" width="276" height="329">
+			<vector name="origin" x="-20" y="-96"/>
+			<int name="z" value="3"/>
+		</canvas>
+		<imgdir name="Buy:button">
+			<imgdir name="disabled">
+				<canvas name="0" width="141" height="28">
+					<vector name="origin" x="-14" y="-53"/>
+				</canvas>
+			</imgdir>
+			<imgdir name="normal">
+				<canvas name="0" width="141" height="28">
+					<vector name="origin" x="-14" y="-53"/>
+				</canvas>
+			</imgdir>
+			<int name="id" value="1010"/>
+			<string name="ToolTip" value="Attempt to purchase with Maple Points."/>
+		</imgdir>
+		<imgdir name="Sell:button">
+			<imgdir name="disabled">
+				<canvas name="0" width="141" height="28">
+					<vector name="origin" x="-160" y="-53"/>
+				</canvas>
+			</imgdir>
+			<imgdir name="normal">
+				<canvas name="0" width="141" height="28">
+					<vector name="origin" x="-160" y="-53"/>
+				</canvas>
+			</imgdir>
+			<int name="id" value="1011"/>
+			<string name="ToolTip" value="Attempt to purchase with Mesos."/>
+		</imgdir>
+		<imgdir name="Exit:button">
+			<imgdir name="normal">
+				<canvas name="0" width="22" height="21">
+					<vector name="origin" x="-573" y="-13"/>
+					<string name="source" value="UI/UIAuction.img/manageUI/Exit:button/normal/0"/>
+				</canvas>
+			</imgdir>
+			<imgdir name="pressed">
+				<canvas name="0" width="22" height="21">
+					<vector name="origin" x="-573" y="-13"/>
+					<string name="source" value="UI/UIAuction.img/manageUI/Exit:button/pressed/0"/>
+				</canvas>
+			</imgdir>
+			<imgdir name="disabled">
+				<canvas name="0" width="22" height="21">
+					<vector name="origin" x="-573" y="-13"/>
+					<string name="source" value="UI/UIAuction.img/manageUI/Exit:button/disabled/0"/>
+				</canvas>
+			</imgdir>
+			<imgdir name="mouseOver">
+				<canvas name="0" width="22" height="21">
+					<vector name="origin" x="-573" y="-13"/>
+					<string name="source" value="UI/UIAuction.img/manageUI/Exit:button/mouseOver/0"/>
+				</canvas>
+			</imgdir>
+			<int name="id" value="1000"/>
+			<string name="ToolTip" value="Exit Meso Market."/>
+		</imgdir>
+		<imgdir name="Helpbutton">
+			<imgdir name="normal">
+				<canvas name="0" width="22" height="21">
+					<vector name="origin" x="-549" y="-13"/>
+				</canvas>
+			</imgdir>
+			<imgdir name="pressed">
+				<canvas name="0" width="22" height="21">
+					<vector name="origin" x="-549" y="-13"/>
+				</canvas>
+			</imgdir>
+			<imgdir name="disabled">
+				<canvas name="0" width="22" height="21">
+					<vector name="origin" x="-549" y="-13"/>
+				</canvas>
+			</imgdir>
+			<imgdir name="mouseOver">
+				<canvas name="0" width="22" height="21">
+					<vector name="origin" x="-549" y="-13"/>
+				</canvas>
+			</imgdir>
+			<int name="id" value="1020"/>
+		</imgdir>
+		<imgdir name="Cancel:button">
+			<imgdir name="normal">
+				<canvas name="0" width="178" height="26">
+					<vector name="origin" x="-361" y="-184"/>
+				</canvas>
+			</imgdir>
+			<imgdir name="pressed">
+				<canvas name="0" width="178" height="26">
+					<vector name="origin" x="-361" y="-184"/>
+				</canvas>
+			</imgdir>
+			<imgdir name="disabled">
+				<canvas name="0" width="178" height="26">
+					<vector name="origin" x="-361" y="-184"/>
+				</canvas>
+			</imgdir>
+			<imgdir name="mouseOver">
+				<canvas name="0" width="178" height="26">
+					<vector name="origin" x="-361" y="-184"/>
+				</canvas>
+			</imgdir>
+			<int name="id" value="1021"/>
+			<string name="ToolTip" value="Cancel all current trades."/>
+		</imgdir>
+		<imgdir name="Collect:button">
+			<imgdir name="normal">
+				<canvas name="0" width="178" height="26">
+					<vector name="origin" x="-361" y="-359"/>
+				</canvas>
+			</imgdir>
+			<imgdir name="pressed">
+				<canvas name="0" width="178" height="26">
+					<vector name="origin" x="-361" y="-359"/>
+				</canvas>
+			</imgdir>
+			<imgdir name="disabled">
+				<canvas name="0" width="178" height="26">
+					<vector name="origin" x="-361" y="-359"/>
+				</canvas>
+			</imgdir>
+			<imgdir name="mouseOver">
+				<canvas name="0" width="178" height="26">
+					<vector name="origin" x="-361" y="-359"/>
+				</canvas>
+			</imgdir>
+			<int name="id" value="1022"/>
+			<string name="ToolTip" value="Collect canceled trade deposits and completed trades."/>
+		</imgdir>
+		<imgdir name="BuyMain">
+			<canvas name="backgrnd:layer" width="278" height="136">
+				<vector name="origin" x="-34" y="-211"/>
+				<int name="z" value="0"/>
+			</canvas>
+			<imgdir name="Auto:button">
+				<imgdir name="normal">
+					<canvas name="0" width="178" height="26">
+						<vector name="origin" x="-68" y="-274"/>
+					</canvas>
+				</imgdir>
+				<imgdir name="pressed">
+					<canvas name="0" width="178" height="26">
+						<vector name="origin" x="-68" y="-274"/>
+					</canvas>
+				</imgdir>
+				<imgdir name="disabled">
+					<canvas name="0" width="178" height="26">
+						<vector name="origin" x="-68" y="-274"/>
+					</canvas>
+				</imgdir>
+				<imgdir name="mouseOver">
+					<canvas name="0" width="178" height="26">
+						<vector name="origin" x="-68" y="-274"/>
+					</canvas>
+				</imgdir>
+				<int name="id" value="1030"/>
+				<string name="ToolTip" value="Add the Buy Now price to the price input box."/>
+			</imgdir>
+			<imgdir name="Start:button">
+				<imgdir name="normal">
+					<canvas name="0" width="278" height="57">
+						<vector name="origin" x="-19" y="-369"/>
+					</canvas>
+				</imgdir>
+				<imgdir name="pressed">
+					<canvas name="0" width="278" height="57">
+						<vector name="origin" x="-19" y="-369"/>
+					</canvas>
+				</imgdir>
+				<imgdir name="disabled">
+					<canvas name="0" width="278" height="57">
+						<vector name="origin" x="-19" y="-369"/>
+					</canvas>
+				</imgdir>
+				<imgdir name="mouseOver">
+					<canvas name="0" width="278" height="57">
+						<vector name="origin" x="-19" y="-369"/>
+					</canvas>
+				</imgdir>
+				<int name="id" value="1031"/>
+				<string name="ToolTip" value="Start trading using selected criteria."/>
+			</imgdir>
+		</imgdir>
+		<imgdir name="SellMain">
+			<canvas name="backgrnd:layer" width="278" height="136">
+				<vector name="origin" x="-32" y="-211"/>
+				<int name="z" value="0"/>
+			</canvas>
+			<imgdir name="Auto:button">
+				<imgdir name="normal">
+					<canvas name="0" width="178" height="26">
+						<vector name="origin" x="-68" y="-274"/>
+						<string name="source" value="UI/UIAuction.img/mesoMarket/BuyMain/Auto:button/normal/0"/>
+					</canvas>
+				</imgdir>
+				<imgdir name="pressed">
+					<canvas name="0" width="178" height="26">
+						<vector name="origin" x="-68" y="-274"/>
+						<string name="source" value="UI/UIAuction.img/mesoMarket/BuyMain/Auto:button/pressed/0"/>
+					</canvas>
+				</imgdir>
+				<imgdir name="disabled">
+					<canvas name="0" width="178" height="26">
+						<vector name="origin" x="-68" y="-274"/>
+						<string name="source" value="UI/UIAuction.img/mesoMarket/BuyMain/Auto:button/disabled/0"/>
+					</canvas>
+				</imgdir>
+				<imgdir name="mouseOver">
+					<canvas name="0" width="178" height="26">
+						<vector name="origin" x="-68" y="-274"/>
+						<string name="source" value="UI/UIAuction.img/mesoMarket/BuyMain/Auto:button/mouseOver/0"/>
+					</canvas>
+				</imgdir>
+				<int name="id" value="1030"/>
+				<string name="ToolTip" value="Add the Buy Now price to the price input box."/>
+			</imgdir>
+			<imgdir name="Start:button">
+				<imgdir name="normal">
+					<canvas name="0" width="278" height="57">
+						<vector name="origin" x="-19" y="-369"/>
+						<string name="source" value="UI/UIAuction.img/mesoMarket/BuyMain/Start:button/normal/0"/>
+					</canvas>
+				</imgdir>
+				<imgdir name="pressed">
+					<canvas name="0" width="278" height="57">
+						<vector name="origin" x="-19" y="-369"/>
+						<string name="source" value="UI/UIAuction.img/mesoMarket/BuyMain/Start:button/pressed/0"/>
+					</canvas>
+				</imgdir>
+				<imgdir name="disabled">
+					<canvas name="0" width="278" height="57">
+						<vector name="origin" x="-19" y="-369"/>
+						<string name="source" value="UI/UIAuction.img/mesoMarket/BuyMain/Start:button/disabled/0"/>
+					</canvas>
+				</imgdir>
+				<imgdir name="mouseOver">
+					<canvas name="0" width="278" height="57">
+						<vector name="origin" x="-19" y="-369"/>
+						<string name="source" value="UI/UIAuction.img/mesoMarket/BuyMain/Start:button/mouseOver/0"/>
+					</canvas>
+				</imgdir>
+				<int name="id" value="1031"/>
+				<string name="ToolTip" value="Start trading using selected criteria."/>
+			</imgdir>
+		</imgdir>
+		<imgdir name="Number">
+			<canvas name="0" width="20" height="28">
+				<vector name="origin" x="0" y="0"/>
+				<int name="z" value="0"/>
+			</canvas>
+			<canvas name="1" width="15" height="27">
+				<vector name="origin" x="-2" y="0"/>
+				<int name="z" value="0"/>
+			</canvas>
+			<canvas name="2" width="19" height="28">
+				<vector name="origin" x="0" y="0"/>
+				<int name="z" value="0"/>
+			</canvas>
+			<canvas name="3" width="18" height="28">
+				<vector name="origin" x="-1" y="0"/>
+				<int name="z" value="0"/>
+			</canvas>
+			<canvas name="4" width="20" height="27">
+				<vector name="origin" x="0" y="0"/>
+				<int name="z" value="0"/>
+			</canvas>
+			<canvas name="5" width="18" height="28">
+				<vector name="origin" x="0" y="0"/>
+				<int name="z" value="0"/>
+			</canvas>
+			<canvas name="6" width="19" height="27">
+				<vector name="origin" x="-1" y="-1"/>
+				<int name="z" value="0"/>
+			</canvas>
+			<canvas name="7" width="19" height="27">
+				<vector name="origin" x="-1" y="0"/>
+				<int name="z" value="0"/>
+			</canvas>
+			<canvas name="8" width="19" height="28">
+				<vector name="origin" x="0" y="0"/>
+				<int name="z" value="0"/>
+			</canvas>
+			<canvas name="9" width="19" height="28">
+				<vector name="origin" x="-1" y="0"/>
+				<int name="z" value="0"/>
+			</canvas>
+		</imgdir>
+		<imgdir name="TTing:tooltip">
+			<string name="text" value="Trades in progress."/>
+			<vector name="lt" x="324" y="55"/>
+			<vector name="rb" x="573" y="180"/>
+		</imgdir>
+		<imgdir name="TTcomplete:tooltip">
+			<string name="text" value="Your canceled and completed trades."/>
+			<vector name="lt" x="323" y="228"/>
+			<vector name="rb" x="574" y="357"/>
+		</imgdir>
+	</imgdir>
+</imgdir>

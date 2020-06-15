@@ -1,0 +1,511 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<imgdir name="ActionBar.img">
+    <imgdir name="ActionBar">
+        <imgdir name="0">
+            <imgdir name="info">
+                <string name="exitMsg" value="Do you want to forfeit and go back to the start?"/>
+                <int name="fieldType" value="68"/>
+            </imgdir>
+            <imgdir name="0">
+                <string name="keyName" value="Shift"/>
+                <string name="id" value="80001275"/>
+                <string name="tooltip" value="Flame Toss: Lights up the air to burn down Hornets."/>
+                <string name="type" value="skill"/>
+            </imgdir>
+            <imgdir name="1">
+                <string name="keyName" value="Ctrl"/>
+                <string name="id" value="80001276"/>
+                <string name="tooltip" value="Hack Job: Cuts down any nearby Flora."/>
+                <string name="type" value="skill"/>
+            </imgdir>
+            <imgdir name="2">
+                <string name="keyName" value="Alt"/>
+                <string name="id" value="2"/>
+                <string name="tooltip" value="Jump"/>
+                <string name="type" value="event"/>
+            </imgdir>
+            <imgdir name="3">
+                <string name="keyName" value="None"/>
+                <string name="id" value="1"/>
+                <string name="tooltip" value="Exit: Go back to the start."/>
+                <string name="type" value="event"/>
+            </imgdir>
+        </imgdir>
+        <imgdir name="1">
+            <imgdir name="info">
+                <string name="exitMsg" value="Do you want to forfeit and go to the exit?\n(You won&apos;t get any rewards if you leave now.)"/>
+                <int name="fieldType" value="70"/>
+            </imgdir>
+            <imgdir name="0">
+                <string name="keyName" value="Shift"/>
+                <string name="id" value="80001283"/>
+                <string name="tooltip" value="Teleport: Use your arrow keys to direct a short-distance teleport. Can be used once every 8 seconds."/>
+                <string name="type" value="skill"/>
+            </imgdir>
+            <imgdir name="1">
+                <string name="keyName" value="None"/>
+                <string name="id" value="1"/>
+                <string name="tooltip" value="Exit: Go to the exit."/>
+                <string name="type" value="event"/>
+            </imgdir>
+        </imgdir>
+        <imgdir name="2">
+            <imgdir name="info">
+                <string name="exitMsg" value="Do you want to forfeit and go to the exit?\n(You won&apos;t get any rewards if you leave now.)"/>
+                <int name="fieldType" value="71"/>
+            </imgdir>
+            <imgdir name="0">
+                <string name="keyName" value="Ctrl"/>
+                <string name="id" value="90000"/>
+                <string name="tooltip" value="Timer Plus: Adds seconds to the bomb timer."/>
+                <string name="type" value="event"/>
+            </imgdir>
+            <imgdir name="1">
+                <string name="keyName" value="Alt"/>
+                <string name="id" value="90001"/>
+                <string name="tooltip" value="Timer Minus:  Subtracts seconds from the bomb timer."/>
+                <string name="type" value="event"/>
+            </imgdir>
+            <imgdir name="2">
+                <string name="keyName" value="Shift"/>
+                <string name="id" value="90002"/>
+                <string name="tooltip" value="Pass Bomb: Pass the bomb to the next player."/>
+                <string name="type" value="event"/>
+            </imgdir>
+            <imgdir name="3">
+                <string name="keyName" value="None"/>
+                <string name="id" value="1"/>
+                <string name="tooltip" value="Exit: Go to the exit."/>
+                <string name="type" value="event"/>
+            </imgdir>
+        </imgdir>
+        <imgdir name="3">
+            <imgdir name="info">
+                <string name="exitMsg" value="Do you want to forfeit and go to the exit?\n(You won&apos;t get any rewards if you leave now.)"/>
+                <int name="fieldType" value="72"/>
+            </imgdir>
+            <imgdir name="0">
+                <string name="keyName" value="Shift"/>
+                <string name="id" value="80001284"/>
+                <string name="tooltip" value="Invincibility: Grants you temporary invulnerability. Can only be used once."/>
+                <string name="type" value="skill"/>
+                <int name="useOnce" value="1"/>
+            </imgdir>
+            <imgdir name="1">
+                <string name="keyName" value="None"/>
+                <string name="id" value="1"/>
+                <string name="tooltip" value="Exit: Go to the exit."/>
+                <string name="type" value="event"/>
+            </imgdir>
+        </imgdir>
+        <imgdir name="4">
+            <imgdir name="info">
+                <string name="exitMsg" value="Do you want to forfeit and go to the exit?\n(You won&apos;t get any rewards if you leave now.)"/>
+                <int name="fieldType" value="13"/>
+            </imgdir>
+            <imgdir name="0">
+                <string name="keyName" value="F1"/>
+                <string name="id" value="2270002"/>
+                <string name="tooltip" value="Element Rock: A special alchemist tool that converts the essence of a monster into a jewel."/>
+                <string name="type" value="item"/>
+            </imgdir>
+            <imgdir name="1">
+                <string name="keyName" value="F2"/>
+                <string name="id" value="2100067"/>
+                <string name="tooltip" value="Mail Order Bombs: Causes victims to drop things when hit."/>
+                <string name="type" value="item"/>
+                <int name="usableCount" value="10"/>
+                <imgdir name="usableCountItem">
+                    <int name="0" value="2100067"/>
+                </imgdir>
+            </imgdir>
+        </imgdir>
+        <imgdir name="5">
+            <imgdir name="info">
+                <string name="exitMsg" value="Do you want to forfeit and go to the exit?\n(You won&apos;t get any rewards if you leave now.)"/>
+                <int name="fieldType" value="19"/>
+            </imgdir>
+            <imgdir name="0">
+                <string name="keyName" value="A"/>
+                <string name="id" value="2022539"/>
+                <string name="tooltip" value="Little Lamb Bleet Lv. 1: Nearby Wolves lose speed for 5 seconds."/>
+                <string name="type" value="item"/>
+                <int name="usableCount" value="10"/>
+                <int name="defaultNotUse" value="1"/>
+                <imgdir name="usableCountItem">
+                    <int name="0" value="2022539"/>
+                </imgdir>
+                <string name="fullCountMessage" value="You can&apos;t have any more. Use the skill, and try again."/>
+                <string name="unusableMessage" value="You can&apos;t use that yet. "/>
+            </imgdir>
+            <imgdir name="1">
+                <string name="keyName" value="S"/>
+                <string name="id" value="80001299"/>
+                <string name="tooltip" value="Danger Dodge: Teleport away from danger."/>
+                <string name="type" value="skill"/>
+                <int name="usableCount" value="10"/>
+                <int name="defaultNotUse" value="1"/>
+                <imgdir name="usableCountItem">
+                    <int name="0" value="2022540"/>
+                </imgdir>
+                <string name="fullCountMessage" value="You can&apos;t have any more. Use the skill, and try again."/>
+                <string name="unusableMessage" value="You can&apos;t use that yet. "/>
+            </imgdir>
+            <imgdir name="2">
+                <string name="keyName" value="D"/>
+                <string name="id" value="2022541"/>
+                <string name="tooltip" value="Steel Wool: Protects from one Wolf attack."/>
+                <string name="type" value="item"/>
+                <int name="usableCount" value="10"/>
+                <int name="defaultNotUse" value="1"/>
+                <imgdir name="usableCountItem">
+                    <int name="0" value="2022541"/>
+                </imgdir>
+                <string name="fullCountMessage" value="You can&apos;t have any more. Use the skill, and try again."/>
+                <string name="unusableMessage" value="You can&apos;t use that yet. "/>
+            </imgdir>
+            <imgdir name="3">
+                <string name="keyName" value="F"/>
+                <string name="id" value="2109005"/>
+                <string name="tooltip" value="Thornbush Lv. 1: Plants thorns to attack Wolves."/>
+                <string name="type" value="item"/>
+                <int name="usableCount" value="10"/>
+                <int name="defaultNotUse" value="1"/>
+                <imgdir name="usableCountItem">
+                    <int name="0" value="2109005"/>
+                </imgdir>
+                <string name="fullCountMessage" value="You can&apos;t have any more. Use the skill, and try again."/>
+                <string name="unusableMessage" value="You can&apos;t use that yet. "/>
+            </imgdir>
+            <imgdir name="4">
+                <string name="keyName" value="None"/>
+                <string name="id" value="1"/>
+                <string name="tooltip" value="Exit: Go to the exit."/>
+                <string name="type" value="event"/>
+            </imgdir>
+        </imgdir>
+        <imgdir name="6">
+            <imgdir name="info">
+                <string name="exitMsg" value="Do you want to forfeit and go to the exit?\n(You won&apos;t get any rewards if you leave now.)"/>
+                <int name="fieldType" value="19"/>
+            </imgdir>
+            <imgdir name="0">
+                <string name="keyName" value="A"/>
+                <string name="id" value="2023210"/>
+                <string name="tooltip" value="Little Lamb Bleet Lv. 2: Nearby Wolves lose speed for 6 seconds."/>
+                <string name="type" value="item"/>
+                <int name="usableCount" value="10"/>
+                <int name="defaultNotUse" value="1"/>
+                <imgdir name="usableCountItem">
+                    <int name="0" value="2022539"/>
+                </imgdir>
+                <string name="fullCountMessage" value="You can&apos;t have any more. Use the skill, and try again."/>
+                <string name="unusableMessage" value="You can&apos;t use that yet. "/>
+            </imgdir>
+            <imgdir name="1">
+                <string name="keyName" value="S"/>
+                <string name="id" value="80001299"/>
+                <string name="tooltip" value="Danger Dodge: Teleport away from danger."/>
+                <string name="type" value="skill"/>
+                <int name="usableCount" value="10"/>
+                <int name="defaultNotUse" value="1"/>
+                <imgdir name="usableCountItem">
+                    <int name="0" value="2022540"/>
+                </imgdir>
+                <string name="fullCountMessage" value="You can&apos;t have any more. Use the skill, and try again."/>
+                <string name="unusableMessage" value="You can&apos;t use that yet. "/>
+            </imgdir>
+            <imgdir name="2">
+                <string name="keyName" value="D"/>
+                <string name="id" value="2022541"/>
+                <string name="tooltip" value="Steel Wool: Protects from one Wolf attack."/>
+                <string name="type" value="item"/>
+                <int name="usableCount" value="10"/>
+                <int name="defaultNotUse" value="1"/>
+                <imgdir name="usableCountItem">
+                    <int name="0" value="2022541"/>
+                </imgdir>
+                <string name="fullCountMessage" value="You can&apos;t have any more. Use the skill, and try again."/>
+                <string name="unusableMessage" value="You can&apos;t use that yet. "/>
+            </imgdir>
+            <imgdir name="3">
+                <string name="keyName" value="F"/>
+                <string name="id" value="2109005"/>
+                <string name="tooltip" value="Thornbush Lv. 2: Plants thorns to attack Wolves. #cThe second level skill gives you twice the thorns#."/>
+                <string name="type" value="item"/>
+                <int name="usableCount" value="10"/>
+                <int name="defaultNotUse" value="1"/>
+                <imgdir name="usableCountItem">
+                    <int name="0" value="2109005"/>
+                    <int name="1" value="2109005"/>
+                </imgdir>
+                <string name="fullCountMessage" value="You can&apos;t have any more. Use the skill, and try again."/>
+                <string name="unusableMessage" value="You can&apos;t use that yet. "/>
+            </imgdir>
+            <imgdir name="4">
+                <string name="keyName" value="None"/>
+                <string name="id" value="1"/>
+                <string name="tooltip" value="Exit: Go to the exit."/>
+                <string name="type" value="event"/>
+            </imgdir>
+        </imgdir>
+        <imgdir name="7">
+            <imgdir name="info">
+                <string name="exitMsg" value="Do you want to forfeit and go to the exit?\n(You won&apos;t get any rewards if you leave now.)"/>
+                <int name="fieldType" value="19"/>
+            </imgdir>
+            <imgdir name="0">
+                <string name="keyName" value="A"/>
+                <string name="id" value="2109004"/>
+                <string name="tooltip" value="Explosive Shear Lv. 1: Drops a bomb to make Sheep lose their wool. #cQuantity: 20# "/>
+                <string name="type" value="item"/>
+                <int name="usableCount" value="20"/>
+                <int name="resetCooltime" value="10"/>
+                <imgdir name="usableCountItem">
+                    <int name="0" value="2109004"/>
+                </imgdir>
+                <string name="fullCountMessage" value="You can&apos;t have any more. Use the skill, and try again."/>
+                <string name="unusableMessage" value="You can&apos;t use that yet. "/>
+            </imgdir>
+            <imgdir name="1">
+                <string name="keyName" value="S"/>
+                <string name="id" value="2022543"/>
+                <string name="tooltip" value="Pack Howl: Causes Sheep to become confused, and lose direction."/>
+                <string name="type" value="item"/>
+                <int name="usableCount" value="10"/>
+                <int name="defaultNotUse" value="1"/>
+                <imgdir name="usableCountItem">
+                    <int name="0" value="2022543"/>
+                </imgdir>
+                <string name="fullCountMessage" value="You can&apos;t have any more. Use the skill, and try again."/>
+                <string name="unusableMessage" value="You can&apos;t use that yet. "/>
+            </imgdir>
+            <imgdir name="2">
+                <string name="keyName" value="D"/>
+                <string name="id" value="2022549"/>
+                <string name="tooltip" value="Snarl &apos;n Snap: Intimidates all Sheep, making them unable to jump."/>
+                <string name="type" value="item"/>
+                <int name="usableCount" value="10"/>
+                <int name="defaultNotUse" value="1"/>
+                <imgdir name="usableCountItem">
+                    <int name="0" value="2022549"/>
+                </imgdir>
+                <string name="fullCountMessage" value="You can&apos;t have any more. Use the skill, and try again."/>
+                <string name="unusableMessage" value="You can&apos;t use that yet. "/>
+            </imgdir>
+            <imgdir name="3">
+                <string name="keyName" value="F"/>
+                <string name="id" value="2210118"/>
+                <string name="tooltip" value="Sheep&apos;s Clothing Lv. 1: Disguise yourself as a sheep to trick them. #cCooldown: 90 sec#"/>
+                <string name="type" value="item"/>
+                <int name="usableCount" value="1"/>
+                <int name="resetCooltime" value="90"/>
+                <imgdir name="usableCountItem">
+                    <int name="0" value="2210118"/>
+                </imgdir>
+                <string name="fullCountMessage" value="You can&apos;t have any more. Use the skill, and try again."/>
+                <string name="unusableMessage" value="You can&apos;t use that yet. "/>
+            </imgdir>
+            <imgdir name="4">
+                <string name="keyName" value="None"/>
+                <string name="id" value="1"/>
+                <string name="tooltip" value="Exit: Go to the exit."/>
+                <string name="type" value="event"/>
+            </imgdir>
+        </imgdir>
+        <imgdir name="8">
+            <imgdir name="info">
+                <string name="exitMsg" value="Do you want to forfeit and go to the exit?\n(You won&apos;t get any rewards if you leave now.)"/>
+                <int name="fieldType" value="19"/>
+            </imgdir>
+            <imgdir name="0">
+                <string name="keyName" value="A"/>
+                <string name="id" value="2109004"/>
+                <string name="tooltip" value="Explosive Shear Lv. 2: Drops a better bomb to make Sheep lose their wool. #cQuantity: 20# "/>
+                <string name="type" value="item"/>
+                <int name="usableCount" value="30"/>
+                <int name="resetCooltime" value="10"/>
+                <imgdir name="usableCountItem">
+                    <int name="0" value="2109004"/>
+                </imgdir>
+                <string name="fullCountMessage" value="You can&apos;t have any more. Use the skill, and try again."/>
+                <string name="unusableMessage" value="You can&apos;t use that yet. "/>
+            </imgdir>
+            <imgdir name="1">
+                <string name="keyName" value="S"/>
+                <string name="id" value="2022543"/>
+                <string name="tooltip" value="Pack Howl: Causes Sheep to become confused, and lose direction."/>
+                <string name="type" value="item"/>
+                <int name="usableCount" value="10"/>
+                <int name="defaultNotUse" value="1"/>
+                <imgdir name="usableCountItem">
+                    <int name="0" value="2022543"/>
+                </imgdir>
+                <string name="fullCountMessage" value="You can&apos;t have any more. Use the skill, and try again."/>
+                <string name="unusableMessage" value="You can&apos;t use that yet. "/>
+            </imgdir>
+            <imgdir name="2">
+                <string name="keyName" value="D"/>
+                <string name="id" value="2022549"/>
+                <string name="tooltip" value="Snarl &apos;n Snap: Intimidates all Sheep, making them unable to jump."/>
+                <string name="type" value="item"/>
+                <int name="usableCount" value="10"/>
+                <int name="defaultNotUse" value="1"/>
+                <imgdir name="usableCountItem">
+                    <int name="0" value="2022549"/>
+                </imgdir>
+                <string name="fullCountMessage" value="You can&apos;t have any more. Use the skill, and try again."/>
+                <string name="unusableMessage" value="You can&apos;t use that yet. "/>
+            </imgdir>
+            <imgdir name="3">
+                <string name="keyName" value="F"/>
+                <string name="id" value="2210118"/>
+                <string name="tooltip" value="Sheep&apos;s Clothing Lv. 2: Disguise yourself as a sheep to trick them. #cCooldown: 60 sec#"/>
+                <string name="type" value="item"/>
+                <int name="usableCount" value="1"/>
+                <int name="resetCooltime" value="60"/>
+                <imgdir name="usableCountItem">
+                    <int name="0" value="2210118"/>
+                </imgdir>
+                <string name="fullCountMessage" value="You can&apos;t have any more. Use the skill, and try again."/>
+                <string name="unusableMessage" value="You can&apos;t use that yet. "/>
+            </imgdir>
+            <imgdir name="4">
+                <string name="keyName" value="None"/>
+                <string name="id" value="1"/>
+                <string name="tooltip" value="Exit: Go to the exit."/>
+                <string name="type" value="event"/>
+            </imgdir>
+        </imgdir>
+        <imgdir name="9">
+            <imgdir name="info">
+                <string name="exitMsg" value="Do you want to forfeit and go to the exit?\n(You won&apos;t get any rewards if you leave now.)"/>
+                <int name="fieldType" value="19"/>
+            </imgdir>
+            <imgdir name="0">
+                <string name="keyName" value="A"/>
+                <string name="id" value="90005"/>
+                <string name="tooltip" value="You can&apos;t use that skill... You&apos;re naked! Get some Wool!"/>
+                <string name="type" value="event"/>
+            </imgdir>
+            <imgdir name="1">
+                <string name="keyName" value="S"/>
+                <string name="id" value="90006"/>
+                <string name="tooltip" value="You can&apos;t use that skill... You&apos;re naked! Get some Wool!"/>
+                <string name="type" value="event"/>
+            </imgdir>
+            <imgdir name="2">
+                <string name="keyName" value="D"/>
+                <string name="id" value="90007"/>
+                <string name="tooltip" value="You can&apos;t use that skill... You&apos;re naked! Get some Wool!"/>
+                <string name="type" value="event"/>
+            </imgdir>
+            <imgdir name="3">
+                <string name="keyName" value="F"/>
+                <string name="id" value="90008"/>
+                <string name="tooltip" value="You can&apos;t use that skill... You&apos;re naked! Get some Wool!"/>
+                <string name="type" value="event"/>
+            </imgdir>
+            <imgdir name="4">
+                <string name="keyName" value="None"/>
+                <string name="id" value="1"/>
+                <string name="tooltip" value="Exit: Go to the exit."/>
+                <string name="type" value="event"/>
+            </imgdir>
+        </imgdir>
+        <imgdir name="100">
+            <imgdir name="info">
+                <string name="exitMsg" value="Do you want to give up your voyage?
+"/>
+                <int name="fieldType" value="56"/>
+            </imgdir>
+            <imgdir name="0">
+                <string name="keyName" value="F1"/>
+                <string name="id" value="80011001"/>
+                <string name="tooltip" value="Fire Cannon
+"/>
+                <string name="type" value="skill"/>
+            </imgdir>
+        </imgdir>
+        <imgdir name="101">
+            <imgdir name="info">
+                <string name="exitMsg" value="Do you want to give up your voyage?"/>
+                <int name="fieldType" value="56"/>
+            </imgdir>
+            <imgdir name="0">
+                <string name="keyName" value="F1"/>
+                <string name="id" value="80011001"/>
+                <string name="tooltip" value="Fire Cannon
+"/>
+                <string name="type" value="skill"/>
+            </imgdir>
+            <imgdir name="1">
+                <string name="keyName" value="F2"/>
+                <string name="id" value="80011002"/>
+                <string name="tooltip" value="Emboldening Horn Flute"/>
+                <string name="type" value="skill"/>
+            </imgdir>
+        </imgdir>
+        <imgdir name="102">
+            <imgdir name="info">
+                <string name="exitMsg" value="Do you want to give up your voyage?"/>
+                <int name="fieldType" value="56"/>
+            </imgdir>
+            <imgdir name="0">
+                <string name="keyName" value="F1"/>
+                <string name="id" value="80011001"/>
+                <string name="tooltip" value="Fire Cannon"/>
+                <string name="type" value="skill"/>
+            </imgdir>
+            <imgdir name="1">
+                <string name="keyName" value="F2"/>
+                <string name="id" value="80011002"/>
+                <string name="tooltip" value="Emboldening Horn Flute"/>
+                <string name="type" value="skill"/>
+            </imgdir>
+            <imgdir name="2">
+                <string name="keyName" value="F3"/>
+                <string name="id" value="80011003"/>
+                <string name="tooltip" value="Magic Arrow Shower
+"/>
+                <string name="type" value="skill"/>
+            </imgdir>
+        </imgdir>
+        <imgdir name="103">
+            <imgdir name="info">
+                <string name="exitMsg" value="Do you want to give up your voyage?"/>
+                <int name="fieldType" value="57"/>
+            </imgdir>
+            <imgdir name="0">
+                <string name="keyName" value="F1"/>
+                <string name="id" value="80011001"/>
+                <string name="tooltip" value="Fire Cannon"/>
+                <string name="type" value="skill"/>
+            </imgdir>
+        </imgdir>
+        <imgdir name="104">
+            <imgdir name="info">
+                <string name="exitMsg" value="Do you want to give up your voyage?"/>
+                <int name="fieldType" value="57"/>
+            </imgdir>
+            <imgdir name="0">
+                <string name="keyName" value="F2"/>
+                <string name="id" value="80011002"/>
+                <string name="tooltip" value="Emboldening Horn Flute"/>
+                <string name="type" value="skill"/>
+            </imgdir>
+        </imgdir>
+        <imgdir name="105">
+            <imgdir name="info">
+                <string name="exitMsg" value="Do you want to give up your voyage?"/>
+                <int name="fieldType" value="57"/>
+            </imgdir>
+            <imgdir name="0">
+                <string name="keyName" value="F3"/>
+                <string name="id" value="80011003"/>
+                <string name="tooltip" value="Magic Arrow Shower"/>
+                <string name="type" value="skill"/>
+            </imgdir>
+        </imgdir>
+    </imgdir>
+</imgdir>

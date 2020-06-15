@@ -1,0 +1,2473 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<imgdir name="0568.img">
+	<imgdir name="05680000">
+		<imgdir name="info">
+			<canvas name="icon" width="32" height="32">
+				<vector name="origin" x="0" y="32"/>
+			</canvas>
+			<canvas name="iconRaw" width="32" height="30">
+				<vector name="origin" x="0" y="32"/>
+			</canvas>
+			<int name="cash" value="1"/>
+			<int name="notConsume" value="1"/>
+			<int name="noMoveToLocker" value="1"/>
+		</imgdir>
+		<imgdir name="spec">
+			<string name="script" value="cash_5680000"/>
+			<int name="npc" value="9010000"/>
+		</imgdir>
+	</imgdir>
+	<imgdir name="05680024">
+		<imgdir name="info">
+			<canvas name="icon" width="31" height="32">
+				<vector name="origin" x="0" y="32"/>
+				<string name="source" value="Item/Cash/0506.img/05065000/info/icon"/>
+			</canvas>
+			<canvas name="iconRaw" width="31" height="32">
+				<vector name="origin" x="0" y="32"/>
+				<string name="source" value="Item/Cash/0506.img/05065000/info/iconRaw"/>
+			</canvas>
+			<int name="cash" value="1"/>
+			<int name="notConsume" value="1"/>
+		</imgdir>
+		<imgdir name="effect">
+			<imgdir name="default">
+				<canvas name="0" width="24" height="48">
+					<vector name="origin" x="15" y="169"/>
+					<int name="z" value="0"/>
+					<int name="delay" value="150"/>
+					<string name="source" value="Item/Cash/0506.img/05065000/effect/default/0"/>
+				</canvas>
+				<canvas name="1" width="45" height="92">
+					<vector name="origin" x="30" y="213"/>
+					<int name="z" value="0"/>
+					<int name="delay" value="150"/>
+					<string name="source" value="Item/Cash/0506.img/05065000/effect/default/1"/>
+				</canvas>
+				<canvas name="2" width="60" height="96">
+					<vector name="origin" x="37" y="224"/>
+					<int name="z" value="0"/>
+					<int name="delay" value="150"/>
+					<string name="source" value="Item/Cash/0506.img/05065000/effect/default/2"/>
+				</canvas>
+				<canvas name="3" width="93" height="94">
+					<vector name="origin" x="44" y="221"/>
+					<int name="z" value="0"/>
+					<int name="delay" value="150"/>
+					<string name="source" value="Item/Cash/0506.img/05065000/effect/default/3"/>
+				</canvas>
+				<canvas name="4" width="155" height="121">
+					<vector name="origin" x="93" y="249"/>
+					<int name="z" value="0"/>
+					<int name="delay" value="150"/>
+					<string name="source" value="Item/Cash/0506.img/05065000/effect/default/4"/>
+				</canvas>
+				<canvas name="5" width="163" height="136">
+					<vector name="origin" x="98" y="269"/>
+					<int name="z" value="0"/>
+					<int name="delay" value="150"/>
+					<string name="source" value="Item/Cash/0506.img/05065000/effect/default/5"/>
+				</canvas>
+				<canvas name="6" width="201" height="129">
+					<vector name="origin" x="99" y="269"/>
+					<int name="z" value="0"/>
+					<int name="delay" value="150"/>
+					<string name="source" value="Item/Cash/0506.img/05065000/effect/default/6"/>
+				</canvas>
+				<canvas name="7" width="206" height="135">
+					<vector name="origin" x="100" y="269"/>
+					<int name="z" value="0"/>
+					<int name="delay" value="150"/>
+					<string name="source" value="Item/Cash/0506.img/05065000/effect/default/7"/>
+				</canvas>
+				<canvas name="8" width="207" height="140">
+					<vector name="origin" x="100" y="268"/>
+					<int name="z" value="0"/>
+					<int name="delay" value="150"/>
+					<string name="source" value="Item/Cash/0506.img/05065000/effect/default/8"/>
+				</canvas>
+				<canvas name="9" width="207" height="141">
+					<vector name="origin" x="99" y="266"/>
+					<int name="z" value="0"/>
+					<int name="delay" value="150"/>
+					<string name="source" value="Item/Cash/0506.img/05065000/effect/default/9"/>
+				</canvas>
+				<canvas name="10" width="163" height="172">
+					<vector name="origin" x="49" y="297"/>
+					<int name="z" value="0"/>
+					<int name="delay" value="150"/>
+					<string name="source" value="Item/Cash/0506.img/05065000/effect/default/10"/>
+				</canvas>
+				<canvas name="11" width="169" height="171">
+					<vector name="origin" x="49" y="295"/>
+					<int name="z" value="0"/>
+					<int name="delay" value="150"/>
+					<string name="source" value="Item/Cash/0506.img/05065000/effect/default/11"/>
+				</canvas>
+				<canvas name="12" width="171" height="124">
+					<vector name="origin" x="49" y="295"/>
+					<int name="z" value="0"/>
+					<int name="delay" value="150"/>
+					<string name="source" value="Item/Cash/0506.img/05065000/effect/default/12"/>
+				</canvas>
+				<canvas name="13" width="170" height="126">
+					<vector name="origin" x="48" y="294"/>
+					<int name="z" value="0"/>
+					<int name="delay" value="150"/>
+					<string name="source" value="Item/Cash/0506.img/05065000/effect/default/13"/>
+				</canvas>
+				<canvas name="14" width="127" height="121">
+					<vector name="origin" x="4" y="288"/>
+					<int name="z" value="0"/>
+					<int name="delay" value="150"/>
+					<string name="source" value="Item/Cash/0506.img/05065000/effect/default/14"/>
+				</canvas>
+				<canvas name="15" width="123" height="116">
+					<vector name="origin" x="2" y="282"/>
+					<int name="z" value="0"/>
+					<int name="delay" value="150"/>
+					<string name="source" value="Item/Cash/0506.img/05065000/effect/default/15"/>
+				</canvas>
+				<int name="z" value="-1"/>
+				<int name="pos" value="1"/>
+			</imgdir>
+		</imgdir>
+		<imgdir name="spec">
+			<string name="script" value="cash_5680024"/>
+			<int name="npc" value="9010000"/>
+		</imgdir>
+	</imgdir>
+	<imgdir name="05680027">
+		<imgdir name="info">
+			<canvas name="icon" width="33" height="27">
+				<vector name="origin" x="0" y="29"/>
+			</canvas>
+			<canvas name="iconRaw" width="33" height="27">
+				<vector name="origin" x="0" y="29"/>
+				<string name="source" value="Item/Cash/0568.img/05680027/info/icon"/>
+			</canvas>
+			<int name="cash" value="1"/>
+			<int name="noMoveToLocker" value="1"/>
+			<int name="notConsume" value="1"/>
+		</imgdir>
+		<imgdir name="spec">
+			<string name="script" value="cash_5680027"/>
+			<int name="npc" value="9010000"/>
+		</imgdir>
+	</imgdir>
+	<imgdir name="05680029">
+		<imgdir name="info">
+			<canvas name="icon" width="28" height="29">
+				<vector name="origin" x="-1" y="30"/>
+				<string name="source" value="Item/Cash/0553.img/05530440/info/icon"/>
+			</canvas>
+			<canvas name="iconRaw" width="28" height="27">
+				<vector name="origin" x="-1" y="30"/>
+				<string name="source" value="Item/Cash/0553.img/05530440/info/iconRaw"/>
+			</canvas>
+			<int name="cash" value="1"/>
+			<int name="noMoveToLocker" value="1"/>
+			<int name="notConsume" value="1"/>
+		</imgdir>
+		<imgdir name="spec">
+			<string name="script" value="cash_5680029"/>
+			<int name="npc" value="9010000"/>
+		</imgdir>
+	</imgdir>
+	<imgdir name="05680030">
+		<imgdir name="info">
+			<canvas name="icon" width="27" height="30">
+				<vector name="origin" x="-3" y="30"/>
+				<string name="source" value="Item/Cash/0553.img/05530275/info/icon"/>
+			</canvas>
+			<canvas name="iconRaw" width="27" height="28">
+				<vector name="origin" x="-3" y="30"/>
+				<string name="source" value="Item/Cash/0553.img/05530275/info/iconRaw"/>
+			</canvas>
+			<int name="cash" value="1"/>
+			<int name="noMoveToLocker" value="1"/>
+			<int name="notConsume" value="1"/>
+		</imgdir>
+		<imgdir name="spec">
+			<string name="script" value="cash_5680030"/>
+			<int name="npc" value="9010000"/>
+		</imgdir>
+	</imgdir>
+	<imgdir name="05680031">
+		<imgdir name="info">
+			<canvas name="icon" width="27" height="30">
+				<vector name="origin" x="-3" y="30"/>
+				<string name="source" value="Item/Cash/0553.img/05530276/info/icon"/>
+			</canvas>
+			<canvas name="iconRaw" width="27" height="28">
+				<vector name="origin" x="-3" y="30"/>
+				<string name="source" value="Item/Cash/0553.img/05530276/info/iconRaw"/>
+			</canvas>
+			<int name="cash" value="1"/>
+			<int name="noMoveToLocker" value="1"/>
+			<int name="notConsume" value="1"/>
+		</imgdir>
+		<imgdir name="spec">
+			<string name="script" value="cash_5680031"/>
+			<int name="npc" value="9010000"/>
+		</imgdir>
+	</imgdir>
+	<imgdir name="05680032">
+		<imgdir name="info">
+			<canvas name="icon" width="27" height="31">
+				<vector name="origin" x="-3" y="30"/>
+				<string name="source" value="Item/Cash/0553.img/05530277/info/icon"/>
+			</canvas>
+			<canvas name="iconRaw" width="27" height="31">
+				<vector name="origin" x="-3" y="30"/>
+				<string name="source" value="Item/Cash/0553.img/05530277/info/iconRaw"/>
+			</canvas>
+			<int name="cash" value="1"/>
+			<int name="noMoveToLocker" value="1"/>
+			<int name="notConsume" value="1"/>
+		</imgdir>
+		<imgdir name="spec">
+			<string name="script" value="cash_5680032"/>
+			<int name="npc" value="9010000"/>
+		</imgdir>
+	</imgdir>
+	<imgdir name="05680033">
+		<imgdir name="info">
+			<canvas name="icon" width="27" height="30">
+				<vector name="origin" x="-3" y="30"/>
+				<string name="source" value="Item/Cash/0553.img/05530278/info/icon"/>
+			</canvas>
+			<canvas name="iconRaw" width="27" height="29">
+				<vector name="origin" x="-3" y="30"/>
+				<string name="source" value="Item/Cash/0553.img/05530278/info/iconRaw"/>
+			</canvas>
+			<int name="cash" value="1"/>
+			<int name="noMoveToLocker" value="1"/>
+			<int name="notConsume" value="1"/>
+		</imgdir>
+		<imgdir name="spec">
+			<string name="script" value="cash_5680033"/>
+			<int name="npc" value="9010000"/>
+		</imgdir>
+	</imgdir>
+	<imgdir name="05680034">
+		<imgdir name="info">
+			<canvas name="icon" width="28" height="32">
+				<vector name="origin" x="-3" y="30"/>
+				<string name="source" value="Item/Cash/0553.img/05530279/info/icon"/>
+			</canvas>
+			<canvas name="iconRaw" width="28" height="32">
+				<vector name="origin" x="-3" y="30"/>
+				<string name="source" value="Item/Cash/0553.img/05530279/info/iconRaw"/>
+			</canvas>
+			<int name="cash" value="1"/>
+			<int name="noMoveToLocker" value="1"/>
+			<int name="notConsume" value="1"/>
+		</imgdir>
+		<imgdir name="spec">
+			<string name="script" value="cash_5680034"/>
+			<int name="npc" value="9010000"/>
+		</imgdir>
+	</imgdir>
+	<imgdir name="05680035">
+		<imgdir name="info">
+			<canvas name="icon" width="33" height="34">
+				<vector name="origin" x="0" y="34"/>
+			</canvas>
+			<canvas name="iconRaw" width="33" height="33">
+				<vector name="origin" x="0" y="34"/>
+			</canvas>
+			<int name="cash" value="1"/>
+			<int name="noMoveToLocker" value="1"/>
+			<int name="notConsume" value="1"/>
+		</imgdir>
+		<imgdir name="spec">
+			<string name="script" value="cash_5680035"/>
+			<int name="npc" value="9010000"/>
+		</imgdir>
+	</imgdir>
+	<imgdir name="05680015">
+		<imgdir name="info">
+			<canvas name="icon" width="28" height="30">
+				<vector name="origin" x="-2" y="29"/>
+			</canvas>
+			<canvas name="iconRaw" width="28" height="28">
+				<vector name="origin" x="-2" y="29"/>
+			</canvas>
+			<int name="cash" value="1"/>
+			<int name="notConsume" value="1"/>
+		</imgdir>
+		<imgdir name="spec">
+			<string name="script" value="cash_5680015"/>
+			<int name="npc" value="9010000"/>
+		</imgdir>
+	</imgdir>
+	<imgdir name="05680016">
+		<imgdir name="info">
+			<canvas name="icon" width="32" height="32">
+				<vector name="origin" x="0" y="32"/>
+				<string name="source" value="Item/Cash/0521.img/05211068/info/icon"/>
+			</canvas>
+			<canvas name="iconRaw" width="32" height="32">
+				<vector name="origin" x="0" y="32"/>
+				<string name="source" value="Item/Cash/0521.img/05211068/info/iconRaw"/>
+			</canvas>
+			<int name="cash" value="1"/>
+			<int name="notConsume" value="1"/>
+		</imgdir>
+		<imgdir name="spec">
+			<string name="script" value="cash_5680016"/>
+			<int name="npc" value="9010000"/>
+		</imgdir>
+	</imgdir>
+	<imgdir name="05680019">
+		<imgdir name="info">
+			<canvas name="icon" width="32" height="28">
+				<vector name="origin" x="0" y="28"/>
+				<string name="source" value="Item/Cash/0515.img/05150038/info/icon"/>
+			</canvas>
+			<canvas name="iconRaw" width="32" height="23">
+				<vector name="origin" x="0" y="28"/>
+				<string name="source" value="Item/Cash/0515.img/05150038/info/iconRaw"/>
+			</canvas>
+			<int name="cash" value="1"/>
+			<int name="notConsume" value="1"/>
+		</imgdir>
+		<imgdir name="spec">
+			<string name="script" value="cash_5680019"/>
+			<int name="npc" value="9010000"/>
+		</imgdir>
+	</imgdir>
+	<imgdir name="05680020">
+		<imgdir name="info">
+			<canvas name="icon" width="32" height="28">
+				<vector name="origin" x="0" y="28"/>
+				<string name="source" value="Item/Cash/0515.img/05150038/info/icon"/>
+			</canvas>
+			<canvas name="iconRaw" width="32" height="23">
+				<vector name="origin" x="0" y="28"/>
+				<string name="source" value="Item/Cash/0515.img/05150038/info/iconRaw"/>
+			</canvas>
+			<int name="cash" value="1"/>
+			<int name="notConsume" value="1"/>
+		</imgdir>
+		<imgdir name="spec">
+			<string name="script" value="cash_5680020"/>
+			<int name="npc" value="9010000"/>
+		</imgdir>
+	</imgdir>
+	<imgdir name="05680021">
+		<imgdir name="info">
+			<canvas name="icon" width="33" height="28">
+				<vector name="origin" x="0" y="28"/>
+				<string name="source" value="Item/Cash/0522.img/05220097/info/icon"/>
+			</canvas>
+			<canvas name="iconRaw" width="33" height="25">
+				<vector name="origin" x="0" y="28"/>
+				<string name="source" value="Item/Cash/0522.img/05220097/info/iconRaw"/>
+			</canvas>
+			<int name="cash" value="1"/>
+			<int name="notConsume" value="1"/>
+		</imgdir>
+		<imgdir name="spec">
+			<string name="script" value="ChairGachapon"/>
+			<int name="npc" value="9010000"/>
+		</imgdir>
+	</imgdir>
+	<imgdir name="05680042">
+		<imgdir name="info">
+			<canvas name="icon" width="32" height="32">
+				<vector name="origin" x="0" y="32"/>
+			</canvas>
+			<canvas name="iconRaw" width="32" height="32">
+				<vector name="origin" x="0" y="32"/>
+			</canvas>
+			<int name="cash" value="1"/>
+			<int name="notConsume" value="1"/>
+		</imgdir>
+		<imgdir name="spec">
+			<string name="script" value="cash_5680042"/>
+			<int name="npc" value="9010000"/>
+		</imgdir>
+	</imgdir>
+	<imgdir name="05680043">
+		<imgdir name="info">
+			<canvas name="icon" width="32" height="32">
+				<vector name="origin" x="0" y="32"/>
+			</canvas>
+			<canvas name="iconRaw" width="32" height="32">
+				<vector name="origin" x="0" y="32"/>
+			</canvas>
+			<int name="cash" value="1"/>
+			<int name="notConsume" value="1"/>
+		</imgdir>
+		<imgdir name="spec">
+			<string name="script" value="cash_5680043"/>
+			<int name="npc" value="9010000"/>
+		</imgdir>
+	</imgdir>
+	<imgdir name="05680044">
+		<imgdir name="info">
+			<canvas name="icon" width="32" height="32">
+				<vector name="origin" x="0" y="32"/>
+			</canvas>
+			<canvas name="iconRaw" width="32" height="32">
+				<vector name="origin" x="0" y="32"/>
+			</canvas>
+			<int name="cash" value="1"/>
+			<int name="notConsume" value="1"/>
+		</imgdir>
+		<imgdir name="spec">
+			<string name="script" value="cash_5680044"/>
+			<int name="npc" value="9010000"/>
+		</imgdir>
+	</imgdir>
+	<imgdir name="05680045">
+		<imgdir name="info">
+			<canvas name="icon" width="32" height="32">
+				<vector name="origin" x="-1" y="32"/>
+			</canvas>
+			<canvas name="iconRaw" width="32" height="32">
+				<vector name="origin" x="-1" y="32"/>
+			</canvas>
+			<int name="cash" value="1"/>
+			<int name="notConsume" value="1"/>
+		</imgdir>
+		<imgdir name="spec">
+			<string name="script" value="cash_5680045"/>
+			<int name="npc" value="9010000"/>
+		</imgdir>
+	</imgdir>
+	<imgdir name="05680046">
+		<imgdir name="info">
+			<canvas name="icon" width="32" height="32">
+				<vector name="origin" x="0" y="32"/>
+			</canvas>
+			<canvas name="iconRaw" width="32" height="32">
+				<vector name="origin" x="0" y="32"/>
+			</canvas>
+			<int name="cash" value="1"/>
+			<int name="notConsume" value="1"/>
+		</imgdir>
+		<imgdir name="spec">
+			<string name="script" value="cash_5680046"/>
+			<int name="npc" value="9010000"/>
+		</imgdir>
+	</imgdir>
+	<imgdir name="05680047">
+		<imgdir name="info">
+			<canvas name="icon" width="32" height="32">
+				<vector name="origin" x="0" y="32"/>
+			</canvas>
+			<canvas name="iconRaw" width="32" height="32">
+				<vector name="origin" x="0" y="32"/>
+			</canvas>
+			<int name="cash" value="1"/>
+			<int name="notConsume" value="1"/>
+		</imgdir>
+		<imgdir name="spec">
+			<string name="script" value="cash_5680047"/>
+			<int name="npc" value="9010000"/>
+		</imgdir>
+	</imgdir>
+	<imgdir name="05680048">
+		<imgdir name="info">
+			<canvas name="icon" width="32" height="32">
+				<vector name="origin" x="0" y="32"/>
+			</canvas>
+			<canvas name="iconRaw" width="32" height="32">
+				<vector name="origin" x="0" y="32"/>
+			</canvas>
+			<int name="cash" value="1"/>
+			<int name="notConsume" value="1"/>
+		</imgdir>
+		<imgdir name="spec">
+			<string name="script" value="cash_5680048"/>
+			<int name="npc" value="9010000"/>
+		</imgdir>
+	</imgdir>
+	<imgdir name="05680036">
+		<imgdir name="info">
+			<canvas name="icon" width="33" height="28">
+				<vector name="origin" x="0" y="28"/>
+				<string name="source" value="Item/Cash/0553.img/05530199/info/icon"/>
+			</canvas>
+			<canvas name="iconRaw" width="33" height="26">
+				<vector name="origin" x="0" y="28"/>
+				<string name="source" value="Item/Cash/0553.img/05530199/info/iconRaw"/>
+			</canvas>
+			<int name="cash" value="1"/>
+			<int name="notConsume" value="1"/>
+		</imgdir>
+		<imgdir name="spec">
+			<string name="script" value="cash_5680036"/>
+			<int name="npc" value="9010000"/>
+		</imgdir>
+	</imgdir>
+	<imgdir name="05680037">
+		<imgdir name="info">
+			<canvas name="icon" width="33" height="28">
+				<vector name="origin" x="0" y="28"/>
+				<string name="source" value="Item/Cash/0553.img/05530201/info/icon"/>
+			</canvas>
+			<canvas name="iconRaw" width="33" height="26">
+				<vector name="origin" x="0" y="28"/>
+				<string name="source" value="Item/Cash/0553.img/05530201/info/iconRaw"/>
+			</canvas>
+			<int name="cash" value="1"/>
+			<int name="notConsume" value="1"/>
+		</imgdir>
+		<imgdir name="spec">
+			<string name="script" value="cash_5680037"/>
+			<int name="npc" value="9010000"/>
+		</imgdir>
+	</imgdir>
+	<imgdir name="05680049">
+		<imgdir name="info">
+			<canvas name="icon" width="27" height="30">
+				<vector name="origin" x="-3" y="30"/>
+				<string name="source" value="Item/Cash/0553.img/05530275/info/icon"/>
+			</canvas>
+			<canvas name="iconRaw" width="27" height="28">
+				<vector name="origin" x="-3" y="30"/>
+				<string name="source" value="Item/Cash/0553.img/05530275/info/iconRaw"/>
+			</canvas>
+			<int name="cash" value="1"/>
+			<int name="noMoveToLocker" value="1"/>
+			<int name="notConsume" value="1"/>
+		</imgdir>
+		<imgdir name="spec">
+			<string name="script" value="cash_5680049"/>
+			<int name="npc" value="9010000"/>
+		</imgdir>
+	</imgdir>
+	<imgdir name="05680050">
+		<imgdir name="info">
+			<canvas name="icon" width="27" height="30">
+				<vector name="origin" x="-3" y="30"/>
+				<string name="source" value="Item/Cash/0553.img/05530276/info/icon"/>
+			</canvas>
+			<canvas name="iconRaw" width="27" height="28">
+				<vector name="origin" x="-3" y="30"/>
+				<string name="source" value="Item/Cash/0553.img/05530276/info/iconRaw"/>
+			</canvas>
+			<int name="cash" value="1"/>
+			<int name="noMoveToLocker" value="1"/>
+			<int name="notConsume" value="1"/>
+		</imgdir>
+		<imgdir name="spec">
+			<string name="script" value="cash_5680050"/>
+			<int name="npc" value="9010000"/>
+		</imgdir>
+	</imgdir>
+	<imgdir name="05680051">
+		<imgdir name="info">
+			<canvas name="icon" width="27" height="31">
+				<vector name="origin" x="-3" y="30"/>
+				<string name="source" value="Item/Cash/0553.img/05530277/info/icon"/>
+			</canvas>
+			<canvas name="iconRaw" width="27" height="31">
+				<vector name="origin" x="-3" y="30"/>
+				<string name="source" value="Item/Cash/0553.img/05530277/info/iconRaw"/>
+			</canvas>
+			<int name="cash" value="1"/>
+			<int name="noMoveToLocker" value="1"/>
+			<int name="notConsume" value="1"/>
+		</imgdir>
+		<imgdir name="spec">
+			<string name="script" value="cash_5680051"/>
+			<int name="npc" value="9010000"/>
+		</imgdir>
+	</imgdir>
+	<imgdir name="05680052">
+		<imgdir name="info">
+			<canvas name="icon" width="27" height="30">
+				<vector name="origin" x="-3" y="30"/>
+				<string name="source" value="Item/Cash/0553.img/05530278/info/icon"/>
+			</canvas>
+			<canvas name="iconRaw" width="27" height="29">
+				<vector name="origin" x="-3" y="30"/>
+				<string name="source" value="Item/Cash/0553.img/05530278/info/iconRaw"/>
+			</canvas>
+			<int name="cash" value="1"/>
+			<int name="noMoveToLocker" value="1"/>
+			<int name="notConsume" value="1"/>
+		</imgdir>
+		<imgdir name="spec">
+			<string name="script" value="cash_5680052"/>
+			<int name="npc" value="9010000"/>
+		</imgdir>
+	</imgdir>
+	<imgdir name="05680053">
+		<imgdir name="info">
+			<canvas name="icon" width="28" height="32">
+				<vector name="origin" x="-3" y="30"/>
+				<string name="source" value="Item/Cash/0553.img/05530279/info/icon"/>
+			</canvas>
+			<canvas name="iconRaw" width="28" height="32">
+				<vector name="origin" x="-3" y="30"/>
+				<string name="source" value="Item/Cash/0553.img/05530279/info/iconRaw"/>
+			</canvas>
+			<int name="cash" value="1"/>
+			<int name="noMoveToLocker" value="1"/>
+			<int name="notConsume" value="1"/>
+		</imgdir>
+		<imgdir name="spec">
+			<string name="script" value="cash_5680053"/>
+			<int name="npc" value="9010000"/>
+		</imgdir>
+	</imgdir>
+	<imgdir name="05680056">
+		<imgdir name="info">
+			<canvas name="icon" width="35" height="34">
+				<vector name="origin" x="-1" y="34"/>
+			</canvas>
+			<canvas name="iconRaw" width="40" height="39">
+				<vector name="origin" x="-1" y="34"/>
+			</canvas>
+			<int name="cash" value="1"/>
+			<int name="notConsume" value="1"/>
+		</imgdir>
+		<imgdir name="spec">
+			<string name="script" value="cash_5680056"/>
+			<int name="npc" value="9010000"/>
+		</imgdir>
+	</imgdir>
+	<imgdir name="05680057">
+		<imgdir name="info">
+			<canvas name="icon" width="33" height="32">
+				<vector name="origin" x="-1" y="34"/>
+			</canvas>
+			<canvas name="iconRaw" width="34" height="35">
+				<vector name="origin" x="-1" y="34"/>
+			</canvas>
+			<int name="cash" value="1"/>
+			<int name="notConsume" value="1"/>
+		</imgdir>
+		<imgdir name="spec">
+			<string name="script" value="cash_5680057"/>
+			<int name="npc" value="9010000"/>
+		</imgdir>
+	</imgdir>
+	<imgdir name="05680063">
+		<imgdir name="info">
+			<canvas name="icon" width="30" height="32">
+				<vector name="origin" x="-2" y="32"/>
+			</canvas>
+			<canvas name="iconRaw" width="30" height="32">
+				<vector name="origin" x="-2" y="32"/>
+			</canvas>
+			<int name="cash" value="1"/>
+			<int name="notConsume" value="1"/>
+		</imgdir>
+		<imgdir name="spec">
+			<string name="script" value="cash_5680063"/>
+			<int name="npc" value="9010000"/>
+		</imgdir>
+	</imgdir>
+	<imgdir name="05680065">
+		<imgdir name="info">
+			<canvas name="icon" width="32" height="32">
+				<vector name="origin" x="0" y="32"/>
+				<string name="source" value="Item/Cash/0568.img/05680000/info/icon"/>
+			</canvas>
+			<canvas name="iconRaw" width="32" height="30">
+				<vector name="origin" x="0" y="32"/>
+				<string name="source" value="Item/Cash/0568.img/05680000/info/iconRaw"/>
+			</canvas>
+			<int name="cash" value="1"/>
+			<int name="notConsume" value="1"/>
+		</imgdir>
+		<imgdir name="spec">
+			<string name="script" value="cash_5680065"/>
+			<int name="npc" value="9010000"/>
+		</imgdir>
+	</imgdir>
+	<imgdir name="05680066">
+		<imgdir name="info">
+			<canvas name="icon" width="32" height="32">
+				<vector name="origin" x="0" y="32"/>
+				<string name="source" value="Item/Cash/0568.img/05680000/info/icon"/>
+			</canvas>
+			<canvas name="iconRaw" width="32" height="30">
+				<vector name="origin" x="0" y="32"/>
+				<string name="source" value="Item/Cash/0568.img/05680000/info/iconRaw"/>
+			</canvas>
+			<int name="cash" value="1"/>
+			<int name="notConsume" value="1"/>
+		</imgdir>
+		<imgdir name="spec">
+			<string name="script" value="cash_5680066"/>
+			<int name="npc" value="9010000"/>
+		</imgdir>
+	</imgdir>
+	<imgdir name="05680067">
+		<imgdir name="info">
+			<canvas name="icon" width="32" height="32">
+				<vector name="origin" x="0" y="32"/>
+				<string name="source" value="Item/Cash/0568.img/05680000/info/icon"/>
+			</canvas>
+			<canvas name="iconRaw" width="32" height="30">
+				<vector name="origin" x="0" y="32"/>
+				<string name="source" value="Item/Cash/0568.img/05680000/info/iconRaw"/>
+			</canvas>
+			<int name="cash" value="1"/>
+			<int name="notConsume" value="1"/>
+		</imgdir>
+		<imgdir name="spec">
+			<string name="script" value="cash_5680067"/>
+			<int name="npc" value="9010000"/>
+		</imgdir>
+	</imgdir>
+	<imgdir name="05680068">
+		<imgdir name="info">
+			<canvas name="icon" width="29" height="29">
+				<vector name="origin" x="-1" y="29"/>
+			</canvas>
+			<canvas name="iconRaw" width="28" height="28">
+				<vector name="origin" x="-1" y="29"/>
+			</canvas>
+			<int name="cash" value="1"/>
+			<int name="tradeBlock" value="1"/>
+			<int name="notConsume" value="1"/>
+			<int name="cashTradeBlock" value="1"/>
+		</imgdir>
+		<imgdir name="spec">
+			<string name="script" value="cash_5680068"/>
+			<int name="npc" value="9010000"/>
+		</imgdir>
+	</imgdir>
+	<imgdir name="05680069">
+		<imgdir name="info">
+			<canvas name="icon" width="33" height="34">
+				<vector name="origin" x="1" y="33"/>
+			</canvas>
+			<canvas name="iconRaw" width="34" height="34">
+				<vector name="origin" x="2" y="33"/>
+			</canvas>
+			<int name="cash" value="1"/>
+			<int name="tradeBlock" value="1"/>
+			<int name="notConsume" value="1"/>
+			<int name="cashTradeBlock" value="1"/>
+		</imgdir>
+		<imgdir name="spec">
+			<string name="script" value="cash_5680069"/>
+			<int name="npc" value="9010000"/>
+		</imgdir>
+	</imgdir>
+	<imgdir name="05680070">
+		<imgdir name="info">
+			<canvas name="icon" width="32" height="29">
+				<vector name="origin" x="0" y="29"/>
+			</canvas>
+			<canvas name="iconRaw" width="32" height="32">
+				<vector name="origin" x="0" y="32"/>
+			</canvas>
+			<int name="cash" value="1"/>
+			<int name="notConsume" value="1"/>
+		</imgdir>
+		<imgdir name="spec">
+			<string name="script" value="cash_5680070"/>
+			<int name="npc" value="9010000"/>
+		</imgdir>
+	</imgdir>
+	<imgdir name="05680071">
+		<imgdir name="info">
+			<canvas name="icon" width="32" height="29">
+				<vector name="origin" x="0" y="29"/>
+				<string name="source" value="Item/Cash/0568.img/05680070/info/icon"/>
+			</canvas>
+			<canvas name="iconRaw" width="32" height="32">
+				<vector name="origin" x="0" y="32"/>
+			</canvas>
+			<int name="cash" value="1"/>
+			<int name="notConsume" value="1"/>
+		</imgdir>
+		<imgdir name="spec">
+			<string name="script" value="cash_5680071"/>
+			<int name="npc" value="9010000"/>
+		</imgdir>
+	</imgdir>
+	<imgdir name="05680072">
+		<imgdir name="info">
+			<canvas name="icon" width="32" height="29">
+				<vector name="origin" x="0" y="29"/>
+				<string name="source" value="Item/Cash/0568.img/05680070/info/icon"/>
+			</canvas>
+			<canvas name="iconRaw" width="32" height="32">
+				<vector name="origin" x="0" y="32"/>
+			</canvas>
+			<int name="cash" value="1"/>
+			<int name="notConsume" value="1"/>
+		</imgdir>
+		<imgdir name="spec">
+			<string name="script" value="cash_5680072"/>
+			<int name="npc" value="9010000"/>
+		</imgdir>
+	</imgdir>
+	<imgdir name="05680073">
+		<imgdir name="info">
+			<canvas name="icon" width="32" height="29">
+				<vector name="origin" x="0" y="29"/>
+				<string name="source" value="Item/Cash/0568.img/05680070/info/icon"/>
+			</canvas>
+			<canvas name="iconRaw" width="32" height="32">
+				<vector name="origin" x="0" y="32"/>
+				<int name="z" value="0"/>
+			</canvas>
+			<int name="cash" value="1"/>
+			<int name="notConsume" value="1"/>
+		</imgdir>
+		<imgdir name="spec">
+			<string name="script" value="cash_5680073"/>
+			<int name="npc" value="9010000"/>
+		</imgdir>
+	</imgdir>
+	<imgdir name="05680074">
+		<imgdir name="info">
+			<canvas name="icon" width="32" height="29">
+				<vector name="origin" x="0" y="29"/>
+				<string name="source" value="Item/Cash/0568.img/05680070/info/icon"/>
+			</canvas>
+			<canvas name="iconRaw" width="32" height="32">
+				<vector name="origin" x="0" y="32"/>
+			</canvas>
+			<int name="cash" value="1"/>
+			<int name="notConsume" value="1"/>
+		</imgdir>
+		<imgdir name="spec">
+			<string name="script" value="cash_5680074"/>
+			<int name="npc" value="9010000"/>
+		</imgdir>
+	</imgdir>
+	<imgdir name="05680075">
+		<imgdir name="info">
+			<canvas name="icon" width="32" height="29">
+				<vector name="origin" x="0" y="29"/>
+				<string name="source" value="Item/Cash/0568.img/05680070/info/icon"/>
+			</canvas>
+			<canvas name="iconRaw" width="32" height="32">
+				<vector name="origin" x="0" y="32"/>
+				<int name="z" value="0"/>
+			</canvas>
+			<int name="cash" value="1"/>
+			<int name="notConsume" value="1"/>
+		</imgdir>
+		<imgdir name="spec">
+			<string name="script" value="cash_5680075"/>
+			<int name="npc" value="9010000"/>
+		</imgdir>
+	</imgdir>
+	<imgdir name="05680076">
+		<imgdir name="info">
+			<canvas name="icon" width="32" height="32">
+				<vector name="origin" x="0" y="32"/>
+				<string name="source" value="Item/Cash/0553.img/05530460/info/icon"/>
+			</canvas>
+			<canvas name="iconRaw" width="32" height="31">
+				<vector name="origin" x="0" y="32"/>
+			</canvas>
+			<int name="cash" value="1"/>
+			<int name="notConsume" value="1"/>
+		</imgdir>
+		<imgdir name="spec">
+			<string name="script" value="cash_5680076"/>
+			<int name="npc" value="9010000"/>
+		</imgdir>
+	</imgdir>
+	<imgdir name="05680077">
+		<imgdir name="info">
+			<canvas name="icon" width="32" height="32">
+				<vector name="origin" x="0" y="32"/>
+				<string name="source" value="Item/Cash/0553.img/05530460/info/icon"/>
+			</canvas>
+			<canvas name="iconRaw" width="32" height="31">
+				<vector name="origin" x="0" y="32"/>
+				<string name="source" value="Item/Cash/0568.img/05680076/info/iconRaw"/>
+			</canvas>
+			<int name="cash" value="1"/>
+			<int name="notConsume" value="1"/>
+		</imgdir>
+		<imgdir name="spec">
+			<string name="script" value="cash_5680077"/>
+			<int name="npc" value="9010000"/>
+		</imgdir>
+	</imgdir>
+	<imgdir name="05680078">
+		<imgdir name="info">
+			<canvas name="icon" width="32" height="32">
+				<vector name="origin" x="0" y="32"/>
+				<string name="source" value="Item/Cash/0553.img/05530460/info/icon"/>
+			</canvas>
+			<canvas name="iconRaw" width="32" height="31">
+				<vector name="origin" x="0" y="32"/>
+				<string name="source" value="Item/Cash/0568.img/05680076/info/iconRaw"/>
+			</canvas>
+			<int name="cash" value="1"/>
+			<int name="notConsume" value="1"/>
+		</imgdir>
+		<imgdir name="spec">
+			<string name="script" value="cash_5680078"/>
+			<int name="npc" value="9010000"/>
+		</imgdir>
+	</imgdir>
+	<imgdir name="05680079">
+		<imgdir name="info">
+			<canvas name="icon" width="32" height="32">
+				<vector name="origin" x="0" y="32"/>
+				<string name="source" value="Item/Cash/0553.img/05530460/info/icon"/>
+			</canvas>
+			<canvas name="iconRaw" width="32" height="31">
+				<vector name="origin" x="0" y="32"/>
+				<string name="source" value="Item/Cash/0568.img/05680076/info/iconRaw"/>
+			</canvas>
+			<int name="cash" value="1"/>
+			<int name="notConsume" value="1"/>
+		</imgdir>
+		<imgdir name="spec">
+			<string name="script" value="cash_5680079"/>
+			<int name="npc" value="9010000"/>
+		</imgdir>
+	</imgdir>
+	<imgdir name="05680080">
+		<imgdir name="info">
+			<canvas name="icon" width="32" height="32">
+				<vector name="origin" x="0" y="32"/>
+				<string name="source" value="Item/Cash/0553.img/05530460/info/icon"/>
+			</canvas>
+			<canvas name="iconRaw" width="32" height="31">
+				<vector name="origin" x="0" y="32"/>
+				<string name="source" value="Item/Cash/0568.img/05680076/info/iconRaw"/>
+			</canvas>
+			<int name="cash" value="1"/>
+			<int name="notConsume" value="1"/>
+		</imgdir>
+		<imgdir name="spec">
+			<string name="script" value="cash_5680080"/>
+			<int name="npc" value="9010000"/>
+		</imgdir>
+	</imgdir>
+	<imgdir name="05680081">
+		<imgdir name="info">
+			<canvas name="icon" width="32" height="32">
+				<vector name="origin" x="0" y="32"/>
+				<string name="source" value="Item/Cash/0553.img/05530460/info/icon"/>
+			</canvas>
+			<canvas name="iconRaw" width="32" height="31">
+				<vector name="origin" x="0" y="32"/>
+				<string name="source" value="Item/Cash/0568.img/05680076/info/iconRaw"/>
+			</canvas>
+			<int name="cash" value="1"/>
+			<int name="notConsume" value="1"/>
+		</imgdir>
+		<imgdir name="spec">
+			<string name="script" value="cash_5680081"/>
+			<int name="npc" value="9010000"/>
+		</imgdir>
+	</imgdir>
+	<imgdir name="05680082">
+		<imgdir name="info">
+			<canvas name="icon" width="32" height="32">
+				<vector name="origin" x="0" y="32"/>
+				<string name="source" value="Item/Cash/0553.img/05530460/info/icon"/>
+			</canvas>
+			<canvas name="iconRaw" width="32" height="31">
+				<vector name="origin" x="0" y="32"/>
+				<string name="source" value="Item/Cash/0568.img/05680076/info/iconRaw"/>
+			</canvas>
+			<int name="cash" value="1"/>
+			<int name="notConsume" value="1"/>
+		</imgdir>
+		<imgdir name="spec">
+			<string name="script" value="cash_5680082"/>
+			<int name="npc" value="9010000"/>
+		</imgdir>
+	</imgdir>
+	<imgdir name="05680083">
+		<imgdir name="info">
+			<canvas name="icon" width="32" height="32">
+				<vector name="origin" x="0" y="32"/>
+				<string name="source" value="Item/Cash/0553.img/05530460/info/icon"/>
+			</canvas>
+			<canvas name="iconRaw" width="32" height="31">
+				<vector name="origin" x="0" y="32"/>
+				<string name="source" value="Item/Cash/0568.img/05680076/info/iconRaw"/>
+			</canvas>
+			<int name="cash" value="1"/>
+			<int name="notConsume" value="1"/>
+		</imgdir>
+		<imgdir name="spec">
+			<string name="script" value="cash_5680083"/>
+			<int name="npc" value="9010000"/>
+		</imgdir>
+	</imgdir>
+	<imgdir name="05680084">
+		<imgdir name="info">
+			<canvas name="icon" width="32" height="32">
+				<vector name="origin" x="0" y="32"/>
+				<string name="source" value="Item/Cash/0553.img/05530460/info/icon"/>
+			</canvas>
+			<canvas name="iconRaw" width="32" height="31">
+				<vector name="origin" x="0" y="32"/>
+				<string name="source" value="Item/Cash/0568.img/05680076/info/iconRaw"/>
+			</canvas>
+			<int name="cash" value="1"/>
+			<int name="notConsume" value="1"/>
+		</imgdir>
+		<imgdir name="spec">
+			<string name="script" value="cash_5680084"/>
+			<int name="npc" value="9010000"/>
+		</imgdir>
+	</imgdir>
+	<imgdir name="05680085">
+		<imgdir name="info">
+			<canvas name="icon" width="32" height="32">
+				<vector name="origin" x="0" y="32"/>
+				<string name="source" value="Item/Cash/0553.img/05530460/info/icon"/>
+			</canvas>
+			<canvas name="iconRaw" width="32" height="31">
+				<vector name="origin" x="0" y="32"/>
+				<string name="source" value="Item/Cash/0568.img/05680076/info/iconRaw"/>
+			</canvas>
+			<int name="cash" value="1"/>
+			<int name="notConsume" value="1"/>
+		</imgdir>
+		<imgdir name="spec">
+			<string name="script" value="cash_5680085"/>
+			<int name="npc" value="9010000"/>
+		</imgdir>
+	</imgdir>
+	<imgdir name="05680086">
+		<imgdir name="info">
+			<canvas name="icon" width="32" height="32">
+				<vector name="origin" x="0" y="32"/>
+				<string name="source" value="Item/Cash/0553.img/05530460/info/icon"/>
+			</canvas>
+			<canvas name="iconRaw" width="32" height="31">
+				<vector name="origin" x="0" y="32"/>
+				<string name="source" value="Item/Cash/0568.img/05680076/info/iconRaw"/>
+			</canvas>
+			<int name="cash" value="1"/>
+			<int name="notConsume" value="1"/>
+		</imgdir>
+		<imgdir name="spec">
+			<string name="script" value="cash_5680086"/>
+			<int name="npc" value="9010000"/>
+		</imgdir>
+	</imgdir>
+	<imgdir name="05680087">
+		<imgdir name="info">
+			<canvas name="icon" width="32" height="32">
+				<vector name="origin" x="0" y="32"/>
+				<string name="source" value="Item/Cash/0553.img/05530460/info/icon"/>
+			</canvas>
+			<canvas name="iconRaw" width="32" height="31">
+				<vector name="origin" x="0" y="32"/>
+				<string name="source" value="Item/Cash/0568.img/05680076/info/iconRaw"/>
+			</canvas>
+			<int name="cash" value="1"/>
+			<int name="notConsume" value="1"/>
+		</imgdir>
+		<imgdir name="spec">
+			<string name="script" value="cash_5680087"/>
+			<int name="npc" value="9010000"/>
+		</imgdir>
+	</imgdir>
+	<imgdir name="05680088">
+		<imgdir name="info">
+			<canvas name="icon" width="32" height="32">
+				<vector name="origin" x="0" y="32"/>
+				<string name="source" value="Item/Cash/0553.img/05530460/info/icon"/>
+			</canvas>
+			<canvas name="iconRaw" width="32" height="31">
+				<vector name="origin" x="0" y="32"/>
+				<string name="source" value="Item/Cash/0568.img/05680076/info/iconRaw"/>
+			</canvas>
+			<int name="cash" value="1"/>
+			<int name="notConsume" value="1"/>
+		</imgdir>
+		<imgdir name="spec">
+			<string name="script" value="cash_5680088"/>
+			<int name="npc" value="9010000"/>
+		</imgdir>
+	</imgdir>
+	<imgdir name="05680089">
+		<imgdir name="info">
+			<canvas name="icon" width="32" height="32">
+				<vector name="origin" x="0" y="32"/>
+				<string name="source" value="Item/Cash/0553.img/05530460/info/icon"/>
+			</canvas>
+			<canvas name="iconRaw" width="32" height="31">
+				<vector name="origin" x="0" y="32"/>
+				<string name="source" value="Item/Cash/0568.img/05680076/info/iconRaw"/>
+			</canvas>
+			<int name="cash" value="1"/>
+			<int name="notConsume" value="1"/>
+		</imgdir>
+		<imgdir name="spec">
+			<string name="script" value="cash_5680089"/>
+			<int name="npc" value="9010000"/>
+		</imgdir>
+	</imgdir>
+	<imgdir name="05680090">
+		<imgdir name="info">
+			<canvas name="icon" width="32" height="32">
+				<vector name="origin" x="0" y="32"/>
+				<string name="source" value="Item/Cash/0553.img/05530460/info/icon"/>
+			</canvas>
+			<canvas name="iconRaw" width="32" height="31">
+				<vector name="origin" x="0" y="32"/>
+				<string name="source" value="Item/Cash/0568.img/05680076/info/iconRaw"/>
+			</canvas>
+			<int name="cash" value="1"/>
+			<int name="notConsume" value="1"/>
+		</imgdir>
+		<imgdir name="spec">
+			<string name="script" value="cash_5680090"/>
+			<int name="npc" value="9010000"/>
+		</imgdir>
+	</imgdir>
+	<imgdir name="05680091">
+		<imgdir name="info">
+			<canvas name="icon" width="32" height="32">
+				<vector name="origin" x="0" y="32"/>
+				<string name="source" value="Item/Cash/0553.img/05530460/info/icon"/>
+			</canvas>
+			<canvas name="iconRaw" width="32" height="31">
+				<vector name="origin" x="0" y="32"/>
+				<string name="source" value="Item/Cash/0568.img/05680076/info/iconRaw"/>
+			</canvas>
+			<int name="cash" value="1"/>
+			<int name="notConsume" value="1"/>
+		</imgdir>
+		<imgdir name="spec">
+			<string name="script" value="cash_5680091"/>
+			<int name="npc" value="9010000"/>
+		</imgdir>
+	</imgdir>
+	<imgdir name="05680092">
+		<imgdir name="info">
+			<canvas name="icon" width="32" height="32">
+				<vector name="origin" x="0" y="32"/>
+				<string name="source" value="Item/Cash/0553.img/05530460/info/icon"/>
+			</canvas>
+			<canvas name="iconRaw" width="32" height="31">
+				<vector name="origin" x="0" y="32"/>
+				<string name="source" value="Item/Cash/0568.img/05680076/info/iconRaw"/>
+			</canvas>
+			<int name="cash" value="1"/>
+			<int name="notConsume" value="1"/>
+		</imgdir>
+		<imgdir name="spec">
+			<string name="script" value="cash_5680092"/>
+			<int name="npc" value="9010000"/>
+		</imgdir>
+	</imgdir>
+	<imgdir name="05680093">
+		<imgdir name="info">
+			<canvas name="icon" width="32" height="32">
+				<vector name="origin" x="0" y="32"/>
+				<string name="source" value="Item/Cash/0553.img/05530460/info/icon"/>
+			</canvas>
+			<canvas name="iconRaw" width="32" height="31">
+				<vector name="origin" x="0" y="32"/>
+				<string name="source" value="Item/Cash/0568.img/05680076/info/iconRaw"/>
+			</canvas>
+			<int name="cash" value="1"/>
+			<int name="notConsume" value="1"/>
+		</imgdir>
+		<imgdir name="spec">
+			<string name="script" value="cash_5680093"/>
+			<int name="npc" value="9010000"/>
+		</imgdir>
+	</imgdir>
+	<imgdir name="05680094">
+		<imgdir name="info">
+			<canvas name="icon" width="32" height="32">
+				<vector name="origin" x="0" y="32"/>
+				<string name="source" value="Item/Cash/0553.img/05530460/info/icon"/>
+			</canvas>
+			<canvas name="iconRaw" width="32" height="31">
+				<vector name="origin" x="0" y="32"/>
+				<string name="source" value="Item/Cash/0568.img/05680076/info/iconRaw"/>
+			</canvas>
+			<int name="cash" value="1"/>
+			<int name="notConsume" value="1"/>
+		</imgdir>
+		<imgdir name="spec">
+			<string name="script" value="cash_5680094"/>
+			<int name="npc" value="9010000"/>
+		</imgdir>
+	</imgdir>
+	<imgdir name="05680095">
+		<imgdir name="info">
+			<canvas name="icon" width="32" height="32">
+				<vector name="origin" x="0" y="32"/>
+				<string name="source" value="Item/Cash/0553.img/05530460/info/icon"/>
+			</canvas>
+			<canvas name="iconRaw" width="32" height="31">
+				<vector name="origin" x="0" y="32"/>
+				<string name="source" value="Item/Cash/0568.img/05680076/info/iconRaw"/>
+			</canvas>
+			<int name="cash" value="1"/>
+			<int name="notConsume" value="1"/>
+		</imgdir>
+		<imgdir name="spec">
+			<string name="script" value="cash_5680095"/>
+			<int name="npc" value="9010000"/>
+		</imgdir>
+	</imgdir>
+	<imgdir name="05680096">
+		<imgdir name="info">
+			<canvas name="icon" width="32" height="32">
+				<vector name="origin" x="0" y="32"/>
+				<string name="source" value="Item/Cash/0553.img/05530460/info/icon"/>
+			</canvas>
+			<canvas name="iconRaw" width="32" height="31">
+				<vector name="origin" x="0" y="32"/>
+				<string name="source" value="Item/Cash/0568.img/05680076/info/iconRaw"/>
+			</canvas>
+			<int name="cash" value="1"/>
+			<int name="notConsume" value="1"/>
+		</imgdir>
+		<imgdir name="spec">
+			<string name="script" value="cash_5680096"/>
+			<int name="npc" value="9010000"/>
+		</imgdir>
+	</imgdir>
+	<imgdir name="05680097">
+		<imgdir name="info">
+			<canvas name="icon" width="32" height="32">
+				<vector name="origin" x="0" y="32"/>
+				<string name="source" value="Item/Cash/0553.img/05530460/info/icon"/>
+			</canvas>
+			<canvas name="iconRaw" width="32" height="31">
+				<vector name="origin" x="0" y="32"/>
+				<string name="source" value="Item/Cash/0568.img/05680076/info/iconRaw"/>
+			</canvas>
+			<int name="cash" value="1"/>
+			<int name="notConsume" value="1"/>
+		</imgdir>
+		<imgdir name="spec">
+			<string name="script" value="cash_5680097"/>
+			<int name="npc" value="9010000"/>
+		</imgdir>
+	</imgdir>
+	<imgdir name="05680098">
+		<imgdir name="info">
+			<canvas name="icon" width="32" height="32">
+				<vector name="origin" x="0" y="32"/>
+				<string name="source" value="Item/Cash/0553.img/05530460/info/icon"/>
+			</canvas>
+			<canvas name="iconRaw" width="32" height="31">
+				<vector name="origin" x="0" y="32"/>
+				<string name="source" value="Item/Cash/0568.img/05680076/info/iconRaw"/>
+			</canvas>
+			<int name="cash" value="1"/>
+			<int name="notConsume" value="1"/>
+		</imgdir>
+		<imgdir name="spec">
+			<string name="script" value="cash_5680098"/>
+			<int name="npc" value="9010000"/>
+		</imgdir>
+	</imgdir>
+	<imgdir name="05680099">
+		<imgdir name="info">
+			<canvas name="icon" width="32" height="32">
+				<vector name="origin" x="0" y="32"/>
+				<string name="source" value="Item/Cash/0553.img/05530460/info/icon"/>
+			</canvas>
+			<canvas name="iconRaw" width="32" height="31">
+				<vector name="origin" x="0" y="32"/>
+				<string name="source" value="Item/Cash/0568.img/05680076/info/iconRaw"/>
+			</canvas>
+			<int name="cash" value="1"/>
+			<int name="notConsume" value="1"/>
+		</imgdir>
+		<imgdir name="spec">
+			<string name="script" value="cash_5680099"/>
+			<int name="npc" value="9010000"/>
+		</imgdir>
+	</imgdir>
+	<imgdir name="05680100">
+		<imgdir name="info">
+			<canvas name="icon" width="32" height="32">
+				<vector name="origin" x="0" y="32"/>
+				<string name="source" value="Item/Cash/0553.img/05530460/info/icon"/>
+			</canvas>
+			<canvas name="iconRaw" width="32" height="31">
+				<vector name="origin" x="0" y="32"/>
+				<string name="source" value="Item/Cash/0568.img/05680076/info/iconRaw"/>
+			</canvas>
+			<int name="cash" value="1"/>
+			<int name="notConsume" value="1"/>
+		</imgdir>
+		<imgdir name="spec">
+			<string name="script" value="cash_5680100"/>
+			<int name="npc" value="9010000"/>
+		</imgdir>
+	</imgdir>
+	<imgdir name="05680101">
+		<imgdir name="info">
+			<canvas name="icon" width="32" height="32">
+				<vector name="origin" x="0" y="32"/>
+				<string name="source" value="Item/Cash/0553.img/05530460/info/icon"/>
+			</canvas>
+			<canvas name="iconRaw" width="32" height="31">
+				<vector name="origin" x="0" y="32"/>
+				<string name="source" value="Item/Cash/0568.img/05680076/info/iconRaw"/>
+			</canvas>
+			<int name="cash" value="1"/>
+			<int name="notConsume" value="1"/>
+		</imgdir>
+		<imgdir name="spec">
+			<string name="script" value="cash_5680101"/>
+			<int name="npc" value="9010000"/>
+		</imgdir>
+	</imgdir>
+	<imgdir name="05680102">
+		<imgdir name="info">
+			<canvas name="icon" width="32" height="32">
+				<vector name="origin" x="0" y="32"/>
+				<string name="source" value="Item/Cash/0553.img/05530460/info/icon"/>
+			</canvas>
+			<canvas name="iconRaw" width="32" height="31">
+				<vector name="origin" x="0" y="32"/>
+				<string name="source" value="Item/Cash/0568.img/05680076/info/iconRaw"/>
+			</canvas>
+			<int name="cash" value="1"/>
+			<int name="notConsume" value="1"/>
+		</imgdir>
+		<imgdir name="spec">
+			<string name="script" value="cash_5680102"/>
+			<int name="npc" value="9010000"/>
+		</imgdir>
+	</imgdir>
+	<imgdir name="05680103">
+		<imgdir name="info">
+			<canvas name="icon" width="32" height="32">
+				<vector name="origin" x="0" y="32"/>
+				<string name="source" value="Item/Cash/0553.img/05530460/info/icon"/>
+			</canvas>
+			<canvas name="iconRaw" width="32" height="31">
+				<vector name="origin" x="0" y="32"/>
+				<string name="source" value="Item/Cash/0568.img/05680076/info/iconRaw"/>
+			</canvas>
+			<int name="cash" value="1"/>
+			<int name="notConsume" value="1"/>
+		</imgdir>
+		<imgdir name="spec">
+			<string name="script" value="cash_5680103"/>
+			<int name="npc" value="9010000"/>
+		</imgdir>
+	</imgdir>
+	<imgdir name="05680104">
+		<imgdir name="info">
+			<canvas name="icon" width="32" height="32">
+				<vector name="origin" x="0" y="32"/>
+				<string name="source" value="Item/Cash/0553.img/05530460/info/icon"/>
+			</canvas>
+			<canvas name="iconRaw" width="32" height="31">
+				<vector name="origin" x="0" y="32"/>
+				<string name="source" value="Item/Cash/0568.img/05680076/info/iconRaw"/>
+			</canvas>
+			<int name="cash" value="1"/>
+			<int name="notConsume" value="1"/>
+		</imgdir>
+		<imgdir name="spec">
+			<string name="script" value="cash_5680104"/>
+			<int name="npc" value="9010000"/>
+		</imgdir>
+	</imgdir>
+	<imgdir name="05680105">
+		<imgdir name="info">
+			<canvas name="icon" width="32" height="32">
+				<vector name="origin" x="0" y="32"/>
+				<string name="source" value="Item/Cash/0553.img/05530460/info/icon"/>
+			</canvas>
+			<canvas name="iconRaw" width="32" height="31">
+				<vector name="origin" x="0" y="32"/>
+				<string name="source" value="Item/Cash/0568.img/05680076/info/iconRaw"/>
+			</canvas>
+			<int name="cash" value="1"/>
+			<int name="notConsume" value="1"/>
+		</imgdir>
+		<imgdir name="spec">
+			<string name="script" value="cash_5680105"/>
+			<int name="npc" value="9010000"/>
+		</imgdir>
+	</imgdir>
+	<imgdir name="05680106">
+		<imgdir name="info">
+			<canvas name="icon" width="32" height="32">
+				<vector name="origin" x="0" y="32"/>
+				<string name="source" value="Item/Cash/0553.img/05530460/info/icon"/>
+			</canvas>
+			<canvas name="iconRaw" width="32" height="31">
+				<vector name="origin" x="0" y="32"/>
+				<string name="source" value="Item/Cash/0568.img/05680076/info/iconRaw"/>
+			</canvas>
+			<int name="cash" value="1"/>
+			<int name="notConsume" value="1"/>
+		</imgdir>
+		<imgdir name="spec">
+			<string name="script" value="cash_5680106"/>
+			<int name="npc" value="9010000"/>
+		</imgdir>
+	</imgdir>
+	<imgdir name="05680107">
+		<imgdir name="info">
+			<canvas name="icon" width="32" height="32">
+				<vector name="origin" x="0" y="32"/>
+				<string name="source" value="Item/Cash/0553.img/05530460/info/icon"/>
+			</canvas>
+			<canvas name="iconRaw" width="32" height="31">
+				<vector name="origin" x="0" y="32"/>
+				<string name="source" value="Item/Cash/0568.img/05680076/info/iconRaw"/>
+			</canvas>
+			<int name="cash" value="1"/>
+			<int name="notConsume" value="1"/>
+		</imgdir>
+		<imgdir name="spec">
+			<string name="script" value="cash_5680107"/>
+			<int name="npc" value="9010000"/>
+		</imgdir>
+	</imgdir>
+	<imgdir name="05680108">
+		<imgdir name="info">
+			<canvas name="icon" width="32" height="32">
+				<vector name="origin" x="0" y="32"/>
+				<string name="source" value="Item/Cash/0553.img/05530460/info/icon"/>
+			</canvas>
+			<canvas name="iconRaw" width="32" height="31">
+				<vector name="origin" x="0" y="32"/>
+				<string name="source" value="Item/Cash/0568.img/05680076/info/iconRaw"/>
+			</canvas>
+			<int name="cash" value="1"/>
+			<int name="notConsume" value="1"/>
+		</imgdir>
+		<imgdir name="spec">
+			<string name="script" value="cash_5680108"/>
+			<int name="npc" value="9010000"/>
+		</imgdir>
+	</imgdir>
+	<imgdir name="05680109">
+		<imgdir name="info">
+			<canvas name="icon" width="32" height="32">
+				<vector name="origin" x="0" y="32"/>
+				<string name="source" value="Item/Cash/0553.img/05530460/info/icon"/>
+			</canvas>
+			<canvas name="iconRaw" width="32" height="31">
+				<vector name="origin" x="0" y="32"/>
+				<string name="source" value="Item/Cash/0568.img/05680076/info/iconRaw"/>
+			</canvas>
+			<int name="cash" value="1"/>
+			<int name="notConsume" value="1"/>
+		</imgdir>
+		<imgdir name="spec">
+			<string name="script" value="cash_5680109"/>
+			<int name="npc" value="9010000"/>
+		</imgdir>
+	</imgdir>
+	<imgdir name="05680110">
+		<imgdir name="info">
+			<canvas name="icon" width="32" height="32">
+				<vector name="origin" x="0" y="32"/>
+				<string name="source" value="Item/Cash/0553.img/05530460/info/icon"/>
+			</canvas>
+			<canvas name="iconRaw" width="32" height="31">
+				<vector name="origin" x="0" y="32"/>
+				<string name="source" value="Item/Cash/0568.img/05680076/info/iconRaw"/>
+			</canvas>
+			<int name="cash" value="1"/>
+			<int name="notConsume" value="1"/>
+		</imgdir>
+		<imgdir name="spec">
+			<string name="script" value="cash_5680110"/>
+			<int name="npc" value="9010000"/>
+		</imgdir>
+	</imgdir>
+	<imgdir name="05680111">
+		<imgdir name="info">
+			<canvas name="icon" width="32" height="32">
+				<vector name="origin" x="0" y="32"/>
+				<string name="source" value="Item/Cash/0553.img/05530460/info/icon"/>
+			</canvas>
+			<canvas name="iconRaw" width="32" height="31">
+				<vector name="origin" x="0" y="32"/>
+				<string name="source" value="Item/Cash/0568.img/05680076/info/iconRaw"/>
+			</canvas>
+			<int name="cash" value="1"/>
+			<int name="notConsume" value="1"/>
+		</imgdir>
+		<imgdir name="spec">
+			<string name="script" value="cash_5680111"/>
+			<int name="npc" value="9010000"/>
+		</imgdir>
+	</imgdir>
+	<imgdir name="05680112">
+		<imgdir name="info">
+			<canvas name="icon" width="32" height="32">
+				<vector name="origin" x="0" y="32"/>
+				<string name="source" value="Item/Cash/0553.img/05530460/info/icon"/>
+			</canvas>
+			<canvas name="iconRaw" width="32" height="31">
+				<vector name="origin" x="0" y="32"/>
+				<string name="source" value="Item/Cash/0568.img/05680076/info/iconRaw"/>
+			</canvas>
+			<int name="cash" value="1"/>
+			<int name="notConsume" value="1"/>
+		</imgdir>
+		<imgdir name="spec">
+			<string name="script" value="cash_5680112"/>
+			<int name="npc" value="9010000"/>
+		</imgdir>
+	</imgdir>
+	<imgdir name="05680113">
+		<imgdir name="info">
+			<canvas name="icon" width="32" height="32">
+				<vector name="origin" x="0" y="32"/>
+				<string name="source" value="Item/Cash/0553.img/05530460/info/icon"/>
+			</canvas>
+			<canvas name="iconRaw" width="32" height="31">
+				<vector name="origin" x="0" y="32"/>
+				<string name="source" value="Item/Cash/0568.img/05680076/info/iconRaw"/>
+			</canvas>
+			<int name="cash" value="1"/>
+			<int name="notConsume" value="1"/>
+		</imgdir>
+		<imgdir name="spec">
+			<string name="script" value="cash_5680113"/>
+			<int name="npc" value="9010000"/>
+		</imgdir>
+	</imgdir>
+	<imgdir name="05680114">
+		<imgdir name="info">
+			<canvas name="icon" width="32" height="32">
+				<vector name="origin" x="0" y="32"/>
+				<string name="source" value="Item/Cash/0553.img/05530460/info/icon"/>
+			</canvas>
+			<canvas name="iconRaw" width="32" height="31">
+				<vector name="origin" x="0" y="32"/>
+				<string name="source" value="Item/Cash/0568.img/05680076/info/iconRaw"/>
+			</canvas>
+			<int name="cash" value="1"/>
+			<int name="notConsume" value="1"/>
+		</imgdir>
+		<imgdir name="spec">
+			<string name="script" value="cash_5680114"/>
+			<int name="npc" value="9010000"/>
+		</imgdir>
+	</imgdir>
+	<imgdir name="05680115">
+		<imgdir name="info">
+			<canvas name="icon" width="32" height="32">
+				<vector name="origin" x="0" y="32"/>
+				<string name="source" value="Item/Cash/0553.img/05530460/info/icon"/>
+			</canvas>
+			<canvas name="iconRaw" width="32" height="31">
+				<vector name="origin" x="0" y="32"/>
+				<string name="source" value="Item/Cash/0568.img/05680076/info/iconRaw"/>
+			</canvas>
+			<int name="cash" value="1"/>
+			<int name="notConsume" value="1"/>
+		</imgdir>
+		<imgdir name="spec">
+			<string name="script" value="cash_5680115"/>
+			<int name="npc" value="9010000"/>
+		</imgdir>
+	</imgdir>
+	<imgdir name="05680116">
+		<imgdir name="info">
+			<canvas name="icon" width="32" height="32">
+				<vector name="origin" x="0" y="32"/>
+				<string name="source" value="Item/Cash/0553.img/05530460/info/icon"/>
+			</canvas>
+			<canvas name="iconRaw" width="32" height="31">
+				<vector name="origin" x="0" y="32"/>
+				<string name="source" value="Item/Cash/0568.img/05680076/info/iconRaw"/>
+			</canvas>
+			<int name="cash" value="1"/>
+			<int name="notConsume" value="1"/>
+		</imgdir>
+		<imgdir name="spec">
+			<string name="script" value="cash_5680116"/>
+			<int name="npc" value="9010000"/>
+		</imgdir>
+	</imgdir>
+	<imgdir name="05680117">
+		<imgdir name="info">
+			<canvas name="icon" width="32" height="32">
+				<vector name="origin" x="0" y="32"/>
+				<string name="source" value="Item/Cash/0553.img/05530460/info/icon"/>
+			</canvas>
+			<canvas name="iconRaw" width="32" height="31">
+				<vector name="origin" x="0" y="32"/>
+				<string name="source" value="Item/Cash/0568.img/05680076/info/iconRaw"/>
+			</canvas>
+			<int name="cash" value="1"/>
+			<int name="notConsume" value="1"/>
+		</imgdir>
+		<imgdir name="spec">
+			<string name="script" value="cash_5680117"/>
+			<int name="npc" value="9010000"/>
+		</imgdir>
+	</imgdir>
+	<imgdir name="05680118">
+		<imgdir name="info">
+			<canvas name="icon" width="32" height="32">
+				<vector name="origin" x="0" y="32"/>
+				<string name="source" value="Item/Cash/0553.img/05530460/info/icon"/>
+			</canvas>
+			<canvas name="iconRaw" width="32" height="31">
+				<vector name="origin" x="0" y="32"/>
+				<string name="source" value="Item/Cash/0568.img/05680076/info/iconRaw"/>
+			</canvas>
+			<int name="cash" value="1"/>
+			<int name="notConsume" value="1"/>
+		</imgdir>
+		<imgdir name="spec">
+			<string name="script" value="cash_5680118"/>
+			<int name="npc" value="9010000"/>
+		</imgdir>
+	</imgdir>
+	<imgdir name="05680119">
+		<imgdir name="info">
+			<canvas name="icon" width="32" height="32">
+				<vector name="origin" x="0" y="32"/>
+				<string name="source" value="Item/Cash/0553.img/05530460/info/icon"/>
+			</canvas>
+			<canvas name="iconRaw" width="32" height="31">
+				<vector name="origin" x="0" y="32"/>
+				<string name="source" value="Item/Cash/0568.img/05680076/info/iconRaw"/>
+			</canvas>
+			<int name="cash" value="1"/>
+			<int name="notConsume" value="1"/>
+		</imgdir>
+		<imgdir name="spec">
+			<string name="script" value="cash_5680119"/>
+			<int name="npc" value="9010000"/>
+		</imgdir>
+	</imgdir>
+	<imgdir name="05680120">
+		<imgdir name="info">
+			<canvas name="icon" width="32" height="32">
+				<vector name="origin" x="0" y="32"/>
+				<string name="source" value="Item/Cash/0553.img/05530460/info/icon"/>
+			</canvas>
+			<canvas name="iconRaw" width="32" height="31">
+				<vector name="origin" x="0" y="32"/>
+				<string name="source" value="Item/Cash/0568.img/05680076/info/iconRaw"/>
+			</canvas>
+			<int name="cash" value="1"/>
+			<int name="notConsume" value="1"/>
+		</imgdir>
+		<imgdir name="spec">
+			<string name="script" value="cash_5680120"/>
+			<int name="npc" value="9010000"/>
+		</imgdir>
+	</imgdir>
+	<imgdir name="05680121">
+		<imgdir name="info">
+			<canvas name="icon" width="32" height="32">
+				<vector name="origin" x="0" y="32"/>
+				<string name="source" value="Item/Cash/0553.img/05530460/info/icon"/>
+			</canvas>
+			<canvas name="iconRaw" width="32" height="31">
+				<vector name="origin" x="0" y="32"/>
+				<string name="source" value="Item/Cash/0568.img/05680076/info/iconRaw"/>
+			</canvas>
+			<int name="cash" value="1"/>
+			<int name="notConsume" value="1"/>
+		</imgdir>
+		<imgdir name="spec">
+			<string name="script" value="cash_5680121"/>
+			<int name="npc" value="9010000"/>
+		</imgdir>
+	</imgdir>
+	<imgdir name="05680122">
+		<imgdir name="info">
+			<canvas name="icon" width="32" height="32">
+				<vector name="origin" x="0" y="32"/>
+				<string name="source" value="Item/Cash/0553.img/05530460/info/icon"/>
+			</canvas>
+			<canvas name="iconRaw" width="32" height="31">
+				<vector name="origin" x="0" y="32"/>
+				<string name="source" value="Item/Cash/0568.img/05680076/info/iconRaw"/>
+			</canvas>
+			<int name="cash" value="1"/>
+			<int name="notConsume" value="1"/>
+		</imgdir>
+		<imgdir name="spec">
+			<string name="script" value="cash_5680122"/>
+			<int name="npc" value="9010000"/>
+		</imgdir>
+	</imgdir>
+	<imgdir name="05680123">
+		<imgdir name="info">
+			<canvas name="icon" width="32" height="32">
+				<vector name="origin" x="0" y="32"/>
+				<string name="source" value="Item/Cash/0553.img/05530460/info/icon"/>
+			</canvas>
+			<canvas name="iconRaw" width="32" height="31">
+				<vector name="origin" x="0" y="32"/>
+				<string name="source" value="Item/Cash/0568.img/05680076/info/iconRaw"/>
+			</canvas>
+			<int name="cash" value="1"/>
+			<int name="notConsume" value="1"/>
+		</imgdir>
+		<imgdir name="spec">
+			<string name="script" value="cash_5680123"/>
+			<int name="npc" value="9010000"/>
+		</imgdir>
+	</imgdir>
+	<imgdir name="05680124">
+		<imgdir name="info">
+			<canvas name="icon" width="32" height="32">
+				<vector name="origin" x="0" y="32"/>
+				<string name="source" value="Item/Cash/0553.img/05530460/info/icon"/>
+			</canvas>
+			<canvas name="iconRaw" width="32" height="31">
+				<vector name="origin" x="0" y="32"/>
+				<string name="source" value="Item/Cash/0568.img/05680076/info/iconRaw"/>
+			</canvas>
+			<int name="cash" value="1"/>
+			<int name="notConsume" value="1"/>
+		</imgdir>
+		<imgdir name="spec">
+			<string name="script" value="cash_5680124"/>
+			<int name="npc" value="9010000"/>
+		</imgdir>
+	</imgdir>
+	<imgdir name="05680125">
+		<imgdir name="info">
+			<canvas name="icon" width="32" height="32">
+				<vector name="origin" x="0" y="32"/>
+				<string name="source" value="Item/Cash/0553.img/05530460/info/icon"/>
+			</canvas>
+			<canvas name="iconRaw" width="32" height="31">
+				<vector name="origin" x="0" y="32"/>
+				<string name="source" value="Item/Cash/0568.img/05680076/info/iconRaw"/>
+			</canvas>
+			<int name="cash" value="1"/>
+			<int name="notConsume" value="1"/>
+		</imgdir>
+		<imgdir name="spec">
+			<string name="script" value="cash_5680125"/>
+			<int name="npc" value="9010000"/>
+		</imgdir>
+	</imgdir>
+	<imgdir name="05680126">
+		<imgdir name="info">
+			<canvas name="icon" width="32" height="32">
+				<vector name="origin" x="0" y="32"/>
+				<string name="source" value="Item/Cash/0553.img/05530460/info/icon"/>
+			</canvas>
+			<canvas name="iconRaw" width="32" height="31">
+				<vector name="origin" x="0" y="32"/>
+				<string name="source" value="Item/Cash/0568.img/05680076/info/iconRaw"/>
+			</canvas>
+			<int name="cash" value="1"/>
+			<int name="notConsume" value="1"/>
+		</imgdir>
+		<imgdir name="spec">
+			<string name="script" value="cash_5680126"/>
+			<int name="npc" value="9010000"/>
+		</imgdir>
+	</imgdir>
+	<imgdir name="05680127">
+		<imgdir name="info">
+			<canvas name="icon" width="32" height="32">
+				<vector name="origin" x="0" y="32"/>
+				<string name="source" value="Item/Cash/0553.img/05530460/info/icon"/>
+			</canvas>
+			<canvas name="iconRaw" width="32" height="31">
+				<vector name="origin" x="0" y="32"/>
+				<string name="source" value="Item/Cash/0568.img/05680076/info/iconRaw"/>
+			</canvas>
+			<int name="cash" value="1"/>
+			<int name="notConsume" value="1"/>
+		</imgdir>
+		<imgdir name="spec">
+			<string name="script" value="cash_5680127"/>
+			<int name="npc" value="9010000"/>
+		</imgdir>
+	</imgdir>
+	<imgdir name="05680128">
+		<imgdir name="info">
+			<canvas name="icon" width="32" height="32">
+				<vector name="origin" x="0" y="32"/>
+				<string name="source" value="Item/Cash/0553.img/05530460/info/icon"/>
+			</canvas>
+			<canvas name="iconRaw" width="32" height="31">
+				<vector name="origin" x="0" y="32"/>
+				<string name="source" value="Item/Cash/0568.img/05680076/info/iconRaw"/>
+			</canvas>
+			<int name="cash" value="1"/>
+			<int name="notConsume" value="1"/>
+		</imgdir>
+		<imgdir name="spec">
+			<string name="script" value="cash_5680128"/>
+			<int name="npc" value="9010000"/>
+		</imgdir>
+	</imgdir>
+	<imgdir name="05680129">
+		<imgdir name="info">
+			<canvas name="icon" width="32" height="32">
+				<vector name="origin" x="0" y="32"/>
+				<string name="source" value="Item/Cash/0553.img/05530460/info/icon"/>
+			</canvas>
+			<canvas name="iconRaw" width="32" height="31">
+				<vector name="origin" x="0" y="32"/>
+				<string name="source" value="Item/Cash/0568.img/05680076/info/iconRaw"/>
+			</canvas>
+			<int name="cash" value="1"/>
+			<int name="notConsume" value="1"/>
+		</imgdir>
+		<imgdir name="spec">
+			<string name="script" value="cash_5680129"/>
+			<int name="npc" value="9010000"/>
+		</imgdir>
+	</imgdir>
+	<imgdir name="05680130">
+		<imgdir name="info">
+			<canvas name="icon" width="32" height="32">
+				<vector name="origin" x="0" y="32"/>
+				<string name="source" value="Item/Cash/0553.img/05530460/info/icon"/>
+			</canvas>
+			<canvas name="iconRaw" width="32" height="31">
+				<vector name="origin" x="0" y="32"/>
+				<string name="source" value="Item/Cash/0568.img/05680076/info/iconRaw"/>
+			</canvas>
+			<int name="cash" value="1"/>
+			<int name="notConsume" value="1"/>
+		</imgdir>
+		<imgdir name="spec">
+			<string name="script" value="cash_5680130"/>
+			<int name="npc" value="9010000"/>
+		</imgdir>
+	</imgdir>
+	<imgdir name="05680131">
+		<imgdir name="info">
+			<canvas name="icon" width="32" height="32">
+				<vector name="origin" x="0" y="32"/>
+				<string name="source" value="Item/Cash/0553.img/05530460/info/icon"/>
+			</canvas>
+			<canvas name="iconRaw" width="32" height="31">
+				<vector name="origin" x="0" y="32"/>
+				<string name="source" value="Item/Cash/0568.img/05680076/info/iconRaw"/>
+			</canvas>
+			<int name="cash" value="1"/>
+			<int name="notConsume" value="1"/>
+		</imgdir>
+		<imgdir name="spec">
+			<string name="script" value="cash_5680131"/>
+			<int name="npc" value="9010000"/>
+		</imgdir>
+	</imgdir>
+	<imgdir name="05680132">
+		<imgdir name="info">
+			<canvas name="icon" width="32" height="32">
+				<vector name="origin" x="0" y="32"/>
+				<string name="source" value="Item/Cash/0553.img/05530460/info/icon"/>
+			</canvas>
+			<canvas name="iconRaw" width="32" height="31">
+				<vector name="origin" x="0" y="32"/>
+				<string name="source" value="Item/Cash/0568.img/05680076/info/iconRaw"/>
+			</canvas>
+			<int name="cash" value="1"/>
+			<int name="notConsume" value="1"/>
+		</imgdir>
+		<imgdir name="spec">
+			<string name="script" value="cash_5680132"/>
+			<int name="npc" value="9010000"/>
+		</imgdir>
+	</imgdir>
+	<imgdir name="05680133">
+		<imgdir name="info">
+			<canvas name="icon" width="32" height="32">
+				<vector name="origin" x="0" y="32"/>
+				<string name="source" value="Item/Cash/0553.img/05530460/info/icon"/>
+			</canvas>
+			<canvas name="iconRaw" width="32" height="31">
+				<vector name="origin" x="0" y="32"/>
+				<string name="source" value="Item/Cash/0568.img/05680076/info/iconRaw"/>
+			</canvas>
+			<int name="cash" value="1"/>
+			<int name="notConsume" value="1"/>
+		</imgdir>
+		<imgdir name="spec">
+			<string name="script" value="cash_5680133"/>
+			<int name="npc" value="9010000"/>
+		</imgdir>
+	</imgdir>
+	<imgdir name="05680134">
+		<imgdir name="info">
+			<canvas name="icon" width="32" height="32">
+				<vector name="origin" x="0" y="32"/>
+				<string name="source" value="Item/Cash/0553.img/05530460/info/icon"/>
+			</canvas>
+			<canvas name="iconRaw" width="32" height="31">
+				<vector name="origin" x="0" y="32"/>
+				<string name="source" value="Item/Cash/0568.img/05680076/info/iconRaw"/>
+			</canvas>
+			<int name="cash" value="1"/>
+			<int name="notConsume" value="1"/>
+		</imgdir>
+		<imgdir name="spec">
+			<string name="script" value="cash_5680134"/>
+			<int name="npc" value="9010000"/>
+		</imgdir>
+	</imgdir>
+	<imgdir name="05680135">
+		<imgdir name="info">
+			<canvas name="icon" width="32" height="32">
+				<vector name="origin" x="0" y="32"/>
+				<string name="source" value="Item/Cash/0553.img/05530460/info/icon"/>
+			</canvas>
+			<canvas name="iconRaw" width="32" height="31">
+				<vector name="origin" x="0" y="32"/>
+				<string name="source" value="Item/Cash/0568.img/05680076/info/iconRaw"/>
+			</canvas>
+			<int name="cash" value="1"/>
+			<int name="notConsume" value="1"/>
+		</imgdir>
+		<imgdir name="spec">
+			<string name="script" value="cash_5680135"/>
+			<int name="npc" value="9010000"/>
+		</imgdir>
+	</imgdir>
+	<imgdir name="05680138">
+		<imgdir name="info">
+			<canvas name="icon" width="32" height="32">
+				<vector name="origin" x="0" y="32"/>
+				<string name="source" value="Item/Cash/0568.img/05680000/info/icon"/>
+			</canvas>
+			<canvas name="iconRaw" width="32" height="30">
+				<vector name="origin" x="0" y="32"/>
+				<string name="source" value="Item/Cash/0568.img/05680000/info/iconRaw"/>
+			</canvas>
+			<int name="cash" value="1"/>
+			<int name="notConsume" value="1"/>
+		</imgdir>
+		<imgdir name="spec">
+			<string name="script" value="cash_5680138"/>
+			<int name="npc" value="9010000"/>
+		</imgdir>
+	</imgdir>
+	<imgdir name="05680139">
+		<imgdir name="info">
+			<canvas name="icon" width="32" height="32">
+				<vector name="origin" x="0" y="32"/>
+				<string name="source" value="Item/Cash/0568.img/05680000/info/icon"/>
+			</canvas>
+			<canvas name="iconRaw" width="32" height="30">
+				<vector name="origin" x="0" y="32"/>
+				<string name="source" value="Item/Cash/0568.img/05680000/info/iconRaw"/>
+			</canvas>
+			<int name="cash" value="1"/>
+			<int name="notConsume" value="1"/>
+		</imgdir>
+		<imgdir name="spec">
+			<string name="script" value="cash_5680139"/>
+			<int name="npc" value="9010000"/>
+		</imgdir>
+	</imgdir>
+	<imgdir name="05680140">
+		<imgdir name="info">
+			<canvas name="icon" width="28" height="29">
+				<vector name="origin" x="-1" y="30"/>
+				<string name="source" value="Item/Cash/0553.img/05530440/info/icon"/>
+			</canvas>
+			<canvas name="iconRaw" width="28" height="27">
+				<vector name="origin" x="-1" y="30"/>
+				<string name="source" value="Item/Cash/0553.img/05530440/info/iconRaw"/>
+			</canvas>
+			<int name="cash" value="1"/>
+			<int name="notConsume" value="1"/>
+		</imgdir>
+		<imgdir name="spec">
+			<string name="script" value="cash_5680140"/>
+			<int name="npc" value="9010000"/>
+		</imgdir>
+	</imgdir>
+	<imgdir name="05680145">
+		<imgdir name="info">
+			<canvas name="icon" width="28" height="29">
+				<vector name="origin" x="-1" y="30"/>
+				<string name="source" value="Item/Cash/0553.img/05530440/info/icon"/>
+			</canvas>
+			<canvas name="iconRaw" width="28" height="27">
+				<vector name="origin" x="-1" y="30"/>
+				<string name="source" value="Item/Cash/0553.img/05530440/info/iconRaw"/>
+			</canvas>
+			<int name="price" value="0"/>
+			<int name="notSale" value="1"/>
+			<int name="slotMax" value="1"/>
+			<int name="tradeBlock" value="1"/>
+			<int name="notConsume" value="1"/>
+		</imgdir>
+		<imgdir name="spec">
+			<string name="script" value="cash_5680145"/>
+			<int name="npc" value="9010000"/>
+		</imgdir>
+	</imgdir>
+	<imgdir name="05680146">
+		<imgdir name="info">
+			<canvas name="icon" width="28" height="29">
+				<vector name="origin" x="-1" y="30"/>
+				<string name="source" value="Item/Cash/0553.img/05530440/info/icon"/>
+			</canvas>
+			<canvas name="iconRaw" width="28" height="27">
+				<vector name="origin" x="-1" y="30"/>
+				<string name="source" value="Item/Cash/0553.img/05530440/info/iconRaw"/>
+			</canvas>
+			<int name="price" value="0"/>
+			<int name="notSale" value="1"/>
+			<int name="slotMax" value="1"/>
+			<int name="tradeBlock" value="1"/>
+			<int name="notConsume" value="1"/>
+		</imgdir>
+		<imgdir name="spec">
+			<string name="script" value="cash_5680146"/>
+			<int name="npc" value="9010000"/>
+		</imgdir>
+	</imgdir>
+	<imgdir name="05680147">
+		<imgdir name="info">
+			<canvas name="icon" width="28" height="29">
+				<vector name="origin" x="-1" y="30"/>
+				<string name="source" value="Item/Cash/0553.img/05530440/info/icon"/>
+			</canvas>
+			<canvas name="iconRaw" width="28" height="27">
+				<vector name="origin" x="-1" y="30"/>
+				<string name="source" value="Item/Cash/0553.img/05530440/info/iconRaw"/>
+			</canvas>
+			<int name="price" value="0"/>
+			<int name="notSale" value="1"/>
+			<int name="slotMax" value="1"/>
+			<int name="tradeBlock" value="1"/>
+			<int name="notConsume" value="1"/>
+		</imgdir>
+		<imgdir name="spec">
+			<string name="script" value="cash_5680147"/>
+			<int name="npc" value="9010000"/>
+		</imgdir>
+	</imgdir>
+	<imgdir name="05680148">
+		<imgdir name="info">
+			<canvas name="icon" width="31" height="31">
+				<vector name="origin" x="-1" y="31"/>
+			</canvas>
+			<canvas name="iconRaw" width="31" height="30">
+				<vector name="origin" x="-1" y="31"/>
+			</canvas>
+			<int name="cash" value="1"/>
+			<int name="notConsume" value="1"/>
+		</imgdir>
+		<imgdir name="spec">
+			<string name="script" value="cash_5680148"/>
+			<int name="npc" value="9030200"/>
+		</imgdir>
+	</imgdir>
+	<imgdir name="05680149">
+		<imgdir name="info">
+			<canvas name="icon" width="31" height="31">
+				<vector name="origin" x="-1" y="31"/>
+			</canvas>
+			<canvas name="iconRaw" width="31" height="30">
+				<vector name="origin" x="-1" y="31"/>
+			</canvas>
+			<int name="cash" value="1"/>
+			<int name="notConsume" value="1"/>
+		</imgdir>
+		<imgdir name="spec">
+			<string name="script" value="cash_5680149"/>
+			<int name="npc" value="9030200"/>
+		</imgdir>
+	</imgdir>
+	<imgdir name="05680150">
+		<imgdir name="info">
+			<canvas name="icon" width="31" height="31">
+				<vector name="origin" x="-1" y="31"/>
+			</canvas>
+			<canvas name="iconRaw" width="31" height="30">
+				<vector name="origin" x="-1" y="31"/>
+			</canvas>
+			<int name="cash" value="1"/>
+			<int name="notConsume" value="1"/>
+		</imgdir>
+		<imgdir name="spec">
+			<string name="script" value="cash_5680150"/>
+			<int name="npc" value="9030200"/>
+		</imgdir>
+	</imgdir>
+	<imgdir name="05680151">
+		<imgdir name="info">
+			<canvas name="icon" width="31" height="31">
+				<vector name="origin" x="-1" y="31"/>
+			</canvas>
+			<canvas name="iconRaw" width="31" height="30">
+				<vector name="origin" x="-1" y="31"/>
+			</canvas>
+			<int name="cash" value="1"/>
+			<int name="notConsume" value="1"/>
+		</imgdir>
+		<imgdir name="spec">
+			<string name="script" value="cash_5680151"/>
+			<int name="npc" value="9030200"/>
+		</imgdir>
+	</imgdir>
+	<imgdir name="05689000">
+		<imgdir name="info">
+			<canvas name="icon" width="31" height="31">
+				<vector name="origin" x="0" y="31"/>
+				<int name="z" value="0"/>
+			</canvas>
+			<canvas name="iconRaw" width="32" height="31">
+				<vector name="origin" x="0" y="31"/>
+				<int name="z" value="0"/>
+			</canvas>
+			<int name="cash" value="1"/>
+			<int name="notConsume" value="1"/>
+			<int name="life" value="90"/>
+		</imgdir>
+		<imgdir name="spec">
+			<string name="script" value="cash_5689000"/>
+			<int name="npc" value="1032102"/>
+		</imgdir>
+	</imgdir>
+	<imgdir name="05680059">
+		<imgdir name="info">
+			<canvas name="icon" width="36" height="31">
+				<vector name="origin" x="2" y="30"/>
+			</canvas>
+			<canvas name="iconRaw" width="36" height="31">
+				<vector name="origin" x="2" y="30"/>
+				<string name="source" value="Item/Cash/0568.img/05680059/info/icon"/>
+			</canvas>
+			<int name="cash" value="1"/>
+			<int name="notConsume" value="1"/>
+			<int name="noMoveToLocker" value="1"/>
+		</imgdir>
+		<imgdir name="spec">
+			<string name="script" value="cash_5680059"/>
+			<int name="npc" value="9010000"/>
+		</imgdir>
+	</imgdir>
+	<imgdir name="05680160">
+		<imgdir name="info">
+			<canvas name="icon" width="27" height="30">
+				<vector name="origin" x="-3" y="30"/>
+				<string name="source" value="Item/Cash/0553.img/05530275/info/icon"/>
+			</canvas>
+			<canvas name="iconRaw" width="27" height="28">
+				<vector name="origin" x="-3" y="30"/>
+				<string name="source" value="Item/Cash/0553.img/05530275/info/iconRaw"/>
+			</canvas>
+			<int name="cash" value="1"/>
+			<int name="noMoveToLocker" value="1"/>
+			<int name="notConsume" value="1"/>
+		</imgdir>
+		<imgdir name="spec">
+			<string name="script" value="cash_5680160"/>
+			<int name="npc" value="9010000"/>
+		</imgdir>
+	</imgdir>
+	<imgdir name="05680154">
+		<imgdir name="info">
+			<canvas name="icon" width="26" height="30">
+				<vector name="origin" x="-4" y="30"/>
+			</canvas>
+			<canvas name="iconRaw" width="24" height="29">
+				<vector name="origin" x="-4" y="30"/>
+			</canvas>
+			<int name="cash" value="1"/>
+			<int name="notConsume" value="1"/>
+		</imgdir>
+		<imgdir name="spec">
+			<string name="script" value="cash_5680154"/>
+			<int name="npc" value="9072200"/>
+		</imgdir>
+	</imgdir>
+	<imgdir name="05680155">
+		<imgdir name="info">
+			<canvas name="icon" width="33" height="29">
+				<vector name="origin" x="0" y="29"/>
+			</canvas>
+			<canvas name="iconRaw" width="33" height="28">
+				<vector name="origin" x="0" y="29"/>
+			</canvas>
+			<int name="cash" value="1"/>
+			<int name="notConsume" value="1"/>
+		</imgdir>
+		<imgdir name="spec">
+			<string name="script" value="cash_5680155"/>
+			<int name="npc" value="9072200"/>
+		</imgdir>
+	</imgdir>
+	<imgdir name="05680157">
+		<imgdir name="info">
+			<canvas name="icon" width="35" height="30">
+				<vector name="origin" x="2" y="30"/>
+			</canvas>
+			<canvas name="iconRaw" width="35" height="29">
+				<vector name="origin" x="2" y="30"/>
+			</canvas>
+			<int name="cash" value="1"/>
+			<int name="notConsume" value="1"/>
+		</imgdir>
+		<imgdir name="spec">
+			<string name="script" value="cash_5680157"/>
+			<int name="npc" value="9000172"/>
+		</imgdir>
+	</imgdir>
+	<imgdir name="05680178">
+		<imgdir name="info">
+			<canvas name="icon" width="33" height="30">
+				<vector name="origin" x="0" y="30"/>
+				<string name="source" value="Item/Cash/0533.img/05530052/info/icon"/>
+			</canvas>
+			<canvas name="iconRaw" width="33" height="25">
+				<vector name="origin" x="0" y="30"/>
+				<string name="source" value="Item/Cash/0533.img/05530052/info/iconRaw"/>
+			</canvas>
+			<int name="cash" value="1"/>
+			<int name="notConsume" value="1"/>
+		</imgdir>
+		<imgdir name="spec">
+			<string name="script" value="cash_5680178"/>
+			<int name="npc" value="9010000"/>
+		</imgdir>
+	</imgdir>
+	<imgdir name="05680184">
+		<imgdir name="info">
+			<canvas name="icon" width="32" height="32">
+				<vector name="origin" x="0" y="32"/>
+				<int name="z" value="0"/>
+			</canvas>
+			<canvas name="iconRaw" width="32" height="32">
+				<vector name="origin" x="0" y="32"/>
+				<int name="z" value="0"/>
+				<string name="source" value="Item/Cash/0568.img/05680184/info/icon"/>
+			</canvas>
+			<int name="cash" value="1"/>
+			<int name="notConsume" value="1"/>
+		</imgdir>
+		<imgdir name="spec">
+			<string name="script" value="cash_5680184"/>
+			<int name="npc" value="9010000"/>
+		</imgdir>
+	</imgdir>
+	<imgdir name="05680185">
+		<imgdir name="info">
+			<canvas name="icon" width="32" height="32">
+				<vector name="origin" x="0" y="32"/>
+				<int name="z" value="0"/>
+				<string name="source" value="Item/Cash/0568.img/05680184/info/icon"/>
+			</canvas>
+			<canvas name="iconRaw" width="32" height="32">
+				<vector name="origin" x="0" y="32"/>
+				<int name="z" value="0"/>
+				<string name="source" value="Item/Cash/0568.img/05680184/info/icon"/>
+			</canvas>
+			<int name="cash" value="1"/>
+			<int name="notConsume" value="1"/>
+		</imgdir>
+		<imgdir name="spec">
+			<string name="script" value="cash_5680185"/>
+			<int name="npc" value="9010000"/>
+		</imgdir>
+	</imgdir>
+	<imgdir name="05680186">
+		<imgdir name="info">
+			<canvas name="icon" width="31" height="28">
+				<vector name="origin" x="-1" y="28"/>
+				<string name="source" value="Item/Cash/0553.img/05530037/info/icon"/>
+			</canvas>
+			<canvas name="iconRaw" width="31" height="23">
+				<vector name="origin" x="-1" y="28"/>
+				<string name="source" value="Item/Cash/0553.img/05530037/info/iconRaw"/>
+			</canvas>
+			<int name="cash" value="1"/>
+			<int name="notConsume" value="1"/>
+		</imgdir>
+		<imgdir name="spec">
+			<string name="script" value="cash_5680186"/>
+			<int name="npc" value="9010000"/>
+		</imgdir>
+	</imgdir>
+	<imgdir name="05680187">
+		<imgdir name="info">
+			<canvas name="icon" width="31" height="28">
+				<vector name="origin" x="-1" y="28"/>
+				<string name="source" value="Item/Cash/0553.img/05530036/info/icon"/>
+			</canvas>
+			<canvas name="iconRaw" width="31" height="23">
+				<vector name="origin" x="-1" y="28"/>
+				<string name="source" value="Item/Cash/0553.img/05530036/info/iconRaw"/>
+			</canvas>
+			<int name="cash" value="1"/>
+			<int name="notConsume" value="1"/>
+		</imgdir>
+		<imgdir name="spec">
+			<string name="script" value="cash_5680187"/>
+			<int name="npc" value="9010000"/>
+		</imgdir>
+	</imgdir>
+	<imgdir name="05680192">
+		<imgdir name="info">
+			<canvas name="icon" width="26" height="26">
+				<vector name="origin" x="-4" y="26"/>
+			</canvas>
+			<canvas name="iconRaw" width="23" height="23">
+				<vector name="origin" x="-6" y="26"/>
+			</canvas>
+			<int name="cash" value="1"/>
+			<int name="notConsume" value="1"/>
+		</imgdir>
+		<imgdir name="spec">
+			<string name="script" value="cash_5680192"/>
+			<int name="npc" value="9010000"/>
+		</imgdir>
+	</imgdir>
+	<imgdir name="05680193">
+		<imgdir name="info">
+			<canvas name="icon" width="31" height="31">
+				<vector name="origin" x="-1" y="31"/>
+				<string name="source" value="Item/Cash/0568.img/05680150/info/icon"/>
+			</canvas>
+			<canvas name="iconRaw" width="31" height="30">
+				<vector name="origin" x="-1" y="31"/>
+				<string name="source" value="Item/Cash/0568.img/05680150/info/iconRaw"/>
+			</canvas>
+			<int name="cash" value="1"/>
+			<int name="notConsume" value="1"/>
+		</imgdir>
+		<imgdir name="spec">
+			<string name="script" value="cash_5680193"/>
+			<int name="npc" value="9030200"/>
+		</imgdir>
+	</imgdir>
+	<imgdir name="05680194">
+		<imgdir name="info">
+			<canvas name="icon" width="31" height="31">
+				<vector name="origin" x="-1" y="31"/>
+				<string name="source" value="Item/Cash/0568.img/05680150/info/icon"/>
+			</canvas>
+			<canvas name="iconRaw" width="31" height="30">
+				<vector name="origin" x="-1" y="31"/>
+				<string name="source" value="Item/Cash/0568.img/05680150/info/iconRaw"/>
+			</canvas>
+			<int name="cash" value="1"/>
+			<int name="notConsume" value="1"/>
+		</imgdir>
+		<imgdir name="spec">
+			<string name="script" value="cash_5680194"/>
+			<int name="npc" value="9030200"/>
+		</imgdir>
+	</imgdir>
+	<imgdir name="05680196">
+		<imgdir name="info">
+			<canvas name="icon" width="32" height="32">
+				<vector name="origin" x="0" y="31"/>
+			</canvas>
+			<canvas name="iconRaw" width="32" height="32">
+				<vector name="origin" x="0" y="31"/>
+				<string name="source" value="Item/Cash/0568.img/05680196/info/icon"/>
+			</canvas>
+			<int name="cash" value="1"/>
+			<int name="notConsume" value="1"/>
+		</imgdir>
+		<imgdir name="spec">
+			<string name="script" value="cash_5680196"/>
+			<int name="npc" value="9010000"/>
+		</imgdir>
+	</imgdir>
+	<imgdir name="05680197">
+		<imgdir name="info">
+			<canvas name="icon" width="32" height="32">
+				<vector name="origin" x="0" y="31"/>
+				<string name="source" value="Item/Cash/0568.img/05680196/info/icon"/>
+			</canvas>
+			<canvas name="iconRaw" width="32" height="32">
+				<vector name="origin" x="0" y="31"/>
+				<string name="source" value="Item/Cash/0568.img/05680196/info/icon"/>
+			</canvas>
+			<int name="cash" value="1"/>
+			<int name="notConsume" value="1"/>
+		</imgdir>
+		<imgdir name="spec">
+			<string name="script" value="cash_5680197"/>
+			<int name="npc" value="9010000"/>
+		</imgdir>
+	</imgdir>
+	<imgdir name="05680198">
+		<imgdir name="info">
+			<canvas name="icon" width="32" height="32">
+				<vector name="origin" x="0" y="32"/>
+			</canvas>
+			<canvas name="iconRaw" width="32" height="32">
+				<vector name="origin" x="0" y="32"/>
+				<string name="source" value="Item/Cash/0568.img/05680198/info/icon"/>
+			</canvas>
+			<int name="cash" value="1"/>
+			<int name="notConsume" value="1"/>
+		</imgdir>
+		<imgdir name="spec">
+			<string name="script" value="cash_5680198"/>
+			<int name="npc" value="9010000"/>
+		</imgdir>
+	</imgdir>
+	<imgdir name="05680199">
+		<imgdir name="info">
+			<canvas name="icon" width="32" height="32">
+				<vector name="origin" x="0" y="32"/>
+			</canvas>
+			<canvas name="iconRaw" width="32" height="32">
+				<vector name="origin" x="0" y="32"/>
+				<string name="source" value="Item/Cash/0568.img/05680199/info/icon"/>
+			</canvas>
+			<int name="cash" value="1"/>
+			<int name="notConsume" value="1"/>
+		</imgdir>
+		<imgdir name="spec">
+			<string name="script" value="cash_5680199"/>
+			<int name="npc" value="9010000"/>
+		</imgdir>
+	</imgdir>
+	<imgdir name="05680200">
+		<imgdir name="info">
+			<canvas name="icon" width="28" height="29">
+				<vector name="origin" x="-2" y="29"/>
+			</canvas>
+			<canvas name="iconRaw" width="28" height="27">
+				<vector name="origin" x="-2" y="29"/>
+			</canvas>
+			<int name="cash" value="1"/>
+			<int name="notConsume" value="1"/>
+		</imgdir>
+		<imgdir name="spec">
+			<string name="script" value="cash_5680200"/>
+			<int name="npc" value="9010000"/>
+		</imgdir>
+	</imgdir>
+	<imgdir name="05680204">
+		<imgdir name="info">
+			<canvas name="icon" width="32" height="32">
+				<vector name="origin" x="0" y="32"/>
+				<string name="source" value="Item/Cash/0501.img/05010111/info/icon"/>
+			</canvas>
+			<canvas name="iconRaw" width="32" height="32">
+				<vector name="origin" x="0" y="32"/>
+				<string name="source" value="Item/Cash/0501.img/05010111/info/icon"/>
+			</canvas>
+			<int name="cash" value="1"/>
+			<int name="notConsume" value="1"/>
+		</imgdir>
+		<imgdir name="spec">
+			<string name="script" value="cash_5680204"/>
+			<int name="npc" value="9010000"/>
+		</imgdir>
+	</imgdir>
+</imgdir>

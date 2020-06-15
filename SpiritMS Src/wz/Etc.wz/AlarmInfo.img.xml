@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<imgdir name="AlarmInfo.img">
+    <imgdir name="1">
+        <imgdir name="questIDs">
+            <string name="0" value="13391 - 13394"/>
+            <string name="1" value="13459"/>
+        </imgdir>
+        <string name="toolTip" value="2013 New Year&apos;s event is in progress."/>
+        <string name="resourcePath" value="newYear"/>
+    </imgdir>
+    <imgdir name="2">
+        <imgdir name="questIDs">
+            <string name="0" value="10661 - 10666"/>
+            <string name="1" value="11440"/>
+            <string name="2" value="11442"/>
+            <string name="3" value="11572 - 11573"/>
+            <string name="4" value="12371 - 12374"/>
+            <string name="5" value="12763 - 12764"/>
+            <string name="6" value="13250"/>
+            <string name="7" value="13264 - 13278"/>
+            <string name="8" value="26910"/>
+        </imgdir>
+        <string name="toolTip" value="Benefits only for Premium PC Cafe users!"/>
+        <string name="resourcePath" value="PC"/>
+    </imgdir>
+    <imgdir name="3">
+        <imgdir name="questIDs">
+            <string name="0" value="26430 - 26442"/>
+            <string name="1" value="26427 - 26429"/>
+            <string name="2" value="26443 - 26451"/>
+            <string name="3" value="26452"/>
+            <string name="4" value="26466"/>
+        </imgdir>
+        <string name="toolTip" value="Enjoy your Mileage benefits at the Cash Shop!"/>
+        <string name="resourcePath" value="Mile"/>
+    </imgdir>
+    <imgdir name="4">
+        <imgdir name="questIDs">
+            <string name="0" value="14016"/>
+        </imgdir>
+        <string name="toolTip" value="Check out the Winter Time Event and get a special gift every 30 minutes."/>
+        <string name="resourcePath" value="TimeEvent"/>
+    </imgdir>
+    <imgdir name="5">
+        <imgdir name="questIDs">
+            <string name="0" value="59322"/>
+        </imgdir>
+        <string name="toolTip" value="There&apos;s a special gift for Beast Tamers between levels 10 and 150!"/>
+        <string name="resourcePath" value="LevelUpIncentiveBT"/>
+        <int name="openUI_idx" value="194"/>
+    </imgdir>
+    <imgdir name="6">
+        <imgdir name="questIDs">
+            <int name="0" value="59018"/>
+            <string name="1" value="59000-59016"/>
+            <string name="2" value="59036-59051"/>
+            <string name="3" value="59052-59064"/>
+            <string name="4" value="59066-59070"/>
+            <string name="5" value="59073-59077"/>
+            <string name="6" value="59079-59215"/>
+            <string name="7" value="59217-59236"/>
+            <string name="8" value="59241-59261"/>
+            <string name="9" value="59268-59404"/>
+        </imgdir>
+        <string name="toolTip" value="Way of the Beast Tamer"/>
+        <string name="resourcePath" value="BeastTamerBT"/>
+    </imgdir>
+</imgdir>

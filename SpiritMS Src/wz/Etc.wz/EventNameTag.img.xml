@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<imgdir name="EventNameTag.img">
+    <imgdir name="0">
+        <string name="0" value="Snail Tosser"/>
+        <string name="1" value="Monster Bane"/>
+        <string name="2" value="Orange Mushroom Devotee"/>
+        <string name="3" value="Pure as the Dew"/>
+        <string name="4" value="Thicker than Reindeer Milk"/>
+        <string name="5" value="Alluring as a Rose"/>
+        <string name="6" value="Heart of Fire"/>
+        <string name="7" value="Tougher than Dragon Scales"/>
+        <string name="8" value="The Pounder"/>
+        <string name="9" value="Rubble Chewer"/>
+    </imgdir>
+    <imgdir name="1">
+        <string name="0" value="Zakum Arm Wrestler"/>
+        <string name="1" value="Fairy Charmer"/>
+        <string name="2" value="Juicy Lips"/>
+        <string name="3" value="Pink Bean Belly"/>
+        <string name="4" value="Adorabunny"/>
+        <string name="5" value="Swims with the Pepe"/>
+        <string name="6" value="Crimson Balrog&apos;s Boss"/>
+        <string name="7" value="Ganapati-Headed"/>
+        <string name="8" value="Skeletonian"/>
+        <string name="9" value="Mega Noggin"/>
+    </imgdir>
+    <imgdir name="2">
+        <string name="0" value="Elluelian"/>
+        <string name="1" value="Henesys Free Marketer"/>
+        <string name="2" value="Kulan Fielder"/>
+        <string name="3" value="Artiant West Entrancer"/>
+        <string name="4" value="Red-Nosed Pirate"/>
+        <string name="5" value="High Tower Hoodlum"/>
+        <string name="6" value="Heliseum Downtowner"/>
+        <string name="7" value="Gelimer&apos;s Intern"/>
+        <string name="8" value="Perion Gusty Peak Climber"/>
+        <string name="9" value="Zakum&apos;s Altar Worshipper"/>
+    </imgdir>
+    <imgdir name="3">
+        <string name="0" value="Ugly"/>
+        <string name="1" value="Messy Face"/>
+        <string name="2" value="Incomplete"/>
+        <string name="3" value="Bling Bling"/>
+        <string name="4" value="Big and Beautiful"/>
+        <string name="5" value="Killer Body"/>
+        <string name="6" value="Wurstmacher "/>
+        <string name="7" value="Gleaming Aura"/>
+        <string name="8" value="Blessed by the Goddess"/>
+        <string name="9" value="Fatally Attractive"/>
+    </imgdir>
+    <imgdir name="4">
+        <string name="0" value="Cassandra&apos;s BFF"/>
+        <string name="1" value="Spiegelmann&apos;s Cousin"/>
+        <string name="2" value="Spiegelette&apos;s Confidante"/>
+        <string name="3" value="Lilin&apos;s Toy"/>
+        <string name="4" value="Dung Fly"/>
+        <string name="5" value="Moon Bunny&apos;s Heir"/>
+        <string name="6" value="Chief Stan&apos;s Comrade"/>
+        <string name="7" value="Kenta&apos;s Mentor"/>
+        <string name="8" value="Rebecca&apos;s Listener"/>
+        <string name="9" value="Chumji&apos;s Opponent"/>
+    </imgdir>
+</imgdir>

@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<imgdir name="0271.img">
+	<imgdir name="02711000">
+		<imgdir name="info">
+			<canvas name="icon" width="29" height="29">
+				<vector name="origin" x="-3" y="29"/>
+			</canvas>
+			<canvas name="iconRaw" width="29" height="29">
+				<vector name="origin" x="-3" y="29"/>
+			</canvas>
+			<int name="price" value="1"/>
+			<int name="slotMax" value="300"/>
+			<string name="path" value="UI/UIWindow2.img/MiracleCube_InGame"/>
+		</imgdir>
+	</imgdir>
+	<imgdir name="02711001">
+		<imgdir name="info">
+			<canvas name="icon" width="29" height="29">
+				<vector name="origin" x="-3" y="29"/>
+				<string name="source" value="Item/Consume/0271.img/02711000/info/icon"/>
+			</canvas>
+			<canvas name="iconRaw" width="29" height="29">
+				<vector name="origin" x="-3" y="29"/>
+				<string name="source" value="Item/Consume/0271.img/02711000/info/iconRaw"/>
+			</canvas>
+			<int name="price" value="1"/>
+			<string name="path" value="UI/UIWindow2.img/MiracleCube_InGame"/>
+			<int name="slotMax" value="1"/>
+			<int name="timeLimited" value="1"/>
+			<int name="tradeBlock" value="1"/>
+		</imgdir>
+	</imgdir>
+	<imgdir name="02710000">
+		<imgdir name="info">
+			<canvas name="icon" width="29" height="29">
+				<vector name="origin" x="-3" y="29"/>
+				<string name="source" value="Item/Consume/0271.img/02711000/info/icon"/>
+			</canvas>
+			<canvas name="iconRaw" width="29" height="29">
+				<vector name="origin" x="-3" y="29"/>
+				<string name="source" value="Item/Consume/0271.img/02711000/info/iconRaw"/>
+			</canvas>
+			<int name="price" value="1"/>
+			<int name="slotMax" value="100"/>
+			<int name="tradeBlock" value="1"/>
+			<string name="path" value="UI/UIWindow2.img/MiracleCube_InGame"/>
+		</imgdir>
+	</imgdir>
+	<imgdir name="02711003">
+		<imgdir name="info">
+			<canvas name="icon" width="32" height="32">
+				<vector name="origin" x="0" y="32"/>
+			</canvas>
+			<canvas name="iconRaw" width="32" height="32">
+				<vector name="origin" x="0" y="32"/>
+			</canvas>
+			<int name="price" value="1"/>
+			<string name="path" value="UI/UIWindow2.img/MiracleCube_InGame"/>
+			<int name="slotMax" value="1"/>
+			<int name="timeLimited" value="1"/>
+		</imgdir>
+	</imgdir>
+	<imgdir name="02711004">
+		<imgdir name="info">
+			<canvas name="icon" width="32" height="32">
+				<vector name="origin" x="0" y="32"/>
+			</canvas>
+			<canvas name="iconRaw" width="32" height="32">
+				<vector name="origin" x="0" y="32"/>
+			</canvas>
+			<int name="price" value="1"/>
+			<string name="path" value="UI/UIWindow2.img/MiracleCube_InGame"/>
+			<int name="slotMax" value="1"/>
+			<int name="timeLimited" value="1"/>
+		</imgdir>
+	</imgdir>
+	<imgdir name="02711002">
+		<imgdir name="info">
+			<canvas name="icon" width="29" height="29">
+				<vector name="origin" x="-3" y="29"/>
+				<string name="source" value="Item/Consume/0271.img/02711000/info/icon"/>
+			</canvas>
+			<canvas name="iconRaw" width="29" height="29">
+				<vector name="origin" x="-3" y="29"/>
+				<string name="source" value="Item/Consume/0271.img/02711000/info/iconRaw"/>
+			</canvas>
+			<int name="price" value="1"/>
+			<int name="slotMax" value="100"/>
+			<int name="tradeBlock" value="1"/>
+			<string name="path" value="UI/UIWindow2.img/MiracleCube_InGame"/>
+		</imgdir>
+	</imgdir>
+	<imgdir name="02710002">
+		<imgdir name="info">
+			<canvas name="icon" width="32" height="32">
+				<vector name="origin" x="0" y="32"/>
+				<string name="source" value="Item/Consume/0271.img/02711003/info/icon"/>
+			</canvas>
+			<canvas name="iconRaw" width="32" height="32">
+				<vector name="origin" x="0" y="32"/>
+				<string name="source" value="Item/Consume/0271.img/02711003/info/iconRaw"/>
+			</canvas>
+			<int name="price" value="1"/>
+			<string name="path" value="UI/UIWindow2.img/MiracleCube_InGame"/>
+			<int name="slotMax" value="1"/>
+			<int name="timeLimited" value="1"/>
+			<int name="accountSharable" value="1"/>
+		</imgdir>
+	</imgdir>
+	<imgdir name="02710003">
+		<imgdir name="info">
+			<canvas name="icon" width="32" height="32">
+				<vector name="origin" x="0" y="32"/>
+				<string name="source" value="Item/Consume/0271.img/02711004/info/icon"/>
+			</canvas>
+			<canvas name="iconRaw" width="32" height="32">
+				<vector name="origin" x="0" y="32"/>
+				<string name="source" value="Item/Consume/0271.img/02711004/info/iconRaw"/>
+			</canvas>
+			<int name="price" value="1"/>
+			<string name="path" value="UI/UIWindow2.img/MiracleCube_InGame"/>
+			<int name="slotMax" value="1"/>
+			<int name="timeLimited" value="1"/>
+			<int name="accountSharable" value="1"/>
+		</imgdir>
+	</imgdir>
+</imgdir>

@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<imgdir name="MobZoneInfo.img">
+    <imgdir name="9990009">
+        <imgdir name="damage">
+            <int name="in" value="100"/>
+            <int name="out" value="10"/>
+        </imgdir>
+        <imgdir name="consume">
+            <int name="in" value="100"/>
+            <int name="out" value="10"/>
+        </imgdir>
+        <imgdir name="autoDec">
+            <int name="in" value="10"/>
+            <int name="out" value="150"/>
+        </imgdir>
+        <imgdir name="healRate">
+            <int name="in" value="10"/>
+            <int name="out" value="150"/>
+        </imgdir>
+    </imgdir>
+    <imgdir name="8880000">
+        <imgdir name="damage">
+            <int name="in" value="100"/>
+            <int name="out" value="10"/>
+        </imgdir>
+        <imgdir name="consume">
+            <int name="in" value="100"/>
+            <int name="out" value="10"/>
+        </imgdir>
+        <imgdir name="autoDec">
+            <int name="in" value="0"/>
+            <int name="out" value="1000"/>
+        </imgdir>
+        <imgdir name="healRate">
+            <int name="in" value="100"/>
+            <int name="out" value="10"/>
+        </imgdir>
+    </imgdir>
+    <imgdir name="8880002">
+        <imgdir name="damage">
+            <int name="in" value="100"/>
+            <int name="out" value="10"/>
+        </imgdir>
+        <imgdir name="consume">
+            <int name="in" value="100"/>
+            <int name="out" value="10"/>
+        </imgdir>
+        <imgdir name="autoDec">
+            <int name="in" value="0"/>
+            <int name="out" value="1000"/>
+        </imgdir>
+        <imgdir name="healRate">
+            <int name="in" value="100"/>
+            <int name="out" value="10"/>
+        </imgdir>
+    </imgdir>
+    <imgdir name="8880010">
+        <imgdir name="damage">
+            <int name="in" value="100"/>
+            <int name="out" value="50"/>
+        </imgdir>
+        <imgdir name="consume">
+            <int name="in" value="100"/>
+            <int name="out" value="50"/>
+        </imgdir>
+        <imgdir name="autoDec">
+            <int name="in" value="0"/>
+            <int name="out" value="500"/>
+        </imgdir>
+        <imgdir name="healRate">
+            <int name="in" value="100"/>
+            <int name="out" value="50"/>
+        </imgdir>
+    </imgdir>
+</imgdir>

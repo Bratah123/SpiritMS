@@ -1,0 +1,289 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<imgdir name="Tips.img">
+    <imgdir name="info">
+        <imgdir name="0">
+            <int name="levelMin" value="1"/>
+            <int name="levelMax" value="5"/>
+            <int name="interval" value="30000"/>
+            <int name="all" value="20"/>
+            <string name="tip" value="novice"/>
+        </imgdir>
+        <imgdir name="1">
+            <int name="levelMin" value="6"/>
+            <int name="levelMax" value="10"/>
+            <int name="interval" value="60000"/>
+            <int name="all" value="40"/>
+            <string name="tip" value="novice"/>
+        </imgdir>
+        <imgdir name="2">
+            <int name="levelMin" value="11"/>
+            <int name="levelMax" value="20"/>
+            <int name="interval" value="300000"/>
+            <int name="all" value="50"/>
+            <string name="tip" value="novice2"/>
+            <int name="job" value="15"/>
+        </imgdir>
+        <imgdir name="3">
+            <int name="levelMin" value="21"/>
+            <int name="levelMax" value="30"/>
+            <int name="interval" value="600000"/>
+            <int name="all" value="60"/>
+            <string name="tip" value="novice3"/>
+            <int name="job" value="15"/>
+        </imgdir>
+        <imgdir name="4">
+            <int name="levelMin" value="31"/>
+            <int name="levelMax" value="60"/>
+            <int name="interval" value="600000"/>
+            <int name="all" value="70"/>
+            <string name="tip" value="novice4"/>
+            <int name="job" value="15"/>
+        </imgdir>
+        <imgdir name="5">
+            <int name="levelMin" value="61"/>
+            <int name="levelMax" value="199"/>
+            <int name="interval" value="600000"/>
+            <int name="all" value="80"/>
+            <string name="tip" value="novice5"/>
+            <int name="job" value="15"/>
+        </imgdir>
+        <imgdir name="6">
+            <int name="levelMin" value="200"/>
+            <int name="levelMax" value="200"/>
+            <int name="interval" value="600000"/>
+            <int name="all" value="90"/>
+            <string name="tip" value="novice6"/>
+        </imgdir>
+        <imgdir name="7">
+            <int name="levelMin" value="11"/>
+            <int name="levelMax" value="30"/>
+            <int name="interval" value="300000"/>
+            <int name="all" value="20"/>
+            <string name="tip" value="novice7"/>
+            <int name="job" value="16"/>
+        </imgdir>
+        <imgdir name="8">
+            <int name="levelMin" value="31"/>
+            <int name="levelMax" value="60"/>
+            <int name="interval" value="600000"/>
+            <int name="all" value="70"/>
+            <string name="tip" value="novice8"/>
+            <int name="job" value="16"/>
+        </imgdir>
+        <imgdir name="9">
+            <int name="levelMin" value="61"/>
+            <int name="levelMax" value="100"/>
+            <int name="interval" value="600000"/>
+            <int name="all" value="80"/>
+            <string name="tip" value="novice9"/>
+            <int name="job" value="16"/>
+        </imgdir>
+    </imgdir>
+    <imgdir name="all">
+        <string name="0" value="Please refrain from using foul language in this game."/>
+        <string name="1" value="Verbal and other forms of abuse will NOT be tolerated. Abusers will be blocked from the game."/>
+        <string name="2" value="Our Game Masters will NEVER ask for your login ID, password, pin, or personal information."/>
+        <string name="3" value="NEVER give out your ID, password, or pin to ANYONE including administrators."/>
+        <string name="4" value="Users abusing the Terms of Service will be blocked from the game."/>
+        <string name="5" value="Using, selling, trading, or promoting hacking or hacking tools will result in being blocked from the game."/>
+        <string name="6" value="You can use the &apos;System Option&apos; in the menu to change your settings--sound, graphics, etc."/>
+        <string name="7" value="Use the &apos;Game Option&apos; at the menu to change settings for chat, trade requests, whisper, and more."/>
+        <string name="8" value="Type &apos;/?&apos; in the textbox to see a list of available game commands."/>
+        <string name="9" value="Cash items can be bought in the Cash Shop using NX purchased from our website."/>
+        <string name="10" value="NEVER open an unknown attachment file from an instant messenger window or an email."/>
+        <string name="11" value="MapleStory Game Masters will NEVER send you files or contact you outside of the game."/>
+        <string name="12" value="This is an online game and online interaction involves communicating with strangers. NEVER give out your personal information such as your name, age, phone number, address to ANYONE you do not know. Protect your identity!"/>
+        <string name="13" value="For security&apos;s sake, create a password that is not easily replicated. Use a mix of letters and numbers, and update your password every 3 months.
+"/>
+        <string name="14" value="When you wear a Cash Equip Item over a regular Equip Item, the function of the regular Equip Item will be maintained while the external features of the Cash Equip Item are displayed. "/>
+        <string name="15" value="Cash Items can neither be traded nor dropped."/>
+        <string name="16" value="To send a Cash Item as a gift, click the &apos;Gift&apos; button of the item you wish to send and enter the character name of the recipient."/>
+        <string name="17" value="In order to prevent hacks, do not download or open email attachment from an untrusted source."/>
+        <string name="18" value="Cash and Mesos cannot be traded. Cash transaction will result in game use restrictions."/>
+        <string name="19" value="To use the Cash Item you have purchased, double-click and place the item in your Inventory."/>
+        <string name="20" value="Login may be prohibited without any notification if you are found using a macro-assisted (auto-hunting) program. "/>
+        <string name="21" value="Mesos and Items cannot be duplicated. Fraudulent activities are strictly forbidden."/>
+        <string name="22" value="Please note, too much game-playing may be damaging to your health. "/>
+        <string name="23" value="Restrictions you incur from using unlawful programs cannot be compensated."/>
+        <string name="24" value="You will not be able to submit a hacking complaint if you haven&apos;t registered your Personal Identification Code (PIC) or if you&apos;ve shared your account information with another user."/>
+        <string name="25" value="When using a public computer, confirm the security programs and change your password on your private computer after use."/>
+        <string name="26" value="Remember not to provide your ID and PW anywhere outside of the official website."/>
+        <string name="27" value="Visiting a website that has not been confirmed may pose hack risks."/>
+        <string name="28" value="You are encouraged to select a password that consists of both numbers and letters, and periodically change the password."/>
+    </imgdir>
+    <imgdir name="novice">
+        <string name="0" value="Use HotKey&apos;s (I,E,S,K,G,W,M,R,H) to conveniently access all menus quickly."/>
+        <string name="1" value="To designate an item to a HotKey, drag the item from your inventory to the quick slot."/>
+        <string name="2" value="Look for hidden portals to expand your adventure!"/>
+        <string name="3" value="Press F1~F7 to make various facial expressions."/>
+        <string name="4" value="Use the portal on a map to move on to a different area."/>
+        <string name="5" value="You can see your stats in more detail if you press the Details button."/>
+        <string name="6" value="All player characters will be shown as red dots on the Minimap."/>
+        <string name="7" value="Standing still will recover HP."/>
+        <string name="8" value="Press Z to pick up items on the ground, or you can set your own Pick Up key in the Key Settings."/>
+        <string name="9" value="Press the Ctrl key to attack and the Alt key to jump."/>
+        <string name="10" value="You can buy equipment and potions for your adventure from NPC shops in the game."/>
+        <string name="11" value="You can distribute the AP you earn when you gain a level in the Stats window."/>
+        <string name="12" value="You cannot switch to different job after your 1st Job Advancement."/>
+        <string name="13" value="Double-click an equipment item in your Inventory window, or drag it into the Equip window to equip it."/>
+        <string name="14" value="Press W to open the World Map."/>
+        <string name="15" value="Press E to open the Equip window."/>
+        <string name="16" value="Press I to open the Inventory window to see the items you own."/>
+        <string name="17" value="Press M to open the Minimap."/>
+        <string name="18" value="Press K to open the Skill window."/>
+        <string name="19" value="Press S to look at your character&apos;s stats."/>
+        <string name="20" value="Press R to look at information about your friends, party, and guild."/>
+        <string name="21" value="You can take a Job Advancement at level 10."/>
+        <string name="22" value="If you level up after you take a Job Advancement, you will receive Skill Points."/>
+        <string name="23" value="As the party leader, type &apos;/partyexpel&apos; character-name to expel a member from your party."/>
+        <string name="24" value="To leave a party, type &apos;/leaveparty&apos;."/>
+        <string name="25" value="To view your party&apos;s information, type &apos;/partyinfo&apos;."/>
+        <string name="26" value="To raise or drop someone&apos;s fame level, right-click and rate their fame in the character info."/>
+        <string name="27" value="You can raise or drop someone&apos;s fame level once a day."/>
+        <string name="28" value="Visit the job instructors in each town to make a job advancement."/>
+        <string name="29" value="To become a magician, make the job advancement at level 8. The other job classes require a minimum level of 10."/>
+        <string name="30" value="To view your friends, party and/or guild membership, click on &apos;R&apos;."/>
+        <string name="31" value="To leave a guild, input &apos;leaveguild&apos;."/>
+        <string name="32" value="Magicians can take their first job advancement at level 8. Other jobs must wait until level 10."/>
+    </imgdir>
+    <imgdir name="novice2">
+        <string name="0" value="Visit town stores where you can purchase equipments and potions."/>
+        <string name="1" value="Some items have gender and job limitations. Please be aware of them before making a purchase."/>
+        <string name="2" value="Be careful! Death will cause you to lose some EXP after you take your job advancement."/>
+        <string name="3" value="Completing quests will earn you items you can&apos;t find in shops."/>
+        <string name="4" value="Your inventory will expand with your job advancements."/>
+        <string name="5" value="You can get the appropriate amount of SP for your 1st Job Advancement, as long as you take it before level 29."/>
+        <string name="6" value="Type &apos;/Trade CharacterName&apos; to open the Trade Window."/>
+        <string name="7" value="To create a party, type &apos;/Create Party&apos; in the Chat Window."/>
+        <string name="8" value="If the party leader wants to invite other players to the party, type &apos;/Party Invite CharacterName&apos;."/>
+        <string name="9" value="If the party leader wants to kick a party member, type &apos;/Party Kick Character Name&apos;."/>
+        <string name="10" value="If a party member wants to leave the party, type &apos;/leave party&apos;."/>
+        <string name="11" value="If you want to see party information, type &apos;/party info&apos;."/>
+        <string name="12" value="Party leaders can right-click on any other player and click &apos;Invite to Party&apos; to send them an invite."/>
+        <string name="13" value="Right-click on other players and use the Fame +/- feature to make them more, or less, famous!"/>
+        <string name="14" value="Fame can be increased or decreased once a day."/>
+        <string name="15" value="Fame can be increased or decreased once a month for one character."/>
+        <string name="16" value="You can only fame or defame once per day."/>
+        <string name="17" value="You can only fame or defame the same character once per month."/>
+    </imgdir>
+    <imgdir name="novice3">
+        <string name="0" value="The 2nd job advancement is available at level 30 (requires 1st job advancement)."/>
+        <string name="1" value="Passive skills work automatically after acquiring them."/>
+        <string name="2" value="To use an active skill, drag it out of the skill window and place it over Quick Slot to designate it with a HotKey."/>
+        <string name="3" value="All skill points earned before level 30 must be applied before making the 2nd job adv."/>
+        <string name="4" value="Make the job advancement at the earliest level allowed for your class. Skill points will not be granted for levels before the job advancement."/>
+        <string name="5" value="After the job advancement, you&apos;ll be awarded with some skill points after every level up."/>
+        <string name="6" value="Skill points can be assigned at the &apos;Skill&apos; window."/>
+        <string name="7" value="Be careful of powerful monsters in the underground dungeon!"/>
+        <string name="8" value="Defeat a powerful monster or complete a quest to acquire rare items not found in stores."/>
+        <string name="9" value="Mana Points (MP) slowly recovers over time."/>
+        <string name="10" value="The skills that require Mana Points will not work if your MP bar is empty."/>
+        <string name="11" value="Type &apos;/trade character-name&apos; to request a trade with a user."/>
+        <string name="12" value="Use the town-returning scrolls to revisit to a town quickly."/>
+        <string name="13" value="Throwing stars will not disappear from your inventory when exhausted. They can be recharged in the armor shop of each town."/>
+        <string name="14" value="Throwing-Stars and Bullets can be recharged at the Weapons Shop and General Shop located in each town."/>
+        <string name="15" value="Most characters have a 2nd Job Advancement at level 30, as long as they have taken their 1st Job Advancement."/>
+        <string name="16" value="Distribute the SP you get after level 30 once you take your 2nd Job Advancement."/>
+        <string name="17" value="You cannot take your 2nd Job Advancement if you do not distribute all the Skill Points you obtained before level 30."/>
+        <string name="18" value="After the 2nd Job Advancement, a Warrior will be able to choose from a Fighter, a Page, or a Spearman."/>
+        <string name="19" value="After the 2nd Job Advancement, a Bowman will be able to choose from a Hunter or a Crossbowman."/>
+        <string name="20" value="After the 2nd Job Advancement, a Magician will be able to choose from a Wizard or a Cleric."/>
+        <string name="21" value="After the 2nd Job Advancement, a Thief will be able to choose from an Assassin or a Bandit."/>
+        <string name="22" value="After the 2nd Job Advancement, a Pirate will be able to choose from a Brawler or a Gunslinger."/>
+    </imgdir>
+    <imgdir name="novice4">
+        <string name="0" value="There are some skills that will not stack with other skills."/>
+        <string name="1" value="Use a variety of skills to beef up your weapons and armor!"/>
+        <string name="2" value="Some quests and items have a Fame requirement."/>
+        <string name="3" value="Most characters have a 3rd Job Advancement at level 60, as long as they have taken their 2nd Job Advancement."/>
+        <string name="4" value="Distribute the SP you get after level 60 once you take your 3rd Job Advancement."/>
+        <string name="5" value="You cannot take your 3rd Job Advancement if you do not distribute all the Skill Points you obtained before level 60."/>
+        <string name="6" value="The Magician&apos;s 2nd Job Skills will increase your Magic Attack, but the damage will vary with each monster."/>
+        <string name="7" value="After the 2nd Job Advancement, a Magician will be able to choose from a Wizard or a Cleric."/>
+        <string name="8" value="After the 2nd Job Advancement, a Thief will be able to choose from an Assassin or a Bandit."/>
+        <string name="9" value="After the 2nd Job Advancement, a Pirate will be able to choose from a Brawler or a Gunslinger."/>
+        <string name="10" value="Some quests and items have a Fame requirement."/>
+    </imgdir>
+    <imgdir name="novice5">
+        <string name="0" value="There are some quests that can be completed multiple times."/>
+        <string name="1" value="Some 4th Job skills require Mastery Books to upgrade."/>
+        <string name="2" value="Some quests will earn you new 4th Job skills."/>
+        <string name="3" value="Some 4th Job skill quests require specific starting conditions. Keep an eye out!"/>
+        <string name="4" value="You cannot take your 4th Job Advancement if you do not distribute all the Skill Points you obtained before level 100."/>
+        <string name="5" value="Use Mastery Books to upgrade some 4th Job skills."/>
+        <string name="6" value="Some quests will earn you new 4th Job skills."/>
+        <string name="7" value="Some 4th Job skill quests require specific starting conditions. Keep an eye out!"/>
+    </imgdir>
+    <imgdir name="novice6">
+        <string name="0" value="There are some skills that will not stack with other skills."/>
+        <string name="1" value="It&apos;s best for you to use your skill points gained after level 120 AFTER the 4th job adv."/>
+        <string name="2" value="All skill points earned before level 120 must be applied before making the 4th job adv."/>
+        <string name="3" value="Cash items can be bought in the Cash Shop using NX purchased from our website."/>
+        <string name="4" value="Trading items for NX gifts is NOT allowed. Such trades will result in being blocked from the game."/>
+        <string name="5" value="Account sharing, selling, or trading is STRICTLY FORBIDDEN. Such accounts will be blocked."/>
+        <string name="6" value="You can obtain a mount by catching one--see Kenta in the Aquarium Zoo for more details! "/>
+        <string name="7" value="You can upgrade your mount by completing a quest, see Kenta in the Aquarium Zoo for more details!"/>
+        <string name="8" value="You can sometimes upgrade 4th job skills by learning mastery books.  Good luck!"/>
+        <string name="9" value="You can sometimes upgrade 4th job skills by completing quests.  Good luck!"/>
+        <string name="10" value="You can sometimes upgrade 4th job skills only if you have the conditions for starting a quest.  Good luck!"/>
+    </imgdir>
+    <imgdir name="novice7">
+        <string name="0" value="Each town has a general shop where you can purchase equipment and potions. "/>
+        <string name="1" value="Certain items are restricted based on gender and jobs. Please be sure to check the restrictions when purchasing an item. "/>
+        <string name="2" value="Be careful! Death will cause you to lose some EXP after you take your job advancement."/>
+        <string name="3" value="Completing quests will earn you items you can&apos;t find in shops."/>
+        <string name="4" value="Your inventory will expand with your job advancements."/>
+        <string name="5" value="You can get the appropriate amount of SP for your 1st Job Advancement, as long as you take it before level 29."/>
+        <string name="6" value="Type &apos;/Trade CharacterName&apos; to open the Trade Window."/>
+        <string name="7" value="To create a party, type &apos;/Create Party&apos; in the Chat Window."/>
+        <string name="8" value="If the party leader wants to invite other players to the party, type &apos;/Party Invite CharacterName&apos;."/>
+        <string name="9" value="If the party leader wants to kick a party member, type &apos;/Party Kick Character Name&apos;."/>
+        <string name="10" value="If a party member wants to leave the party, type &apos;/leave party&apos;."/>
+        <string name="11" value="If you want to see party information, type &apos;/party info&apos;."/>
+        <string name="12" value="Party leaders can right-click on any other player and click &apos;Invite to Party&apos; to send them an invite."/>
+        <string name="13" value="Right-click on other players and use the Fame +/- feature to make them more, or less, famous!"/>
+        <string name="14" value="Fame can be increased or decreased once a day."/>
+        <string name="15" value="Fame can be increased or decreased once a month for one character."/>
+        <string name="16" value="Explorers can take their Job Advancements at the Guild NPC&apos;s in each town."/>
+        <string name="17" value="Passive Skills begin working automatically as soon as you learn them."/>
+        <string name="18" value="To use Active skills faster, drag the icon from the Skill window into one of your quickslots."/>
+        <string name="19" value="Each town sells unique equipment."/>
+        <string name="20" value="If you level up without taking your Job Advancement, when you are available for it, you will not receive Skill Points."/>
+        <string name="21" value="If you level up after you take a Job Advancement, you will receive Skill Points."/>
+        <string name="22" value="You can use Skill Points to improve your powers in the Skill window."/>
+        <string name="23" value=" Be careful! Powerful monsters dwell in the underground dungeons."/>
+        <string name="24" value="Defeating more powerful monsters will earn you treasures not found in any shop."/>
+        <string name="25" value="MP recovers little by little over time."/>
+        <string name="26" value="Skills that consumes MP cannot be used without MP."/>
+        <string name="27" value="Type &apos;/Trade CharacterName&apos; to open the Trade Window."/>
+        <string name="28" value="Return Scrolls will get you back to town and back into action much faster than walking."/>
+        <string name="29" value="If you run out of Stars and Bullets, they will not disappear from your inventory."/>
+        <string name="30" value="Keep up your Star and Bullet supplies at the Weapon/General Stores in each Town."/>
+        <string name="31" value="You can dash by pressing →→ or ←←."/>
+        <string name="32" value="After the 2nd Job Advancement, a Pirate will be able to choose from a Brawler or a Gunslinger."/>
+        <string name="33" value="You cannot take your 2nd Job Advancement if you do not distribute all the Skill Points that you obtained before level 30."/>
+        <string name="34" value="Distribute the SP you get after level 30 once you take your 2nd Job Advancement."/>
+        <string name="35" value="The Magician&apos;s 2nd Job Skills will increase your Magic Attack, but the damage will vary with each monster."/>
+    </imgdir>
+    <imgdir name="novice8">
+        <string name="0" value="There are some skills that will not stack with other skills."/>
+        <string name="1" value="Use a variety of skills to beef up your weapons and armor!"/>
+        <string name="2" value="Some quests and items have a Fame requirement."/>
+        <string name="3" value="Shop around. Regular bullets are great, but some bullets have special attributes."/>
+        <string name="4" value="Some attacks require bullets with special attributes."/>
+        <string name="5" value="Most characters have a 3rd Job Advancement at level 60, as long as they have taken their 2nd Job Advancement."/>
+        <string name="6" value="Distribute the SP you get after level 60 once you take your 3rd Job Advancement."/>
+        <string name="7" value="You cannot take your 3rd Job Advancement if you do not distribute all the Skill Points you obtained before level 60."/>
+        <string name="8" value="An attribute-exclusive bullet can only be used for attribute attacks."/>
+    </imgdir>
+    <imgdir name="novice9">
+        <string name="0" value="There are some quests that can be completed multiple times."/>
+        <string name="1" value="Use the sauna in Sleepywood to recover HP and MP faster."/>
+        <string name="2" value="You can learn the Monster Riding Skill through a quest."/>
+        <string name="3" value="You can obtain an exclusive Mount skill from the Job Instructor after the Pirate&apos;s 4th Job Advancement."/>
+        <string name="4" value="If you use the sauna in Sleepywood, you will be able to recover your HP and MP much more quickly."/>
+        <string name="5" value="The 2nd Job Advancement skill set of a magician differs.  These skills are elemental-based, and damages each monster differently."/>
+        <string name="6" value="You can learn the skill needed to ride on a Mount by completing a quest. "/>
+        <string name="7" value="Only regular attacks can be used to hit breakable objects and other reactors. Special attacks will not work."/>
+    </imgdir>
+</imgdir>

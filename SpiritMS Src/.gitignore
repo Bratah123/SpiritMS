@@ -1,0 +1,12 @@
+/build/
+dist/Amoria.jar
+dist/README.TXT
+ErrorCodes.txt
+Log_Command_Except.txt
+Log_Packet_Except.txt
+Log_Script_Except.txt
+nbproject/private/private.properties
+nbproject/private/private.xml
+PacketLog.txt
+Secondary Passwords
+*.txt

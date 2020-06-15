@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<imgdir name="0235.img">
+	<imgdir name="02350000">
+		<imgdir name="info">
+			<canvas name="icon" width="32" height="28">
+				<vector name="origin" x="0" y="28"/>
+			</canvas>
+			<canvas name="iconRaw" width="32" height="23">
+				<vector name="origin" x="0" y="28"/>
+			</canvas>
+			<int name="price" value="1"/>
+			<int name="slotMax" value="1"/>
+			<int name="tradeBlock" value="1"/>
+			<int name="notSale" value="1"/>
+			<int name="timeLimited" value="1"/>
+			<int name="notExtend" value="1"/>
+		</imgdir>
+		<imgdir name="spec">
+		</imgdir>
+	</imgdir>
+	<imgdir name="02350001">
+		<imgdir name="info">
+			<canvas name="icon" width="32" height="28">
+				<vector name="origin" x="0" y="28"/>
+				<string name="source" value="Item/Consume/0235.img/02350000/info/icon"/>
+			</canvas>
+			<canvas name="iconRaw" width="32" height="23">
+				<vector name="origin" x="0" y="28"/>
+				<string name="source" value="Item/Consume/0235.img/02350000/info/iconRaw"/>
+			</canvas>
+			<int name="price" value="1"/>
+			<int name="slotMax" value="1"/>
+			<int name="tradeBlock" value="1"/>
+			<int name="notSale" value="1"/>
+			<int name="timeLimited" value="1"/>
+			<int name="notExtend" value="1"/>
+		</imgdir>
+		<imgdir name="spec">
+		</imgdir>
+	</imgdir>
+	<imgdir name="02350002">
+		<imgdir name="info">
+			<canvas name="icon" width="26" height="28">
+				<vector name="origin" x="-3" y="30"/>
+			</canvas>
+			<canvas name="iconRaw" width="27" height="30">
+				<vector name="origin" x="-3" y="30"/>
+			</canvas>
+			<int name="price" value="1"/>
+			<int name="slotMax" value="1"/>
+			<int name="tradeBlock" value="1"/>
+			<int name="notSale" value="1"/>
+			<int name="timeLimited" value="1"/>
+			<int name="notExtend" value="1"/>
+		</imgdir>
+		<imgdir name="spec">
+		</imgdir>
+	</imgdir>
+	<imgdir name="02350003">
+		<imgdir name="info">
+			<canvas name="icon" width="32" height="28">
+				<vector name="origin" x="0" y="28"/>
+				<string name="source" value="Item/Consume/0235.img/02350000/info/icon"/>
+			</canvas>
+			<canvas name="iconRaw" width="32" height="23">
+				<vector name="origin" x="0" y="28"/>
+				<string name="source" value="Item/Consume/0235.img/02350000/info/iconRaw"/>
+			</canvas>
+			<int name="price" value="1"/>
+			<int name="slotMax" value="1"/>
+			<int name="notSale" value="1"/>
+		</imgdir>
+		<imgdir name="spec">
+		</imgdir>
+	</imgdir>
+	<imgdir name="02350004">
+		<imgdir name="info">
+			<canvas name="icon" width="35" height="29">
+				<vector name="origin" x="2" y="29"/>
+			</canvas>
+			<canvas name="iconRaw" width="35" height="28">
+				<vector name="origin" x="2" y="29"/>
+			</canvas>
+			<int name="price" value="1"/>
+			<int name="slotMax" value="1"/>
+			<int name="tradeBlock" value="1"/>
+			<int name="notSale" value="1"/>
+		</imgdir>
+		<imgdir name="spec">
+		</imgdir>
+	</imgdir>
+	<imgdir name="02350005">
+		<imgdir name="info">
+			<canvas name="icon" width="35" height="29">
+				<vector name="origin" x="2" y="29"/>
+			</canvas>
+			<canvas name="iconRaw" width="35" height="28">
+				<vector name="origin" x="2" y="29"/>
+			</canvas>
+			<int name="price" value="1"/>
+			<int name="slotMax" value="1"/>
+			<int name="notSale" value="1"/>
+			<int name="tradeBlock" value="1"/>
+		</imgdir>
+		<imgdir name="spec">
+		</imgdir>
+	</imgdir>
+	<imgdir name="02350006">
+		<imgdir name="info">
+			<canvas name="icon" width="36" height="30">
+				<vector name="origin" x="3" y="30"/>
+			</canvas>
+			<canvas name="iconRaw" width="36" height="29">
+				<vector name="origin" x="3" y="30"/>
+			</canvas>
+			<int name="price" value="1"/>
+			<int name="slotMax" value="1"/>
+			<int name="notSale" value="1"/>
+			<int name="timeLimited" value="1"/>
+			<int name="notExtend" value="1"/>
+			<int name="accountSharable" value="1"/>
+		</imgdir>
+		<imgdir name="spec">
+		</imgdir>
+	</imgdir>
+	<imgdir name="02350007">
+		<imgdir name="info">
+			<canvas name="icon" width="35" height="29">
+				<vector name="origin" x="2" y="29"/>
+			</canvas>
+			<canvas name="iconRaw" width="35" height="28">
+				<vector name="origin" x="2" y="29"/>
+			</canvas>
+			<int name="price" value="1"/>
+			<int name="slotMax" value="1"/>
+			<int name="notSale" value="1"/>
+			<int name="tradeBlock" value="1"/>
+		</imgdir>
+		<imgdir name="spec">
+		</imgdir>
+	</imgdir>
+</imgdir>

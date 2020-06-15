@@ -1,0 +1,471 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<imgdir name="EpisodeBook.img">
+	<imgdir name="0">
+		<string name="title" value="Explorer Book (Warrior)"/>
+		<int name="preQuest" value="17050"/>
+		<imgdir name="Category">
+			<imgdir name="0">
+				<string name="title" value="Prologue"/>
+			</imgdir>
+			<imgdir name="1">
+				<string name="title" value="Explorer Book Act 1"/>
+			</imgdir>
+			<imgdir name="2">
+				<string name="title" value="Explorer Book Act 2"/>
+			</imgdir>
+			<imgdir name="3">
+				<string name="title" value="Explorer Book Act 3"/>
+			</imgdir>
+			<imgdir name="4">
+				<string name="title" value="Explorer Book Act 4"/>
+			</imgdir>
+			<imgdir name="5">
+				<string name="title" value="Explorer Book Act 5"/>
+			</imgdir>
+			<imgdir name="6">
+				<string name="title" value="Explorer Book Act 6"/>
+			</imgdir>
+			<imgdir name="7">
+				<string name="title" value="Explorer Book Act 7"/>
+			</imgdir>
+		</imgdir>
+		<imgdir name="Act">
+			<imgdir name="0">
+				<string name="title" value="Discovering Amherst"/>
+				<int name="quest" value="17900"/>
+			</imgdir>
+			<imgdir name="1">
+				<string name="title" value="Discovering Victoria Island (Lith Harbor)"/>
+				<int name="quest" value="17901"/>
+			</imgdir>
+			<imgdir name="2">
+				<string name="title" value="Discovering Perion"/>
+				<int name="quest" value="17902"/>
+			</imgdir>
+			<imgdir name="3">
+				<string name="title" value="1st Job Advancement"/>
+				<int name="quest" value="17903"/>
+			</imgdir>
+			<imgdir name="4">
+				<string name="title" value="Eliminate Stumpy"/>
+				<int name="quest" value="17907"/>
+			</imgdir>
+			<imgdir name="5">
+				<string name="title" value="2nd Job Advancement"/>
+				<int name="quest" value="17904"/>
+			</imgdir>
+			<imgdir name="6">
+				<string name="title" value="Discovering Ossyria (Orbis)"/>
+				<int name="quest" value="17908"/>
+			</imgdir>
+			<imgdir name="7">
+				<string name="title" value="3rd Job Advancement"/>
+				<int name="quest" value="17905"/>
+			</imgdir>
+			<imgdir name="8">
+				<string name="title" value="Discovering the Temple of Time"/>
+				<int name="quest" value="17909"/>
+			</imgdir>
+			<imgdir name="9">
+				<string name="title" value="4th Job Advancement"/>
+				<int name="quest" value="17906"/>
+			</imgdir>
+		</imgdir>
+	</imgdir>
+	<imgdir name="1">
+		<string name="title" value="Explorer Book (Magician)"/>
+		<int name="preQuest" value="17051"/>
+		<imgdir name="Category">
+			<imgdir name="0">
+				<string name="title" value="Prologue"/>
+			</imgdir>
+			<imgdir name="1">
+				<string name="title" value="Explorer Book Act 1"/>
+			</imgdir>
+			<imgdir name="2">
+				<string name="title" value="Explorer Book Act 2"/>
+			</imgdir>
+			<imgdir name="3">
+				<string name="title" value="Explorer Book Act 3"/>
+			</imgdir>
+			<imgdir name="4">
+				<string name="title" value="Explorer Book Act 4"/>
+			</imgdir>
+			<imgdir name="5">
+				<string name="title" value="Explorer Book Act 5"/>
+			</imgdir>
+			<imgdir name="6">
+				<string name="title" value="Explorer Book Act 6"/>
+			</imgdir>
+			<imgdir name="7">
+				<string name="title" value="Explorer Book Act 7"/>
+			</imgdir>
+		</imgdir>
+		<imgdir name="Act">
+			<imgdir name="0">
+				<string name="title" value="Discovering Amherst"/>
+				<int name="quest" value="17900"/>
+			</imgdir>
+			<imgdir name="1">
+				<string name="title" value="Discovering Victoria Island (Lith Harbor)"/>
+				<int name="quest" value="17901"/>
+			</imgdir>
+			<imgdir name="2">
+				<string name="title" value="Discovering Ellinia"/>
+				<int name="quest" value="17902"/>
+			</imgdir>
+			<imgdir name="3">
+				<string name="title" value="1st Job Advancement"/>
+				<int name="quest" value="17903"/>
+			</imgdir>
+			<imgdir name="4">
+				<string name="title" value="Eliminate Faust"/>
+				<int name="quest" value="17907"/>
+			</imgdir>
+			<imgdir name="5">
+				<string name="title" value="2nd Job Advancement"/>
+				<int name="quest" value="17904"/>
+			</imgdir>
+			<imgdir name="6">
+				<string name="title" value="Discovering Ossyria (Orbis)"/>
+				<int name="quest" value="17908"/>
+			</imgdir>
+			<imgdir name="7">
+				<string name="title" value="3rd Job Advancement"/>
+				<int name="quest" value="17905"/>
+			</imgdir>
+			<imgdir name="8">
+				<string name="title" value="Discovering the Temple of Time"/>
+				<int name="quest" value="17909"/>
+			</imgdir>
+			<imgdir name="9">
+				<string name="title" value="4th Job Advancement"/>
+				<int name="quest" value="17906"/>
+			</imgdir>
+		</imgdir>
+	</imgdir>
+	<imgdir name="2">
+		<string name="title" value="Explorer Book (Bowman)"/>
+		<int name="preQuest" value="17052"/>
+		<imgdir name="Category">
+			<imgdir name="0">
+				<string name="title" value="Prologue"/>
+			</imgdir>
+			<imgdir name="1">
+				<string name="title" value="Explorer Book Act 1"/>
+			</imgdir>
+			<imgdir name="2">
+				<string name="title" value="Explorer Book Act 2"/>
+			</imgdir>
+			<imgdir name="3">
+				<string name="title" value="Explorer Book Act 3"/>
+			</imgdir>
+			<imgdir name="4">
+				<string name="title" value="Explorer Book Act 4"/>
+			</imgdir>
+			<imgdir name="5">
+				<string name="title" value="Explorer Book Act 5"/>
+			</imgdir>
+			<imgdir name="6">
+				<string name="title" value="Explorer Book Act 6"/>
+			</imgdir>
+			<imgdir name="7">
+				<string name="title" value="Explorer Book Act 7"/>
+			</imgdir>
+		</imgdir>
+		<imgdir name="Act">
+			<imgdir name="0">
+				<string name="title" value="Discovering Amherst"/>
+				<int name="quest" value="17900"/>
+			</imgdir>
+			<imgdir name="1">
+				<string name="title" value="Discovering Victoria Island (Lith Harbor)"/>
+				<int name="quest" value="17901"/>
+			</imgdir>
+			<imgdir name="2">
+				<string name="title" value="Discovering Henesys"/>
+				<int name="quest" value="17902"/>
+			</imgdir>
+			<imgdir name="3">
+				<string name="title" value="1st Job Advancement"/>
+				<int name="quest" value="17903"/>
+			</imgdir>
+			<imgdir name="4">
+				<string name="title" value="Eliminate Mushmom"/>
+				<int name="quest" value="17907"/>
+			</imgdir>
+			<imgdir name="5">
+				<string name="title" value="2nd Job Advancement"/>
+				<int name="quest" value="17904"/>
+			</imgdir>
+			<imgdir name="6">
+				<string name="title" value="Discovering Ossyria (Orbis)"/>
+				<int name="quest" value="17908"/>
+			</imgdir>
+			<imgdir name="7">
+				<string name="title" value="3rd Job Advancement"/>
+				<int name="quest" value="17905"/>
+			</imgdir>
+			<imgdir name="8">
+				<string name="title" value="Discovering the Temple of Time"/>
+				<int name="quest" value="17909"/>
+			</imgdir>
+			<imgdir name="9">
+				<string name="title" value="4th Job Advancement"/>
+				<int name="quest" value="17906"/>
+			</imgdir>
+		</imgdir>
+	</imgdir>
+	<imgdir name="3">
+		<string name="title" value="Explorer Book (Thief)"/>
+		<int name="preQuest" value="17053"/>
+		<imgdir name="Category">
+			<imgdir name="0">
+				<string name="title" value="Prologue"/>
+			</imgdir>
+			<imgdir name="1">
+				<string name="title" value="Explorer Book Act 1"/>
+			</imgdir>
+			<imgdir name="2">
+				<string name="title" value="Explorer Book Act 2"/>
+			</imgdir>
+			<imgdir name="3">
+				<string name="title" value="Explorer Book Act 3"/>
+			</imgdir>
+			<imgdir name="4">
+				<string name="title" value="Explorer Book Act 4"/>
+			</imgdir>
+			<imgdir name="5">
+				<string name="title" value="Explorer Book Act 5"/>
+			</imgdir>
+			<imgdir name="6">
+				<string name="title" value="Explorer Book Act 6"/>
+			</imgdir>
+			<imgdir name="7">
+				<string name="title" value="Explorer Book Act 7"/>
+			</imgdir>
+		</imgdir>
+		<imgdir name="Act">
+			<imgdir name="0">
+				<string name="title" value="Discovering Amherst"/>
+				<int name="quest" value="17900"/>
+			</imgdir>
+			<imgdir name="1">
+				<string name="title" value="Discovering Victoria Island (Lith Harbor)"/>
+				<int name="quest" value="17901"/>
+			</imgdir>
+			<imgdir name="2">
+				<string name="title" value="Discovering Kerning City"/>
+				<int name="quest" value="17902"/>
+			</imgdir>
+			<imgdir name="3">
+				<string name="title" value="1st Job Advancement"/>
+				<int name="quest" value="17903"/>
+			</imgdir>
+			<imgdir name="4">
+				<string name="title" value="Eliminate Dyle"/>
+				<int name="quest" value="17907"/>
+			</imgdir>
+			<imgdir name="5">
+				<string name="title" value="2nd Job Advancement"/>
+				<int name="quest" value="17904"/>
+			</imgdir>
+			<imgdir name="6">
+				<string name="title" value="Discovering Ossyria (Orbis)"/>
+				<int name="quest" value="17908"/>
+			</imgdir>
+			<imgdir name="7">
+				<string name="title" value="3rd Job Advancement"/>
+				<int name="quest" value="17905"/>
+			</imgdir>
+			<imgdir name="8">
+				<string name="title" value="Discovering the Temple of Time"/>
+				<int name="quest" value="17909"/>
+			</imgdir>
+			<imgdir name="9">
+				<string name="title" value="4th Job Advancement"/>
+				<int name="quest" value="17906"/>
+			</imgdir>
+		</imgdir>
+	</imgdir>
+	<imgdir name="4">
+		<string name="title" value="Explorer Book (Pirate)"/>
+		<int name="preQuest" value="17054"/>
+		<imgdir name="Category">
+			<imgdir name="0">
+				<string name="title" value="Prologue"/>
+			</imgdir>
+			<imgdir name="1">
+				<string name="title" value="Explorer Book Act 1"/>
+			</imgdir>
+			<imgdir name="2">
+				<string name="title" value="Explorer Book Act 2"/>
+			</imgdir>
+			<imgdir name="3">
+				<string name="title" value="Explorer Book Act 3"/>
+			</imgdir>
+			<imgdir name="4">
+				<string name="title" value="Explorer Book Act 4"/>
+			</imgdir>
+			<imgdir name="5">
+				<string name="title" value="Explorer Book Act 5"/>
+			</imgdir>
+			<imgdir name="6">
+				<string name="title" value="Explorer Book Act 6"/>
+			</imgdir>
+			<imgdir name="7">
+				<string name="title" value="Explorer Book Act 7"/>
+			</imgdir>
+		</imgdir>
+		<imgdir name="Act">
+			<imgdir name="0">
+				<string name="title" value="Discovering Amherst"/>
+				<int name="quest" value="17900"/>
+			</imgdir>
+			<imgdir name="1">
+				<string name="title" value="Discovering Victoria Island (Lith Harbor)"/>
+				<int name="quest" value="17901"/>
+			</imgdir>
+			<imgdir name="2">
+				<string name="title" value="Discovering Nautilus"/>
+				<int name="quest" value="17902"/>
+			</imgdir>
+			<imgdir name="3">
+				<string name="title" value="1st Job Advancement"/>
+				<int name="quest" value="17903"/>
+			</imgdir>
+			<imgdir name="4">
+				<string name="title" value="Eliminate King Clang"/>
+				<int name="quest" value="17907"/>
+			</imgdir>
+			<imgdir name="5">
+				<string name="title" value="2nd Job Advancement"/>
+				<int name="quest" value="17904"/>
+			</imgdir>
+			<imgdir name="6">
+				<string name="title" value="Discovering Ossyria (Orbis)"/>
+				<int name="quest" value="17908"/>
+			</imgdir>
+			<imgdir name="7">
+				<string name="title" value="3rd Job Advancement"/>
+				<int name="quest" value="17905"/>
+			</imgdir>
+			<imgdir name="8">
+				<string name="title" value="Discovering the Temple of Time"/>
+				<int name="quest" value="17909"/>
+			</imgdir>
+			<imgdir name="9">
+				<string name="title" value="4th Job Advancement"/>
+				<int name="quest" value="17906"/>
+			</imgdir>
+		</imgdir>
+	</imgdir>
+	<imgdir name="5">
+		<string name="title" value="Dawnveil: Episode 1"/>
+		<int name="preQuest" value="17600"/>
+		<imgdir name="Category">
+			<imgdir name="0">
+				<string name="title" value="Chapter 1: New Wave"/>
+			</imgdir>
+			<imgdir name="1">
+				<string name="title" value="Chapter 2: By Land, or by Land"/>
+			</imgdir>
+			<imgdir name="2">
+				<string name="title" value="Chapter 3: Nautical Rhapsody"/>
+			</imgdir>
+			<imgdir name="3">
+				<string name="title" value="Chapter 4: Shadow Over Commerci"/>
+			</imgdir>
+		</imgdir>
+		<imgdir name="Act">
+			<imgdir name="0">
+				<string name="title" value="Mayor Berry's Fishing Bonanza"/>
+				<int name="quest" value="17910"/>
+			</imgdir>
+			<imgdir name="1">
+				<string name="title" value="Coastal Cat Roundup"/>
+				<int name="quest" value="17911"/>
+			</imgdir>
+			<imgdir name="2">
+				<string name="title" value="Visit Daniella Merchants Union Office"/>
+				<int name="quest" value="17912"/>
+			</imgdir>
+			<imgdir name="3">
+				<string name="title" value="Visit Tremier Merchants Union Office"/>
+				<int name="quest" value="17913"/>
+			</imgdir>
+			<imgdir name="4">
+				<string name="title" value="Local Trader: 10 Times"/>
+				<int name="quest" value="17914"/>
+			</imgdir>
+			<imgdir name="5">
+				<string name="title" value="Local Trader: 30 Times"/>
+				<int name="quest" value="17915"/>
+			</imgdir>
+			<imgdir name="6">
+				<string name="title" value="Local Trader: 50 Times"/>
+				<int name="quest" value="17916"/>
+			</imgdir>
+			<imgdir name="7">
+				<string name="title" value="Delfino Hunt"/>
+				<int name="quest" value="17917"/>
+			</imgdir>
+			<imgdir name="8">
+				<string name="title" value="International Trader: 10 Times"/>
+				<int name="quest" value="17918"/>
+			</imgdir>
+			<imgdir name="9">
+				<string name="title" value="International Trader: 30 Times"/>
+				<int name="quest" value="17919"/>
+			</imgdir>
+			<imgdir name="10">
+				<string name="title" value="Remote Trade Master"/>
+				<int name="quest" value="17920"/>
+			</imgdir>
+			<imgdir name="11">
+				<string name="title" value="Eliminate Grosso Polpo"/>
+				<int name="quest" value="17921"/>
+			</imgdir>
+			<imgdir name="12">
+				<string name="title" value="Eliminate Riverson"/>
+				<int name="quest" value="17922"/>
+			</imgdir>
+			<imgdir name="13">
+				<string name="title" value="Eliminate Il Capo"/>
+				<int name="quest" value="17923"/>
+			</imgdir>
+			<imgdir name="14">
+				<string name="title" value="Eliminate Ocean Reef Runners"/>
+				<int name="quest" value="17924"/>
+			</imgdir>
+			<imgdir name="15">
+				<string name="title" value="Eliminate Coral Reef Runners"/>
+				<int name="quest" value="17925"/>
+			</imgdir>
+			<imgdir name="16">
+				<string name="title" value="Learning About Upgrades"/>
+				<int name="quest" value="17926"/>
+			</imgdir>
+			<imgdir name="17">
+				<string name="title" value="Iridescent Scale Owner"/>
+				<int name="quest" value="17927"/>
+			</imgdir>
+			<imgdir name="18">
+				<string name="title" value="Treasure Map Owner"/>
+				<int name="quest" value="17928"/>
+			</imgdir>
+			<imgdir name="19">
+				<string name="title" value="Discovering the Commerci Canals"/>
+				<int name="quest" value="17929"/>
+			</imgdir>
+			<imgdir name="20">
+				<string name="title" value="Discovering Gloomy Forest"/>
+				<int name="quest" value="17930"/>
+			</imgdir>
+			<imgdir name="21">
+				<string name="title" value="The Great Assassin Hunt"/>
+				<int name="quest" value="17931"/>
+			</imgdir>
+		</imgdir>
+	</imgdir>
+</imgdir>

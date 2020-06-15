@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<imgdir name="9330186.img">
+	<imgdir name="info">
+		<imgdir name="script">
+			<imgdir name="0">
+				<string name="script" value="StageNpcCheck"/>
+			</imgdir>
+		</imgdir>
+		<imgdir name="speak">
+			<string name="0" value="n0"/>
+			<string name="1" value="n1"/>
+		</imgdir>
+	</imgdir>
+	<imgdir name="stand">
+		<canvas name="0" width="51" height="89">
+			<vector name="origin" x="22" y="88"/>
+			<int name="delay" value="150"/>
+			<string name="source" value="Npc/9330165.img/stand/0"/>
+		</canvas>
+		<canvas name="1" width="51" height="89">
+			<vector name="origin" x="21" y="88"/>
+			<int name="delay" value="150"/>
+			<string name="source" value="Npc/9330165.img/stand/1"/>
+		</canvas>
+		<canvas name="2" width="51" height="89">
+			<vector name="origin" x="20" y="88"/>
+			<int name="delay" value="150"/>
+			<string name="source" value="Npc/9330165.img/stand/2"/>
+		</canvas>
+		<canvas name="3" width="51" height="89">
+			<vector name="origin" x="21" y="88"/>
+			<int name="delay" value="150"/>
+			<string name="source" value="Npc/9330165.img/stand/1"/>
+		</canvas>
+	</imgdir>
+	<imgdir name="eye">
+		<canvas name="0" width="51" height="89">
+			<vector name="origin" x="22" y="88"/>
+			<int name="delay" value="150"/>
+			<string name="source" value="Npc/9330165.img/stand/0"/>
+		</canvas>
+		<canvas name="1" width="51" height="89">
+			<vector name="origin" x="21" y="88"/>
+			<int name="delay" value="150"/>
+			<string name="source" value="Npc/9330165.img/stand/1"/>
+		</canvas>
+		<canvas name="2" width="51" height="89">
+			<vector name="origin" x="20" y="88"/>
+			<int name="delay" value="150"/>
+			<string name="source" value="Npc/9330165.img/stand/2"/>
+		</canvas>
+		<canvas name="3" width="51" height="89">
+			<vector name="origin" x="21" y="88"/>
+			<int name="delay" value="150"/>
+			<string name="source" value="Npc/9330165.img/stand/1"/>
+		</canvas>
+	</imgdir>
+</imgdir>

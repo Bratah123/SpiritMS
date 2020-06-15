@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<imgdir name="8940037.img">
+	<imgdir name="info">
+		<int name="level" value="180"/>
+		<int name="maxHP" value="100000000"/>
+		<int name="maxMP" value="20000"/>
+		<int name="speed" value="20"/>
+		<int name="PADamage" value="100"/>
+		<int name="PDDamage" value="170"/>
+		<int name="PDRate" value="10"/>
+		<int name="MADamage" value="100"/>
+		<int name="MDDamage" value="210"/>
+		<int name="MDRate" value="10"/>
+		<int name="acc" value="640"/>
+		<int name="eva" value="180"/>
+		<int name="pushed" value="100000000"/>
+		<float name="fs" value="10.0"/>
+		<int name="exp" value="0"/>
+		<int name="summonType" value="1"/>
+		<int name="category" value="8"/>
+		<string name="mobType" value="1N"/>
+		<int name="noFlip" value="1"/>
+		<int name="boss" value="1"/>
+		<imgdir name="skill">
+			<imgdir name="0">
+				<int name="skill" value="207"/>
+				<int name="action" value="1"/>
+				<int name="level" value="5"/>
+			</imgdir>
+		</imgdir>
+	</imgdir>
+	<imgdir name="stand">
+		<canvas name="0" width="649" height="1192">
+			<vector name="origin" x="330" y="1410"/>
+			<vector name="head" x="-7" y="-1062"/>
+			<vector name="lt" x="-52" y="-1098"/>
+			<vector name="rb" x="41" y="-1022"/>
+			<string name="source" value="Mob/8940005.img/stand/0"/>
+		</canvas>
+		<int name="z" value="-2"/>
+	</imgdir>
+	<imgdir name="hit1">
+		<canvas name="0" width="649" height="1192">
+			<vector name="origin" x="330" y="1410"/>
+			<vector name="head" x="-7" y="-1062"/>
+			<vector name="lt" x="-52" y="-1098"/>
+			<vector name="rb" x="41" y="-1022"/>
+			<int name="z" value="-1"/>
+			<string name="source" value="Mob/8940005.img/hit1/0"/>
+		</canvas>
+	</imgdir>
+	<imgdir name="die1">
+		<canvas name="0" width="649" height="1192">
+			<vector name="origin" x="330" y="1410"/>
+			<vector name="head" x="-7" y="-1062"/>
+			<string name="source" value="Mob/8940005.img/stand/0"/>
+		</canvas>
+		<int name="z" value="-2"/>
+	</imgdir>
+	<imgdir name="skill1">
+		<canvas name="0" width="649" height="1192">
+			<vector name="origin" x="332" y="1410"/>
+			<vector name="head" x="-7" y="-1062"/>
+			<vector name="lt" x="-52" y="-1098"/>
+			<vector name="rb" x="41" y="-1022"/>
+			<string name="source" value="Mob/8940005.img/stand/1"/>
+		</canvas>
+		<int name="z" value="-2"/>
+	</imgdir>
+	<imgdir name="revive">
+		<canvas name="0" width="649" height="1192">
+			<vector name="origin" x="330" y="1410"/>
+			<string name="source" value="Mob/8940018.img/revive/0"/>
+		</canvas>
+		<canvas name="1" width="797" height="1240">
+			<vector name="origin" x="402" y="1458"/>
+		</canvas>
+		<canvas name="2" width="790" height="1249">
+			<vector name="origin" x="398" y="1467"/>
+		</canvas>
+		<canvas name="3" width="798" height="1263">
+			<vector name="origin" x="403" y="1481"/>
+		</canvas>
+		<canvas name="4" width="825" height="1267">
+			<vector name="origin" x="416" y="1485"/>
+		</canvas>
+		<canvas name="5" width="847" height="1268">
+			<vector name="origin" x="427" y="1486"/>
+		</canvas>
+		<canvas name="6" width="853" height="1269">
+			<vector name="origin" x="430" y="1487"/>
+		</canvas>
+		<canvas name="7" width="742" height="1211">
+			<vector name="origin" x="375" y="1429"/>
+		</canvas>
+		<canvas name="8" width="649" height="1192">
+			<vector name="origin" x="330" y="1410"/>
+		</canvas>
+		<canvas name="9" width="651" height="1192">
+			<vector name="origin" x="331" y="1410"/>
+		</canvas>
+		<canvas name="10" width="651" height="1192">
+			<vector name="origin" x="331" y="1410"/>
+		</canvas>
+		<canvas name="11" width="651" height="1192">
+			<vector name="origin" x="331" y="1410"/>
+		</canvas>
+		<canvas name="12" width="651" height="1192">
+			<vector name="origin" x="331" y="1410"/>
+		</canvas>
+		<canvas name="13" width="651" height="1192">
+			<vector name="origin" x="331" y="1410"/>
+		</canvas>
+		<canvas name="14" width="651" height="1192">
+			<vector name="origin" x="331" y="1410"/>
+		</canvas>
+		<canvas name="15" width="649" height="1192">
+			<vector name="origin" x="330" y="1410"/>
+		</canvas>
+		<canvas name="16" width="649" height="1192">
+			<vector name="origin" x="330" y="1410"/>
+		</canvas>
+		<canvas name="17" width="649" height="1192">
+			<vector name="origin" x="330" y="1410"/>
+		</canvas>
+		<canvas name="18" width="649" height="1192">
+			<vector name="origin" x="330" y="1410"/>
+		</canvas>
+		<int name="z" value="-2"/>
+	</imgdir>
+	<imgdir name="sealed">
+		<canvas name="0" width="651" height="1192">
+			<vector name="origin" x="331" y="1410"/>
+			<vector name="head" x="-7" y="-1062"/>
+			<string name="source" value="Mob/8940018.img/sealed/0"/>
+		</canvas>
+	</imgdir>
+</imgdir>

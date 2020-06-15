@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<imgdir name="BlockedBehavior.img">
+    <imgdir name="101">
+        <imgdir name="quest">
+            <imgdir name="0">
+                <string name="info" value="경험치습득"/>
+                <int name="quest" value="40980"/>
+            </imgdir>
+            <imgdir name="1">
+                <string name="info" value="메소 줍기"/>
+                <int name="quest" value="40900"/>
+            </imgdir>
+            <imgdir name="2">
+                <string name="info" value="아이템 줍기"/>
+                <int name="quest" value="40900"/>
+            </imgdir>
+            <imgdir name="3">
+                <string name="info" value="비전투 스테이터스 습득"/>
+                <int name="quest" value="40901"/>
+            </imgdir>
+            <imgdir name="4">
+                <string name="info" value="전문 기술 습득"/>
+                <int name="quest" value="40901"/>
+            </imgdir>
+            <imgdir name="5">
+                <string name="info" value="이방인 해제"/>
+                <int name="quest" value="40980"/>
+            </imgdir>
+            <imgdir name="6">
+                <string name="info" value="거울 세계로 이동"/>
+                <int name="quest" value="40900"/>
+            </imgdir>
+            <imgdir name="7">
+                <string name="info" value="거래"/>
+                <int name="quest" value="40900"/>
+            </imgdir>
+            <imgdir name="8">
+                <string name="info" value="창고"/>
+                <int name="quest" value="40900"/>
+            </imgdir>
+            <imgdir name="9">
+                <string name="info" value="퀘스트"/>
+                <int name="quest" value="40980"/>
+                <int name="ignoreExceptField" value="1"/>
+            </imgdir>
+            <imgdir name="10">
+                <string name="info" value="파티"/>
+                <int name="quest" value="40901"/>
+            </imgdir>
+            <imgdir name="11">
+                <string name="info" value="길드"/>
+                <int name="quest" value="40900"/>
+            </imgdir>
+            <imgdir name="12">
+                <string name="info" value="친구"/>
+                <int name="quest" value="40900"/>
+            </imgdir>
+            <imgdir name="13">
+                <string name="info" value="패밀리"/>
+                <int name="quest" value="40900"/>
+            </imgdir>
+            <imgdir name="14">
+                <string name="info" value="Open WP Window"/>
+                <int name="quest" value="40905"/>
+                <int name="ignoreExceptField" value="1"/>
+            </imgdir>
+        </imgdir>
+        <imgdir name="exceptField">
+            <null name=""/>
+        </imgdir>
+        <imgdir name="exceptQuest">
+            <imgdir name="0">
+            </imgdir>
+            <imgdir name="1">
+            </imgdir>
+            <imgdir name="2">
+            </imgdir>
+            <imgdir name="3">
+            </imgdir>
+            <imgdir name="4">
+            </imgdir>
+            <imgdir name="5">
+            </imgdir>
+            <imgdir name="6">
+            </imgdir>
+            <imgdir name="7">
+            </imgdir>
+            <imgdir name="8">
+            </imgdir>
+        </imgdir>
+    </imgdir>
+    <imgdir name="100">
+        <imgdir name="quest">
+            <imgdir name="0">
+                <string name="info" value="경험치습득"/>
+                <int name="quest" value="40980"/>
+            </imgdir>
+            <imgdir name="1">
+                <string name="info" value="메소 줍기"/>
+                <int name="quest" value="40901"/>
+            </imgdir>
+            <imgdir name="2">
+                <string name="info" value="아이템 줍기"/>
+                <int name="quest" value="40901"/>
+            </imgdir>
+            <imgdir name="3">
+                <string name="info" value="비전투 스테이터스 습득"/>
+                <int name="quest" value="40901"/>
+            </imgdir>
+            <imgdir name="4">
+                <string name="info" value="전문 기술 습득"/>
+                <int name="quest" value="40901"/>
+            </imgdir>
+            <imgdir name="5">
+                <string name="info" value="이방인 해제"/>
+                <int name="quest" value="40980"/>
+            </imgdir>
+            <imgdir name="6">
+                <string name="info" value="거울 세계로 이동"/>
+                <int name="quest" value="40900"/>
+            </imgdir>
+            <imgdir name="7">
+                <string name="info" value="거래"/>
+                <int name="quest" value="40900"/>
+            </imgdir>
+            <imgdir name="8">
+                <string name="info" value="창고"/>
+                <int name="quest" value="40900"/>
+            </imgdir>
+            <imgdir name="9">
+                <string name="info" value="퀘스트"/>
+                <int name="quest" value="40980"/>
+                <int name="ignoreExceptField" value="1"/>
+            </imgdir>
+            <imgdir name="10">
+                <string name="info" value="파티"/>
+                <int name="quest" value="40901"/>
+            </imgdir>
+            <imgdir name="11">
+                <string name="info" value="길드"/>
+                <int name="quest" value="40900"/>
+            </imgdir>
+            <imgdir name="12">
+                <string name="info" value="친구"/>
+                <int name="quest" value="40900"/>
+            </imgdir>
+            <imgdir name="13">
+                <string name="info" value="패밀리"/>
+                <int name="quest" value="40900"/>
+            </imgdir>
+            <imgdir name="14">
+                <string name="info" value="Open WP Window"/>
+                <int name="quest" value="40905"/>
+                <int name="ignoreExceptField" value="1"/>
+            </imgdir>
+        </imgdir>
+        <imgdir name="exceptField">
+            <null name=""/>
+        </imgdir>
+        <imgdir name="exceptQuest">
+            <imgdir name="0">
+            </imgdir>
+            <imgdir name="1">
+            </imgdir>
+            <imgdir name="2">
+            </imgdir>
+            <imgdir name="3">
+            </imgdir>
+            <imgdir name="4">
+            </imgdir>
+            <imgdir name="5">
+            </imgdir>
+            <imgdir name="6">
+            </imgdir>
+            <imgdir name="7">
+            </imgdir>
+        </imgdir>
+    </imgdir>
+    <imgdir name="otherJob">
+        <imgdir name="blockQuest">
+            <imgdir name="0">
+                <int name="begin" value="40000"/>
+                <int name="end" value="41999"/>
+            </imgdir>
+        </imgdir>
+        <imgdir name="blockField">
+            <imgdir name="0">
+                <int name="begin" value="320000000"/>
+                <int name="end" value="329999999"/>
+            </imgdir>
+        </imgdir>
+    </imgdir>
+</imgdir>

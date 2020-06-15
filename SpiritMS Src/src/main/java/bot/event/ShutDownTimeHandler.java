@@ -25,7 +25,6 @@ public class ShutDownTimeHandler extends ListenerAdapter {
             final int[] minutesLeft = {Integer.parseInt(args[1])};
             ScheduledFuture<?> ts = null;
             Thread t = null;
-            e.getGuild().getTextChannelById("722160746565468291").sendMessage("Server will be shutting down in " + minutesLeft[0] + " minutes, please log off safely.").queue();
             if (ts == null && (t == null || !t.isAlive())) {
                 t = new Thread(ShutdownServer.getInstance());
                 Thread finalT = t;
@@ -41,7 +40,7 @@ public class ShutDownTimeHandler extends ListenerAdapter {
                             return;
                         }
                         World.Broadcast.broadcastMessage(CWvsContext.broadcastMsg(0, "The server will shutdown in " + minutesLeft[0] + " minutes. please log off safely."));
-                        e.getGuild().getTextChannelById("722160746565468291").sendMessage("Sever will be shutting down in " + minutesLeft[0] + " minutes, please log off safely.").queue();
+                        e.getGuild().getTextChannelById("722160746565468291").sendMessage("Server will be shutting down in " + minutesLeft[0] + " minutes, please log off safely.").queue();
                         minutesLeft[0]--;
                     }
                 }, 60000);

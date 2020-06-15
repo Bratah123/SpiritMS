@@ -3,10 +3,22 @@
   <component name="ChangeListManager">
     <list default="true" id="b6018274-476e-40f5-ab0d-cc65796a609f" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Amoria/.vs/Amoria/v16/.suo" beforeDir="false" afterPath="$PROJECT_DIR$/Amoria/.vs/Amoria/v16/.suo" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Log_Eventtimer_Except.rtf" beforeDir="false" afterPath="$PROJECT_DIR$/Log_Eventtimer_Except.rtf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/bot/event/ShutDownTimeHandler$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/bot/event/ShutDownTimeHandler$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/bot/event/ShutDownTimeHandler.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/bot/event/ShutDownTimeHandler.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/constants/ServerConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/constants/ServerConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/server/commands/PlayerCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/server/commands/PlayerCommand.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/constants/ServerConfig.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/constants/ServerConfig.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/handling/login/LoginServer.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/handling/login/LoginServer.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/server/commands/PlayerCommand$CallGM.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/server/commands/PlayerCommand$CallGM.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/server/commands/PlayerCommand$CashDrop.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/server/commands/PlayerCommand$CashDrop.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/server/commands/PlayerCommand$Check.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/server/commands/PlayerCommand$Check.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/server/commands/PlayerCommand$Help.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/server/commands/PlayerCommand$Help.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/server/commands/PlayerCommand$JoinEvent.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/server/commands/PlayerCommand$JoinEvent.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/server/commands/PlayerCommand$SpawnBomb.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/server/commands/PlayerCommand$SpawnBomb.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/server/commands/PlayerCommand$fm.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/server/commands/PlayerCommand$fm.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/server/commands/PlayerCommand$home.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/server/commands/PlayerCommand$job.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/server/commands/PlayerCommand$job.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/server/commands/PlayerCommand$modes.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/server/commands/PlayerCommand$modes.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/server/commands/PlayerCommand$ranking.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/server/commands/PlayerCommand$ranking.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/server/commands/PlayerCommand.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/server/commands/PlayerCommand.class" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />

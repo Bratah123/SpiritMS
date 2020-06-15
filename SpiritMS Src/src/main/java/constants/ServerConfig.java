@@ -12,8 +12,8 @@ public class ServerConfig {
     public static boolean DISABLE_PIC = false;
     public static final int flags = 3;
     public static final String serverName = "Amoria";
-    public static final String eventMessage = "v146 Amoria Development!";
-    public static final String rankingURL = "http://www.Amoria.org/ranking";
+    public static final String eventMessage = "v146 SpiritMS Development!";
+    public static final String rankingURL = "";
     public static final int flag = 3;
     public static final int maxCharacters = 20;
     public static final int STARTER_MAP = 10000; //Maple Island

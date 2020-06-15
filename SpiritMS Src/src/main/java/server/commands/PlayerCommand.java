@@ -619,39 +619,34 @@ public class PlayerCommand {
      }
      }
      * */
-    public static class home extends CommandExecute {
-
-        @Override
-        public int execute(MapleClient c, String[] splitted) {
-            for (int i : GameConstants.blockedMaps) {
-                if (c.getPlayer().getMapId() == i) {
-                    c.getPlayer().dropMessage(5, "You may not use this command here.");
-                    return 0;
-                }
-            }
-            if (c.getPlayer().getLevel() < 50 && c.getPlayer().getJob() != 200) {
-                c.getPlayer().dropMessage(5, "You must be over level 50 to use this command.");
-                return 0;
-            }
-            if (c.getPlayer().hasBlockedInventory() || c.getPlayer().getMap().getSquadByMap() != null || c.getPlayer().getEventInstance() != null || c.getPlayer().getMap().getEMByMap() != null || c.getPlayer().getMapId() >= 990000000/* || FieldLimitType.VipRock.check(c.getPlayer().getMap().getFieldLimit())*/) {
-                c.getPlayer().dropMessage(5, "You may not use this command here.");
-                return 0;
-            }
-
-            if ((c.getPlayer().getMapId() >= 680000210 && c.getPlayer().getMapId() <= 680000502) || (c.getPlayer().getMapId() / 1000 == 980000 && c.getPlayer().getMapId() != 980000000) || (c.getPlayer().getMapId() / 100 == 1030008) || (c.getPlayer().getMapId() / 100 == 922010) || (c.getPlayer().getMapId() / 10 == 13003000)) {
-                c.getPlayer().dropMessage(5, "You may not use this command here.");
-                return 0;
-            }
-
-            c.getPlayer().saveLocation(SavedLocationType.FREE_MARKET, c.getPlayer().getMap().getReturnMap().getId());
-            MapleMap map = c.getChannelServer().getMapFactory().getMap(ServerConfig.HOME_MAP_ID);
-
-            c.getPlayer()
-                    .changeMap(map, map.getPortal(0));
-
-            return 1;
-        }
-    }
+//    public static class Home extends CommandExecute {
+//
+//        @Override
+//        public int execute(MapleClient c, String[] splitted) {
+//            for (int i : GameConstants.blockedMaps) {
+//                if (c.getPlayer().getMapId() == i) {
+//                    c.getPlayer().dropMessage(5, "You may not use this command here.");
+//                    return 0;
+//                }
+//            }
+//            if (c.getPlayer().hasBlockedInventory() || c.getPlayer().getMap().getSquadByMap() != null || c.getPlayer().getEventInstance() != null || c.getPlayer().getMap().getEMByMap() != null || c.getPlayer().getMapId() >= 990000000/* || FieldLimitType.VipRock.check(c.getPlayer().getMap().getFieldLimit())*/) {
+//                c.getPlayer().dropMessage(5, "You may not use this command here.");
+//                return 0;
+//            }
+//
+//            if ((c.getPlayer().getMapId() >= 680000210 && c.getPlayer().getMapId() <= 680000502) || (c.getPlayer().getMapId() / 1000 == 980000 && c.getPlayer().getMapId() != 980000000) || (c.getPlayer().getMapId() / 100 == 1030008) || (c.getPlayer().getMapId() / 100 == 922010) || (c.getPlayer().getMapId() / 10 == 13003000)) {
+//                c.getPlayer().dropMessage(5, "You may not use this command here.");
+//                return 0;
+//            }
+//
+//            c.getPlayer().saveLocation(SavedLocationType.FREE_MARKET, c.getPlayer().getMap().getReturnMap().getId());
+//            MapleMap map = c.getChannelServer().getMapFactory().getMap(ServerConfig.HOME_MAP_ID);
+//
+//            c.getPlayer().changeMap(map, map.getPortal(0));
+//
+//            return 1;
+//        }
+//    }
 
     public static class modes extends CommandExecute {
 
@@ -679,7 +674,7 @@ public class PlayerCommand {
         }
     }
 
-    public static class fm extends CommandExecute {
+    public static class FM extends CommandExecute {
 
         @Override
         public int execute(MapleClient c, String[] splitted) {
@@ -688,10 +683,6 @@ public class PlayerCommand {
                     c.getPlayer().dropMessage(5, "You may not use this command here.");
                     return 0;
                 }
-            }
-            if (c.getPlayer().getLevel() < 10 && c.getPlayer().getJob() != 200) {
-                c.getPlayer().dropMessage(5, "You must be over level 10 to use this command.");
-                return 0;
             }
             if (c.getPlayer().hasBlockedInventory() || c.getPlayer().getMap().getSquadByMap() != null || c.getPlayer().getEventInstance() != null || c.getPlayer().getMap().getEMByMap() != null || c.getPlayer().getMapId() >= 990000000/* || FieldLimitType.VipRock.check(c.getPlayer().getMap().getFieldLimit())*/) {
                 c.getPlayer().dropMessage(5, "You may not use this command here.");
@@ -816,7 +807,7 @@ public class PlayerCommand {
             //sb.append("\r\n@tsmega < Toggle super megaphone on/off >");
             //sb.append("\r\n@ea < If you are unable to attack or talk to NPC >");
             //sb.append("\r\n@clearslot < Cleanup that trash in your inventory >");
-            sb.append("\r\n@ranking < Check the rankings on our site >");
+            //sb.append("\r\n@ranking < Check the rankings on our site >");
             sb.append("\r\n@checkdrop < Check drops on Hidden-Street >");
             //sb.append("\r\n@style < Styler >");
             //sb.append("\r\n@advance < Job Advancer >");
@@ -849,6 +840,22 @@ public class PlayerCommand {
         }
     }
 
+    public static class SkipTutorial extends CommandExecute {
+        @Override
+        public int execute(MapleClient c, String[] args){
+            MapleCharacter chr = c.getPlayer();
+            if(chr.getLevel() < 10){
+                c.getPlayer().setLevel((short)10);
+                c.getPlayer().updateSingleStat(MapleStat.LEVEL, 10);
+                c.getPlayer().setExp(0);
+                chr.changeMap(1000000000, 0); // warp them to henesys
+            }
+            else{
+                chr.dropMessage(5, "You cannot skip tutorial at this time.");
+            }
+            return 1;
+        }
+    }
     /*public static class Crescent extends NPC {
      }
 

@@ -43,6 +43,7 @@ import server.life.MobSkillFactory;
 import server.life.PlayerNPC;
 import server.maps.MapleMapFactory;
 import server.quest.MapleQuest;
+import sun.security.provider.ConfigFile;
 import tools.MapleAESOFB;
 
 public class Start {
@@ -141,7 +142,7 @@ public class Start {
             throw new RuntimeException("Runtime Exception - Could not connect to MySql Server.");
         }
 
-        System.out.println("Loading Amoria Development");
+        System.out.println("Loading SpiritMS Development");
         World.init();
         System.out.println("Host: " + ServerConfig.interface_ + ":" + LoginServer.PORT);
         System.out.println("In-game Version: 146.1");

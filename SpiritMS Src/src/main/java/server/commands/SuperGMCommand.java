@@ -204,7 +204,7 @@ public class SuperGMCommand {
             for (MapleCharacter mch : c.getChannelServer().getPlayerStorage().getAllCharacters()) {
                 mch.saveToDB(false, false);
             }
-            c.getPlayer().dropMessage(0, "Characters successfully saved!");
+            c.getPlayer().dropMessage(0, "Character successfully saved!");
             return 1;
         }
     }

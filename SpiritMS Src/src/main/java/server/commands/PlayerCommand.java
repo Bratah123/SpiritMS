@@ -848,7 +848,7 @@ public class PlayerCommand {
                 c.getPlayer().setLevel((short)10);
                 c.getPlayer().updateSingleStat(MapleStat.LEVEL, 10);
                 c.getPlayer().setExp(0);
-                chr.changeMap(1000000000, 0); // warp them to henesys
+                chr.changeMap(100000000, 0); // warp them to henesys
             }
             else{
                 chr.dropMessage(5, "You cannot skip tutorial at this time.");

@@ -1,67 +1,1593 @@
-var a;
-var destinyweapons;
-var sel;
+
+
+var status = -1;
+var redCube = 5062009;
+var bonusCube = 5062500;
+var cubeSelection;
+/*
+1: Red Cube
+2: Bonus Potential Cube
+3: Auto Cube
+*/
+
+var state = 0;
+var bagIndex;
+var desiredStatNumber = 0;
+var statList = ["None", "Att %", "Matt %", "Drop Rate %", "Luk %", "Dex %", "Int %", "Str %", "All Stat %"]
+var proceedSelection = statList.length + 1;
+var cubeNormally = proceedSelection + 1;
+var statSelected = 0;
+var combination;
+var isBpot = false;
+
+/* Prices of Auto Cube Per Cube */
+var autoCubePriceRed = 5500;
+var autoCubePriceBonus = 5500;
+
+var equipment; //cm.getChar().getInventory(MapleInventoryType.EQUIP).getItem(bagIndex);
+
 
 function start() {
-    // destinyweapons = cm.getPlayer().getDestinyWeapons();
-    // a = 0;
-    // cm.sendSimple("Hello, what may I do for you?\r\n#L0#Tell me about the #bDestiny Weapons#k.#l\r\n#L1#What is the #bReward System#k?#l\r\n");
-	cm.sendOk("Hi, I'm currently disabled. Enjoy Amoria!");
-	cm.dispose();
-	return;
+    status = -1;
+    action (1, 0, 0);
 }
 
-function action(mode, type, selection) {
-    if (mode != 1) {
-        cm.dispose();
-        return;
-    }
-    a++;
-    if (a == 1) {
-        sel = selection;
-    }
-    if (sel == 0) {
-        switch (a) {
-            case 1:
-                cm.sendSimple("The #bDestiny Weapons#k are regular weapons, which enhances as you level.\r\n\r\nTheir new stats are never known, and they may obtain stats which they do not have upon leveling. These stats will be enhanced as you level aswell. \r\n\r\n#bStat Enhancements Maximum#k:\r\n#gHp & Mp#k: If level is lower than 150, then 500 else, 1000.\r\n#gSpeed & Jump#k: If level is lower than 150, then 20 else, 40.\r\n#gAttack & Magic#k: If level is lower than 150, then 150 else, 200.\r\n#gOther Stats#k: If level is lower than 150, then 100 else, 150.\r\n\r\nYou may only hold one #bDestiny Weapon#k, and #rSecondary Destiny Weapons#k are not found yet.\r\n\r\nThere is only one way to know if a weapon is a #bDestiny Weapon#k.\r\n#L0#How do I know if my weapon is a #bDestiny Weapon#k?#l\r\n ");
-                break;
-            case 2:
-                cm.sendSimple("There is an uncompleted list of #bDestiny Weapons#k which is being updated.\r\nHowever, the weapons look like regular weapons. The #bDestiny Weapons#k will have their crafter's name signed on it, and there is only one person who can craft them, which is the legendary #rShadow Knight#k.\r\n#L0#May I see the list?#l\r\n ");
-                break;
-            case 3:
-                var list = "Yes of course,";
-                for (var i = 0; i < destinyweapons.length; i++)
-                    list += "\r\n#v" + destinyweapons[i] + "##t" + destinyweapons[i] + "#"
-                list += "\r\n#L0#How can I obtain the #bDestiny Weapons#k?#l\r\n ";
-                cm.sendSimple(list);
-                break;
-            case 4:
-                cm.sendSimple("Since these weapons are very unique, the only way to obtain them is to purchase them from the only seller who knows to craft them, #rThe Shadow Knight#k.\r\nHe can be found at the #rFree Market#k, since it is the best place to trade.\r\nThe Shadow Knight had been found to have some suspicious activities related to the #rBlack Mage#k, he was found trading #i4251202# with the Black Wings for some materials to craft the #bDestiny Weapons#k...\r\n#L0#What is the payment he accepts?#l\r\n ");
-                break;
-            case 5:
-                cm.sendSimple("He sells them for some old coins whose were found to be hold by monsters. You shall go and see him yourself!\r\n#L0#Alright, thanks for you help.#l\r\n ");
-                cm.dispose();
-                break;
-            default:
-                cm.dispose();
-                return;
-        }
+function action(mode, type, selection)
+{
+
+    if (mode == 1) {
+        status++;
     } else {
-        switch (sel) {
-            case 1:
-                switch (a) {
-                    case 1:
-                        cm.sendOk("The reward system is a new system, which allows you to obtain #dItems#k, #rMaple Points#k, #bMesos#k, or #gExp#k.\r\nYou can access your Rewards by clicking the #fEffect/BasicEff.img/MainNotice/userReward/Default/0##bReward UI#k.\r\nThe Reward UI will appear when you have any rewards you can claim.\r\nYou can get #bRewards#k by creating a character, or leveling up.");
-                        cm.dispose();
-                        break;
-                    default:
-                        cm.dispose();
-                        return;
-                }
-                break;
-            default:
-                cm.dispose();
-                return;
-        }
+	cm.dispose();
+	return;
     }
+
+    if (status == 0) {
+
+		var itemSel = "This is the #rFree Cubing NPC#k, please select the item you'd like to cube.\r\n#b\r\n"
+		cm.sendSimple(itemSel + cm.EquipListVertical(cm.getChar().getClient()));
+
+	}
+	if(status == 1)
+	{
+		bagIndex = selection;
+		equipment = cm.getChar().getInventory(MapleInventoryType.EQUIP).getItem(bagIndex);
+
+		var cubeSelDiag = "Which cube would you like to use?\r\n#rCOST: 1 Cube\r\n#k";
+		cubeSelDiag += "#L500" + "##v" + redCube + " #Red Cube\r\n";
+		cubeSelDiag += "#L1000" + "##v" + bonusCube + " #Bonus Potential Cube\r\n\r\n";
+		cubeSelDiag += "#L2000##bAuto Cube Lines Selection#l"
+		cm.sendSimple(cubeSelDiag);
+	}
+	else if (status == 2)
+	{
+		if(selection == 500) // red cube
+		{
+			cubeSelection = 1;
+			if(equipment.getPotential1() == 0 && equipment.getPotential2() == 0 || equipment.getPotential1() < 40000)
+			{
+				cm.sendOk("Your item does not have a potential, or is not legendary.");
+				return cm.dispose();
+			}
+			else if(cm.getQuantityOfItem(redCube) <= 0)
+			{
+				cm.sendOk("You do not have any red cubes.");
+				return cm.dispose();
+			}
+			else
+			{
+				var cubingDiag = "These are your potentials, would you like to use a cube?\r\n#v" + redCube +": #" + cm.getQuantityOfItem(redCube) + "\r\nDP: " + "#L1\r\n\r\n";
+				var basePot = [equipment.getPotential1(), equipment.getPotential2(),equipment.getPotential3()];
+				for(var i = 0; i < basePot.length; i++)
+				{
+					if(basePot[i] == 0)
+					{
+							cubingDiag += "(None) ";
+					}
+					if(basePot[i] == 40056 || basePot[i] == 40057)
+					{
+						cubingDiag += "#g(Legendary)#k Critical Damage 8%";
+					}
+					else
+					{
+						var tier = Math.floor(basePot[i] / 10000)
+							if(tier <= 1)
+							{
+								cubingDiag += "#b(Rare) #k";
+							}
+							else if(tier == 2)
+							{
+								cubingDiag += "#d(Epic) #k";
+							}
+							else if(tier == 3)
+							{
+								cubingDiag += "#r(Unique) #k";
+							}
+							else
+							{
+								cubingDiag += "#g(Legendary) #k";
+							}
+						if(cm.getReqLevel(equipment.getItemId()) >= 200)
+						{
+							potInfo = cm.getPotentialInfoById(basePot[i]).get(19);
+							cubingDiag += potInfo;
+						}
+						else{
+						potInfo = cm.getPotentialInfoById(basePot[i]).get(cm.getReqLevel(equipment.getItemId()) / 10);
+						cubingDiag += potInfo;
+						}
+					}
+
+					cubingDiag += "\r\n"
+				}
+				cm.sendNext(cubingDiag + "#l");
+
+			}
+		}
+		else if(selection == 1000)
+		{
+			cubeSelection = 2;
+			if(equipment.getPotential4() == 0 && equipment.getPotential5() == 0 || equipment.getPotential4() < 40000)
+			{
+				cm.sendOk("Your item does not have a potential, or is not legendary.");
+				return cm.dispose();
+			}
+			else if(cm.getQuantityOfItem(bonusCube) <= 0)
+			{
+				cm.sendOk("You do not have any bonus potential cubes.");
+				return cm.dispose();
+			}
+			else
+			{
+				var cubingDiag = "These are your bonus potentials, would you like to use a cube?\r\n#v" + bonusCube +": #" + cm.getQuantityOfItem(bonusCube) + "\r\nDP: " + "#L2\r\n\r\n";
+				var bonusPot = [equipment.getPotential4(), equipment.getPotential5(),equipment.getPotential6()];
+				for(var i = 0; i < bonusPot.length; i++)
+				{
+					if(bonusPot[i] == 0)
+					{
+							cubingDiag += "(None) ";
+					}
+					else
+					{
+						var tier = Math.floor(bonusPot[i] / 10000)
+							if(tier <= 1)
+							{
+								cubingDiag += "#b(Rare) #k";
+							}
+							else if(tier == 2)
+							{
+								cubingDiag += "#d(Epic) #k";
+							}
+							else if(tier == 3)
+							{
+								cubingDiag += "#r(Unique) #k";
+							}
+							else
+							{
+								cubingDiag += "#g(Legendary) #k";
+							}
+						if(cm.getReqLevel(equipment.getItemId()) >= 200)
+						{
+							potInfo = cm.getPotentialInfoById(bonusPot[i]).get(19);
+							cubingDiag += potInfo;
+						}
+						else{
+						potInfo = cm.getPotentialInfoById(bonusPot[i]).get(cm.getReqLevel(equipment.getItemId()) / 10);
+						cubingDiag += potInfo;
+						}
+					}
+
+					cubingDiag += "\r\n"
+				}
+				cm.sendNext(cubingDiag + "#l");
+				status++;
+			}
+		}
+		else if(selection == 2000) // Auto Cube Selection
+		{
+			combination = "#rCOMBINATION: " + desiredStatNumber + " " + statList[statSelected]
+			cubeSelection = 3;
+			autoCubeDiag = "Please select the stat you would like to automatically cube for.\r\n#rCOST: \r\n5,000 NX per Red Cube\r\n5,000 NX per Bonus Cube\r\n\r\n";
+
+			for(var i = 1; i < statList.length; i++)
+			{
+				autoCubeDiag += "#L" + i + "##b" + statList[i] + "\r\n";
+			}
+			autoCubeDiag += "\r\n#L" + cubeNormally + "##b" + "Cube Normally.";
+			cm.sendNext(autoCubeDiag);
+		}
+	}
+	else if(status == 3 && cubeSelection == 3) // Auto Cube Lines Selection
+	{
+		if(selection == cubeNormally)
+		{
+			cubeSelection = 1;
+			cm.sendNext("Press next to use a cube on #i" + equipment.getItemId() + "#\r\n#rCOMBINATION: NONE");
+			status--;
+		}
+		else if(selection == 1) // Att
+		{
+			statSelected = selection;
+			cm.sendGetNumber("How much percent Att would you like to cube for?", 1, 1, 36);
+		}
+		else if(selection == 2) // Matt
+		{
+			statSelected = selection;
+			cm.sendGetNumber("How much percent Matt would you like to cube for?", 1, 1, 36);
+		}
+		else if(selection == 3) // Drop Rate
+		{
+			statSelected = selection;
+			cm.sendGetNumber("How much percent Drop Rate would you like to cube for?", 1, 1, 60);
+		}
+		else if(selection == 4) // Luk
+		{
+			statSelected = selection;
+			cm.sendGetNumber("How much percent Luk would you like to cube for?", 1, 1, 36);
+		}
+		else if(selection == 5) // Dex
+		{
+			statSelected = selection;
+			cm.sendGetNumber("How much percent Dex would you like to cube for?", 1, 1, 36);
+		}
+		else if(selection == 6) // Int
+		{
+			statSelected = selection;
+			cm.sendGetNumber("How much percent Int would you like to cube for?", 1, 1, 36);
+		}
+		else if(selection == 7) // Str
+		{
+			statSelected = selection;
+			cm.sendGetNumber("How much percent Str would you like to cube for?", 1, 1, 36);
+		}
+		else if(selection == 8) // All Stat
+		{
+			statSelected = selection;
+			cm.sendGetNumber("How much percent All Stat would you like to cube for?", 1, 1, 36);
+		}
+	}
+	else if(status == 4 && cubeSelection == 3)
+	{
+		desiredStatNumber = selection;
+		cm.sendNext("Do you want to cube for atleast #r" + statList[statSelected] + desiredStatNumber + "?\r\n#k#L2000##bYes(#rRed Cube#k 5,000 NX#b)\r\n#L5000#Yes(#gBonus Potential Cube#k 5,000 NX#b)\r\n#L4000#No");
+	}
+	else if(status == 5) // Auto Cubing Section
+	{
+		if(selection <= 2000 && isBpot == false) // Main Pot Auto Cube
+		{
+			if(cm.getQuantityOfItem(redCube) == 0)
+				{
+					cm.sendOk("You do not have enough red cubes.");
+					return cm.dispose();
+				}
+				else if(equipment.getPotential1() < 40000)
+				{
+					cm.sendOk("Your item is not Legendary or does not have a potential.");
+					return cm.dispose();
+				}
+				else if(cm.getChar().getCSPoints(2) < autoCubePriceRed)
+				{
+					cm.sendOk("You do not have enough mesos to cube.");
+					return cm.dispose();
+				}
+				else if(GameConstants.isWeapon(equipment.getItemId()) || GameConstants.isSecondaryWeapon(equipment.getItemId()) || GameConstants.isEmblem(equipment.getItemId())) // Weapon, 2ndry, Emblem
+				{
+				var wepPrimePotentials = [40001, 40002, 40003, 40004, 40011, 40012, 40041, 40042, 40043, 40044, 40045, 40046,40047,40051,40052, 40070,40081,40086,40291,40292,40601,40602,40603];
+				var wepUniquePotentials = [30001, 30002, 30003, 30004, 30011, 30012, 30041, 30042, 30043, 30044, 30045, 30046,30047,30051,30052,30054, 30070,30086,30291,30601,30602,30001, 30002, 30003, 30004, 30011, 30012, 30041, 30042, 30043, 30044, 30045, 30046,30047,30051,30052,30054, 30070,30086,30291,30601,30602,30001, 30002, 30003, 30004, 30011, 30012, 30041, 30042, 30043, 30044, 30045, 30046,30047,30051,30052,30054, 30070,30086,30291,30601,30602, 40001, 40002, 40003, 40004 , 40011, 40012, 40041, 40041, 40042, 40043, 40044, 40045, 40046,40047,40051,40052, 40070,40081,40086,40291,40292,40601,40602,40603];				var randomPot = wepPrimePotentials[Math.floor(Math.random() * wepPrimePotentials.length)]; // Prime Line
+				var randomPot2 = wepUniquePotentials[Math.floor(Math.random() * wepUniquePotentials.length)]; // Unique
+				var randomPot3 = wepUniquePotentials[Math.floor(Math.random() * wepUniquePotentials.length)]; // Unique
+				equipment.setPotential1(randomPot);
+				equipment.setPotential2(randomPot2);
+				equipment.setPotential3(randomPot3);
+				cm.getChar().getClient().getSession().writeAndFlush(CWvsContext.InventoryPacket.updateEquipSlot(equipment));
+				cm.gainItem(redCube, -1);
+				cm.getChar().gainMaplePoints(-autoCubePriceRed);
+				cm.getChar().dropMessage(5,"You lost 1 red cube");
+				var cubingDiag = "These are your potentials, would you like to use a cube?\r\n#rAUTO CUBING: ON#k\r\n#v" + redCube +": #" + cm.getQuantityOfItem(redCube) + "\r\nDP: " + "\r\n\r\n";
+				var basePot = [equipment.getPotential1(), equipment.getPotential2(),equipment.getPotential3()];
+				for(var i = 0; i < basePot.length; i++)
+				{
+					if(basePot[i] == 0)
+					{
+							cubingDiag += "(None) ";
+					}
+					else
+					{
+						var tier = Math.floor(basePot[i] / 10000)
+							if(tier <= 1)
+							{
+								cubingDiag += "#b(Rare) #k";
+							}
+							else if(tier == 2)
+							{
+								cubingDiag += "#d(Epic) #k";
+							}
+							else if(tier == 3)
+							{
+								cubingDiag += "#r(Unique) #k";
+							}
+							else
+							{
+								cubingDiag += "#g(Legendary) #k";
+							}
+						if(cm.getReqLevel(equipment.getItemId()) >= 200)
+						{
+							potInfo = cm.getPotentialInfoById(basePot[i]).get(19);
+							cubingDiag += potInfo;
+						}
+						else{
+						potInfo = cm.getPotentialInfoById(basePot[i]).get(cm.getReqLevel(equipment.getItemId()) / 10);
+						cubingDiag += potInfo;
+						}
+					}
+
+					cubingDiag += "\r\n";
+				}
+				var totalLukPercent = (cm.getReqLevel(equipment.getItemId()) >= 200) ? cm.getPotentialInfoById(basePot[0]).get(19).incLUKr + cm.getPotentialInfoById(basePot[1]).get(19).incLUKr + cm.getPotentialInfoById(basePot[2]).get(19).incLUKr : cm.getPotentialInfoById(basePot[0]).get(cm.getReqLevel(equipment.getItemId()) / 10).incLUKr + cm.getPotentialInfoById(basePot[1]).get(cm.getReqLevel(equipment.getItemId()) / 10).incLUKr + cm.getPotentialInfoById(basePot[2]).get(cm.getReqLevel(equipment.getItemId()) / 10).incLUKr;
+				var totalStrPercent = (cm.getReqLevel(equipment.getItemId()) >= 200) ? cm.getPotentialInfoById(basePot[0]).get(19).incSTRr + cm.getPotentialInfoById(basePot[1]).get(19).incSTRr + cm.getPotentialInfoById(basePot[2]).get(19).incSTRr : cm.getPotentialInfoById(basePot[0]).get(cm.getReqLevel(equipment.getItemId()) / 10).incSTRr + cm.getPotentialInfoById(basePot[1]).get(cm.getReqLevel(equipment.getItemId()) / 10).incSTRr + cm.getPotentialInfoById(basePot[2]).get(cm.getReqLevel(equipment.getItemId()) / 10).incSTRr;
+				var totalDexPercent = (cm.getReqLevel(equipment.getItemId()) >= 200) ? cm.getPotentialInfoById(basePot[0]).get(19).incDEXr + cm.getPotentialInfoById(basePot[1]).get(19).incDEXr + cm.getPotentialInfoById(basePot[2]).get(19).incDEXr : cm.getPotentialInfoById(basePot[0]).get(cm.getReqLevel(equipment.getItemId()) / 10).incDEXr + cm.getPotentialInfoById(basePot[1]).get(cm.getReqLevel(equipment.getItemId()) / 10).incDEXr + cm.getPotentialInfoById(basePot[2]).get(cm.getReqLevel(equipment.getItemId()) / 10).incDEXr;
+				var totalIntPercent = (cm.getReqLevel(equipment.getItemId()) >= 200) ? cm.getPotentialInfoById(basePot[0]).get(19).incINTr + cm.getPotentialInfoById(basePot[1]).get(19).incINTr + cm.getPotentialInfoById(basePot[2]).get(19).incINTr : cm.getPotentialInfoById(basePot[0]).get(cm.getReqLevel(equipment.getItemId()) / 10).incINTr + cm.getPotentialInfoById(basePot[1]).get(cm.getReqLevel(equipment.getItemId()) / 10).incINTr + cm.getPotentialInfoById(basePot[2]).get(cm.getReqLevel(equipment.getItemId()) / 10).incINTr;
+				var totalAttPercent = (cm.getReqLevel(equipment.getItemId()) >= 200) ? cm.getPotentialInfoById(basePot[0]).get(19).incPADr + cm.getPotentialInfoById(basePot[1]).get(19).incPADr + cm.getPotentialInfoById(basePot[2]).get(19).incPADr : cm.getPotentialInfoById(basePot[0]).get(cm.getReqLevel(equipment.getItemId()) / 10).incPADr + cm.getPotentialInfoById(basePot[1]).get(cm.getReqLevel(equipment.getItemId()) / 10).incPADr + cm.getPotentialInfoById(basePot[2]).get(cm.getReqLevel(equipment.getItemId()) / 10).incPADr;
+				var totalMattPercent = (cm.getReqLevel(equipment.getItemId()) >= 200) ? cm.getPotentialInfoById(basePot[0]).get(19).incMADr + cm.getPotentialInfoById(basePot[1]).get(19).incMADr + cm.getPotentialInfoById(basePot[2]).get(19).incMADr : cm.getPotentialInfoById(basePot[0]).get(cm.getReqLevel(equipment.getItemId()) / 10).incMADr + cm.getPotentialInfoById(basePot[1]).get(cm.getReqLevel(equipment.getItemId()) / 10).incMADr + cm.getPotentialInfoById(basePot[2]).get(cm.getReqLevel(equipment.getItemId()) / 10).incMADr;
+				var totalDropPercent = (cm.getReqLevel(equipment.getItemId()) >= 200) ? cm.getPotentialInfoById(basePot[0]).get(19).incRewardProp + cm.getPotentialInfoById(basePot[1]).get(19).incRewardProp + cm.getPotentialInfoById(basePot[2]).get(19).incRewardProp : cm.getPotentialInfoById(basePot[0]).get(cm.getReqLevel(equipment.getItemId()) / 10).incRewardProp + cm.getPotentialInfoById(basePot[1]).get(cm.getReqLevel(equipment.getItemId()) / 10).incRewardProp + cm.getPotentialInfoById(basePot[2]).get(cm.getReqLevel(equipment.getItemId()) / 10).incRewardProp;
+
+				if(statSelected == 4 && totalLukPercent >= desiredStatNumber) // Luk %
+				{
+					cm.sendGetText("#rMATCH FOUND!\r\n" + cubingDiag + "#l");
+				}
+				else if(statSelected == 1 && totalAttPercent >= desiredStatNumber) // Att %
+				{
+					cm.sendGetText("#rMATCH FOUND!\r\n" + cubingDiag + "#l");
+				}
+				else if(statSelected == 2 && totalMattPercent >= desiredStatNumber) // Matt %
+				{
+					cm.sendGetText("#rMATCH FOUND!\r\n" + cubingDiag + "#l");
+				}
+				else if(statSelected == 3 && totalDropPercent >= desiredStatNumber) // Drop Rate %
+				{
+					cm.sendGetText("#rMATCH FOUND!\r\n" + cubingDiag + "#l");
+				}
+				else if(statSelected == 5 && totalDexPercent >= desiredStatNumber) // Dex %
+				{
+					cm.sendGetText("#rMATCH FOUND!\r\n" + cubingDiag + "#l");
+				}
+				else if(statSelected == 6 && totalIntPercent >= desiredStatNumber) // Int %
+				{
+					cm.sendGetText("#rMATCH FOUND!\r\n" + cubingDiag + "#l");
+				}
+				else if(statSelected == 7 && totalStrPercent >= desiredStatNumber) // Str %
+				{
+					cm.sendGetText("#rMATCH FOUND!\r\n" + cubingDiag + "#l");
+				}
+				else if(statSelected == 8 && totalStrPercent >= desiredStatNumber && totalIntPercent >= desiredStatNumber && totalDexPercent >= desiredStatNumber && totalDexPercent >= desiredStatNumber) // All Stat %
+				{
+					cm.sendGetText("#rMATCH FOUND!\r\n" + cubingDiag + "#l");
+				}
+				else{
+				cm.sendNext(cubingDiag + "#l");
+				status--;
+				}
+				}
+				else if(GameConstants.getOptionType(equipment.getItemId()) == 54) // Gloves
+				{
+				var equipPrimePotentials = [40001, 40002, 40003, 40004,40057, 40008, 40009, 40041, 40042, 40043, 40044,40056, 40045, 40046, 40048,   40081, 40086];
+				var equipUniquePotentials = [30001, 30002, 30003, 30004, 30008,40057,  30041, 30042,40056, 30043, 30044, 30045, 30046,30048,30053,30054,30001, 30002, 30003, 30004, 30006, 30008,  30041, 30042, 30043, 30044, 30045, 30046,30048,30053,30054,30001, 30002, 30003, 30004, 30006, 30008,  30041, 30042, 30043, 30044, 30045, 30046,30048,30053,30054,40001, 40002, 40003, 40004, 40008, 40009, 40041, 40042, 40043, 40044, 40045, 40046, 40048,   40081, 40086];
+				var randomPrimePot = equipPrimePotentials[Math.floor(Math.random() * equipPrimePotentials.length)]; // Prime Line
+				var randomPot2 = equipUniquePotentials[Math.floor(Math.random() * equipUniquePotentials.length)]; // Unique
+				var randomPot3 = equipUniquePotentials[Math.floor(Math.random() * equipUniquePotentials.length)]; // Unique
+				equipment.setPotential1(randomPrimePot);
+				equipment.setPotential2(randomPot2);
+				equipment.setPotential3(randomPot3);
+				cm.getChar().getClient().getSession().writeAndFlush(CWvsContext.InventoryPacket.updateEquipSlot(equipment));
+				cm.gainItem(redCube, -1);
+				cm.getChar().gainMaplePoints(-autoCubePriceRed);
+				cm.getChar().dropMessage(5,"You lost 1 red cube");
+				var cubingDiag = "These are your potentials, would you like to use a cube?\r\n#rAUTO CUBING: ON#k\r\n#v" + redCube +": #" + cm.getQuantityOfItem(redCube) + "\r\nDP: " + "\r\n\r\n";
+				var basePot = [equipment.getPotential1(), equipment.getPotential2(),equipment.getPotential3()];
+				for(var i = 0; i < basePot.length; i++)
+				{
+					if(basePot[i] == 0)
+					{
+							cubingDiag += "(None) ";
+					}
+					if(basePot[i] == 40056 || basePot[i] == 40057)
+					{
+						cubingDiag += "#g(Legendary)#k Critical Damage 8%";
+					}
+					else
+					{
+						var tier = Math.floor(basePot[i] / 10000)
+							if(tier <= 1)
+							{
+								cubingDiag += "#b(Rare) #k";
+							}
+							else if(tier == 2)
+							{
+								cubingDiag += "#d(Epic) #k";
+							}
+							else if(tier == 3)
+							{
+								cubingDiag += "#r(Unique) #k";
+							}
+							else
+							{
+								cubingDiag += "#g(Legendary) #k";
+							}
+						if(cm.getReqLevel(equipment.getItemId()) >= 200)
+						{
+							potInfo = cm.getPotentialInfoById(basePot[i]).get(19);
+							cubingDiag += potInfo;
+						}
+						else{
+						potInfo = cm.getPotentialInfoById(basePot[i]).get(cm.getReqLevel(equipment.getItemId()) / 10);
+						cubingDiag += potInfo;
+						}
+					}
+
+					cubingDiag += "\r\n";
+				}
+				var totalLukPercent = (cm.getReqLevel(equipment.getItemId()) >= 200) ? cm.getPotentialInfoById(basePot[0]).get(19).incLUKr + cm.getPotentialInfoById(basePot[1]).get(19).incLUKr + cm.getPotentialInfoById(basePot[2]).get(19).incLUKr : cm.getPotentialInfoById(basePot[0]).get(cm.getReqLevel(equipment.getItemId()) / 10).incLUKr + cm.getPotentialInfoById(basePot[1]).get(cm.getReqLevel(equipment.getItemId()) / 10).incLUKr + cm.getPotentialInfoById(basePot[2]).get(cm.getReqLevel(equipment.getItemId()) / 10).incLUKr;
+				var totalStrPercent = (cm.getReqLevel(equipment.getItemId()) >= 200) ? cm.getPotentialInfoById(basePot[0]).get(19).incSTRr + cm.getPotentialInfoById(basePot[1]).get(19).incSTRr + cm.getPotentialInfoById(basePot[2]).get(19).incSTRr : cm.getPotentialInfoById(basePot[0]).get(cm.getReqLevel(equipment.getItemId()) / 10).incSTRr + cm.getPotentialInfoById(basePot[1]).get(cm.getReqLevel(equipment.getItemId()) / 10).incSTRr + cm.getPotentialInfoById(basePot[2]).get(cm.getReqLevel(equipment.getItemId()) / 10).incSTRr;
+				var totalDexPercent = (cm.getReqLevel(equipment.getItemId()) >= 200) ? cm.getPotentialInfoById(basePot[0]).get(19).incDEXr + cm.getPotentialInfoById(basePot[1]).get(19).incDEXr + cm.getPotentialInfoById(basePot[2]).get(19).incDEXr : cm.getPotentialInfoById(basePot[0]).get(cm.getReqLevel(equipment.getItemId()) / 10).incDEXr + cm.getPotentialInfoById(basePot[1]).get(cm.getReqLevel(equipment.getItemId()) / 10).incDEXr + cm.getPotentialInfoById(basePot[2]).get(cm.getReqLevel(equipment.getItemId()) / 10).incDEXr;
+				var totalIntPercent = (cm.getReqLevel(equipment.getItemId()) >= 200) ? cm.getPotentialInfoById(basePot[0]).get(19).incINTr + cm.getPotentialInfoById(basePot[1]).get(19).incINTr + cm.getPotentialInfoById(basePot[2]).get(19).incINTr : cm.getPotentialInfoById(basePot[0]).get(cm.getReqLevel(equipment.getItemId()) / 10).incINTr + cm.getPotentialInfoById(basePot[1]).get(cm.getReqLevel(equipment.getItemId()) / 10).incINTr + cm.getPotentialInfoById(basePot[2]).get(cm.getReqLevel(equipment.getItemId()) / 10).incINTr;
+				var totalAttPercent = (cm.getReqLevel(equipment.getItemId()) >= 200) ? cm.getPotentialInfoById(basePot[0]).get(19).incPADr + cm.getPotentialInfoById(basePot[1]).get(19).incPADr + cm.getPotentialInfoById(basePot[2]).get(19).incPADr : cm.getPotentialInfoById(basePot[0]).get(cm.getReqLevel(equipment.getItemId()) / 10).incPADr + cm.getPotentialInfoById(basePot[1]).get(cm.getReqLevel(equipment.getItemId()) / 10).incPADr + cm.getPotentialInfoById(basePot[2]).get(cm.getReqLevel(equipment.getItemId()) / 10).incPADr;
+				var totalMattPercent = (cm.getReqLevel(equipment.getItemId()) >= 200) ? cm.getPotentialInfoById(basePot[0]).get(19).incMADr + cm.getPotentialInfoById(basePot[1]).get(19).incMADr + cm.getPotentialInfoById(basePot[2]).get(19).incMADr : cm.getPotentialInfoById(basePot[0]).get(cm.getReqLevel(equipment.getItemId()) / 10).incMADr + cm.getPotentialInfoById(basePot[1]).get(cm.getReqLevel(equipment.getItemId()) / 10).incMADr + cm.getPotentialInfoById(basePot[2]).get(cm.getReqLevel(equipment.getItemId()) / 10).incMADr;
+				var totalDropPercent = (cm.getReqLevel(equipment.getItemId()) >= 200) ? cm.getPotentialInfoById(basePot[0]).get(19).incRewardProp + cm.getPotentialInfoById(basePot[1]).get(19).incRewardProp + cm.getPotentialInfoById(basePot[2]).get(19).incRewardProp : cm.getPotentialInfoById(basePot[0]).get(cm.getReqLevel(equipment.getItemId()) / 10).incRewardProp + cm.getPotentialInfoById(basePot[1]).get(cm.getReqLevel(equipment.getItemId()) / 10).incRewardProp + cm.getPotentialInfoById(basePot[2]).get(cm.getReqLevel(equipment.getItemId()) / 10).incRewardProp;
+
+				if(statSelected == 4 && totalLukPercent >= desiredStatNumber) // Luk %
+				{
+					cm.sendGetText("#rMATCH FOUND!\r\n" + cubingDiag + "#l");
+				}
+				else if(statSelected == 1 && totalAttPercent >= desiredStatNumber) // Att %
+				{
+					cm.sendGetText("#rMATCH FOUND!\r\n" + cubingDiag + "#l");
+				}
+				else if(statSelected == 2 && totalMattPercent >= desiredStatNumber) // Matt %
+				{
+					cm.sendGetText("#rMATCH FOUND!\r\n" + cubingDiag + "#l");
+				}
+				else if(statSelected == 3 && totalDropPercent >= desiredStatNumber) // Drop Rate %
+				{
+					cm.sendGetText("#rMATCH FOUND!\r\n" + cubingDiag + "#l");
+				}
+				else if(statSelected == 5 && totalDexPercent >= desiredStatNumber) // Dex %
+				{
+					cm.sendGetText("#rMATCH FOUND!\r\n" + cubingDiag + "#l");
+				}
+				else if(statSelected == 6 && totalIntPercent >= desiredStatNumber) // Int %
+				{
+					cm.sendGetText("#rMATCH FOUND!\r\n" + cubingDiag + "#l");
+				}
+				else if(statSelected == 7 && totalStrPercent >= desiredStatNumber) // Str %
+				{
+					cm.sendGetText("#rMATCH FOUND!\r\n" + cubingDiag + "#l");
+				}
+				else if(statSelected == 8 && totalStrPercent >= desiredStatNumber && totalIntPercent >= desiredStatNumber && totalDexPercent >= desiredStatNumber && totalDexPercent >= desiredStatNumber) // All Stat %
+				{
+					cm.sendGetText("#rMATCH FOUND!\r\n" + cubingDiag + "#l");
+				}
+				else
+				{
+				cm.sendNext(cubingDiag + "#l");
+				status--;
+				}
+				}
+				else if(GameConstants.isEquip(equipment.getItemId()) && GameConstants.isAccessory(equipment.getItemId()) == false && GameConstants.isRing(equipment.getItemId()) == false && GameConstants.isEmblem(equipment.getItemId()) == false && GameConstants.getOptionType(equipment.getItemId()) != 54)
+				{
+				var equipPrimePotentials = [40001, 40002, 40003, 40004, 40008, 40009, 40041, 40042, 40043, 40044, 40045, 40046, 40048,   40081, 40086];
+				var equipUniquePotentials = [30001, 30002, 30003, 30004, 30006, 30008,  30041, 30042, 30043, 30044, 30045, 30046,30048,30053,30054,30001, 30002, 30003, 30004, 30006, 30008,  30041, 30042, 30043, 30044, 30045, 30046,30048,30053,30054,30001, 30002, 30003, 30004, 30006, 30008,  30041, 30042, 30043, 30044, 30045, 30046,30048,30053,30054,40001, 40002, 40003, 40004, 40008, 40009, 40041, 40042, 40043, 40044, 40045, 40046, 40048,   40081, 40086];
+				var randomPrimePot = equipPrimePotentials[Math.floor(Math.random() * equipPrimePotentials.length)]; // Prime Line
+				var randomPot2 = equipUniquePotentials[Math.floor(Math.random() * equipUniquePotentials.length)]; // Unique
+				var randomPot3 = equipUniquePotentials[Math.floor(Math.random() * equipUniquePotentials.length)]; // Unique
+				equipment.setPotential1(randomPrimePot);
+				equipment.setPotential2(randomPot2);
+				equipment.setPotential3(randomPot3);
+				cm.getChar().getClient().getSession().writeAndFlush(CWvsContext.InventoryPacket.updateEquipSlot(equipment));
+				cm.gainItem(redCube, -1);
+				cm.getChar().gainMaplePoints(-autoCubePriceRed);
+				cm.getChar().dropMessage(5,"You lost 1 red cube");
+				var cubingDiag = "These are your potentials, would you like to use a cube?\r\n#rAUTO CUBING: ON#k\r\n#v" + redCube +": #" + cm.getQuantityOfItem(redCube) + "\r\nDP: " + "\r\n\r\n";
+				var basePot = [equipment.getPotential1(), equipment.getPotential2(),equipment.getPotential3()];
+				for(var i = 0; i < basePot.length; i++)
+				{
+					if(basePot[i] == 0)
+					{
+							cubingDiag += "(None) ";
+					}
+					else
+					{
+						var tier = Math.floor(basePot[i] / 10000)
+							if(tier <= 1)
+							{
+								cubingDiag += "#b(Rare) #k";
+							}
+							else if(tier == 2)
+							{
+								cubingDiag += "#d(Epic) #k";
+							}
+							else if(tier == 3)
+							{
+								cubingDiag += "#r(Unique) #k";
+							}
+							else
+							{
+								cubingDiag += "#g(Legendary) #k";
+							}
+						if(cm.getReqLevel(equipment.getItemId()) >= 200)
+						{
+							potInfo = cm.getPotentialInfoById(basePot[i]).get(19);
+							cubingDiag += potInfo;
+						}
+						else{
+						potInfo = cm.getPotentialInfoById(basePot[i]).get(cm.getReqLevel(equipment.getItemId()) / 10);
+						cubingDiag += potInfo;
+						}
+					}
+
+					cubingDiag += "\r\n";
+				}
+				var totalLukPercent = (cm.getReqLevel(equipment.getItemId()) >= 200) ? cm.getPotentialInfoById(basePot[0]).get(19).incLUKr + cm.getPotentialInfoById(basePot[1]).get(19).incLUKr + cm.getPotentialInfoById(basePot[2]).get(19).incLUKr : cm.getPotentialInfoById(basePot[0]).get(cm.getReqLevel(equipment.getItemId()) / 10).incLUKr + cm.getPotentialInfoById(basePot[1]).get(cm.getReqLevel(equipment.getItemId()) / 10).incLUKr + cm.getPotentialInfoById(basePot[2]).get(cm.getReqLevel(equipment.getItemId()) / 10).incLUKr;
+				var totalStrPercent = (cm.getReqLevel(equipment.getItemId()) >= 200) ? cm.getPotentialInfoById(basePot[0]).get(19).incSTRr + cm.getPotentialInfoById(basePot[1]).get(19).incSTRr + cm.getPotentialInfoById(basePot[2]).get(19).incSTRr : cm.getPotentialInfoById(basePot[0]).get(cm.getReqLevel(equipment.getItemId()) / 10).incSTRr + cm.getPotentialInfoById(basePot[1]).get(cm.getReqLevel(equipment.getItemId()) / 10).incSTRr + cm.getPotentialInfoById(basePot[2]).get(cm.getReqLevel(equipment.getItemId()) / 10).incSTRr;
+				var totalDexPercent = (cm.getReqLevel(equipment.getItemId()) >= 200) ? cm.getPotentialInfoById(basePot[0]).get(19).incDEXr + cm.getPotentialInfoById(basePot[1]).get(19).incDEXr + cm.getPotentialInfoById(basePot[2]).get(19).incDEXr : cm.getPotentialInfoById(basePot[0]).get(cm.getReqLevel(equipment.getItemId()) / 10).incDEXr + cm.getPotentialInfoById(basePot[1]).get(cm.getReqLevel(equipment.getItemId()) / 10).incDEXr + cm.getPotentialInfoById(basePot[2]).get(cm.getReqLevel(equipment.getItemId()) / 10).incDEXr;
+				var totalIntPercent = (cm.getReqLevel(equipment.getItemId()) >= 200) ? cm.getPotentialInfoById(basePot[0]).get(19).incINTr + cm.getPotentialInfoById(basePot[1]).get(19).incINTr + cm.getPotentialInfoById(basePot[2]).get(19).incINTr : cm.getPotentialInfoById(basePot[0]).get(cm.getReqLevel(equipment.getItemId()) / 10).incINTr + cm.getPotentialInfoById(basePot[1]).get(cm.getReqLevel(equipment.getItemId()) / 10).incINTr + cm.getPotentialInfoById(basePot[2]).get(cm.getReqLevel(equipment.getItemId()) / 10).incINTr;
+				var totalAttPercent = (cm.getReqLevel(equipment.getItemId()) >= 200) ? cm.getPotentialInfoById(basePot[0]).get(19).incPADr + cm.getPotentialInfoById(basePot[1]).get(19).incPADr + cm.getPotentialInfoById(basePot[2]).get(19).incPADr : cm.getPotentialInfoById(basePot[0]).get(cm.getReqLevel(equipment.getItemId()) / 10).incPADr + cm.getPotentialInfoById(basePot[1]).get(cm.getReqLevel(equipment.getItemId()) / 10).incPADr + cm.getPotentialInfoById(basePot[2]).get(cm.getReqLevel(equipment.getItemId()) / 10).incPADr;
+				var totalMattPercent = (cm.getReqLevel(equipment.getItemId()) >= 200) ? cm.getPotentialInfoById(basePot[0]).get(19).incMADr + cm.getPotentialInfoById(basePot[1]).get(19).incMADr + cm.getPotentialInfoById(basePot[2]).get(19).incMADr : cm.getPotentialInfoById(basePot[0]).get(cm.getReqLevel(equipment.getItemId()) / 10).incMADr + cm.getPotentialInfoById(basePot[1]).get(cm.getReqLevel(equipment.getItemId()) / 10).incMADr + cm.getPotentialInfoById(basePot[2]).get(cm.getReqLevel(equipment.getItemId()) / 10).incMADr;
+				var totalDropPercent = (cm.getReqLevel(equipment.getItemId()) >= 200) ? cm.getPotentialInfoById(basePot[0]).get(19).incRewardProp + cm.getPotentialInfoById(basePot[1]).get(19).incRewardProp + cm.getPotentialInfoById(basePot[2]).get(19).incRewardProp : cm.getPotentialInfoById(basePot[0]).get(cm.getReqLevel(equipment.getItemId()) / 10).incRewardProp + cm.getPotentialInfoById(basePot[1]).get(cm.getReqLevel(equipment.getItemId()) / 10).incRewardProp + cm.getPotentialInfoById(basePot[2]).get(cm.getReqLevel(equipment.getItemId()) / 10).incRewardProp;
+
+				if(statSelected == 4 && totalLukPercent >= desiredStatNumber) // Luk %
+				{
+					cm.sendGetText("#rMATCH FOUND!\r\n" + cubingDiag + "#l");
+				}
+				else if(statSelected == 1 && totalAttPercent >= desiredStatNumber) // Att %
+				{
+					cm.sendGetText("#rMATCH FOUND!\r\n" + cubingDiag + "#l");
+				}
+				else if(statSelected == 2 && totalMattPercent >= desiredStatNumber) // Matt %
+				{
+					cm.sendGetText("#rMATCH FOUND!\r\n" + cubingDiag + "#l");
+				}
+				else if(statSelected == 3 && totalDropPercent >= desiredStatNumber) // Drop Rate %
+				{
+					cm.sendGetText("#rMATCH FOUND!\r\n" + cubingDiag + "#l");
+				}
+				else if(statSelected == 5 && totalDexPercent >= desiredStatNumber) // Dex %
+				{
+					cm.sendGetText("#rMATCH FOUND!\r\n" + cubingDiag + "#l");
+				}
+				else if(statSelected == 6 && totalIntPercent >= desiredStatNumber) // Int %
+				{
+					cm.sendGetText("#rMATCH FOUND!\r\n" + cubingDiag + "#l");
+				}
+				else if(statSelected == 7 && totalStrPercent >= desiredStatNumber) // Str %
+				{
+					cm.sendGetText("#rMATCH FOUND!\r\n" + cubingDiag + "#l");
+				}
+				else if(statSelected == 8 && totalStrPercent >= desiredStatNumber && totalIntPercent >= desiredStatNumber && totalDexPercent >= desiredStatNumber && totalDexPercent >= desiredStatNumber) // All Stat %
+				{
+					cm.sendGetText("#rMATCH FOUND!\r\n" + cubingDiag + "#l");
+				}
+				else
+				{
+				cm.sendNext(cubingDiag + "#l");
+				status--;
+				}
+			}
+			else if(GameConstants.isAccessory(equipment.getItemId()) || GameConstants.isRing(equipment.getItemId()))
+			{
+				var equipPrimePotentials = [40001, 40002, 40003, 40004, 40008, 40009, 40041, 40042,40650, 40043, 40044, 40045, 40046, 40048,   40081, 40086,40656];
+				var equipUniquePotentials = [30001, 30002, 30003, 30004, 30008,  30041, 30042, 30043, 30044, 30045, 30046,30048,30054,30001, 30002, 30003, 30004, 30008,  30041, 30042, 30043, 30044, 30045, 30046,30048,30054,30001, 30002, 30003, 30004, 30008,  30041, 30042, 30043, 30044, 30045, 30046,30048,30054,40001, 40002, 40003,40650, 40004,40008, 40009, 40041, 40042, 40043, 40044, 40045, 40046, 40048,   40081, 40086,40656];
+				var randomPrimePot = equipPrimePotentials[Math.floor(Math.random() * equipPrimePotentials.length)]; // Prime Line
+				var randomPot2 = equipUniquePotentials[Math.floor(Math.random() * equipUniquePotentials.length)]; // Unique
+				var randomPot3 = equipUniquePotentials[Math.floor(Math.random() * equipUniquePotentials.length)]; // Unique
+				equipment.setPotential1(randomPrimePot);
+				equipment.setPotential2(randomPot2);
+				equipment.setPotential3(randomPot3);
+				cm.getChar().getClient().getSession().writeAndFlush(CWvsContext.InventoryPacket.updateEquipSlot(equipment));
+				cm.gainItem(redCube, -1);
+				cm.getChar().gainMaplePoints(-autoCubePriceRed);
+				cm.getChar().dropMessage(5,"You lost 1 red cube");
+				var cubingDiag = "These are your potentials, would you like to use a cube?\r\n#rAUTO CUBING: ON#k\r\n#v" + redCube +": #" + cm.getQuantityOfItem(redCube) + "\r\nDP: " + "\r\n\r\n";
+				var basePot = [equipment.getPotential1(), equipment.getPotential2(),equipment.getPotential3()];
+				for(var i = 0; i < basePot.length; i++)
+				{
+					if(basePot[i] == 0)
+					{
+							cubingDiag += "(None) ";
+					}
+					else
+					{
+						var tier = Math.floor(basePot[i] / 10000)
+							if(tier <= 1)
+							{
+								cubingDiag += "#b(Rare) #k";
+							}
+							else if(tier == 2)
+							{
+								cubingDiag += "#d(Epic) #k";
+							}
+							else if(tier == 3)
+							{
+								cubingDiag += "#r(Unique) #k";
+							}
+							else
+							{
+								cubingDiag += "#g(Legendary) #k";
+							}
+						if(cm.getReqLevel(equipment.getItemId()) >= 200)
+						{
+							potInfo = cm.getPotentialInfoById(basePot[i]).get(19);
+							cubingDiag += potInfo;
+						}
+						else{
+						potInfo = cm.getPotentialInfoById(basePot[i]).get(cm.getReqLevel(equipment.getItemId()) / 10);
+						cubingDiag += potInfo;
+						}
+					}
+
+					cubingDiag += "\r\n";
+				}
+				var totalLukPercent = (cm.getReqLevel(equipment.getItemId()) >= 200) ? cm.getPotentialInfoById(basePot[0]).get(19).incLUKr + cm.getPotentialInfoById(basePot[1]).get(19).incLUKr + cm.getPotentialInfoById(basePot[2]).get(19).incLUKr : cm.getPotentialInfoById(basePot[0]).get(cm.getReqLevel(equipment.getItemId()) / 10).incLUKr + cm.getPotentialInfoById(basePot[1]).get(cm.getReqLevel(equipment.getItemId()) / 10).incLUKr + cm.getPotentialInfoById(basePot[2]).get(cm.getReqLevel(equipment.getItemId()) / 10).incLUKr;
+				var totalLukPercent = (cm.getReqLevel(equipment.getItemId()) >= 200) ? cm.getPotentialInfoById(basePot[0]).get(19).incLUKr + cm.getPotentialInfoById(basePot[1]).get(19).incLUKr + cm.getPotentialInfoById(basePot[2]).get(19).incLUKr : cm.getPotentialInfoById(basePot[0]).get(cm.getReqLevel(equipment.getItemId()) / 10).incLUKr + cm.getPotentialInfoById(basePot[1]).get(cm.getReqLevel(equipment.getItemId()) / 10).incLUKr + cm.getPotentialInfoById(basePot[2]).get(cm.getReqLevel(equipment.getItemId()) / 10).incLUKr;
+				var totalStrPercent = (cm.getReqLevel(equipment.getItemId()) >= 200) ? cm.getPotentialInfoById(basePot[0]).get(19).incSTRr + cm.getPotentialInfoById(basePot[1]).get(19).incSTRr + cm.getPotentialInfoById(basePot[2]).get(19).incSTRr : cm.getPotentialInfoById(basePot[0]).get(cm.getReqLevel(equipment.getItemId()) / 10).incSTRr + cm.getPotentialInfoById(basePot[1]).get(cm.getReqLevel(equipment.getItemId()) / 10).incSTRr + cm.getPotentialInfoById(basePot[2]).get(cm.getReqLevel(equipment.getItemId()) / 10).incSTRr;
+				var totalDexPercent = (cm.getReqLevel(equipment.getItemId()) >= 200) ? cm.getPotentialInfoById(basePot[0]).get(19).incDEXr + cm.getPotentialInfoById(basePot[1]).get(19).incDEXr + cm.getPotentialInfoById(basePot[2]).get(19).incDEXr : cm.getPotentialInfoById(basePot[0]).get(cm.getReqLevel(equipment.getItemId()) / 10).incDEXr + cm.getPotentialInfoById(basePot[1]).get(cm.getReqLevel(equipment.getItemId()) / 10).incDEXr + cm.getPotentialInfoById(basePot[2]).get(cm.getReqLevel(equipment.getItemId()) / 10).incDEXr;
+				var totalIntPercent = (cm.getReqLevel(equipment.getItemId()) >= 200) ? cm.getPotentialInfoById(basePot[0]).get(19).incINTr + cm.getPotentialInfoById(basePot[1]).get(19).incINTr + cm.getPotentialInfoById(basePot[2]).get(19).incINTr : cm.getPotentialInfoById(basePot[0]).get(cm.getReqLevel(equipment.getItemId()) / 10).incINTr + cm.getPotentialInfoById(basePot[1]).get(cm.getReqLevel(equipment.getItemId()) / 10).incINTr + cm.getPotentialInfoById(basePot[2]).get(cm.getReqLevel(equipment.getItemId()) / 10).incINTr;
+				var totalAttPercent = (cm.getReqLevel(equipment.getItemId()) >= 200) ? cm.getPotentialInfoById(basePot[0]).get(19).incPADr + cm.getPotentialInfoById(basePot[1]).get(19).incPADr + cm.getPotentialInfoById(basePot[2]).get(19).incPADr : cm.getPotentialInfoById(basePot[0]).get(cm.getReqLevel(equipment.getItemId()) / 10).incPADr + cm.getPotentialInfoById(basePot[1]).get(cm.getReqLevel(equipment.getItemId()) / 10).incPADr + cm.getPotentialInfoById(basePot[2]).get(cm.getReqLevel(equipment.getItemId()) / 10).incPADr;
+				var totalMattPercent = (cm.getReqLevel(equipment.getItemId()) >= 200) ? cm.getPotentialInfoById(basePot[0]).get(19).incMADr + cm.getPotentialInfoById(basePot[1]).get(19).incMADr + cm.getPotentialInfoById(basePot[2]).get(19).incMADr : cm.getPotentialInfoById(basePot[0]).get(cm.getReqLevel(equipment.getItemId()) / 10).incMADr + cm.getPotentialInfoById(basePot[1]).get(cm.getReqLevel(equipment.getItemId()) / 10).incMADr + cm.getPotentialInfoById(basePot[2]).get(cm.getReqLevel(equipment.getItemId()) / 10).incMADr;
+				var totalDropPercent = (cm.getReqLevel(equipment.getItemId()) >= 200) ? cm.getPotentialInfoById(basePot[0]).get(19).incRewardProp + cm.getPotentialInfoById(basePot[1]).get(19).incRewardProp + cm.getPotentialInfoById(basePot[2]).get(19).incRewardProp : cm.getPotentialInfoById(basePot[0]).get(cm.getReqLevel(equipment.getItemId()) / 10).incRewardProp + cm.getPotentialInfoById(basePot[1]).get(cm.getReqLevel(equipment.getItemId()) / 10).incRewardProp + cm.getPotentialInfoById(basePot[2]).get(cm.getReqLevel(equipment.getItemId()) / 10).incRewardProp;
+
+				if(statSelected == 4 && totalLukPercent >= desiredStatNumber) // Luk %
+				{
+					cm.sendGetText("#rMATCH FOUND!\r\n" + cubingDiag + "#l");
+				}
+				else if(statSelected == 1 && totalAttPercent >= desiredStatNumber) // Att %
+				{
+					cm.sendGetText("#rMATCH FOUND!\r\n" + cubingDiag + "#l");
+				}
+				else if(statSelected == 2 && totalMattPercent >= desiredStatNumber) // Matt %
+				{
+					cm.sendGetText("#rMATCH FOUND!\r\n" + cubingDiag + "#l");
+				}
+				else if(statSelected == 3 && totalDropPercent >= desiredStatNumber) // Drop Rate %
+				{
+					cm.sendGetText("#rMATCH FOUND!\r\n" + cubingDiag + "#l");
+				}
+				else if(statSelected == 5 && totalDexPercent >= desiredStatNumber) // Dex %
+				{
+					cm.sendGetText("#rMATCH FOUND!\r\n" + cubingDiag + "#l");
+				}
+				else if(statSelected == 6 && totalIntPercent >= desiredStatNumber) // Int %
+				{
+					cm.sendGetText("#rMATCH FOUND!\r\n" + cubingDiag + "#l");
+				}
+				else if(statSelected == 7 && totalStrPercent >= desiredStatNumber) // Str %
+				{
+					cm.sendGetText("#rMATCH FOUND!\r\n" + cubingDiag + "#l");
+				}
+				else if(statSelected == 8 && totalStrPercent >= desiredStatNumber && totalIntPercent >= desiredStatNumber && totalDexPercent >= desiredStatNumber && totalDexPercent >= desiredStatNumber) // All Stat %
+				{
+					cm.sendGetText("#rMATCH FOUND!\r\n" + cubingDiag + "#l");
+				}
+				else
+				{
+				cm.sendNext(cubingDiag + "#l");
+				status--;
+				}
+			}
+			else
+			{
+				cm.sendOk("Please message Brandon if you got to this message.");
+				return cm.dispose();
+			}
+		}
+		else if(selection == 5000 || isBpot == true) // BPOT Auto Cube
+		{
+			isBpot = true;
+			if(cm.getQuantityOfItem(bonusCube) == 0)
+				{
+					cm.sendOk("You do not have enough bonus potential cubes.");
+					return cm.dispose();
+				}
+				else if(equipment.getPotential4() < 40000)
+				{
+					cm.sendOk("Your item is not Legendary or does not have a potential.");
+					return cm.dispose();
+				}
+				else if(cm.getChar().getCSPoints(2) < autoCubePriceBonus)
+				{
+					cm.sendOk("You do not have enough mesos to Auto Cube.");
+					return cm.dispose();
+				}
+				else if(GameConstants.isWeapon(equipment.getItemId()) || GameConstants.isSecondaryWeapon(equipment.getItemId()) || GameConstants.isEmblem(equipment.getItemId()))
+				{
+				var wepPrimePotentials = [40001, 40002, 40003, 40004, 40011, 40012, 40041, 40042, 40043, 40044, 40045, 40046,40047,40051,40052, 40070,40081,40086,40291,40292,40601,40602,40603];
+				var wepUniquePotentials = [30001, 30002, 30003, 30004, 30006, 30011, 30012, 30041, 30042, 30043, 30044, 30045, 30046,30047,30051,30052,30054, 30070,30086,30291,30601,30602,30001, 30002, 30003, 30004, 30006, 30011, 30012, 30041, 30042, 30043, 30044, 30045, 30046,30047,30051,30052,30054, 30070,30086,30291,30601,30602,30001, 30002, 30003, 30004, 30006, 30011, 30012, 30041, 30042, 30043, 30044, 30045, 30046,30047,30051,30052,30054, 30070,30086,30291,30601,30602, 40001, 40002, 40003, 40004, 40011, 40012, 40041, 40041, 40042, 40043, 40044, 40045, 40046,40047,40051,40052, 40070,40081,40086,40291,40292,40601,40602,40603];				var randomPot = wepPrimePotentials[Math.floor(Math.random() * wepPrimePotentials.length)]; // Prime Line
+				var randomPot2 = wepUniquePotentials[Math.floor(Math.random() * wepUniquePotentials.length)]; // Unique
+				var randomPot3 = wepUniquePotentials[Math.floor(Math.random() * wepUniquePotentials.length)]; // Unique
+				equipment.setPotential4(randomPot);
+				equipment.setPotential5(randomPot2);
+				equipment.setPotential6(randomPot3);
+				cm.getChar().getClient().getSession().writeAndFlush(CWvsContext.InventoryPacket.updateEquipSlot(equipment));
+				cm.gainItem(bonusCube, -1);
+				cm.getChar().gainMaplePoints(-autoCubePriceBonus);
+				cm.getChar().dropMessage(5,"You lost 1 bonus cube");
+				var cubingDiag = "These are your bonus potentials, would you like to use a cube?\r\n#rAUTO CUBING: ON#k\r\n#v" + bonusCube +": #" + cm.getQuantityOfItem(bonusCube) + "\r\nDP: " + "\r\n\r\n";
+				var basePot = [equipment.getPotential4(), equipment.getPotential5(),equipment.getPotential6()];
+				for(var i = 0; i < basePot.length; i++)
+				{
+					if(basePot[i] == 0)
+					{
+							cubingDiag += "(None) ";
+					}
+					else
+					{
+						var tier = Math.floor(basePot[i] / 10000)
+							if(tier <= 1)
+							{
+								cubingDiag += "#b(Rare) #k";
+							}
+							else if(tier == 2)
+							{
+								cubingDiag += "#d(Epic) #k";
+							}
+							else if(tier == 3)
+							{
+								cubingDiag += "#r(Unique) #k";
+							}
+							else
+							{
+								cubingDiag += "#g(Legendary) #k";
+							}
+						if(cm.getReqLevel(equipment.getItemId()) >= 200)
+						{
+							potInfo = cm.getPotentialInfoById(basePot[i]).get(8);
+							cubingDiag += potInfo;
+						}
+						else{
+						potInfo = cm.getPotentialInfoById(basePot[i]).get(cm.getReqLevel(equipment.getItemId()) / 10);
+						cubingDiag += potInfo;
+						}
+					}
+
+					cubingDiag += "\r\n";
+				}
+				var totalLukPercent = (cm.getReqLevel(equipment.getItemId()) >= 200) ? cm.getPotentialInfoById(basePot[0]).get(19).incLUKr + cm.getPotentialInfoById(basePot[1]).get(19).incLUKr + cm.getPotentialInfoById(basePot[2]).get(19).incLUKr : cm.getPotentialInfoById(basePot[0]).get(cm.getReqLevel(equipment.getItemId()) / 10).incLUKr + cm.getPotentialInfoById(basePot[1]).get(cm.getReqLevel(equipment.getItemId()) / 10).incLUKr + cm.getPotentialInfoById(basePot[2]).get(cm.getReqLevel(equipment.getItemId()) / 10).incLUKr;
+				var totalStrPercent = (cm.getReqLevel(equipment.getItemId()) >= 200) ? cm.getPotentialInfoById(basePot[0]).get(19).incSTRr + cm.getPotentialInfoById(basePot[1]).get(19).incSTRr + cm.getPotentialInfoById(basePot[2]).get(19).incSTRr : cm.getPotentialInfoById(basePot[0]).get(cm.getReqLevel(equipment.getItemId()) / 10).incSTRr + cm.getPotentialInfoById(basePot[1]).get(cm.getReqLevel(equipment.getItemId()) / 10).incSTRr + cm.getPotentialInfoById(basePot[2]).get(cm.getReqLevel(equipment.getItemId()) / 10).incSTRr;
+				var totalDexPercent = (cm.getReqLevel(equipment.getItemId()) >= 200) ? cm.getPotentialInfoById(basePot[0]).get(19).incDEXr + cm.getPotentialInfoById(basePot[1]).get(19).incDEXr + cm.getPotentialInfoById(basePot[2]).get(19).incDEXr : cm.getPotentialInfoById(basePot[0]).get(cm.getReqLevel(equipment.getItemId()) / 10).incDEXr + cm.getPotentialInfoById(basePot[1]).get(cm.getReqLevel(equipment.getItemId()) / 10).incDEXr + cm.getPotentialInfoById(basePot[2]).get(cm.getReqLevel(equipment.getItemId()) / 10).incDEXr;
+				var totalIntPercent = (cm.getReqLevel(equipment.getItemId()) >= 200) ? cm.getPotentialInfoById(basePot[0]).get(19).incINTr + cm.getPotentialInfoById(basePot[1]).get(19).incINTr + cm.getPotentialInfoById(basePot[2]).get(19).incINTr : cm.getPotentialInfoById(basePot[0]).get(cm.getReqLevel(equipment.getItemId()) / 10).incINTr + cm.getPotentialInfoById(basePot[1]).get(cm.getReqLevel(equipment.getItemId()) / 10).incINTr + cm.getPotentialInfoById(basePot[2]).get(cm.getReqLevel(equipment.getItemId()) / 10).incINTr;
+				var totalAttPercent = (cm.getReqLevel(equipment.getItemId()) >= 200) ? cm.getPotentialInfoById(basePot[0]).get(19).incPADr + cm.getPotentialInfoById(basePot[1]).get(19).incPADr + cm.getPotentialInfoById(basePot[2]).get(19).incPADr : cm.getPotentialInfoById(basePot[0]).get(cm.getReqLevel(equipment.getItemId()) / 10).incPADr + cm.getPotentialInfoById(basePot[1]).get(cm.getReqLevel(equipment.getItemId()) / 10).incPADr + cm.getPotentialInfoById(basePot[2]).get(cm.getReqLevel(equipment.getItemId()) / 10).incPADr;
+				var totalMattPercent = (cm.getReqLevel(equipment.getItemId()) >= 200) ? cm.getPotentialInfoById(basePot[0]).get(19).incMADr + cm.getPotentialInfoById(basePot[1]).get(19).incMADr + cm.getPotentialInfoById(basePot[2]).get(19).incMADr : cm.getPotentialInfoById(basePot[0]).get(cm.getReqLevel(equipment.getItemId()) / 10).incMADr + cm.getPotentialInfoById(basePot[1]).get(cm.getReqLevel(equipment.getItemId()) / 10).incMADr + cm.getPotentialInfoById(basePot[2]).get(cm.getReqLevel(equipment.getItemId()) / 10).incMADr;
+				var totalDropPercent = (cm.getReqLevel(equipment.getItemId()) >= 200) ? cm.getPotentialInfoById(basePot[0]).get(19).incRewardProp + cm.getPotentialInfoById(basePot[1]).get(19).incRewardProp + cm.getPotentialInfoById(basePot[2]).get(19).incRewardProp : cm.getPotentialInfoById(basePot[0]).get(cm.getReqLevel(equipment.getItemId()) / 10).incRewardProp + cm.getPotentialInfoById(basePot[1]).get(cm.getReqLevel(equipment.getItemId()) / 10).incRewardProp + cm.getPotentialInfoById(basePot[2]).get(cm.getReqLevel(equipment.getItemId()) / 10).incRewardProp;
+
+				if(statSelected == 4 && totalLukPercent >= desiredStatNumber) // Luk %
+				{
+					cm.sendGetText("#rMATCH FOUND!\r\n" + cubingDiag + "#l");
+				}
+				else if(statSelected == 1 && totalAttPercent >= desiredStatNumber) // Att %
+				{
+					cm.sendGetText("#rMATCH FOUND!\r\n" + cubingDiag + "#l");
+				}
+				else if(statSelected == 2 && totalMattPercent >= desiredStatNumber) // Matt %
+				{
+					cm.sendGetText("#rMATCH FOUND!\r\n" + cubingDiag + "#l");
+				}
+				else if(statSelected == 3 && totalDropPercent >= desiredStatNumber) // Drop Rate %
+				{
+					cm.sendGetText("#rMATCH FOUND!\r\n" + cubingDiag + "#l");
+				}
+				else if(statSelected == 5 && totalDexPercent >= desiredStatNumber) // Dex %
+				{
+					cm.sendGetText("#rMATCH FOUND!\r\n" + cubingDiag + "#l");
+				}
+				else if(statSelected == 6 && totalIntPercent >= desiredStatNumber) // Int %
+				{
+					cm.sendGetText("#rMATCH FOUND!\r\n" + cubingDiag + "#l");
+				}
+				else if(statSelected == 7 && totalStrPercent >= desiredStatNumber) // Str %
+				{
+					cm.sendGetText("#rMATCH FOUND!\r\n" + cubingDiag + "#l");
+				}
+				else if(statSelected == 8 && totalStrPercent >= desiredStatNumber && totalIntPercent >= desiredStatNumber && totalDexPercent >= desiredStatNumber && totalDexPercent >= desiredStatNumber) // All Stat %
+				{
+					cm.sendGetText("#rMATCH FOUND!\r\n" + cubingDiag + "#l");
+				}
+				else{
+				cm.sendNext(cubingDiag + "#l");
+				status--;
+				}
+				}
+				else if(GameConstants.getOptionType(equipment.getItemId()) == 54)
+				{
+				var equipPrimePotentials = [40001, 40002, 40003, 40004,40057, 40008, 40009, 40041, 40042, 40043, 40044,40056, 40045, 40046, 40048,   40081, 40086];
+				var equipUniquePotentials = [30001, 30002, 30003, 30004, 30006, 30008,40057,  30041, 30042,40056, 30043, 30044, 30045, 30046,30048,30053,30054,30001, 30002, 30003, 30004, 30006, 30008,40057,  30041, 30042,40056, 30043, 30044, 30045, 30046,30048,30053,30054,30001, 30002, 30003, 30004, 30006, 30008,40057,  30041, 30042,40056, 30043, 30044, 30045, 30046,30048,30053,30054,40001, 40002, 40003, 40004, 40008, 40009, 40041, 40042, 40043, 40044, 40045, 40046, 40048,   40081, 40086];
+				var randomPrimePot = equipPrimePotentials[Math.floor(Math.random() * equipPrimePotentials.length)]; // Prime Line
+				var randomPot2 = equipUniquePotentials[Math.floor(Math.random() * equipUniquePotentials.length)]; // Unique
+				var randomPot3 = equipUniquePotentials[Math.floor(Math.random() * equipUniquePotentials.length)]; // Unique
+				equipment.setPotential4(randomPrimePot);
+				equipment.setPotential5(randomPot2);
+				equipment.setPotential6(randomPot3);
+				cm.getChar().getClient().getSession().writeAndFlush(CWvsContext.InventoryPacket.updateEquipSlot(equipment));
+				cm.gainItem(bonusCube, -1);
+				cm.getChar().gainMaplePoints(-autoCubePriceBonus);
+				cm.getChar().dropMessage(5,"You lost 1 bonus cube");
+				var cubingDiag = "These are your bonus potentials, would you like to use a cube?\r\n#rAUTO CUBING: ON#k\r\n#v" + bonusCube +": #" + cm.getQuantityOfItem(bonusCube) + "\r\nDP: " + "\r\n\r\n";
+				var basePot = [equipment.getPotential4(), equipment.getPotential5(),equipment.getPotential6()];
+				for(var i = 0; i < basePot.length; i++)
+				{
+					if(basePot[i] == 0)
+					{
+							cubingDiag += "(None) ";
+					}
+					if(basePot[i] == 40056 || basePot[i] == 40057)
+					{
+						cubingDiag += "#g(Legendary)#k Critical Damage 8%";
+					}
+					else
+					{
+						var tier = Math.floor(basePot[i] / 10000)
+							if(tier <= 1)
+							{
+								cubingDiag += "#b(Rare) #k";
+							}
+							else if(tier == 2)
+							{
+								cubingDiag += "#d(Epic) #k";
+							}
+							else if(tier == 3)
+							{
+								cubingDiag += "#r(Unique) #k";
+							}
+							else
+							{
+								cubingDiag += "#g(Legendary) #k";
+							}
+						if(cm.getReqLevel(equipment.getItemId()) >= 200)
+						{
+							potInfo = cm.getPotentialInfoById(basePot[i]).get(19);
+							cubingDiag += potInfo;
+						}
+						else{
+						potInfo = cm.getPotentialInfoById(basePot[i]).get(cm.getReqLevel(equipment.getItemId()) / 10);
+						cubingDiag += potInfo;
+						}
+					}
+
+					cubingDiag += "\r\n";
+				}
+				var totalLukPercent = (cm.getReqLevel(equipment.getItemId()) >= 200) ? cm.getPotentialInfoById(basePot[0]).get(19).incLUKr + cm.getPotentialInfoById(basePot[1]).get(19).incLUKr + cm.getPotentialInfoById(basePot[2]).get(19).incLUKr : cm.getPotentialInfoById(basePot[0]).get(cm.getReqLevel(equipment.getItemId()) / 10).incLUKr + cm.getPotentialInfoById(basePot[1]).get(cm.getReqLevel(equipment.getItemId()) / 10).incLUKr + cm.getPotentialInfoById(basePot[2]).get(cm.getReqLevel(equipment.getItemId()) / 10).incLUKr;
+				var totalStrPercent = (cm.getReqLevel(equipment.getItemId()) >= 200) ? cm.getPotentialInfoById(basePot[0]).get(19).incSTRr + cm.getPotentialInfoById(basePot[1]).get(19).incSTRr + cm.getPotentialInfoById(basePot[2]).get(19).incSTRr : cm.getPotentialInfoById(basePot[0]).get(cm.getReqLevel(equipment.getItemId()) / 10).incSTRr + cm.getPotentialInfoById(basePot[1]).get(cm.getReqLevel(equipment.getItemId()) / 10).incSTRr + cm.getPotentialInfoById(basePot[2]).get(cm.getReqLevel(equipment.getItemId()) / 10).incSTRr;
+				var totalDexPercent = (cm.getReqLevel(equipment.getItemId()) >= 200) ? cm.getPotentialInfoById(basePot[0]).get(19).incDEXr + cm.getPotentialInfoById(basePot[1]).get(19).incDEXr + cm.getPotentialInfoById(basePot[2]).get(19).incDEXr : cm.getPotentialInfoById(basePot[0]).get(cm.getReqLevel(equipment.getItemId()) / 10).incDEXr + cm.getPotentialInfoById(basePot[1]).get(cm.getReqLevel(equipment.getItemId()) / 10).incDEXr + cm.getPotentialInfoById(basePot[2]).get(cm.getReqLevel(equipment.getItemId()) / 10).incDEXr;
+				var totalIntPercent = (cm.getReqLevel(equipment.getItemId()) >= 200) ? cm.getPotentialInfoById(basePot[0]).get(19).incINTr + cm.getPotentialInfoById(basePot[1]).get(19).incINTr + cm.getPotentialInfoById(basePot[2]).get(19).incINTr : cm.getPotentialInfoById(basePot[0]).get(cm.getReqLevel(equipment.getItemId()) / 10).incINTr + cm.getPotentialInfoById(basePot[1]).get(cm.getReqLevel(equipment.getItemId()) / 10).incINTr + cm.getPotentialInfoById(basePot[2]).get(cm.getReqLevel(equipment.getItemId()) / 10).incINTr;
+				var totalAttPercent = (cm.getReqLevel(equipment.getItemId()) >= 200) ? cm.getPotentialInfoById(basePot[0]).get(19).incPADr + cm.getPotentialInfoById(basePot[1]).get(19).incPADr + cm.getPotentialInfoById(basePot[2]).get(19).incPADr : cm.getPotentialInfoById(basePot[0]).get(cm.getReqLevel(equipment.getItemId()) / 10).incPADr + cm.getPotentialInfoById(basePot[1]).get(cm.getReqLevel(equipment.getItemId()) / 10).incPADr + cm.getPotentialInfoById(basePot[2]).get(cm.getReqLevel(equipment.getItemId()) / 10).incPADr;
+				var totalMattPercent = (cm.getReqLevel(equipment.getItemId()) >= 200) ? cm.getPotentialInfoById(basePot[0]).get(19).incMADr + cm.getPotentialInfoById(basePot[1]).get(19).incMADr + cm.getPotentialInfoById(basePot[2]).get(19).incMADr : cm.getPotentialInfoById(basePot[0]).get(cm.getReqLevel(equipment.getItemId()) / 10).incMADr + cm.getPotentialInfoById(basePot[1]).get(cm.getReqLevel(equipment.getItemId()) / 10).incMADr + cm.getPotentialInfoById(basePot[2]).get(cm.getReqLevel(equipment.getItemId()) / 10).incMADr;
+				var totalDropPercent = (cm.getReqLevel(equipment.getItemId()) >= 200) ? cm.getPotentialInfoById(basePot[0]).get(19).incRewardProp + cm.getPotentialInfoById(basePot[1]).get(19).incRewardProp + cm.getPotentialInfoById(basePot[2]).get(19).incRewardProp : cm.getPotentialInfoById(basePot[0]).get(cm.getReqLevel(equipment.getItemId()) / 10).incRewardProp + cm.getPotentialInfoById(basePot[1]).get(cm.getReqLevel(equipment.getItemId()) / 10).incRewardProp + cm.getPotentialInfoById(basePot[2]).get(cm.getReqLevel(equipment.getItemId()) / 10).incRewardProp;
+
+				if(statSelected == 4 && totalLukPercent >= desiredStatNumber) // Luk %
+				{
+					cm.sendGetText("#rMATCH FOUND!\r\n" + cubingDiag + "#l");
+				}
+				else if(statSelected == 1 && totalAttPercent >= desiredStatNumber) // Att %
+				{
+					cm.sendGetText("#rMATCH FOUND!\r\n" + cubingDiag + "#l");
+				}
+				else if(statSelected == 2 && totalMattPercent >= desiredStatNumber) // Matt %
+				{
+					cm.sendGetText("#rMATCH FOUND!\r\n" + cubingDiag + "#l");
+				}
+				else if(statSelected == 3 && totalDropPercent >= desiredStatNumber) // Drop Rate %
+				{
+					cm.sendGetText("#rMATCH FOUND!\r\n" + cubingDiag + "#l");
+				}
+				else if(statSelected == 5 && totalDexPercent >= desiredStatNumber) // Dex %
+				{
+					cm.sendGetText("#rMATCH FOUND!\r\n" + cubingDiag + "#l");
+				}
+				else if(statSelected == 6 && totalIntPercent >= desiredStatNumber) // Int %
+				{
+					cm.sendGetText("#rMATCH FOUND!\r\n" + cubingDiag + "#l");
+				}
+				else if(statSelected == 7 && totalStrPercent >= desiredStatNumber) // Str %
+				{
+					cm.sendGetText("#rMATCH FOUND!\r\n" + cubingDiag + "#l");
+				}
+				else if(statSelected == 8 && totalStrPercent >= desiredStatNumber && totalIntPercent >= desiredStatNumber && totalDexPercent >= desiredStatNumber && totalDexPercent >= desiredStatNumber) // All Stat %
+				{
+					cm.sendGetText("#rMATCH FOUND!\r\n" + cubingDiag + "#l");
+				}
+				else{
+				cm.sendNext(cubingDiag + "#l");
+				status--;
+				}
+				}
+				else if(GameConstants.isEquip(equipment.getItemId()) && GameConstants.isAccessory(equipment.getItemId()) == false && GameConstants.isRing(equipment.getItemId()) == false && GameConstants.isEmblem(equipment.getItemId()) == false && GameConstants.getOptionType(equipment.getItemId()) != 54)
+				{
+				var equipPrimePotentials = [40001, 40002, 40003, 40004, 40008, 40009, 40041, 40042, 40043, 40044, 40045, 40046, 40048,   40081, 40086];
+				var equipUniquePotentials = [30001, 30002, 30003, 30004, 30006, 30008,  30041, 30042, 30043, 30044, 30045, 30046,30048,30053,30054,40001, 40002, 40003, 40004, 40008, 40009, 40041, 40042, 40043, 40044, 40045, 40046, 40048,   40081, 40086];
+				var randomPrimePot = equipPrimePotentials[Math.floor(Math.random() * equipPrimePotentials.length)]; // Prime Line
+				var randomPot2 = equipUniquePotentials[Math.floor(Math.random() * equipUniquePotentials.length)]; // Unique
+				var randomPot3 = equipUniquePotentials[Math.floor(Math.random() * equipUniquePotentials.length)]; // Unique
+				equipment.setPotential4(randomPrimePot);
+				equipment.setPotential5(randomPot2);
+				equipment.setPotential6(randomPot3);
+				cm.getChar().getClient().getSession().writeAndFlush(CWvsContext.InventoryPacket.updateEquipSlot(equipment));
+				cm.gainItem(bonusCube, -1);
+				cm.getChar().gainMaplePoints(-autoCubePriceBonus);
+				cm.getChar().dropMessage(5,"You lost 1 bonus cube");
+				var cubingDiag = "These are your bonus potentials, would you like to use a cube?\r\n#rAUTO CUBING: ON#k\r\n#v" + bonusCube +": #" + cm.getQuantityOfItem(bonusCube) + "\r\nDP: " + "\r\n\r\n";
+				var basePot = [equipment.getPotential4(), equipment.getPotential5(),equipment.getPotential6()];
+				for(var i = 0; i < basePot.length; i++)
+				{
+					if(basePot[i] == 0)
+					{
+							cubingDiag += "(None) ";
+					}
+					else
+					{
+						var tier = Math.floor(basePot[i] / 10000)
+							if(tier <= 1)
+							{
+								cubingDiag += "#b(Rare) #k";
+							}
+							else if(tier == 2)
+							{
+								cubingDiag += "#d(Epic) #k";
+							}
+							else if(tier == 3)
+							{
+								cubingDiag += "#r(Unique) #k";
+							}
+							else
+							{
+								cubingDiag += "#g(Legendary) #k";
+							}
+						if(cm.getReqLevel(equipment.getItemId()) >= 200)
+						{
+							potInfo = cm.getPotentialInfoById(basePot[i]).get(8);
+							cubingDiag += potInfo;
+						}
+						else{
+						potInfo = cm.getPotentialInfoById(basePot[i]).get(cm.getReqLevel(equipment.getItemId()) / 10);
+						cubingDiag += potInfo;
+						}
+					}
+
+					cubingDiag += "\r\n";
+				}
+				var totalLukPercent = (cm.getReqLevel(equipment.getItemId()) >= 200) ? cm.getPotentialInfoById(basePot[0]).get(19).incLUKr + cm.getPotentialInfoById(basePot[1]).get(19).incLUKr + cm.getPotentialInfoById(basePot[2]).get(19).incLUKr : cm.getPotentialInfoById(basePot[0]).get(cm.getReqLevel(equipment.getItemId()) / 10).incLUKr + cm.getPotentialInfoById(basePot[1]).get(cm.getReqLevel(equipment.getItemId()) / 10).incLUKr + cm.getPotentialInfoById(basePot[2]).get(cm.getReqLevel(equipment.getItemId()) / 10).incLUKr;
+				var totalStrPercent = (cm.getReqLevel(equipment.getItemId()) >= 200) ? cm.getPotentialInfoById(basePot[0]).get(19).incSTRr + cm.getPotentialInfoById(basePot[1]).get(19).incSTRr + cm.getPotentialInfoById(basePot[2]).get(19).incSTRr : cm.getPotentialInfoById(basePot[0]).get(cm.getReqLevel(equipment.getItemId()) / 10).incSTRr + cm.getPotentialInfoById(basePot[1]).get(cm.getReqLevel(equipment.getItemId()) / 10).incSTRr + cm.getPotentialInfoById(basePot[2]).get(cm.getReqLevel(equipment.getItemId()) / 10).incSTRr;
+				var totalDexPercent = (cm.getReqLevel(equipment.getItemId()) >= 200) ? cm.getPotentialInfoById(basePot[0]).get(19).incDEXr + cm.getPotentialInfoById(basePot[1]).get(19).incDEXr + cm.getPotentialInfoById(basePot[2]).get(19).incDEXr : cm.getPotentialInfoById(basePot[0]).get(cm.getReqLevel(equipment.getItemId()) / 10).incDEXr + cm.getPotentialInfoById(basePot[1]).get(cm.getReqLevel(equipment.getItemId()) / 10).incDEXr + cm.getPotentialInfoById(basePot[2]).get(cm.getReqLevel(equipment.getItemId()) / 10).incDEXr;
+				var totalIntPercent = (cm.getReqLevel(equipment.getItemId()) >= 200) ? cm.getPotentialInfoById(basePot[0]).get(19).incINTr + cm.getPotentialInfoById(basePot[1]).get(19).incINTr + cm.getPotentialInfoById(basePot[2]).get(19).incINTr : cm.getPotentialInfoById(basePot[0]).get(cm.getReqLevel(equipment.getItemId()) / 10).incINTr + cm.getPotentialInfoById(basePot[1]).get(cm.getReqLevel(equipment.getItemId()) / 10).incINTr + cm.getPotentialInfoById(basePot[2]).get(cm.getReqLevel(equipment.getItemId()) / 10).incINTr;
+				var totalAttPercent = (cm.getReqLevel(equipment.getItemId()) >= 200) ? cm.getPotentialInfoById(basePot[0]).get(19).incPADr + cm.getPotentialInfoById(basePot[1]).get(19).incPADr + cm.getPotentialInfoById(basePot[2]).get(19).incPADr : cm.getPotentialInfoById(basePot[0]).get(cm.getReqLevel(equipment.getItemId()) / 10).incPADr + cm.getPotentialInfoById(basePot[1]).get(cm.getReqLevel(equipment.getItemId()) / 10).incPADr + cm.getPotentialInfoById(basePot[2]).get(cm.getReqLevel(equipment.getItemId()) / 10).incPADr;
+				var totalMattPercent = (cm.getReqLevel(equipment.getItemId()) >= 200) ? cm.getPotentialInfoById(basePot[0]).get(19).incMADr + cm.getPotentialInfoById(basePot[1]).get(19).incMADr + cm.getPotentialInfoById(basePot[2]).get(19).incMADr : cm.getPotentialInfoById(basePot[0]).get(cm.getReqLevel(equipment.getItemId()) / 10).incMADr + cm.getPotentialInfoById(basePot[1]).get(cm.getReqLevel(equipment.getItemId()) / 10).incMADr + cm.getPotentialInfoById(basePot[2]).get(cm.getReqLevel(equipment.getItemId()) / 10).incMADr;
+				var totalDropPercent = (cm.getReqLevel(equipment.getItemId()) >= 200) ? cm.getPotentialInfoById(basePot[0]).get(19).incRewardProp + cm.getPotentialInfoById(basePot[1]).get(19).incRewardProp + cm.getPotentialInfoById(basePot[2]).get(19).incRewardProp : cm.getPotentialInfoById(basePot[0]).get(cm.getReqLevel(equipment.getItemId()) / 10).incRewardProp + cm.getPotentialInfoById(basePot[1]).get(cm.getReqLevel(equipment.getItemId()) / 10).incRewardProp + cm.getPotentialInfoById(basePot[2]).get(cm.getReqLevel(equipment.getItemId()) / 10).incRewardProp;
+
+				if(statSelected == 4 && totalLukPercent >= desiredStatNumber) // Luk %
+				{
+					cm.sendGetText("#rMATCH FOUND!\r\n" + cubingDiag + "#l");
+				}
+				else if(statSelected == 1 && totalAttPercent >= desiredStatNumber) // Att %
+				{
+					cm.sendGetText("#rMATCH FOUND!\r\n" + cubingDiag + "#l");
+				}
+				else if(statSelected == 2 && totalMattPercent >= desiredStatNumber) // Matt %
+				{
+					cm.sendGetText("#rMATCH FOUND!\r\n" + cubingDiag + "#l");
+				}
+				else if(statSelected == 3 && totalDropPercent >= desiredStatNumber) // Drop Rate %
+				{
+					cm.sendGetText("#rMATCH FOUND!\r\n" + cubingDiag + "#l");
+				}
+				else if(statSelected == 5 && totalDexPercent >= desiredStatNumber) // Dex %
+				{
+					cm.sendGetText("#rMATCH FOUND!\r\n" + cubingDiag + "#l");
+				}
+				else if(statSelected == 6 && totalIntPercent >= desiredStatNumber) // Int %
+				{
+					cm.sendGetText("#rMATCH FOUND!\r\n" + cubingDiag + "#l");
+				}
+				else if(statSelected == 7 && totalStrPercent >= desiredStatNumber) // Str %
+				{
+					cm.sendGetText("#rMATCH FOUND!\r\n" + cubingDiag + "#l");
+				}
+				else if(statSelected == 8 && totalStrPercent >= desiredStatNumber && totalIntPercent >= desiredStatNumber && totalDexPercent >= desiredStatNumber && totalDexPercent >= desiredStatNumber) // All Stat %
+				{
+					cm.sendGetText("#rMATCH FOUND!\r\n" + cubingDiag + "#l");
+				}
+				else{
+				cm.sendNext(cubingDiag + "#l");
+				status--;
+				}
+			}
+			else if(GameConstants.isAccessory(equipment.getItemId()) || GameConstants.isRing(equipment.getItemId()))
+			{
+				var equipPrimePotentials = [40001, 40002, 40003, 40004,40650, 40008, 40009, 40041, 40042, 40043, 40044, 40045, 40046, 40048,   40081, 40086,40656];
+				var equipUniquePotentials = [30001, 30002, 30003, 30004, 30006, 30008,  30041, 30042, 30043, 30044, 30045, 30046,30048,30053,30054,30001, 30002, 30003, 30004, 30006, 30008,  30041, 30042, 30043, 30044, 30045, 30046,30048,30053,30054,30001, 30002, 30003, 30004, 30006, 30008,  30041, 30042, 30043, 30044, 30045, 30046,30048,30053,30054,40001, 40002, 40003, 40004, 40656, 40008, 40009, 40041, 40042, 40043,40650, 40044, 40045, 40046, 40048,   40081, 40086];
+				var randomPrimePot = equipPrimePotentials[Math.floor(Math.random() * equipPrimePotentials.length)]; // Prime Line
+				var randomPot2 = equipUniquePotentials[Math.floor(Math.random() * equipUniquePotentials.length)]; // Unique
+				var randomPot3 = equipUniquePotentials[Math.floor(Math.random() * equipUniquePotentials.length)]; // Unique
+				equipment.setPotential4(randomPrimePot);
+				equipment.setPotential5(randomPot2);
+				equipment.setPotential6(randomPot3);
+				cm.getChar().getClient().getSession().writeAndFlush(CWvsContext.InventoryPacket.updateEquipSlot(equipment));
+				cm.gainItem(bonusCube, -1);
+				cm.getChar().gainMaplePoints(-autoCubePriceBonus);
+				cm.getChar().dropMessage(5,"You lost 1 bonus cube");
+				var cubingDiag = "These are your bonus potentials, would you like to use a cube?\r\n#rAUTO CUBING: ON#k\r\n#v" + bonusCube +": #" + cm.getQuantityOfItem(bonusCube) + "\r\nDP: " + "\r\n\r\n";
+				var basePot = [equipment.getPotential4(), equipment.getPotential5(),equipment.getPotential6()];
+				for(var i = 0; i < basePot.length; i++)
+				{
+					if(basePot[i] == 0)
+					{
+							cubingDiag += "(None) ";
+					}
+					else
+					{
+						var tier = Math.floor(basePot[i] / 10000)
+							if(tier <= 1)
+							{
+								cubingDiag += "#b(Rare) #k";
+							}
+							else if(tier == 2)
+							{
+								cubingDiag += "#d(Epic) #k";
+							}
+							else if(tier == 3)
+							{
+								cubingDiag += "#r(Unique) #k";
+							}
+							else
+							{
+								cubingDiag += "#g(Legendary) #k";
+							}
+						if(cm.getReqLevel(equipment.getItemId()) >= 200)
+						{
+							potInfo = cm.getPotentialInfoById(basePot[i]).get(8);
+							cubingDiag += potInfo;
+						}
+						else{
+						potInfo = cm.getPotentialInfoById(basePot[i]).get(cm.getReqLevel(equipment.getItemId()) / 10);
+						cubingDiag += potInfo;
+						}
+					}
+
+					cubingDiag += "\r\n";
+				}
+				var totalLukPercent = (cm.getReqLevel(equipment.getItemId()) >= 200) ? cm.getPotentialInfoById(basePot[0]).get(19).incLUKr + cm.getPotentialInfoById(basePot[1]).get(19).incLUKr + cm.getPotentialInfoById(basePot[2]).get(19).incLUKr : cm.getPotentialInfoById(basePot[0]).get(cm.getReqLevel(equipment.getItemId()) / 10).incLUKr + cm.getPotentialInfoById(basePot[1]).get(cm.getReqLevel(equipment.getItemId()) / 10).incLUKr + cm.getPotentialInfoById(basePot[2]).get(cm.getReqLevel(equipment.getItemId()) / 10).incLUKr;
+				var totalStrPercent = (cm.getReqLevel(equipment.getItemId()) >= 200) ? cm.getPotentialInfoById(basePot[0]).get(19).incSTRr + cm.getPotentialInfoById(basePot[1]).get(19).incSTRr + cm.getPotentialInfoById(basePot[2]).get(19).incSTRr : cm.getPotentialInfoById(basePot[0]).get(cm.getReqLevel(equipment.getItemId()) / 10).incSTRr + cm.getPotentialInfoById(basePot[1]).get(cm.getReqLevel(equipment.getItemId()) / 10).incSTRr + cm.getPotentialInfoById(basePot[2]).get(cm.getReqLevel(equipment.getItemId()) / 10).incSTRr;
+				var totalDexPercent = (cm.getReqLevel(equipment.getItemId()) >= 200) ? cm.getPotentialInfoById(basePot[0]).get(19).incDEXr + cm.getPotentialInfoById(basePot[1]).get(19).incDEXr + cm.getPotentialInfoById(basePot[2]).get(19).incDEXr : cm.getPotentialInfoById(basePot[0]).get(cm.getReqLevel(equipment.getItemId()) / 10).incDEXr + cm.getPotentialInfoById(basePot[1]).get(cm.getReqLevel(equipment.getItemId()) / 10).incDEXr + cm.getPotentialInfoById(basePot[2]).get(cm.getReqLevel(equipment.getItemId()) / 10).incDEXr;
+				var totalIntPercent = (cm.getReqLevel(equipment.getItemId()) >= 200) ? cm.getPotentialInfoById(basePot[0]).get(19).incINTr + cm.getPotentialInfoById(basePot[1]).get(19).incINTr + cm.getPotentialInfoById(basePot[2]).get(19).incINTr : cm.getPotentialInfoById(basePot[0]).get(cm.getReqLevel(equipment.getItemId()) / 10).incINTr + cm.getPotentialInfoById(basePot[1]).get(cm.getReqLevel(equipment.getItemId()) / 10).incINTr + cm.getPotentialInfoById(basePot[2]).get(cm.getReqLevel(equipment.getItemId()) / 10).incINTr;
+				var totalAttPercent = (cm.getReqLevel(equipment.getItemId()) >= 200) ? cm.getPotentialInfoById(basePot[0]).get(19).incPADr + cm.getPotentialInfoById(basePot[1]).get(19).incPADr + cm.getPotentialInfoById(basePot[2]).get(19).incPADr : cm.getPotentialInfoById(basePot[0]).get(cm.getReqLevel(equipment.getItemId()) / 10).incPADr + cm.getPotentialInfoById(basePot[1]).get(cm.getReqLevel(equipment.getItemId()) / 10).incPADr + cm.getPotentialInfoById(basePot[2]).get(cm.getReqLevel(equipment.getItemId()) / 10).incPADr;
+				var totalMattPercent = (cm.getReqLevel(equipment.getItemId()) >= 200) ? cm.getPotentialInfoById(basePot[0]).get(19).incMADr + cm.getPotentialInfoById(basePot[1]).get(19).incMADr + cm.getPotentialInfoById(basePot[2]).get(19).incMADr : cm.getPotentialInfoById(basePot[0]).get(cm.getReqLevel(equipment.getItemId()) / 10).incMADr + cm.getPotentialInfoById(basePot[1]).get(cm.getReqLevel(equipment.getItemId()) / 10).incMADr + cm.getPotentialInfoById(basePot[2]).get(cm.getReqLevel(equipment.getItemId()) / 10).incMADr;
+				var totalDropPercent = (cm.getReqLevel(equipment.getItemId()) >= 200) ? cm.getPotentialInfoById(basePot[0]).get(19).incRewardProp + cm.getPotentialInfoById(basePot[1]).get(19).incRewardProp + cm.getPotentialInfoById(basePot[2]).get(19).incRewardProp : cm.getPotentialInfoById(basePot[0]).get(cm.getReqLevel(equipment.getItemId()) / 10).incRewardProp + cm.getPotentialInfoById(basePot[1]).get(cm.getReqLevel(equipment.getItemId()) / 10).incRewardProp + cm.getPotentialInfoById(basePot[2]).get(cm.getReqLevel(equipment.getItemId()) / 10).incRewardProp;
+
+				if(statSelected == 4 && totalLukPercent >= desiredStatNumber) // Luk %
+				{
+					cm.sendGetText("#rMATCH FOUND!\r\n" + cubingDiag + "#l");
+				}
+				else if(statSelected == 1 && totalAttPercent >= desiredStatNumber) // Att %
+				{
+					cm.sendGetText("#rMATCH FOUND!\r\n" + cubingDiag + "#l");
+				}
+				else if(statSelected == 2 && totalMattPercent >= desiredStatNumber) // Matt %
+				{
+					cm.sendGetText("#rMATCH FOUND!\r\n" + cubingDiag + "#l");
+				}
+				else if(statSelected == 3 && totalDropPercent >= desiredStatNumber) // Drop Rate %
+				{
+					cm.sendGetText("#rMATCH FOUND!\r\n" + cubingDiag + "#l");
+				}
+				else if(statSelected == 5 && totalDexPercent >= desiredStatNumber) // Dex %
+				{
+					cm.sendGetText("#rMATCH FOUND!\r\n" + cubingDiag + "#l");
+				}
+				else if(statSelected == 6 && totalIntPercent >= desiredStatNumber) // Int %
+				{
+					cm.sendGetText("#rMATCH FOUND!\r\n" + cubingDiag + "#l");
+				}
+				else if(statSelected == 7 && totalStrPercent >= desiredStatNumber) // Str %
+				{
+					cm.sendGetText("#rMATCH FOUND!\r\n" + cubingDiag + "#l");
+				}
+				else if(statSelected == 8 && totalStrPercent >= desiredStatNumber && totalIntPercent >= desiredStatNumber && totalDexPercent >= desiredStatNumber && totalDexPercent >= desiredStatNumber) // All Stat %
+				{
+					cm.sendGetText("#rMATCH FOUND!\r\n" + cubingDiag + "#l");
+				}
+				else{
+				cm.sendNext(cubingDiag + "#l");
+				status--;
+				}
+			}
+			else
+			{
+				cm.sendOk("Please message Brandon if you got to this message.");
+				return cm.dispose();
+			}
+		}
+		else if(selection == 4000)
+		{
+			return cm.dispose();
+		}
+	}
+	else if(status == 3 && cubeSelection == 1) // Main Pot
+	{
+
+				if(cm.getQuantityOfItem(redCube) == 0)
+				{
+					cm.sendOk("You do not have enough red cubes.");
+					return cm.dispose();
+				}
+				else if(GameConstants.isWeapon(equipment.getItemId()) || GameConstants.isSecondaryWeapon(equipment.getItemId()) || GameConstants.isEmblem(equipment.getItemId())) // Weapon, 2ndry, Emblem
+				{
+				var wepPrimePotentials = [40001, 40002, 40003, 40004, 40011, 40012, 40041, 40042, 40043, 40044, 40045, 40046,40047,40051,40052, 40070,40081,40086,40291,40292,40601,40602,40603];
+				var wepUniquePotentials = [30001, 30002, 30003, 30004, 30011, 30012, 30041, 30042, 30043, 30044, 30045, 30046,30047,30051,30052,30054, 30070,30086,30291,30601,30602,30001, 30002, 30003, 30004, 30011, 30012, 30041, 30042, 30043, 30044, 30045, 30046,30047,30051,30052,30054, 30070,30086,30291,30601,30602,30001, 30002, 30003, 30004, 30011, 30012, 30041, 30042, 30043, 30044, 30045, 30046,30047,30051,30052,30054, 30070,30086,30291,30601,30602, 40001, 40002, 40003, 40004 , 40011, 40012, 40041, 40041, 40042, 40043, 40044, 40045, 40046,40047,40051,40052, 40070,40081,40086,40291,40292,40601,40602,40603];				var randomPot = wepPrimePotentials[Math.floor(Math.random() * wepPrimePotentials.length)]; // Prime Line
+				var randomPot2 = wepUniquePotentials[Math.floor(Math.random() * wepUniquePotentials.length)]; // Unique
+				var randomPot3 = wepUniquePotentials[Math.floor(Math.random() * wepUniquePotentials.length)]; // Unique
+				equipment.setPotential1(randomPot);
+				equipment.setPotential2(randomPot2);
+				equipment.setPotential3(randomPot3);
+				cm.getChar().getClient().getSession().writeAndFlush(CWvsContext.InventoryPacket.updateEquipSlot(equipment));
+				cm.gainItem(redCube, -1);
+				cm.getChar().dropMessage(5,"You lost 1 red cube");
+				var cubingDiag = "These are your potentials, would you like to use a cube?\r\n#v" + redCube +": #" + cm.getQuantityOfItem(redCube) + "\r\nDP: " + "#L1\r\n\r\n";
+				var basePot = [equipment.getPotential1(), equipment.getPotential2(),equipment.getPotential3()];
+				for(var i = 0; i < basePot.length; i++)
+				{
+					if(basePot[i] == 0)
+					{
+							cubingDiag += "(None) ";
+					}
+					else
+					{
+						var tier = Math.floor(basePot[i] / 10000)
+							if(tier <= 1)
+							{
+								cubingDiag += "#b(Rare) #k";
+							}
+							else if(tier == 2)
+							{
+								cubingDiag += "#d(Epic) #k";
+							}
+							else if(tier == 3)
+							{
+								cubingDiag += "#r(Unique) #k";
+							}
+							else
+							{
+								cubingDiag += "#g(Legendary) #k";
+							}
+						if(cm.getReqLevel(equipment.getItemId()) >= 200)
+						{
+							potInfo = cm.getPotentialInfoById(basePot[i]).get(19);
+							cubingDiag += potInfo;
+						}
+						else{
+						potInfo = cm.getPotentialInfoById(basePot[i]).get(cm.getReqLevel(equipment.getItemId()) / 10);
+						cubingDiag += potInfo;
+						}
+					}
+
+					cubingDiag += "\r\n";
+				}
+				cm.sendNext(cubingDiag + "#l");
+				status--;
+				}
+				else if(GameConstants.getOptionType(equipment.getItemId()) == 54) // Gloves
+				{
+				var equipPrimePotentials = [40001, 40002, 40003, 40004,40057, 40008, 40009, 40041, 40042, 40043, 40044,40056, 40045, 40046, 40048,   40081, 40086];
+				var equipUniquePotentials = [30001, 30002, 30003, 30004, 30008,40057,  30041, 30042,40056, 30043, 30044, 30045, 30046,30048,30053,30054,30001, 30002, 30003, 30004, 30006, 30008,  30041, 30042, 30043, 30044, 30045, 30046,30048,30053,30054,30001, 30002, 30003, 30004, 30006, 30008,  30041, 30042, 30043, 30044, 30045, 30046,30048,30053,30054,40001, 40002, 40003, 40004, 40008, 40009, 40041, 40042, 40043, 40044, 40045, 40046, 40048,   40081, 40086];
+				var randomPrimePot = equipPrimePotentials[Math.floor(Math.random() * equipPrimePotentials.length)]; // Prime Line
+				var randomPot2 = equipUniquePotentials[Math.floor(Math.random() * equipUniquePotentials.length)]; // Unique
+				var randomPot3 = equipUniquePotentials[Math.floor(Math.random() * equipUniquePotentials.length)]; // Unique
+				equipment.setPotential1(randomPrimePot);
+				equipment.setPotential2(randomPot2);
+				equipment.setPotential3(randomPot3);
+				cm.getChar().getClient().getSession().writeAndFlush(CWvsContext.InventoryPacket.updateEquipSlot(equipment));
+				cm.gainItem(redCube, -1);
+				cm.getChar().dropMessage(5,"You lost 1 red cube");
+				var cubingDiag = "These are your potentials, would you like to use a cube?\r\n#v" + redCube +": #" + cm.getQuantityOfItem(redCube) + "\r\nDP: " + "#L1\r\n\r\n";
+				var basePot = [equipment.getPotential1(), equipment.getPotential2(),equipment.getPotential3()];
+				for(var i = 0; i < basePot.length; i++)
+				{
+					if(basePot[i] == 0)
+					{
+							cubingDiag += "(None) ";
+					}
+					if(basePot[i] == 40056 || basePot[i] == 40057)
+					{
+						cubingDiag += "#g(Legendary)#k Critical Damage 8%";
+					}
+					else
+					{
+						var tier = Math.floor(basePot[i] / 10000)
+							if(tier <= 1)
+							{
+								cubingDiag += "#b(Rare) #k";
+							}
+							else if(tier == 2)
+							{
+								cubingDiag += "#d(Epic) #k";
+							}
+							else if(tier == 3)
+							{
+								cubingDiag += "#r(Unique) #k";
+							}
+							else
+							{
+								cubingDiag += "#g(Legendary) #k";
+							}
+						if(cm.getReqLevel(equipment.getItemId()) >= 200)
+						{
+							potInfo = cm.getPotentialInfoById(basePot[i]).get(19);
+							cubingDiag += potInfo;
+						}
+						else{
+						potInfo = cm.getPotentialInfoById(basePot[i]).get(cm.getReqLevel(equipment.getItemId()) / 10);
+						cubingDiag += potInfo;
+						}
+					}
+
+					cubingDiag += "\r\n";
+				}
+				cm.sendNext(cubingDiag + "#l");
+				status--;
+				}
+				else if(GameConstants.isEquip(equipment.getItemId()) && GameConstants.isAccessory(equipment.getItemId()) == false && GameConstants.isRing(equipment.getItemId()) == false && GameConstants.isEmblem(equipment.getItemId()) == false && GameConstants.getOptionType(equipment.getItemId()) != 54)
+				{
+				var equipPrimePotentials = [40001, 40002, 40003, 40004, 40008, 40009, 40041, 40042, 40043, 40044, 40045, 40046, 40048,   40081, 40086];
+				var equipUniquePotentials = [30001, 30002, 30003, 30004, 30006, 30008,  30041, 30042, 30043, 30044, 30045, 30046,30048,30053,30054,30001, 30002, 30003, 30004, 30006, 30008,  30041, 30042, 30043, 30044, 30045, 30046,30048,30053,30054,30001, 30002, 30003, 30004, 30006, 30008,  30041, 30042, 30043, 30044, 30045, 30046,30048,30053,30054,40001, 40002, 40003, 40004, 40008, 40009, 40041, 40042, 40043, 40044, 40045, 40046, 40048,   40081, 40086];
+				var randomPrimePot = equipPrimePotentials[Math.floor(Math.random() * equipPrimePotentials.length)]; // Prime Line
+				var randomPot2 = equipUniquePotentials[Math.floor(Math.random() * equipUniquePotentials.length)]; // Unique
+				var randomPot3 = equipUniquePotentials[Math.floor(Math.random() * equipUniquePotentials.length)]; // Unique
+				equipment.setPotential1(randomPrimePot);
+				equipment.setPotential2(randomPot2);
+				equipment.setPotential3(randomPot3);
+				cm.getChar().getClient().getSession().writeAndFlush(CWvsContext.InventoryPacket.updateEquipSlot(equipment));
+				cm.gainItem(redCube, -1);
+				cm.getChar().dropMessage(5,"You lost 1 red cube");
+				var cubingDiag = "These are your potentials, would you like to use a cube?\r\n#v" + redCube +": #" + cm.getQuantityOfItem(redCube) + "\r\nDP: " + "#L1\r\n\r\n";
+				var basePot = [equipment.getPotential1(), equipment.getPotential2(),equipment.getPotential3()];
+				for(var i = 0; i < basePot.length; i++)
+				{
+					if(basePot[i] == 0)
+					{
+							cubingDiag += "(None) ";
+					}
+					else
+					{
+						var tier = Math.floor(basePot[i] / 10000)
+							if(tier <= 1)
+							{
+								cubingDiag += "#b(Rare) #k";
+							}
+							else if(tier == 2)
+							{
+								cubingDiag += "#d(Epic) #k";
+							}
+							else if(tier == 3)
+							{
+								cubingDiag += "#r(Unique) #k";
+							}
+							else
+							{
+								cubingDiag += "#g(Legendary) #k";
+							}
+						if(cm.getReqLevel(equipment.getItemId()) >= 200)
+						{
+							potInfo = cm.getPotentialInfoById(basePot[i]).get(19);
+							cubingDiag += potInfo;
+						}
+						else{
+						potInfo = cm.getPotentialInfoById(basePot[i]).get(cm.getReqLevel(equipment.getItemId()) / 10);
+						cubingDiag += potInfo;
+						}
+					}
+
+					cubingDiag += "\r\n";
+				}
+				cm.sendNext(cubingDiag + "#l");
+				status--;
+				}
+			else if(GameConstants.isAccessory(equipment.getItemId()) || GameConstants.isRing(equipment.getItemId()))
+			{
+				var equipPrimePotentials = [40001, 40002, 40003, 40004, 40008, 40009, 40041, 40042,40650, 40043, 40044, 40045, 40046, 40048,   40081, 40086,40656];
+				var equipUniquePotentials = [30001, 30002, 30003, 30004, 30008,  30041, 30042, 30043, 30044, 30045, 30046,30048,30054,30001, 30002, 30003, 30004, 30008,  30041, 30042, 30043, 30044, 30045, 30046,30048,30054,30001, 30002, 30003, 30004, 30008,  30041, 30042, 30043, 30044, 30045, 30046,30048,30054,40001, 40002, 40003,40650, 40004,40008, 40009, 40041, 40042, 40043, 40044, 40045, 40046, 40048,   40081, 40086,40656];
+				var randomPrimePot = equipPrimePotentials[Math.floor(Math.random() * equipPrimePotentials.length)]; // Prime Line
+				var randomPot2 = equipUniquePotentials[Math.floor(Math.random() * equipUniquePotentials.length)]; // Unique
+				var randomPot3 = equipUniquePotentials[Math.floor(Math.random() * equipUniquePotentials.length)]; // Unique
+				equipment.setPotential1(randomPrimePot);
+				equipment.setPotential2(randomPot2);
+				equipment.setPotential3(randomPot3);
+				cm.getChar().getClient().getSession().writeAndFlush(CWvsContext.InventoryPacket.updateEquipSlot(equipment));
+				cm.gainItem(redCube, -1);
+				cm.getChar().dropMessage(5,"You lost 1 red cube");
+				var cubingDiag = "These are your potentials, would you like to use a cube?\r\n#v" + redCube +": #" + cm.getQuantityOfItem(redCube) + "\r\nDP: " + "#L1\r\n\r\n";
+				var basePot = [equipment.getPotential1(), equipment.getPotential2(),equipment.getPotential3()];
+				for(var i = 0; i < basePot.length; i++)
+				{
+					if(basePot[i] == 0)
+					{
+							cubingDiag += "(None) ";
+					}
+					else
+					{
+						var tier = Math.floor(basePot[i] / 10000)
+							if(tier <= 1)
+							{
+								cubingDiag += "#b(Rare) #k";
+							}
+							else if(tier == 2)
+							{
+								cubingDiag += "#d(Epic) #k";
+							}
+							else if(tier == 3)
+							{
+								cubingDiag += "#r(Unique) #k";
+							}
+							else
+							{
+								cubingDiag += "#g(Legendary) #k";
+							}
+						if(cm.getReqLevel(equipment.getItemId()) >= 200)
+						{
+							potInfo = cm.getPotentialInfoById(basePot[i]).get(19);
+							cubingDiag += potInfo;
+						}
+						else{
+						potInfo = cm.getPotentialInfoById(basePot[i]).get(cm.getReqLevel(equipment.getItemId()) / 10);
+						cubingDiag += potInfo;
+						}
+					}
+
+					cubingDiag += "\r\n";
+				}
+				cm.sendNext(cubingDiag + "#l");
+				status--;
+			}
+			else
+			{
+				cm.sendOk("Please message Brandon if you got to this message.");
+				return cm.dispose();
+			}
+
+	}
+	else if(status == 4 && cubeSelection == 2) // BPOT
+	{
+
+				if(cm.getQuantityOfItem(bonusCube) == 0)
+				{
+					cm.sendOk("You do not have enough bonus potential cubes.");
+					return cm.dispose();
+				}
+				else if(GameConstants.isWeapon(equipment.getItemId()) || GameConstants.isSecondaryWeapon(equipment.getItemId()) || GameConstants.isEmblem(equipment.getItemId()))
+				{
+				var wepPrimePotentials = [40001, 40002, 40003, 40004, 40011, 40012, 40041, 40042, 40043, 40044, 40045, 40046,40047,40051,40052, 40070,40081,40086,40291,40292,40601,40602,40603];
+				var wepUniquePotentials = [30001, 30002, 30003, 30004, 30006, 30011, 30012, 30041, 30042, 30043, 30044, 30045, 30046,30047,30051,30052,30054, 30070,30086,30291,30601,30602,30001, 30002, 30003, 30004, 30006, 30011, 30012, 30041, 30042, 30043, 30044, 30045, 30046,30047,30051,30052,30054, 30070,30086,30291,30601,30602,30001, 30002, 30003, 30004, 30006, 30011, 30012, 30041, 30042, 30043, 30044, 30045, 30046,30047,30051,30052,30054, 30070,30086,30291,30601,30602, 40001, 40002, 40003, 40004, 40011, 40012, 40041, 40041, 40042, 40043, 40044, 40045, 40046,40047,40051,40052, 40070,40081,40086,40291,40292,40601,40602,40603];				var randomPot = wepPrimePotentials[Math.floor(Math.random() * wepPrimePotentials.length)]; // Prime Line
+				var randomPot2 = wepUniquePotentials[Math.floor(Math.random() * wepUniquePotentials.length)]; // Unique
+				var randomPot3 = wepUniquePotentials[Math.floor(Math.random() * wepUniquePotentials.length)]; // Unique
+				equipment.setPotential4(randomPot);
+				equipment.setPotential5(randomPot2);
+				equipment.setPotential6(randomPot3);
+				cm.getChar().getClient().getSession().writeAndFlush(CWvsContext.InventoryPacket.updateEquipSlot(equipment));
+				cm.gainItem(bonusCube, -1);
+				cm.getChar().dropMessage(5,"You lost 1 bonus cube");
+				var cubingDiag = "These are your bonus potentials, would you like to use a cube?\r\n#v" + bonusCube +": #" + cm.getQuantityOfItem(bonusCube) + "\r\nDP: " + "#L2\r\n\r\n";
+				var basePot = [equipment.getPotential4(), equipment.getPotential5(),equipment.getPotential6()];
+				for(var i = 0; i < basePot.length; i++)
+				{
+					if(basePot[i] == 0)
+					{
+							cubingDiag += "(None) ";
+					}
+					else
+					{
+						var tier = Math.floor(basePot[i] / 10000)
+							if(tier <= 1)
+							{
+								cubingDiag += "#b(Rare) #k";
+							}
+							else if(tier == 2)
+							{
+								cubingDiag += "#d(Epic) #k";
+							}
+							else if(tier == 3)
+							{
+								cubingDiag += "#r(Unique) #k";
+							}
+							else
+							{
+								cubingDiag += "#g(Legendary) #k";
+							}
+						if(cm.getReqLevel(equipment.getItemId()) >= 200)
+						{
+							potInfo = cm.getPotentialInfoById(basePot[i]).get(8);
+							cubingDiag += potInfo;
+						}
+						else{
+						potInfo = cm.getPotentialInfoById(basePot[i]).get(cm.getReqLevel(equipment.getItemId()) / 10);
+						cubingDiag += potInfo;
+						}
+					}
+
+					cubingDiag += "\r\n";
+				}
+				cm.sendNext(cubingDiag + "#l");
+				status--;
+				}
+				else if(GameConstants.getOptionType(equipment.getItemId()) == 54)
+				{
+				var equipPrimePotentials = [40001, 40002, 40003, 40004,40057, 40008, 40009, 40041, 40042, 40043, 40044,40056, 40045, 40046, 40048,   40081, 40086];
+				var equipUniquePotentials = [30001, 30002, 30003, 30004, 30006, 30008,40057,  30041, 30042,40056, 30043, 30044, 30045, 30046,30048,30053,30054,30001, 30002, 30003, 30004, 30006, 30008,40057,  30041, 30042,40056, 30043, 30044, 30045, 30046,30048,30053,30054,30001, 30002, 30003, 30004, 30006, 30008,40057,  30041, 30042,40056, 30043, 30044, 30045, 30046,30048,30053,30054,40001, 40002, 40003, 40004, 40008, 40009, 40041, 40042, 40043, 40044, 40045, 40046, 40048,   40081, 40086];
+				var randomPrimePot = equipPrimePotentials[Math.floor(Math.random() * equipPrimePotentials.length)]; // Prime Line
+				var randomPot2 = equipUniquePotentials[Math.floor(Math.random() * equipUniquePotentials.length)]; // Unique
+				var randomPot3 = equipUniquePotentials[Math.floor(Math.random() * equipUniquePotentials.length)]; // Unique
+				equipment.setPotential4(randomPrimePot);
+				equipment.setPotential5(randomPot2);
+				equipment.setPotential6(randomPot3);
+				cm.getChar().getClient().getSession().writeAndFlush(CWvsContext.InventoryPacket.updateEquipSlot(equipment));
+				cm.gainItem(bonusCube, -1);
+				cm.getChar().dropMessage(5,"You lost 1 bonus cube");
+				var cubingDiag = "These are your bonus potentials, would you like to use a cube?\r\n#v" + bonusCube +": #" + cm.getQuantityOfItem(bonusCube) + "\r\nDP: " + "#L2\r\n\r\n";
+				var basePot = [equipment.getPotential4(), equipment.getPotential5(),equipment.getPotential6()];
+				for(var i = 0; i < basePot.length; i++)
+				{
+					if(basePot[i] == 0)
+					{
+							cubingDiag += "(None) ";
+					}
+					if(basePot[i] == 40056 || basePot[i] == 40057)
+					{
+						cubingDiag += "#g(Legendary)#k Critical Damage 8%";
+					}
+					else
+					{
+						var tier = Math.floor(basePot[i] / 10000)
+							if(tier <= 1)
+							{
+								cubingDiag += "#b(Rare) #k";
+							}
+							else if(tier == 2)
+							{
+								cubingDiag += "#d(Epic) #k";
+							}
+							else if(tier == 3)
+							{
+								cubingDiag += "#r(Unique) #k";
+							}
+							else
+							{
+								cubingDiag += "#g(Legendary) #k";
+							}
+						if(cm.getReqLevel(equipment.getItemId()) >= 200)
+						{
+							potInfo = cm.getPotentialInfoById(basePot[i]).get(19);
+							cubingDiag += potInfo;
+						}
+						else{
+						potInfo = cm.getPotentialInfoById(basePot[i]).get(cm.getReqLevel(equipment.getItemId()) / 10);
+						cubingDiag += potInfo;
+						}
+					}
+
+					cubingDiag += "\r\n";
+				}
+				cm.sendNext(cubingDiag + "#l");
+				status--;
+				}
+				else if(GameConstants.isEquip(equipment.getItemId()) && GameConstants.isAccessory(equipment.getItemId()) == false && GameConstants.isRing(equipment.getItemId()) == false && GameConstants.isEmblem(equipment.getItemId()) == false && GameConstants.getOptionType(equipment.getItemId()) != 54)
+				{
+				var equipPrimePotentials = [40001, 40002, 40003, 40004, 40008, 40009, 40041, 40042, 40043, 40044, 40045, 40046, 40048,   40081, 40086];
+				var equipUniquePotentials = [30001, 30002, 30003, 30004, 30006, 30008,  30041, 30042, 30043, 30044, 30045, 30046,30048,30053,30054,40001, 40002, 40003, 40004, 40008, 40009, 40041, 40042, 40043, 40044, 40045, 40046, 40048,   40081, 40086];
+				var randomPrimePot = equipPrimePotentials[Math.floor(Math.random() * equipPrimePotentials.length)]; // Prime Line
+				var randomPot2 = equipUniquePotentials[Math.floor(Math.random() * equipUniquePotentials.length)]; // Unique
+				var randomPot3 = equipUniquePotentials[Math.floor(Math.random() * equipUniquePotentials.length)]; // Unique
+				equipment.setPotential4(randomPrimePot);
+				equipment.setPotential5(randomPot2);
+				equipment.setPotential6(randomPot3);
+				cm.getChar().getClient().getSession().writeAndFlush(CWvsContext.InventoryPacket.updateEquipSlot(equipment));
+				cm.gainItem(bonusCube, -1);
+				cm.getChar().dropMessage(5,"You lost 1 bonus cube");
+				var cubingDiag = "These are your bonus potentials, would you like to use a cube?\r\n#v" + bonusCube +": #" + cm.getQuantityOfItem(bonusCube) + "\r\nDP: " + "#L2\r\n\r\n";
+				var basePot = [equipment.getPotential4(), equipment.getPotential5(),equipment.getPotential6()];
+				for(var i = 0; i < basePot.length; i++)
+				{
+					if(basePot[i] == 0)
+					{
+							cubingDiag += "(None) ";
+					}
+					else
+					{
+						var tier = Math.floor(basePot[i] / 10000)
+							if(tier <= 1)
+							{
+								cubingDiag += "#b(Rare) #k";
+							}
+							else if(tier == 2)
+							{
+								cubingDiag += "#d(Epic) #k";
+							}
+							else if(tier == 3)
+							{
+								cubingDiag += "#r(Unique) #k";
+							}
+							else
+							{
+								cubingDiag += "#g(Legendary) #k";
+							}
+						if(cm.getReqLevel(equipment.getItemId()) >= 200)
+						{
+							potInfo = cm.getPotentialInfoById(basePot[i]).get(8);
+							cubingDiag += potInfo;
+						}
+						else{
+						potInfo = cm.getPotentialInfoById(basePot[i]).get(cm.getReqLevel(equipment.getItemId()) / 10);
+						cubingDiag += potInfo;
+						}
+					}
+
+					cubingDiag += "\r\n";
+				}
+				cm.sendNext(cubingDiag);
+				status--;
+			}
+			else if(GameConstants.isAccessory(equipment.getItemId()) || GameConstants.isRing(equipment.getItemId()))
+			{
+				var equipPrimePotentials = [40001, 40002, 40003, 40004,40650, 40008, 40009, 40041, 40042, 40043, 40044, 40045, 40046, 40048,   40081, 40086,40656];
+				var equipUniquePotentials = [30001, 30002, 30003, 30004, 30006, 30008,  30041, 30042, 30043, 30044, 30045, 30046,30048,30053,30054,30001, 30002, 30003, 30004, 30006, 30008,  30041, 30042, 30043, 30044, 30045, 30046,30048,30053,30054,30001, 30002, 30003, 30004, 30006, 30008,  30041, 30042, 30043, 30044, 30045, 30046,30048,30053,30054,40001, 40002, 40003, 40004, 40656, 40008, 40009, 40041, 40042, 40043,40650, 40044, 40045, 40046, 40048,   40081, 40086];
+				var randomPrimePot = equipPrimePotentials[Math.floor(Math.random() * equipPrimePotentials.length)]; // Prime Line
+				var randomPot2 = equipUniquePotentials[Math.floor(Math.random() * equipUniquePotentials.length)]; // Unique
+				var randomPot3 = equipUniquePotentials[Math.floor(Math.random() * equipUniquePotentials.length)]; // Unique
+				equipment.setPotential4(randomPrimePot);
+				equipment.setPotential5(randomPot2);
+				equipment.setPotential6(randomPot3);
+				cm.getChar().getClient().getSession().writeAndFlush(CWvsContext.InventoryPacket.updateEquipSlot(equipment));
+				cm.gainItem(bonusCube, -1);
+				cm.getChar().dropMessage(5,"You lost 1 bonus cube");
+				var cubingDiag = "These are your bonus potentials, would you like to use a cube?\r\n#v" + bonusCube +": #" + cm.getQuantityOfItem(bonusCube) + "\r\nDP: " + "#L2\r\n\r\n";
+				var basePot = [equipment.getPotential4(), equipment.getPotential5(),equipment.getPotential6()];
+				for(var i = 0; i < basePot.length; i++)
+				{
+					if(basePot[i] == 0)
+					{
+							cubingDiag += "(None) ";
+					}
+					else
+					{
+						var tier = Math.floor(basePot[i] / 10000)
+							if(tier <= 1)
+							{
+								cubingDiag += "#b(Rare) #k";
+							}
+							else if(tier == 2)
+							{
+								cubingDiag += "#d(Epic) #k";
+							}
+							else if(tier == 3)
+							{
+								cubingDiag += "#r(Unique) #k";
+							}
+							else
+							{
+								cubingDiag += "#g(Legendary) #k";
+							}
+						if(cm.getReqLevel(equipment.getItemId()) >= 200)
+						{
+							potInfo = cm.getPotentialInfoById(basePot[i]).get(8);
+							cubingDiag += potInfo;
+						}
+						else{
+						potInfo = cm.getPotentialInfoById(basePot[i]).get(cm.getReqLevel(equipment.getItemId()) / 10);
+						cubingDiag += potInfo;
+						}
+					}
+
+					cubingDiag += "\r\n";
+				}
+				cm.sendNext(cubingDiag + "#l");
+				status--;
+			}
+			else
+			{
+				cm.sendOk("Please message Brandon if you got to this message.");
+				return cm.dispose();
+			}
+	}
 }

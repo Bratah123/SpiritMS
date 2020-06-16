@@ -50,6 +50,9 @@ public class NPCScriptManager extends AbstractScriptManager {
     public final void start(final MapleClient c, final int npc, String script) {
         final Lock lock = c.getNPCLock();
         lock.lock();
+        if(c.getPlayer().isGM()){
+            c.getPlayer().dropMessage(6,"NPC ID: " + npc);
+        }
         try {
             if (!cms.containsKey(c) && c.canClickNPC()) {
                 Invocable iv = getInvocable("npc/" + npc + ".js", c, true); //safe disposal

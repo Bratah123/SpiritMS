@@ -58,7 +58,7 @@ function action(mode, type, selection) {
                 intPoints += (pricemultipy * cm.itemQuantity(itemid));
                 record.setCustomData(""+intPoints+"");
                 cm.gainItem(itemid, -selection);
-                cm.sendOk("Enjoy your rewards :P");
+                cm.sendOk("Enjoy your rewards.");
             } else {
                 cm.sendOk("Please check if you have sufficient item, or inventory slot for it.");
             }

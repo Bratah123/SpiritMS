@@ -2354,6 +2354,19 @@ public class NPCConversationManager extends AbstractPlayerInteraction {
         return str.toString();
     }
 
+    public String EquipListVertical(MapleClient c) {
+        StringBuilder str = new StringBuilder();
+        MapleInventory equip = c.getPlayer().getInventory(MapleInventoryType.EQUIP);
+        List<String> stra = new LinkedList<>();
+        for (Item item : equip.list()) {
+            stra.add("#L" + item.getPosition() + "##v" + item.getItemId() + "##l" + "\r\n");
+        }
+        for (String strb : stra) {
+            str.append(strb);
+        }
+        return str.toString();
+    }
+
     public String UseList(MapleClient c) {
         StringBuilder str = new StringBuilder();
         MapleInventory use = c.getPlayer().getInventory(MapleInventoryType.USE);

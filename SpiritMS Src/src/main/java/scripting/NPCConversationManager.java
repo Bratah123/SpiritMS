@@ -71,22 +71,13 @@ import provider.MapleDataDirectoryEntry;
 import provider.MapleDataFileEntry;
 import provider.MapleDataProvider;
 import provider.MapleDataProviderFactory;
-import server.MapleCarnivalChallenge;
-import server.MapleCarnivalParty;
-import server.MapleInventoryManipulator;
-import server.MapleItemInformationProvider;
-import server.MapleSlideMenu;
-import server.MapleSquad;
-import server.MapleStatEffect;
-import server.Randomizer;
+import server.*;
 import server.MapleSlideMenu.SlideMenu0;
 import server.MapleSlideMenu.SlideMenu1;
 import server.MapleSlideMenu.SlideMenu2;
 import server.MapleSlideMenu.SlideMenu3;
 import server.MapleSlideMenu.SlideMenu4;
 import server.MapleSlideMenu.SlideMenu5;
-import server.SpeedRunner;
-import server.StructItemOption;
 import server.Timer.CloneTimer;
 import server.life.*;
 import server.maps.Event_DojoAgent;
@@ -2354,14 +2345,17 @@ public class NPCConversationManager extends AbstractPlayerInteraction {
         return str.toString();
     }
 
-    public String EquipListVertical(MapleClient c) {
+    public String EquipListVertical(MapleClient c)
+    {
         StringBuilder str = new StringBuilder();
         MapleInventory equip = c.getPlayer().getInventory(MapleInventoryType.EQUIP);
         List<String> stra = new LinkedList<>();
-        for (Item item : equip.list()) {
-            stra.add("#L" + item.getPosition() + "##v" + item.getItemId() + "##l" + "\r\n");
+        for (Item item : equip.list())
+        {
+            stra.add("#L" + item.getPosition() + "##v" + item.getItemId() + "##z" + item.getItemId() + "##l" + "\r\n");
         }
-        for (String strb : stra) {
+        for (String strb : stra)
+        {
             str.append(strb);
         }
         return str.toString();
@@ -3102,5 +3096,26 @@ public class NPCConversationManager extends AbstractPlayerInteraction {
             return false;
         }
         return true;
+    }
+    public List<StructItemOption> getPotentialInfoById(int id)
+    {
+        MapleItemInformationProvider ii = MapleItemInformationProvider.getInstance();
+        return ii.getPotentialInfo(id);
+    }
+
+    public final MapleInventory getEquipInventory(MapleCharacter chr){
+        return chr.getInventory(MapleInventoryType.EQUIP);
+    }
+
+    public final MapleInventory getCashInventory(MapleCharacter chr){
+        return chr.getInventory(MapleInventoryType.CASH);
+    }
+
+    public final MapleInventory getUseInventory(MapleCharacter chr){
+        return chr.getInventory(MapleInventoryType.USE);
+    }
+
+    public int getQuantityOfItem(int itemId){
+        return c.getPlayer().getItemQuantity(itemId, false);
     }
   }

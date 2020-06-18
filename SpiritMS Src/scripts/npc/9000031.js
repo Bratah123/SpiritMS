@@ -1,5 +1,4 @@
 
-
 var status = -1;
 var redCube = 5062009;
 var bonusCube = 5062500;
@@ -333,35 +332,35 @@ function action(mode, type, selection)
 
 				if(statSelected == 4 && totalLukPercent >= desiredStatNumber) // Luk %
 				{
-					cm.sendGetText("#rMATCH FOUND!\r\n" + cubingDiag + "#l");
+					cm.sendYesNo("#rMATCH FOUND!\r\n" + cubingDiag + "#l");
 				}
 				else if(statSelected == 1 && totalAttPercent >= desiredStatNumber) // Att %
 				{
-					cm.sendGetText("#rMATCH FOUND!\r\n" + cubingDiag + "#l");
+					cm.sendYesNo("#rMATCH FOUND!\r\n" + cubingDiag + "#l");
 				}
 				else if(statSelected == 2 && totalMattPercent >= desiredStatNumber) // Matt %
 				{
-					cm.sendGetText("#rMATCH FOUND!\r\n" + cubingDiag + "#l");
+					cm.sendYesNo("#rMATCH FOUND!\r\n" + cubingDiag + "#l");
 				}
 				else if(statSelected == 3 && totalDropPercent >= desiredStatNumber) // Drop Rate %
 				{
-					cm.sendGetText("#rMATCH FOUND!\r\n" + cubingDiag + "#l");
+					cm.sendYesNo("#rMATCH FOUND!\r\n" + cubingDiag + "#l");
 				}
 				else if(statSelected == 5 && totalDexPercent >= desiredStatNumber) // Dex %
 				{
-					cm.sendGetText("#rMATCH FOUND!\r\n" + cubingDiag + "#l");
+					cm.sendYesNo("#rMATCH FOUND!\r\n" + cubingDiag + "#l");
 				}
 				else if(statSelected == 6 && totalIntPercent >= desiredStatNumber) // Int %
 				{
-					cm.sendGetText("#rMATCH FOUND!\r\n" + cubingDiag + "#l");
+					cm.sendYesNo("#rMATCH FOUND!\r\n" + cubingDiag + "#l");
 				}
 				else if(statSelected == 7 && totalStrPercent >= desiredStatNumber) // Str %
 				{
-					cm.sendGetText("#rMATCH FOUND!\r\n" + cubingDiag + "#l");
+					cm.sendYesNo("#rMATCH FOUND!\r\n" + cubingDiag + "#l");
 				}
 				else if(statSelected == 8 && totalStrPercent >= desiredStatNumber && totalIntPercent >= desiredStatNumber && totalDexPercent >= desiredStatNumber && totalDexPercent >= desiredStatNumber) // All Stat %
 				{
-					cm.sendGetText("#rMATCH FOUND!\r\n" + cubingDiag + "#l");
+					cm.sendYesNo("#rMATCH FOUND!\r\n" + cubingDiag + "#l");
 				}
 				else{
 				cm.sendNext(cubingDiag + "#l");
@@ -436,35 +435,35 @@ function action(mode, type, selection)
 
 				if(statSelected == 4 && totalLukPercent >= desiredStatNumber) // Luk %
 				{
-					cm.sendGetText("#rMATCH FOUND!\r\n" + cubingDiag + "#l");
+					cm.sendYesNo("#rMATCH FOUND!\r\n" + cubingDiag + "#l");
 				}
 				else if(statSelected == 1 && totalAttPercent >= desiredStatNumber) // Att %
 				{
-					cm.sendGetText("#rMATCH FOUND!\r\n" + cubingDiag + "#l");
+					cm.sendYesNo("#rMATCH FOUND!\r\n" + cubingDiag + "#l");
 				}
 				else if(statSelected == 2 && totalMattPercent >= desiredStatNumber) // Matt %
 				{
-					cm.sendGetText("#rMATCH FOUND!\r\n" + cubingDiag + "#l");
+					cm.sendYesNo("#rMATCH FOUND!\r\n" + cubingDiag + "#l");
 				}
 				else if(statSelected == 3 && totalDropPercent >= desiredStatNumber) // Drop Rate %
 				{
-					cm.sendGetText("#rMATCH FOUND!\r\n" + cubingDiag + "#l");
+					cm.sendYesNo("#rMATCH FOUND!\r\n" + cubingDiag + "#l");
 				}
 				else if(statSelected == 5 && totalDexPercent >= desiredStatNumber) // Dex %
 				{
-					cm.sendGetText("#rMATCH FOUND!\r\n" + cubingDiag + "#l");
+					cm.sendYesNo("#rMATCH FOUND!\r\n" + cubingDiag + "#l");
 				}
 				else if(statSelected == 6 && totalIntPercent >= desiredStatNumber) // Int %
 				{
-					cm.sendGetText("#rMATCH FOUND!\r\n" + cubingDiag + "#l");
+					cm.sendYesNo("#rMATCH FOUND!\r\n" + cubingDiag + "#l");
 				}
 				else if(statSelected == 7 && totalStrPercent >= desiredStatNumber) // Str %
 				{
-					cm.sendGetText("#rMATCH FOUND!\r\n" + cubingDiag + "#l");
+					cm.sendYesNo("#rMATCH FOUND!\r\n" + cubingDiag + "#l");
 				}
 				else if(statSelected == 8 && totalStrPercent >= desiredStatNumber && totalIntPercent >= desiredStatNumber && totalDexPercent >= desiredStatNumber && totalDexPercent >= desiredStatNumber) // All Stat %
 				{
-					cm.sendGetText("#rMATCH FOUND!\r\n" + cubingDiag + "#l");
+					cm.sendYesNo("#rMATCH FOUND!\r\n" + cubingDiag + "#l");
 				}
 				else
 				{
@@ -536,35 +535,35 @@ function action(mode, type, selection)
 
 				if(statSelected == 4 && totalLukPercent >= desiredStatNumber) // Luk %
 				{
-					cm.sendGetText("#rMATCH FOUND!\r\n" + cubingDiag + "#l");
+					cm.sendYesNo("#rMATCH FOUND!\r\n" + cubingDiag + "#l");
 				}
 				else if(statSelected == 1 && totalAttPercent >= desiredStatNumber) // Att %
 				{
-					cm.sendGetText("#rMATCH FOUND!\r\n" + cubingDiag + "#l");
+					cm.sendYesNo("#rMATCH FOUND!\r\n" + cubingDiag + "#l");
 				}
 				else if(statSelected == 2 && totalMattPercent >= desiredStatNumber) // Matt %
 				{
-					cm.sendGetText("#rMATCH FOUND!\r\n" + cubingDiag + "#l");
+					cm.sendYesNo("#rMATCH FOUND!\r\n" + cubingDiag + "#l");
 				}
 				else if(statSelected == 3 && totalDropPercent >= desiredStatNumber) // Drop Rate %
 				{
-					cm.sendGetText("#rMATCH FOUND!\r\n" + cubingDiag + "#l");
+					cm.sendYesNo("#rMATCH FOUND!\r\n" + cubingDiag + "#l");
 				}
 				else if(statSelected == 5 && totalDexPercent >= desiredStatNumber) // Dex %
 				{
-					cm.sendGetText("#rMATCH FOUND!\r\n" + cubingDiag + "#l");
+					cm.sendYesNo("#rMATCH FOUND!\r\n" + cubingDiag + "#l");
 				}
 				else if(statSelected == 6 && totalIntPercent >= desiredStatNumber) // Int %
 				{
-					cm.sendGetText("#rMATCH FOUND!\r\n" + cubingDiag + "#l");
+					cm.sendYesNo("#rMATCH FOUND!\r\n" + cubingDiag + "#l");
 				}
 				else if(statSelected == 7 && totalStrPercent >= desiredStatNumber) // Str %
 				{
-					cm.sendGetText("#rMATCH FOUND!\r\n" + cubingDiag + "#l");
+					cm.sendYesNo("#rMATCH FOUND!\r\n" + cubingDiag + "#l");
 				}
 				else if(statSelected == 8 && totalStrPercent >= desiredStatNumber && totalIntPercent >= desiredStatNumber && totalDexPercent >= desiredStatNumber && totalDexPercent >= desiredStatNumber) // All Stat %
 				{
-					cm.sendGetText("#rMATCH FOUND!\r\n" + cubingDiag + "#l");
+					cm.sendYesNo("#rMATCH FOUND!\r\n" + cubingDiag + "#l");
 				}
 				else
 				{
@@ -637,35 +636,35 @@ function action(mode, type, selection)
 
 				if(statSelected == 4 && totalLukPercent >= desiredStatNumber) // Luk %
 				{
-					cm.sendGetText("#rMATCH FOUND!\r\n" + cubingDiag + "#l");
+					cm.sendYesNo("#rMATCH FOUND!\r\n" + cubingDiag + "#l");
 				}
 				else if(statSelected == 1 && totalAttPercent >= desiredStatNumber) // Att %
 				{
-					cm.sendGetText("#rMATCH FOUND!\r\n" + cubingDiag + "#l");
+					cm.sendYesNo("#rMATCH FOUND!\r\n" + cubingDiag + "#l");
 				}
 				else if(statSelected == 2 && totalMattPercent >= desiredStatNumber) // Matt %
 				{
-					cm.sendGetText("#rMATCH FOUND!\r\n" + cubingDiag + "#l");
+					cm.sendYesNo("#rMATCH FOUND!\r\n" + cubingDiag + "#l");
 				}
 				else if(statSelected == 3 && totalDropPercent >= desiredStatNumber) // Drop Rate %
 				{
-					cm.sendGetText("#rMATCH FOUND!\r\n" + cubingDiag + "#l");
+					cm.sendYesNo("#rMATCH FOUND!\r\n" + cubingDiag + "#l");
 				}
 				else if(statSelected == 5 && totalDexPercent >= desiredStatNumber) // Dex %
 				{
-					cm.sendGetText("#rMATCH FOUND!\r\n" + cubingDiag + "#l");
+					cm.sendYesNo("#rMATCH FOUND!\r\n" + cubingDiag + "#l");
 				}
 				else if(statSelected == 6 && totalIntPercent >= desiredStatNumber) // Int %
 				{
-					cm.sendGetText("#rMATCH FOUND!\r\n" + cubingDiag + "#l");
+					cm.sendYesNo("#rMATCH FOUND!\r\n" + cubingDiag + "#l");
 				}
 				else if(statSelected == 7 && totalStrPercent >= desiredStatNumber) // Str %
 				{
-					cm.sendGetText("#rMATCH FOUND!\r\n" + cubingDiag + "#l");
+					cm.sendYesNo("#rMATCH FOUND!\r\n" + cubingDiag + "#l");
 				}
 				else if(statSelected == 8 && totalStrPercent >= desiredStatNumber && totalIntPercent >= desiredStatNumber && totalDexPercent >= desiredStatNumber && totalDexPercent >= desiredStatNumber) // All Stat %
 				{
-					cm.sendGetText("#rMATCH FOUND!\r\n" + cubingDiag + "#l");
+					cm.sendYesNo("#rMATCH FOUND!\r\n" + cubingDiag + "#l");
 				}
 				else
 				{
@@ -760,35 +759,35 @@ function action(mode, type, selection)
 
 				if(statSelected == 4 && totalLukPercent >= desiredStatNumber) // Luk %
 				{
-					cm.sendGetText("#rMATCH FOUND!\r\n" + cubingDiag + "#l");
+					cm.sendYesNo("#rMATCH FOUND!\r\n" + cubingDiag + "#l");
 				}
 				else if(statSelected == 1 && totalAttPercent >= desiredStatNumber) // Att %
 				{
-					cm.sendGetText("#rMATCH FOUND!\r\n" + cubingDiag + "#l");
+					cm.sendYesNo("#rMATCH FOUND!\r\n" + cubingDiag + "#l");
 				}
 				else if(statSelected == 2 && totalMattPercent >= desiredStatNumber) // Matt %
 				{
-					cm.sendGetText("#rMATCH FOUND!\r\n" + cubingDiag + "#l");
+					cm.sendYesNo("#rMATCH FOUND!\r\n" + cubingDiag + "#l");
 				}
 				else if(statSelected == 3 && totalDropPercent >= desiredStatNumber) // Drop Rate %
 				{
-					cm.sendGetText("#rMATCH FOUND!\r\n" + cubingDiag + "#l");
+					cm.sendYesNo("#rMATCH FOUND!\r\n" + cubingDiag + "#l");
 				}
 				else if(statSelected == 5 && totalDexPercent >= desiredStatNumber) // Dex %
 				{
-					cm.sendGetText("#rMATCH FOUND!\r\n" + cubingDiag + "#l");
+					cm.sendYesNo("#rMATCH FOUND!\r\n" + cubingDiag + "#l");
 				}
 				else if(statSelected == 6 && totalIntPercent >= desiredStatNumber) // Int %
 				{
-					cm.sendGetText("#rMATCH FOUND!\r\n" + cubingDiag + "#l");
+					cm.sendYesNo("#rMATCH FOUND!\r\n" + cubingDiag + "#l");
 				}
 				else if(statSelected == 7 && totalStrPercent >= desiredStatNumber) // Str %
 				{
-					cm.sendGetText("#rMATCH FOUND!\r\n" + cubingDiag + "#l");
+					cm.sendYesNo("#rMATCH FOUND!\r\n" + cubingDiag + "#l");
 				}
 				else if(statSelected == 8 && totalStrPercent >= desiredStatNumber && totalIntPercent >= desiredStatNumber && totalDexPercent >= desiredStatNumber && totalDexPercent >= desiredStatNumber) // All Stat %
 				{
-					cm.sendGetText("#rMATCH FOUND!\r\n" + cubingDiag + "#l");
+					cm.sendYesNo("#rMATCH FOUND!\r\n" + cubingDiag + "#l");
 				}
 				else{
 				cm.sendNext(cubingDiag + "#l");
@@ -863,35 +862,35 @@ function action(mode, type, selection)
 
 				if(statSelected == 4 && totalLukPercent >= desiredStatNumber) // Luk %
 				{
-					cm.sendGetText("#rMATCH FOUND!\r\n" + cubingDiag + "#l");
+					cm.sendYesNo("#rMATCH FOUND!\r\n" + cubingDiag + "#l");
 				}
 				else if(statSelected == 1 && totalAttPercent >= desiredStatNumber) // Att %
 				{
-					cm.sendGetText("#rMATCH FOUND!\r\n" + cubingDiag + "#l");
+					cm.sendYesNo("#rMATCH FOUND!\r\n" + cubingDiag + "#l");
 				}
 				else if(statSelected == 2 && totalMattPercent >= desiredStatNumber) // Matt %
 				{
-					cm.sendGetText("#rMATCH FOUND!\r\n" + cubingDiag + "#l");
+					cm.sendYesNo("#rMATCH FOUND!\r\n" + cubingDiag + "#l");
 				}
 				else if(statSelected == 3 && totalDropPercent >= desiredStatNumber) // Drop Rate %
 				{
-					cm.sendGetText("#rMATCH FOUND!\r\n" + cubingDiag + "#l");
+					cm.sendYesNo("#rMATCH FOUND!\r\n" + cubingDiag + "#l");
 				}
 				else if(statSelected == 5 && totalDexPercent >= desiredStatNumber) // Dex %
 				{
-					cm.sendGetText("#rMATCH FOUND!\r\n" + cubingDiag + "#l");
+					cm.sendYesNo("#rMATCH FOUND!\r\n" + cubingDiag + "#l");
 				}
 				else if(statSelected == 6 && totalIntPercent >= desiredStatNumber) // Int %
 				{
-					cm.sendGetText("#rMATCH FOUND!\r\n" + cubingDiag + "#l");
+					cm.sendYesNo("#rMATCH FOUND!\r\n" + cubingDiag + "#l");
 				}
 				else if(statSelected == 7 && totalStrPercent >= desiredStatNumber) // Str %
 				{
-					cm.sendGetText("#rMATCH FOUND!\r\n" + cubingDiag + "#l");
+					cm.sendYesNo("#rMATCH FOUND!\r\n" + cubingDiag + "#l");
 				}
 				else if(statSelected == 8 && totalStrPercent >= desiredStatNumber && totalIntPercent >= desiredStatNumber && totalDexPercent >= desiredStatNumber && totalDexPercent >= desiredStatNumber) // All Stat %
 				{
-					cm.sendGetText("#rMATCH FOUND!\r\n" + cubingDiag + "#l");
+					cm.sendYesNo("#rMATCH FOUND!\r\n" + cubingDiag + "#l");
 				}
 				else{
 				cm.sendNext(cubingDiag + "#l");
@@ -962,35 +961,35 @@ function action(mode, type, selection)
 
 				if(statSelected == 4 && totalLukPercent >= desiredStatNumber) // Luk %
 				{
-					cm.sendGetText("#rMATCH FOUND!\r\n" + cubingDiag + "#l");
+					cm.sendYesNo("#rMATCH FOUND!\r\n" + cubingDiag + "#l");
 				}
 				else if(statSelected == 1 && totalAttPercent >= desiredStatNumber) // Att %
 				{
-					cm.sendGetText("#rMATCH FOUND!\r\n" + cubingDiag + "#l");
+					cm.sendYesNo("#rMATCH FOUND!\r\n" + cubingDiag + "#l");
 				}
 				else if(statSelected == 2 && totalMattPercent >= desiredStatNumber) // Matt %
 				{
-					cm.sendGetText("#rMATCH FOUND!\r\n" + cubingDiag + "#l");
+					cm.sendYesNo("#rMATCH FOUND!\r\n" + cubingDiag + "#l");
 				}
 				else if(statSelected == 3 && totalDropPercent >= desiredStatNumber) // Drop Rate %
 				{
-					cm.sendGetText("#rMATCH FOUND!\r\n" + cubingDiag + "#l");
+					cm.sendYesNo("#rMATCH FOUND!\r\n" + cubingDiag + "#l");
 				}
 				else if(statSelected == 5 && totalDexPercent >= desiredStatNumber) // Dex %
 				{
-					cm.sendGetText("#rMATCH FOUND!\r\n" + cubingDiag + "#l");
+					cm.sendYesNo("#rMATCH FOUND!\r\n" + cubingDiag + "#l");
 				}
 				else if(statSelected == 6 && totalIntPercent >= desiredStatNumber) // Int %
 				{
-					cm.sendGetText("#rMATCH FOUND!\r\n" + cubingDiag + "#l");
+					cm.sendYesNo("#rMATCH FOUND!\r\n" + cubingDiag + "#l");
 				}
 				else if(statSelected == 7 && totalStrPercent >= desiredStatNumber) // Str %
 				{
-					cm.sendGetText("#rMATCH FOUND!\r\n" + cubingDiag + "#l");
+					cm.sendYesNo("#rMATCH FOUND!\r\n" + cubingDiag + "#l");
 				}
 				else if(statSelected == 8 && totalStrPercent >= desiredStatNumber && totalIntPercent >= desiredStatNumber && totalDexPercent >= desiredStatNumber && totalDexPercent >= desiredStatNumber) // All Stat %
 				{
-					cm.sendGetText("#rMATCH FOUND!\r\n" + cubingDiag + "#l");
+					cm.sendYesNo("#rMATCH FOUND!\r\n" + cubingDiag + "#l");
 				}
 				else{
 				cm.sendNext(cubingDiag + "#l");
@@ -1061,35 +1060,35 @@ function action(mode, type, selection)
 
 				if(statSelected == 4 && totalLukPercent >= desiredStatNumber) // Luk %
 				{
-					cm.sendGetText("#rMATCH FOUND!\r\n" + cubingDiag + "#l");
+					cm.sendYesNo("#rMATCH FOUND!\r\n" + cubingDiag + "#l");
 				}
 				else if(statSelected == 1 && totalAttPercent >= desiredStatNumber) // Att %
 				{
-					cm.sendGetText("#rMATCH FOUND!\r\n" + cubingDiag + "#l");
+					cm.sendYesNo("#rMATCH FOUND!\r\n" + cubingDiag + "#l");
 				}
 				else if(statSelected == 2 && totalMattPercent >= desiredStatNumber) // Matt %
 				{
-					cm.sendGetText("#rMATCH FOUND!\r\n" + cubingDiag + "#l");
+					cm.sendYesNo("#rMATCH FOUND!\r\n" + cubingDiag + "#l");
 				}
 				else if(statSelected == 3 && totalDropPercent >= desiredStatNumber) // Drop Rate %
 				{
-					cm.sendGetText("#rMATCH FOUND!\r\n" + cubingDiag + "#l");
+					cm.sendYesNo("#rMATCH FOUND!\r\n" + cubingDiag + "#l");
 				}
 				else if(statSelected == 5 && totalDexPercent >= desiredStatNumber) // Dex %
 				{
-					cm.sendGetText("#rMATCH FOUND!\r\n" + cubingDiag + "#l");
+					cm.sendYesNo("#rMATCH FOUND!\r\n" + cubingDiag + "#l");
 				}
 				else if(statSelected == 6 && totalIntPercent >= desiredStatNumber) // Int %
 				{
-					cm.sendGetText("#rMATCH FOUND!\r\n" + cubingDiag + "#l");
+					cm.sendYesNo("#rMATCH FOUND!\r\n" + cubingDiag + "#l");
 				}
 				else if(statSelected == 7 && totalStrPercent >= desiredStatNumber) // Str %
 				{
-					cm.sendGetText("#rMATCH FOUND!\r\n" + cubingDiag + "#l");
+					cm.sendYesNo("#rMATCH FOUND!\r\n" + cubingDiag + "#l");
 				}
 				else if(statSelected == 8 && totalStrPercent >= desiredStatNumber && totalIntPercent >= desiredStatNumber && totalDexPercent >= desiredStatNumber && totalDexPercent >= desiredStatNumber) // All Stat %
 				{
-					cm.sendGetText("#rMATCH FOUND!\r\n" + cubingDiag + "#l");
+					cm.sendYesNo("#rMATCH FOUND!\r\n" + cubingDiag + "#l");
 				}
 				else{
 				cm.sendNext(cubingDiag + "#l");

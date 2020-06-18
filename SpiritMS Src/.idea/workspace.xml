@@ -2,21 +2,17 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b6018274-476e-40f5-ab0d-cc65796a609f" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/../README.md" beforeDir="false" afterPath="$PROJECT_DIR$/../README.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Log_Eventtimer_Except.rtf" beforeDir="false" afterPath="$PROJECT_DIR$/Log_Eventtimer_Except.rtf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/scripts/npc/2042002.js" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/npc/2042002.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/scripts/npc/9000031.js" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/npc/9000031.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/scripts/npc/9010037.js" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/npc/9010037.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/scripts/npc/9010036.js" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/npc/9010036.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/bot/SpiritBot.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/bot/SpiritBot.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/scripting/NPCConversationManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/scripting/NPCConversationManager.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/scripting/NPCScriptManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/scripting/NPCScriptManager.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/server/commands/PlayerCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/server/commands/PlayerCommand.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/bot/SpiritBot.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/bot/SpiritBot.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/scripting/NPCConversationManager$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/scripting/NPCConversationManager$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/scripting/NPCConversationManager$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/scripting/NPCConversationManager$2.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/scripting/NPCConversationManager.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/scripting/NPCConversationManager.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/scripting/NPCScriptManager.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/scripting/NPCScriptManager.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/server/commands/PlayerCommand$CallGM.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/server/commands/PlayerCommand$CallGM.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/server/commands/PlayerCommand$CashDrop.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/server/commands/PlayerCommand$CashDrop.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/server/commands/PlayerCommand$Help.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/server/commands/PlayerCommand$Help.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/server/commands/PlayerCommand$JoinEvent.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/server/commands/PlayerCommand$JoinEvent.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/server/commands/PlayerCommand$SpawnBomb.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/server/commands/PlayerCommand$SpawnBomb.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/server/commands/PlayerCommand.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/server/commands/PlayerCommand.class" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />

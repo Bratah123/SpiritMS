@@ -23,6 +23,7 @@ package server.life;
 import java.awt.Point;
 import java.util.concurrent.atomic.AtomicInteger;
 
+import constants.ServerConstants;
 import server.MapleCarnivalFactory;
 import server.MapleCarnivalFactory.MCSkill;
 import server.maps.MapleMap;
@@ -111,7 +112,13 @@ public class SpawnPoint extends Spawns {
 
     @Override
     public final MapleMonster spawnMonster(final MapleMap map) {
-        final MapleMonster mob = new MapleMonster(id, monster);
+        MapleMonster mob = null;
+        if(map.getChannel() <= ServerConstants.BUFFED_CHANNELS){
+            mob = new MapleMonster(id, monster, true);
+        }
+        else{
+            mob = new MapleMonster(id, monster, false);
+        }
         mob.setPosition(pos);
         mob.setCy(pos.y);
         mob.setRx0(pos.x - 50);

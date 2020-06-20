@@ -4,15 +4,26 @@
     <list default="true" id="b6018274-476e-40f5-ab0d-cc65796a609f" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Log_Eventtimer_Except.rtf" beforeDir="false" afterPath="$PROJECT_DIR$/Log_Eventtimer_Except.rtf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/scripts/npc/2042002.js" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/npc/2042002.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/scripts/npc/9000031.js" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/npc/9000031.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/scripts/npc/9010036.js" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/npc/9010036.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/bot/SpiritBot.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/bot/SpiritBot.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/scripting/NPCConversationManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/scripting/NPCConversationManager.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/bot/SpiritBot.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/bot/SpiritBot.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/scripting/NPCConversationManager$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/scripting/NPCConversationManager$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/scripting/NPCConversationManager$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/scripting/NPCConversationManager$2.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/scripting/NPCConversationManager.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/scripting/NPCConversationManager.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/constants/ServerConstants.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/constants/ServerConstants.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/server/life/MapleLifeFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/server/life/MapleLifeFactory.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/server/life/MapleMonster.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/server/life/MapleMonster.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/server/life/SpawnPoint.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/server/life/SpawnPoint.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/server/life/SpawnPointAreaBoss.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/server/life/SpawnPointAreaBoss.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/constants/ServerConstants$CommandType.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/constants/ServerConstants$CommandType.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/constants/ServerConstants$PlayerGMRank.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/constants/ServerConstants$PlayerGMRank.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/constants/ServerConstants.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/constants/ServerConstants.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/server/life/MapleLifeFactory.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/server/life/MapleLifeFactory.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/server/life/MapleMonster$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/server/life/MapleMonster$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/server/life/MapleMonster$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/server/life/MapleMonster$2.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/server/life/MapleMonster$AttackingMapleCharacter.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/server/life/MapleMonster$AttackingMapleCharacter.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/server/life/MapleMonster$ExpMap.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/server/life/MapleMonster$ExpMap.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/server/life/MapleMonster$OnePartyAttacker.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/server/life/MapleMonster$OnePartyAttacker.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/server/life/MapleMonster$PartyAttackerEntry.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/server/life/MapleMonster$PartyAttackerEntry.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/server/life/MapleMonster$SingleAttackerEntry.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/server/life/MapleMonster$SingleAttackerEntry.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/server/life/MapleMonster.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/server/life/MapleMonster.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/server/life/SpawnPoint$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/server/life/SpawnPoint$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/server/life/SpawnPoint.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/server/life/SpawnPoint.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/server/life/SpawnPointAreaBoss.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/server/life/SpawnPointAreaBoss.class" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />

@@ -88,9 +88,14 @@ public class MapleMonster extends AbstractLoadedMapleLife {
     private boolean shouldDropItem = false, killed = false;
     private int triangulation = 0;
 
-    public MapleMonster(final int id, final MapleMonsterStats stats) {
+    public MapleMonster(final int id, final MapleMonsterStats stats, boolean isBuffed) {
         super(id);
-        initWithStats(stats);
+        if(isBuffed){
+            initWithBuffedStats(stats);
+        }
+        else{
+            initWithStats(stats);
+        }
     }
 
     public MapleMonster(final MapleMonster monster) {
@@ -107,6 +112,18 @@ public class MapleMonster extends AbstractLoadedMapleLife {
 
         
         if (stats.getNoSkills() > 0) {
+            usedSkills = new HashMap<>();
+        }
+    }
+
+    private void initWithBuffedStats(final MapleMonsterStats stats){
+        setStance(5);
+        this.stats = stats;
+        hp = stats.getHp() * 5;
+        mp = stats.getMp();
+        finalmaxhp = stats.getFinalMaxHP();
+
+        if(stats.getNoSkills() > 0){
             usedSkills = new HashMap<>();
         }
     }

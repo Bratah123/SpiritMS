@@ -136,7 +136,7 @@ public class MapleLifeFactory {
         if (stats == null) {
             return null;
         }
-        return new MapleMonster(mid, stats);
+        return new MapleMonster(mid, stats, false);
     }
 
     public static MapleMonsterStats getMonsterStats(int mid) {

@@ -93,7 +93,7 @@ public class SpawnPointAreaBoss extends Spawns {
     @Override
     public final MapleMonster spawnMonster(final MapleMap map) {
         final Point pos = getPosition();
-        final MapleMonster mob = new MapleMonster(id, monster);
+        final MapleMonster mob = new MapleMonster(id, monster, false);
         mob.setPosition(pos);
         mob.setCy(pos.y);
         mob.setRx0(pos.x - 50);

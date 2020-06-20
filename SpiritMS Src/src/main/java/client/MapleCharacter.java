@@ -7703,6 +7703,9 @@ public class MapleCharacter extends AnimatedMapleMapObject implements Serializab
             client.getSession().write(CField.serverBlocked(1));
             return;
         }
+        if(channel <= ServerConstants.BUFFED_CHANNELS){
+            getClient().getSession().write(CWvsContext.getTopMsg("You are now on a buffed channel."));
+        }
         changeRemoval();
 
         final ChannelServer ch = ChannelServer.getInstance(client.getChannel());
@@ -10809,5 +10812,14 @@ public class MapleCharacter extends AnimatedMapleMapObject implements Serializab
         updateSingleStat(MapleStat.FACE, this.face);
         updateSingleStat(MapleStat.HAIR, this.hair);
         equipChanged();
+    }
+
+    public void gainMaplePoints(int amount){
+        maplepoints += amount;
+        getClient().getSession().write(CWvsContext.getTopMsg("You've gained " + amount + " NX"));
+        getClient().getSession().write(CWvsContext.updateMaplePoint(maplepoints));
+    }
+    public int getMaplePoints(){
+        return maplepoints;
     }
 }

@@ -34,6 +34,7 @@ import constants.GameConstants;
 import constants.QuickMove;
 import constants.QuickMove.QuickMoveNPC;
 import constants.ServerConfig;
+import constants.ServerConstants;
 import custom.MoonlightRevamp;
 import database.DatabaseConnection;
 import handling.channel.ChannelServer;
@@ -562,6 +563,14 @@ public final class MapleMap {
                 }
                 if (de.itemId == 0) { // meso
                     int mesos = Randomizer.nextInt(1 + Math.abs(de.Maximum - de.Minimum)) + de.Minimum;
+                    double amount = ((Math.sqrt(mob.getMobMaxHp() / 20D)) * ((double) mob.getStats().getHp() / (mob.getMobExp() * mob.getStats().getLevel())));
+                    if(chr.getMap().getChannel() <= ServerConstants.BUFFED_CHANNELS){
+                        amount = ((Math.sqrt(mob.getMobMaxHpBuffed() / 20D)) * ((double) mob.getMobMaxHp() / (mob.getMobExp() * mob.getStats().getLevel())));
+                    }
+                    int randGain = Randomizer.rand(1, 10);
+                    if(randGain <= 3){ // 30% chance for a mob to give you NX
+                        chr.gainMaplePoints((int) amount);
+                    }
                     if (mesos > 0) {
                         spawnMobMesoDrop((int) (mesos * (chr.getStat().mesoBuff / 100.0) * chr.getDropMod() * cmServerrate), calcDropPos(pos, mob.getTruePosition()), mob, chr, false, droptype);
                         mesoDropped = true;
@@ -592,7 +601,7 @@ public final class MapleMap {
                 if (mons.getLevel() > 100) {
                     spawnMobMesoDrop((int) (5 + (mons.getLevel() * 10) * (chr.getStat().mesoBuff / 100.0) * chr.getDropMod() * cmServerrate), calcDropPos(pos, mob.getPosition()), mob, chr, false, droptype);              
                 } else {
-               spawnMobMesoDrop((int) (5 + (mons.getLevel()) * (chr.getStat().mesoBuff / 100.0) * chr.getDropMod() * cmServerrate), calcDropPos(pos, mob.getPosition()), mob, chr, false, droptype);
+                    spawnMobMesoDrop((int) (5 + (mons.getLevel()) * (chr.getStat().mesoBuff / 100.0) * chr.getDropMod() * cmServerrate), calcDropPos(pos, mob.getPosition()), mob, chr, false, droptype);
                 }
                 } else if (!gDropsDisabled) {
                     if (droptype == 3) {

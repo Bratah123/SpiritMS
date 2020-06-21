@@ -10,3 +10,4 @@ nbproject/private/private.xml
 PacketLog.txt
 Secondary Passwords
 *.txt
+target/*

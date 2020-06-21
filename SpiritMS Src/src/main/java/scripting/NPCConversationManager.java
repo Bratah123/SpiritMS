@@ -3118,4 +3118,8 @@ public class NPCConversationManager extends AbstractPlayerInteraction {
     public int getQuantityOfItem(int itemId){
         return c.getPlayer().getItemQuantity(itemId, false);
     }
+
+    public void updateEquipSlot(Item item){
+       CWvsContext.InventoryPacket.updateInventorySlot(MapleInventoryType.EQUIP, item, false);
+    }
   }

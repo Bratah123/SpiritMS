@@ -10814,9 +10814,14 @@ public class MapleCharacter extends AnimatedMapleMapObject implements Serializab
         equipChanged();
     }
 
-    public void gainMaplePoints(int amount){
+    public void gainMaplePoints(int amount){ // gain maple points
         maplepoints += amount;
-        getClient().getSession().write(CWvsContext.getTopMsg("You've gained " + amount + " NX"));
+        if(amount > 0){ // if they gain negative amount then say they lost instead of gain
+            getClient().getSession().write(CWvsContext.getTopMsg("Gained " + amount + " NX."));
+        }
+        else{
+            getClient().getSession().write(CWvsContext.getTopMsg("Lost " + amount + " NX."));
+        }
         getClient().getSession().write(CWvsContext.updateMaplePoint(maplepoints));
     }
     public int getMaplePoints(){

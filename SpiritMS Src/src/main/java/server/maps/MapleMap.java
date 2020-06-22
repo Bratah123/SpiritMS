@@ -38,6 +38,7 @@ import constants.ServerConstants;
 import custom.MoonlightRevamp;
 import database.DatabaseConnection;
 import handling.channel.ChannelServer;
+import handling.world.MaplePartyCharacter;
 import handling.world.PartyOperation;
 import handling.world.World;
 import handling.world.exped.ExpeditionType;
@@ -570,6 +571,19 @@ public final class MapleMap {
                     int randGain = Randomizer.rand(1, 10);
                     if(randGain <= 3){ // 30% chance for a mob to give you NX
                         chr.gainMaplePoints((int) amount);
+                        if(chr.getParty() != null && chr.getParty().getMembers().size() > 1){
+                            double partyMemberNX = (int) (amount / 10);
+                            for(int i = 1; i <= chr.getParty().getMembers().size(); i++){
+                                MaplePartyCharacter partyMember =  chr.getParty().getMemberByIndex(i);
+                                if(partyMember.getMapid() == chr.getMapId() && partyMember.getChannel() == chr.getMap().getChannel() && partyMember.getLevel() >= chr.getLevel() - 15){
+                                    MapleCharacter target = chr.getClient().getChannelServer().getPlayerStorage().getCharacterByName(partyMember.getName());
+                                    if(target != null){
+                                        target.gainMaplePoints((int) partyMemberNX);
+                                        amount += partyMemberNX;
+                                    }
+                                }
+                            }
+                        }
                     }
                     if (mesos > 0) {
                         spawnMobMesoDrop((int) (mesos * (chr.getStat().mesoBuff / 100.0) * chr.getDropMod() * cmServerrate), calcDropPos(pos, mob.getTruePosition()), mob, chr, false, droptype);

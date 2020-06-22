@@ -1509,7 +1509,7 @@ public class MapleMonster extends AbstractLoadedMapleLife {
                 Premium_Bonus_EXP = 0;
                 expApplicable = new ArrayList<>();
                 for (final MaplePartyCharacter partychar : party.getMembers()) {
-                    if (attacker.getKey().getLevel() - partychar.getLevel() <= 5 || stats.getLevel() - partychar.getLevel() <= 5) {
+                    if (attacker.getKey().getLevel() - partychar.getLevel() <= 15 || stats.getLevel() - partychar.getLevel() <= 15) {
                         pchr = map.getCharacterById(partychar.getId());
                         if (pchr != null && pchr.isAlive()) {
                             expApplicable.add(pchr);

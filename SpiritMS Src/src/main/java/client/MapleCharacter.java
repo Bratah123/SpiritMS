@@ -8277,7 +8277,7 @@ public class MapleCharacter extends AnimatedMapleMapObject implements Serializab
         if (!isAlive() || getPyramidSubway() != null || getMap().getSquadByMap() != null || getEventInstance() != null || getMap().getEMByMap() != null) {
             return true;
         }
-        if ((getMapId() >= 680000210 && getMapId() <= 680000502) || (getMapId() / 10000 == 92502 && getMapId() >= 925020100) || (getMapId() / 10000 == 92503) || getMapId() == GameConstants.JAIL) {
+        if (getMapId() == GameConstants.JAIL) {
             return true;
         }
         for (int i : GameConstants.blockedMaps) {

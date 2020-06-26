@@ -174,7 +174,7 @@ public class MapleTrade {
             c.getSession().write(CWvsContext.enableActions());
             return false;
         }
-        if (((ii.isDropRestricted(item.getItemId())) || (ii.isAccountShared(item.getItemId())))
+        if (((ii.isDropRestricted(item.getItemId(), getChr())) || (ii.isAccountShared(item.getItemId())))
                 && (!ItemFlag.KARMA_EQ.check(flag)) && (!ItemFlag.KARMA_USE.check(flag))) {
             c.getSession().write(CWvsContext.enableActions());
             return false;

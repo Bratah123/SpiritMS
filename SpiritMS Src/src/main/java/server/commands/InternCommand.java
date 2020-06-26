@@ -1032,4 +1032,13 @@ public class InternCommand {
             return 1;
         }
     }
+
+    public static class GetMap extends CommandExecute {
+        @Override
+        public int execute(MapleClient c, String[] args){
+            String mapId = String.valueOf(c.getPlayer().getMapId());
+            c.getPlayer().dropMessage(6,"Map ID: " + mapId);
+            return 1;
+        }
+    }
 }

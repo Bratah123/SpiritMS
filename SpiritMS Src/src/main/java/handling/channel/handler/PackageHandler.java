@@ -114,7 +114,7 @@ public class PackageHandler {
                                 }
                                 if (c.getPlayer().getItemQuantity(item.getItemId(), false) >= amount) {
                                     final MapleItemInformationProvider ii = MapleItemInformationProvider.getInstance();
-                                    if (!ii.isDropRestricted(item.getItemId()) && !ii.isAccountShared(item.getItemId())) {
+                                    if (!ii.isDropRestricted(item.getItemId(), c.getPlayer()) && !ii.isAccountShared(item.getItemId())) {
                                         if (addItemToDB(item, amount, mesos, c.getPlayer().getName(), accid, recipientOn)) {
                                             if (GameConstants.isThrowingStar(item.getItemId()) || GameConstants.isBullet(item.getItemId())) {
                                                 MapleInventoryManipulator.removeFromSlot(c, inv, (byte) itemPos, item.getQuantity(), true);

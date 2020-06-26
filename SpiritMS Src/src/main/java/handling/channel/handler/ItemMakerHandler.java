@@ -228,7 +228,7 @@ public class ItemMakerHandler {
                 }
                 final MapleItemInformationProvider ii = MapleItemInformationProvider.getInstance();
 
-                if (!ii.isDropRestricted(itemId) && !ii.isAccountShared(itemId)) {
+                if (!ii.isDropRestricted(itemId, c.getPlayer()) && !ii.isAccountShared(itemId)) {
                     final int[] toGive = getCrystal(itemId, ii.getReqLevel(itemId));
                     MapleInventoryManipulator.addById(c, toGive[0], (byte) toGive[1], "Made by disassemble " + itemId + " on " + FileoutputUtil.CurrentReadable_Date());
                     MapleInventoryManipulator.removeFromSlot(c, MapleInventoryType.EQUIP, slot, (byte) 1, false);

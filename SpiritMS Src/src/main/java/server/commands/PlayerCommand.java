@@ -844,6 +844,10 @@ public class PlayerCommand {
         @Override
         public int execute(MapleClient c, String[] args){
             MapleCharacter chr = c.getPlayer();
+            if(chr.getJob() != 0){
+                chr.dropMessage(5, "This job cannot use this command");
+                return 0;
+            }
             if(chr.getLevel() < 10){
                 c.getPlayer().setLevel((short)10);
                 c.getPlayer().updateSingleStat(MapleStat.LEVEL, 10);
@@ -853,6 +857,23 @@ public class PlayerCommand {
             else{
                 chr.dropMessage(5, "You cannot skip tutorial at this time.");
             }
+            return 1;
+        }
+    }
+
+    public static class TradeRoom extends CommandExecute {
+        @Override
+        public int execute(MapleClient c, String[] args){
+            MapleCharacter chr = c.getPlayer();
+            if(chr.getMapId() == GameConstants.JAIL){
+                chr.dropMessage(5, "You cannot use this command.");
+                return 0;
+            }
+            if(chr.getLevel() < 15){
+                chr.dropMessage(5, "You need to be level 15 and up to use this command.");
+                return 0;
+            }
+            chr.changeMap(100000001, 0); // maya's house
             return 1;
         }
     }

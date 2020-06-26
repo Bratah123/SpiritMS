@@ -499,8 +499,8 @@ public class PlayerInteractionHandler {
                             c.getSession().write(CWvsContext.enableActions());
                             return;
                         }
-                        if (ii.isDropRestricted(ivItem.getItemId()) || ii.isAccountShared(ivItem.getItemId())) {
-                            if (!(ItemFlag.KARMA_EQ.check(flag) || ItemFlag.KARMA_USE.check(flag))) {
+                        if (ii.isDropRestricted(ivItem.getItemId(), chr) || ii.isAccountShared(ivItem.getItemId())) {
+                            if (!(ItemFlag.KARMA_EQ.check(flag)|| ItemFlag.KARMA_USE.check(flag))) {
                                 c.getSession().write(CWvsContext.enableActions());
                                 return;
                             }

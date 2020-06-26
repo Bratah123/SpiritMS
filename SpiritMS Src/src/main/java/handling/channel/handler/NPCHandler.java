@@ -286,7 +286,7 @@ public class NPCHandler {
                         return;
                     }
                     if ((item.getItemId() == itemId) && ((item.getQuantity() >= quantity) || (GameConstants.isThrowingStar(itemId)) || (GameConstants.isBullet(itemId)))) {
-                        if (ii.isDropRestricted(item.getItemId())) {
+                        if (ii.isDropRestricted(item.getItemId(), chr)) {
                             if (ItemFlag.KARMA_EQ.check(flag)) {
                                 item.setFlag((short) (flag - ItemFlag.KARMA_EQ.getValue()));
                             } else if (ItemFlag.KARMA_USE.check(flag)) {
@@ -571,7 +571,6 @@ public class NPCHandler {
             return;
         }
         for (QuickMove qm : QuickMove.values()) {
-            if (qm.getMap() == c.getPlayer().getMapId()) {
                 List<QuickMove.QuickMoveNPC> qmn = new LinkedList();
                 int npcs = qm.getNPCFlag();
                 for (QuickMove.QuickMoveNPC npc : QuickMove.QuickMoveNPC.values()) {
@@ -580,7 +579,6 @@ public class NPCHandler {
                         break;
                     }
                 }
-            }
         }
     }
 

@@ -1049,7 +1049,7 @@ public class MapleInventoryManipulator {
             source.setQuantity((short) (source.getQuantity() - quantity));
             c.getSession().write(InventoryPacket.dropInventoryItemUpdate(type, source));
 
-            if (ii.isDropRestricted(target.getItemId()) || ii.isAccountShared(target.getItemId())) {
+            if (ii.isDropRestricted(target.getItemId(), c.getPlayer()) || ii.isAccountShared(target.getItemId())) {
                 if (ItemFlag.KARMA_EQ.check(flag)) {
                     target.setFlag((byte) (flag - ItemFlag.KARMA_EQ.getValue()));
                     c.getPlayer().getMap().spawnItemDrop(c.getPlayer(), c.getPlayer(), target, dropPos, true, true);
@@ -1077,7 +1077,7 @@ public class MapleInventoryManipulator {
             if (src < 0) {
                 c.getPlayer().equipChanged();
             }
-            if (ii.isDropRestricted(source.getItemId()) || ii.isAccountShared(source.getItemId())) {
+            if (ii.isDropRestricted(source.getItemId(), c.getPlayer()) || ii.isAccountShared(source.getItemId())) {
                 if (ItemFlag.KARMA_EQ.check(flag)) {
                     source.setFlag((byte) (flag - ItemFlag.KARMA_EQ.getValue()));
                     c.getPlayer().getMap().spawnItemDrop(c.getPlayer(), c.getPlayer(), source, dropPos, true, true);

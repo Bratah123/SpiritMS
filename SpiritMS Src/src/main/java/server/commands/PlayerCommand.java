@@ -877,6 +877,17 @@ public class PlayerCommand {
             return 1;
         }
     }
+
+    public static class Eunice extends CommandExecute {
+        @Override
+        public int execute(MapleClient c, String[] args){
+            c.removeClickedNPC();
+            NPCScriptManager.getInstance().dispose(c);
+            c.getSession().write(CWvsContext.enableActions());
+            NPCScriptManager.getInstance().start(c, 9270035, null);
+            return 1;
+        }
+    }
     /*public static class Crescent extends NPC {
      }
 

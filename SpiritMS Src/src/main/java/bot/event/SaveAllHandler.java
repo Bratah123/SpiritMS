@@ -11,7 +11,7 @@ public class SaveAllHandler extends ListenerAdapter {
     public void onGuildMessageReceived(GuildMessageReceivedEvent event) {
         if(event.getMessage().getContentRaw().equalsIgnoreCase("!saveall")){
             if(!event.getAuthor().getId().equals("207371595113562124")){
-                event.getChannel().sendMessage("You do not have the neccessary .").queue();
+                event.getChannel().sendMessage("You do not have the neccessary permissions for that command.").queue();
                 return;
             }
             for(int i = 1; i <= ChannelServer.getChannelCount(); i++){

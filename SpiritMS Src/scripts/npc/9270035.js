@@ -52,7 +52,7 @@ function action(mode, type, selection) {
 			cm.dispose();
 			return;
 	    }
-        cm.sendSimple("Hello #r#h ##k!. \r\n#b#L1#Secret Scroll [4th Job] for 10 million mesos#l \r\n#b#L2#I would like to learn a skill#l \r\n#b#L3#I want to go somewhere#l\r\n#L5#Trade Meso for Gold Maple Leaf#l\r\n#L6#Trade Gold Maple Leaf for Meso#l\r\n#L11#Universal Shop#l#k");
+        cm.sendSimple("Hello #r#h ##k! #b\r\n#b#L3#I want to go somewhere#l\r\n#L13#I want to exchange currency.#l\r\n#L12##bI want to talk to Lilin.#l");
     } else if (status == 1) {
         if (selection == 1) {
             if (cm.haveItem(4031348)) {
@@ -88,22 +88,30 @@ function action(mode, type, selection) {
                 }
                 cm.dispose();
         } else if (selection == 6) {
-                if (cm.getMeso() < 1030000000) {
-                        cm.sendOk("You must have 1,030,000,000 mesos before doing the trade.");
+                if (cm.getMeso() < 1200000000) {
+                        cm.sendOk("You must have 1,200,000,000 mesos before doing the trade.");
                 } else if (!cm.canHold(4001168,1)) {
                         cm.sendOk("Please make room.");
                 } else {
                         cm.gainItem(4001168, 1);
                         cm.gainMeso(-1030000000);
-                        cm.sendOk("Thank you for the trade, I have given you Golden Maple Leaf for 1,030,000,000 meso (1 billion + 0.03% tax).");
+                        cm.sendOk("Thank you for the trade, I have given you Golden Maple Leaf for 1,200,000,000 meso (1 billion + 20% tax).");
                 }
                 cm.dispose();
         
         } else if (selection == 11) {
                 cm.dispose();
-                cm.openShop(61);
-
+                cm.openShop(9010038);
        }
+       else if(selection == 12){
+            cm.dispose();
+            cm.openNpc(9010036);
+       }
+       else if(selection == 13){
+            cm.dispose();
+            cm.openNpc(9270037);
+       }
+
     } else if (status == 2) {
             var selStr = "Select your destination.#b";
         if (selection == 0) {

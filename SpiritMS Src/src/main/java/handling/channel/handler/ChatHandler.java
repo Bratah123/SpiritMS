@@ -20,9 +20,12 @@
  */
 package handling.channel.handler;
 
+import bot.DiscordWebhook;
 import client.MapleCharacter;
 import client.MapleCharacterUtil;
 import client.MapleClient;
+import com.mrpowergamerbr.temmiewebhook.DiscordMessage;
+import com.mrpowergamerbr.temmiewebhook.TemmieWebhook;
 import constants.ServerConstants.CommandType;
 import handling.channel.ChannelServer;
 import handling.world.MapleMessenger;
@@ -66,6 +69,7 @@ public class ChatHandler {
                         //chr.getMap().broadcastMessage(CField.getChatText(chr.getId(), text, c.getPlayer().isSuperGM(), unk), c.getPlayer().getTruePosition());
                         chr.getMap().broadcastMessage(ColourChat(chr, text, unk, chr.getChatType()));
                         chr.getMap().broadcastMessage(CField.getChatText(chr.getId(), text, c.getPlayer().isSuperGM(), 1));//was1
+                        DiscordWebhook.sendDiscMessage(text,chr.getName());
                     }
                 }
                 if (text.equalsIgnoreCase(c.getChannelServer().getServerName() + " rocks")) {
@@ -117,12 +121,6 @@ public class ChatHandler {
                 rank = "[Admin] ";
                 //colour = 8;
                 break;
-        }
-        if (chr.isDonator()) {
-            colour = 13;
-            if (rank.isEmpty()) {
-                rank = "[Donor] ";
-            }
         }
         byte[] packet;
         switch (colour) {

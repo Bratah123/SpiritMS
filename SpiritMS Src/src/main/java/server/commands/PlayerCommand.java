@@ -1089,4 +1089,27 @@ public class PlayerCommand {
             return 1;
         }
     }
+
+    public static class Taxi extends CommandExecute {
+        @Override
+        public int execute(MapleClient c, String[] args){
+            c.removeClickedNPC();
+            NPCScriptManager.getInstance().dispose(c);
+            c.getSession().write(CWvsContext.enableActions());
+            NPCScriptManager.getInstance().start(c, 1012000, null);
+            return 1;
+        }
+    }
+
+    public static class Portal extends CommandExecute {
+        @Override
+        public int execute(MapleClient c, String[] args){
+            c.removeClickedNPC();
+            NPCScriptManager.getInstance().dispose(c);
+            c.getSession().write(CWvsContext.enableActions());
+            NPCScriptManager.getInstance().start(c, 9010022, null);
+            return 1;
+        }
+    }
+
 }

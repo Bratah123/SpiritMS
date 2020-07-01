@@ -12,7 +12,7 @@ import javax.security.auth.login.LoginException;
 public class SpiritBot {
 
     public static void start() throws Exception{
-        JDA jda = new JDABuilder("INSERTTOKENBOTHERE").build();
+        JDA jda = (JDA) new JDABuilder("TOKENIDHERE").build();
         jda.addEventListener(new DisconnectHandler(), new InfoHandler(), new SaveAllHandler(), new OnlineHandler(), new ShutDownHandler(), new ShutDownTimeHandler(), new WhisperHandler(), new NoticeHandler());
     }
 

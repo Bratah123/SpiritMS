@@ -26,6 +26,7 @@
         <dependency>
             <groupId>com.github.MrPowerGamerBR</groupId>
             <artifactId>TemmieWebhook</artifactId>
+            <version>-SNAPSHOT</version>
         </dependency>
     </dependencies>
     <repositories>

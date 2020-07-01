@@ -1,5 +1,6 @@
 package bot.event;
 
+import net.dv8tion.jda.api.Permission;
 import net.dv8tion.jda.api.events.message.guild.GuildMessageReceivedEvent;
 import net.dv8tion.jda.api.hooks.ListenerAdapter;
 import server.ShutdownServer;
@@ -7,7 +8,7 @@ import server.ShutdownServer;
 public class ShutDownHandler extends ListenerAdapter {
     public void onGuildMessageReceived(GuildMessageReceivedEvent e){
         if(e.getMessage().getContentRaw().equalsIgnoreCase("!shutdown")){
-            if(!e.getAuthor().getId().equals("207371595113562124")){
+            if(!e.getMember().hasPermission(Permission.ADMINISTRATOR)){
                 e.getChannel().sendMessage("You do not have the proper permissions to use this command").queue();
                 return;
             }

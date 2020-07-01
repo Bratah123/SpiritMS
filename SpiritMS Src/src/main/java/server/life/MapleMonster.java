@@ -119,7 +119,7 @@ public class MapleMonster extends AbstractLoadedMapleLife {
     private void initWithBuffedStats(final MapleMonsterStats stats){
         setStance(5);
         this.stats = stats;
-        hp = stats.getHp() * 5;
+        hp = stats.getHp() * 12;
         mp = stats.getMp();
         finalmaxhp = getMobMaxHpBuffed();
 
@@ -193,9 +193,9 @@ public class MapleMonster extends AbstractLoadedMapleLife {
 
     public final long getMobMaxHpBuffed(){
         if(ostats != null){
-            return ostats.hp * 5;
+            return ostats.hp * 12;
         }
-        return stats.getHp() * 5;
+        return stats.getHp() * 12;
     }
 
     public final void setFinalMaxHP(long fmhp) {

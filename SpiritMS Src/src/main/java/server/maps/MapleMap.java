@@ -564,9 +564,9 @@ public final class MapleMap {
                 }
                 if (de.itemId == 0) { // meso
                     int mesos = Randomizer.nextInt(1 + Math.abs(de.Maximum - de.Minimum)) + de.Minimum;
-                    double amount = ((Math.sqrt(mob.getMobMaxHp() / 2D)) * ((double) mob.getStats().getHp() / (mob.getMobExp() * mob.getStats().getLevel())));
+                    double amount = ((Math.sqrt(mob.getMobMaxHp() / 0.2D)) * ((double) mob.getStats().getHp() / (mob.getMobExp() * mob.getStats().getLevel())));
                     if(chr.getMap().getChannel() <= ServerConstants.BUFFED_CHANNELS){
-                        amount = ((Math.sqrt(mob.getMobMaxHpBuffed() / 2D)) * ((double) mob.getMobMaxHp() / (mob.getMobExp() * mob.getStats().getLevel())));
+                        amount = ((Math.sqrt(mob.getMobMaxHpBuffed() / 0.2D)) * ((double) mob.getMobMaxHp() / (mob.getMobExp() * mob.getStats().getLevel())));
                     }
                     int randGain = Randomizer.rand(1, 10);
                     if(randGain <= 3){ // 30% chance for a mob to give you NX

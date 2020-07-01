@@ -3,6 +3,7 @@ package bot.event;
 import client.MapleCharacter;
 import handling.channel.ChannelServer;
 import handling.world.World;
+import net.dv8tion.jda.api.Permission;
 import net.dv8tion.jda.api.events.message.guild.GuildMessageReceivedEvent;
 import net.dv8tion.jda.api.hooks.ListenerAdapter;
 
@@ -10,7 +11,7 @@ public class DisconnectHandler extends ListenerAdapter {
     public void onGuildMessageReceived(GuildMessageReceivedEvent event){
         String message = event.getMessage().getContentRaw();
         if(message.startsWith("!dc")){
-            if(!event.getAuthor().getId().equals("207371595113562124"))
+            if(!event.getMember().hasPermission(Permission.ADMINISTRATOR))
             {
                 event.getChannel().sendMessage("You do not have the proper permissions to use this command").queue();
                 return;

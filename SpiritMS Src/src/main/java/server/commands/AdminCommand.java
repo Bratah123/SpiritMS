@@ -3,10 +3,7 @@ package server.commands;
 import client.MapleCharacter;
 import client.MapleClient;
 import client.SkillFactory;
-import client.inventory.Item;
-import client.inventory.MapleInventory;
-import client.inventory.MapleInventoryType;
-import client.inventory.MaplePet;
+import client.inventory.*;
 import com.mysql.jdbc.Connection;
 import com.mysql.jdbc.PreparedStatement;
 import constants.EventConstants;
@@ -351,6 +348,42 @@ public class AdminCommand {
                 for (MapleCharacter mch : cserv.getPlayerStorage().getAllCharacters()) {
                     mch.gainMeso(Integer.parseInt(splitted[1]), true);
                 }
+            }
+            return 1;
+        }
+    }
+
+    public static class ProItem extends CommandExecute {
+
+        @Override
+        public int execute(MapleClient c, String[] splitted) {
+            if (!c.getPlayer().isAdmin()) {
+                return 0;
+            }
+            if (splitted.length < 3) {
+                c.getPlayer().dropMessage(5, "!proitem id stats potential stats");
+                return 0;
+            }
+            final int itemId = Integer.parseInt(splitted[1]);
+            MapleItemInformationProvider ii = MapleItemInformationProvider.getInstance();
+            if (itemId >= 2000000) {
+                c.getPlayer().dropMessage(5, "You can only get equips.");
+            } else if (!ii.itemExists(itemId)) {
+                c.getPlayer().dropMessage(5, itemId + " does not exist");
+            } else {
+                Equip equip;
+                equip = ii.randomizeStats((Equip) ii.getEquipById(itemId));
+                equip.setStr(Short.parseShort(splitted[2]));
+                equip.setDex(Short.parseShort(splitted[2]));
+                equip.setInt(Short.parseShort(splitted[2]));
+                equip.setLuk(Short.parseShort(splitted[2]));
+                ((Equip) equip).setWatk(Short.parseShort(splitted[2]));
+                equip.setMatk(Short.parseShort(splitted[2]));
+                equip.setPotential1(Integer.parseInt(splitted[3]));
+                equip.setPotential2(Integer.parseInt(splitted[3]));
+                equip.setPotential3(Integer.parseInt(splitted[3]));
+                equip.setOwner(c.getPlayer().getName());
+                MapleInventoryManipulator.addbyItem(c, equip);
             }
             return 1;
         }

@@ -2331,9 +2331,12 @@ public class InventoryHandler {
                     NPCScriptManager.getInstance().start(c, 9010010, "consume_2430611");
                     break;
                 }
+                case 2431676:
+                    NPCScriptManager.getInstance().start(c,  9010010, "Maple_Beryl");
+
                 case 2430182:   {
-                                NPCScriptManager.getInstance().start(c,  9010010, "SBC");
-                                               break;
+                    NPCScriptManager.getInstance().start(c,  9010010, "SBC");
+                    break;
                  }
                 case 2430690: {
                     if (c.getPlayer().getInventory(MapleInventoryType.CASH).getNumFreeSlot() >= 1 && c.getPlayer().getInventory(MapleInventoryType.EQUIP).getNumFreeSlot() >= 1) {

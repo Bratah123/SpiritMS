@@ -1,4 +1,4 @@
 function enter(pi) {
     pi.playPortalSE();
-    pi.warp(807040100, 1);
+    pi.warp(807000000, 1);
 }

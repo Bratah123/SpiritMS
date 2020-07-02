@@ -15,7 +15,6 @@ import server.MaplePackageActions;
 import server.MapleTrade;
 import server.Randomizer;
 import server.events.MapleSnowball;
-import server.life.MapleMonster;
 import server.life.MapleNPC;
 import server.maps.*;
 import server.movement.LifeMovementFragment;
@@ -2074,7 +2073,7 @@ public static byte[] showAndroidEmotion(int cid, byte emo1) {
     public static byte[] updatePartyMemberHP(int cid, int curhp, int maxhp) {
         MaplePacketLittleEndianWriter mplew = new MaplePacketLittleEndianWriter();
 
-        mplew.writeShort(SendPacketOpcode.UPDATE_PARTYMEMBER_HP.getValue());
+        mplew.writeShort(SendPacketOpcode.UPDATE_PARTY_MEMBER_HP.getValue());
         mplew.writeInt(cid);
         mplew.writeInt(curhp);
         mplew.writeInt(maxhp);

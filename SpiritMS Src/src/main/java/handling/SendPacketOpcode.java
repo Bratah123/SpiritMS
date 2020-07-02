@@ -311,7 +311,7 @@ public enum SendPacketOpcode implements WritableIntValueHolder {
     SHOW_FOREIGN_EFFECT((short) 0x1CE),//+2
     GIVE_FOREIGN_BUFF((short) 0x1CF),//+2
     CANCEL_FOREIGN_BUFF((short) 0x1D0),//+2
-    UPDATE_PARTYMEMBER_HP((short) 0x1D1),//+2
+    UPDATE_PARTY_MEMBER_HP((short) 0x1D1),//+2
     LOAD_GUILD_NAME((short) 0x1D2),//+2
     LOAD_GUILD_ICON((short) 0x1D3),//+2
     LOAD_TEAM((short) 0x1D4),//+2

@@ -55,7 +55,7 @@ public class LoginInformationProvider {
         Xenon(14, 3002, 931050920, true, true, true, false, false, false, false, false),
         Zero(15, 10112, 321000000, false, true, false, false, false, true, false, false),//create tutorial plox
         Jett(16, 0, 552000050, false, false, false, false, false, true, false, false),//End map for tutorial
-        Hayato(17, 4001, 807000000, true, true, false, true, false, false, false, false),//half stater map TODO real tutorial
+        Hayato(17, 4001, 807040000, true, true, false, true, false, false, false, false),//half stater map TODO real tutorial
         Kanna(18, 4002, 807040000, true, true, false, true, false, false, false, false),
         BeastTamer(19, 11212, 866000000, false, true, true, false, false, false, true, true);//Beast tamer town, old/custom: 302000000
         public int type, id, map;

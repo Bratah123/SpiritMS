@@ -366,6 +366,7 @@ public class MapScriptMethods {
         PTjob4M,
         PTjob4M_1,
         PTjob4M2,
+        kannaJobChange,
         hayatoJobChange,
         sao_enterRewardMap,
         sao_enterRewardMap2,
@@ -3539,12 +3540,37 @@ public class MapScriptMethods {
                 break;
             }
 
-            case hayatoJobChange: {
+            case kannaJobChange: {
                 c.getSession().write(UIPacket.playMovie("JPKanna.avi", true));
                 while (c.getPlayer().getLevel() < 10) {
                     c.getSession().write(CField.showEffect("JPKanna/text0"));
                     c.getSession().write(CField.showEffect("JPKanna/text1"));
                     c.getSession().write(CField.showEffect("JPKanna/text2"));
+                    c.getPlayer().levelUp();
+                    c.getPlayer().levelUp();
+                    c.getPlayer().levelUp();
+                    c.getPlayer().levelUp();
+                    c.getPlayer().levelUp();
+                    c.getPlayer().levelUp();
+                    c.getPlayer().levelUp();
+                    c.getPlayer().levelUp();
+                    c.getPlayer().levelUp();
+                    c.getPlayer().setExp(0);
+                    //c.getPlayer().changeJob((short) 4200);
+                    if (c.getPlayer().getQuestStatus(28862) == 1) {
+                        MapleQuest.getInstance(28862).forceComplete(c.getPlayer(), 0);
+                    }
+                }
+                break;
+            }
+
+
+            case hayatoJobChange: {
+                c.getSession().write(UIPacket.playMovie("JPHayato.avi", true));
+                while (c.getPlayer().getLevel() < 10) {
+                    c.getSession().write(CField.showEffect("JPHayato/text0"));
+                    c.getSession().write(CField.showEffect("JPHayato/text1"));
+                    c.getSession().write(CField.showEffect("JPHayato/text2"));
                     c.getPlayer().levelUp();
                     c.getPlayer().levelUp();
                     c.getPlayer().levelUp();

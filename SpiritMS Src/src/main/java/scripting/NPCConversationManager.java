@@ -2917,6 +2917,16 @@ public class NPCConversationManager extends AbstractPlayerInteraction {
         return "#fMob/" + mobStr + ".img/stand/0#";
     }
 
+    public void showHayatoMovie() {
+        try {
+            c.getSession().write(UIPacket.playMovie("JPHayato.avi", true));
+            Thread.sleep(1 * 60 * 1000);
+        } catch (InterruptedException e) {
+        }
+        c.getSession().write(CField.UIPacket.getDirectionStatus(false));
+        c.getSession().write(CField.UIPacket.IntroEnableUI(0));
+    }
+
     public void showKannaMovie() {
         try {
             c.getSession().write(UIPacket.playMovie("JPKanna.avi", true));
@@ -2962,9 +2972,9 @@ public class NPCConversationManager extends AbstractPlayerInteraction {
             NPCScriptManager.getInstance().start(c, 10306, "ExplorerTut08");
     }
       
-            public final void UnlockHonor() {
+        public final void UnlockHonor() {
          c.getPlayer().HonorUnlock();
-          c.getPlayer().dropMessage(5, "Slot 1 Inner potential opened.");
+         c.getPlayer().dropMessage(5, "Slot 1 Inner potential opened.");
     }
         
         public final void UnlockHonor2() {

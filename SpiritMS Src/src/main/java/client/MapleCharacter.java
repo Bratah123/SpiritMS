@@ -7706,6 +7706,9 @@ public class MapleCharacter extends AnimatedMapleMapObject implements Serializab
         if(channel <= ServerConstants.BUFFED_CHANNELS){
             getClient().getSession().write(CWvsContext.getTopMsg("You are now on a buffed channel."));
         }
+        if(channel > ServerConstants.BUFFED_CHANNELS){
+            getClient().getSession().write(CWvsContext.getTopMsg("You are now on a unbuffed channel."));
+        }
         changeRemoval();
 
         final ChannelServer ch = ChannelServer.getInstance(client.getChannel());

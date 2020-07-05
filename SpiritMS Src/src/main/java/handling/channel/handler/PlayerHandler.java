@@ -6,6 +6,7 @@ import client.inventory.Item;
 import client.inventory.MapleInventory;
 import client.inventory.MapleInventoryType;
 import constants.GameConstants;
+import constants.ServerConstants;
 import handling.channel.ChannelServer;
 import handling.world.World;
 import java.awt.Point;
@@ -606,9 +607,12 @@ public class PlayerHandler {
             if (damage > 0) {
                 MapleStatEffect eff = SkillFactory.getSkill(1201007).getEffect(chr.getTotalSkillLevel(1201007));
                 long enemyDMG = Math.min(damage * (eff.getY() / 100), attacker.getMobMaxHp() / 2L);
-                if (enemyDMG > pDMG) {
-                    enemyDMG = pDMG;
+                if(chr.getMap().getChannel() >= ServerConstants.BUFFED_CHANNELS){
+                    enemyDMG = Math.min(damage * (eff.getY() / 100), attacker.getMobMaxHpBuffed() / 2L);
                 }
+                /*if (enemyDMG > pDMG) {
+                    enemyDMG = pDMG;
+                }*/
                 if (enemyDMG > 1000L) {
                     enemyDMG = 1000L;
                 }

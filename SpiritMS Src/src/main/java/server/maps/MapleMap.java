@@ -569,7 +569,7 @@ public final class MapleMap {
                         amount = ((Math.sqrt(mob.getMobMaxHpBuffed() / 0.2D)) * ((double) mob.getMobMaxHp() / (mob.getMobExp() * mob.getStats().getLevel())));
                     }
                     int randGain = Randomizer.rand(1, 10);
-                    if(randGain <= 3){ // 30% chance for a mob to give you NX
+                    if(randGain <= 4){ // 40% chance for a mob to give you NX
                         chr.gainMaplePoints((int) amount);
                         if(chr.getParty() != null && chr.getParty().getMembers().size() > 1){
                             double partyMemberNX = (int) (amount / 10);

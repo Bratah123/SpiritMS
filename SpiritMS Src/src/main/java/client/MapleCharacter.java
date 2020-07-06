@@ -8951,7 +8951,8 @@ public class MapleCharacter extends AnimatedMapleMapObject implements Serializab
                 }
                 break;
             }
-        }         if (getJob() >= 410 && getJob() <= 412) {
+        }
+        if (GameConstants.isNightLord(getJob())) {
             final Skill skill = SkillFactory.getSkill(getTotalSkillLevel(4120018) > 0 ? 4120018 : 4100011);
             if (getTotalSkillLevel(skill) > 0) {
                 final MapleMonster monster = map.getMonsterByOid(oid);

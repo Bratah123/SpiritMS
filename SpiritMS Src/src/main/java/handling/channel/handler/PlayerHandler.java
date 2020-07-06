@@ -1468,38 +1468,40 @@ public class PlayerHandler {
                     }
                 }
             }
-        }      if ((chr.getJob() >= 410 && chr.getJob() <= 412)) {
+        }      if (GameConstants.isNightLord(chr.getJob())) {
             int percent = 0, count = 0, skillid = 0, type = 0;
             if (c.getPlayer().getSkillLevel(SkillFactory.getSkill(4100011)) > 0) {
                 if (Randomizer.nextInt(100) < 99) {
                     skillid = 4100011;
                 //count = Randomizer.rand(1, 5);
                 percent = 99;
-            }final List<MapleMapObject> objs = c.getPlayer().getMap().getMapObjectsInRange(c.getPlayer().getPosition(), 500000, Arrays.asList(MapleMapObjectType.MONSTER));
-                                                    final List<MapleMonster> monsters = new ArrayList<>();
-                                    for (int i = 0; i < bulletCount; i++) {
-                                        int rand = Randomizer.rand(0, objs.size() - 1);
-                                        if (objs.size() < bulletCount) {
-                                            if (i < objs.size()) {
-                                                monsters.add((MapleMonster) objs.get(i));
-                                            }
-                                        } else {
-                                            monsters.add((MapleMonster) objs.get(rand));
-                                            objs.remove(rand);
-                                        }
-                                    }
-                                    if (monsters.size() <= 0) {
-                                        c.getPlayer().getClient().getSession().write(CWvsContext.enableActions());
-                                        return;
-                                    }
-            for (AttackPair at : attack.allDamage) {
+            }
+                final List<MapleMapObject> objs = c.getPlayer().getMap().getMapObjectsInRange(c.getPlayer().getPosition(), 500000, Arrays.asList(MapleMapObjectType.MONSTER));
+                final List<MapleMonster> monsters = new ArrayList<>();
+                for (int i = 0; i < bulletCount; i++) {
+                    int rand = Randomizer.rand(0, objs.size() - 1);
+                    if (objs.size() < bulletCount) {
+                        if (i < objs.size()) {
+                            monsters.add((MapleMonster) objs.get(i));
+                        }
+                    }
+                    else {
+                        monsters.add((MapleMonster) objs.get(rand));
+                        objs.remove(rand);
+                    }
+                }
+                if (monsters.size() <= 0) {
+                    c.getPlayer().getClient().getSession().write(CWvsContext.enableActions());
+                    return;
+                }
+                for (AttackPair at : attack.allDamage) {
                 
                 MapleMonster mob = chr.getMap().getMonsterByOid(at.objectid);
                 if (Randomizer.nextInt(100) < percent) {
                     if (mob != null) {
-                                                                                    final Item star = c.getPlayer().getInventory(MapleInventoryType.USE).getItem(attack.slot);
-                                final MapleMonster source = c.getPlayer().getMap().getMonsterByOid(at.objectid);
-                                final MonsterStatusEffect check = source.getBuff(MonsterStatus.POISON);
+                        final Item star = c.getPlayer().getInventory(MapleInventoryType.USE).getItem(attack.slot);
+                        final MapleMonster source = c.getPlayer().getMap().getMonsterByOid(at.objectid);
+                        final MonsterStatusEffect check = source.getBuff(MonsterStatus.POISON);
                          c.getPlayer().getMap().broadcastMessage(AdventurerPacket.AssassinPacket.giveMarkOfTheif(c.getPlayer().getId(), source.getObjectId(), (skill.getId() + 1), monsters, c.getPlayer().getPosition(), monsters.get(0).getPosition(), star.getItemId()));
                                //     if (star != null) { // TODO: check for quantity
                                         System.out.println("Star " + star.getItemId());

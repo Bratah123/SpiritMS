@@ -545,31 +545,23 @@ public static void applyAttack(AttackInfo attack, Skill theSkill, MapleCharacter
         }
     }
     if (player.getSkillLevel(4100012) > 0) {
-        MapleStatEffect eff = SkillFactory.getSkill(4100012).getEffect(player.getSkillLevel(4100012));
-        if (eff.makeChanceResult()) {
-            for (Map.Entry z : effect.getMonsterStati().entrySet()) {
-                for (AttackPair ap : attack.allDamage) {
-                    final MapleMonster monster = player.getMap().getMonsterByOid(ap.objectid);
-                    monster.applyStatus(player, new MonsterStatusEffect((MonsterStatus)z.getKey(), (Integer)z.getValue(), theSkill.getId(), null, false), effect.isPoison(), effect.getDuration(), true, effect);
-//            }
-                    // MonsterStatusEffect monsterStatusEffect = new MonsterStatusEffect(Collections.singletonMap(MonsterStatus.POISON, eff.getSourceId().getStats()), SkillFactory.getSkill(4100011), null, false);
-                    //  MonsterStatusEffect.setOwnerId(player.getId()); //cid가 맞아야 보이므로
-                    // monster.applyStatus(player, new MonsterStatusEffect(Collections.singletonMap(MonsterStatus.POISON, eff.getSourceId(), SkillFactory.getSkill(4100011), null, false), true, eff.getDuration(), false));
-                    monster.applyStatus(player, new MonsterStatusEffect(MonsterStatus.POISON, Integer.valueOf(eff.getX()), eff.getSourceId(), null, false), false, eff.getY() * 1000, true, eff);
-                    monster.applyStatus(player, new MonsterStatusEffect((MonsterStatus)z.getKey(), (Integer)z.getValue(), theSkill.getId(), null, false), effect.isPoison(), effect.getDuration(), true, effect);
-                }
-            }}
+            MapleStatEffect eff = SkillFactory.getSkill(4100012).getEffect(player.getSkillLevel(4100012));
+            if (eff.makeChanceResult()) {
+                for (Map.Entry z : effect.getMonsterStati().entrySet()) {
+                    for (AttackPair ap : attack.allDamage) {
+                        final MapleMonster monster = player.getMap().getMonsterByOid(ap.objectid);
+                        monster.applyStatus(player, new MonsterStatusEffect((MonsterStatus)z.getKey(), (Integer)z.getValue(), theSkill.getId(), null, false), effect.isPoison(), effect.getDuration(), true, effect);
+                        monster.applyStatus(player, new MonsterStatusEffect(MonsterStatus.POISON, Integer.valueOf(eff.getX()), eff.getSourceId(), null, false), false, eff.getY() * 1000, true, eff);
+                        monster.applyStatus(player, new MonsterStatusEffect((MonsterStatus)z.getKey(), (Integer)z.getValue(), theSkill.getId(), null, false), effect.isPoison(), effect.getDuration(), true, effect);
+                    }
+                }}
 
         int bulletCount = eff.getBulletCount();
         for (AttackPair ap : attack.allDamage) {
             final MapleMonster source = player.getMap().getMonsterByOid(ap.objectid);
 
-            //source.get
             final MonsterStatusEffect check = source.getBuff(MonsterStatus.POISON);
-
-            //  if (check != null && check.getSkill().getId() == 4100011 && check.getOwnerId() == player.getId()) {
             if (check != null && check.getSkill() == 4100011 && check.getOwnerId() == player.getId()) { //:3
-                //   player.message("조건 진입");
                 final List<MapleMapObject> objs = player.getMap().getMapObjectsInRange(player.getPosition(), 500000, Arrays.asList(MapleMapObjectType.MONSTER));
                 final List<MapleMonster> monsters = new ArrayList<>();
                 for (int i = 0; i < bulletCount; i++) {
@@ -591,10 +583,7 @@ public static void applyAttack(AttackInfo attack, Skill theSkill, MapleCharacter
                 for (MapleMonster mob : monsters) {
                     points.add(mob.getPosition());
                 }
-                //                 player.dropMessage(monsters.size());
-                //  player.dropMessage("시작" + monsters.size());
                 player.getMap().broadcastMessage(CWvsContext.giveMarkOfTheif(player.getId(), source.getObjectId(), 4100012, monsters, player.getPosition(), monsters.get(0).getPosition(), 2070005));
-                //          player.message("종료");
             }
         }
     }

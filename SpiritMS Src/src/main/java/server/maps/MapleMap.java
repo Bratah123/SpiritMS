@@ -133,7 +133,7 @@ public final class MapleMap {
     private MapleMapEffect mapEffect;
     private final byte channel;
     private String fieldType = "";
-    private short decHP = 0, createMobInterval = 9000, top = 0, bottom = 0, left = 0, right = 0;
+    private short decHP = 0, createMobInterval = 500, top = 0, bottom = 0, left = 0, right = 0;
     private int consumeItemCoolTime = 0, protectItem = 0, decHPInterval = 10000, mapid, returnMapId, timeLimit,
             fieldLimit, maxRegularSpawn = 0, fixedMob, forcedReturnMap = 999999999, instanceid = -1,
             lvForceMove = 0, lvLimit = 0, permanentWeather = 0, partyBonusRate = 0;
@@ -570,7 +570,6 @@ public final class MapleMap {
                     }
                     int randGain = Randomizer.rand(1, 10);
                     if(randGain <= 4){ // 40% chance for a mob to give you NX
-                        chr.gainMaplePoints((int) amount);
                         if(chr.getParty() != null && chr.getParty().getMembers().size() > 1){
                             double partyMemberNX = (int) (amount / 10);
                             for(int i = 1; i <= chr.getParty().getMembers().size(); i++){
@@ -584,6 +583,12 @@ public final class MapleMap {
                                 }
                             }
                         }
+                        chr.gainMaplePoints((int) amount);
+                    }
+                    if(randGain >= 3){
+                        final int range = Math.abs(de.Maximum - de.Minimum);
+                        idrop = new Item(4001126, (byte) 0, (short) (de.Maximum != 1 ? Randomizer.nextInt(range <= 0 ? 1 : range) + de.Minimum : 1), (byte) 0);
+                        spawnMobDrop(idrop, calcDropPos(pos, mob.getTruePosition()), mob, chr, droptype, de.questid);
                     }
                     if (mesos > 0) {
                         spawnMobMesoDrop((int) (mesos * (chr.getStat().mesoBuff / 100.0) * chr.getDropMod() * cmServerrate), calcDropPos(pos, mob.getTruePosition()), mob, chr, false, droptype);
@@ -3160,17 +3165,21 @@ public final class MapleMap {
 
     public final void loadMonsterRate(final boolean first) {
         final int spawnSize = monsterSpawn.size();
-        if (spawnSize >= 20 || partyBonusRate > 0) {
-            maxRegularSpawn = Math.round(spawnSize / monsterRate);
+        if (spawnSize >= 50 || partyBonusRate > 0) {
+            //maxRegularSpawn = Math.round(spawnSize / monsterRate);
+            maxRegularSpawn = 100;
         } else {
-            maxRegularSpawn = (int) Math.ceil(spawnSize * monsterRate);
+            //maxRegularSpawn = (int) Math.ceil(spawnSize * monsterRate);
+            maxRegularSpawn = 100;
         }
         if (fixedMob > 0) {
-            maxRegularSpawn = fixedMob;
+            //maxRegularSpawn = fixedMob;
+            maxRegularSpawn = 100;
         } else if (maxRegularSpawn <= 2) {
             maxRegularSpawn = 2;
         } else if (maxRegularSpawn > spawnSize) {
-            maxRegularSpawn = Math.max(10, spawnSize);
+           // maxRegularSpawn = Math.max(10, spawnSize);
+            maxRegularSpawn = 100;
         }
 
         Collection<Spawns> newSpawn = new LinkedList<>();
@@ -3192,7 +3201,7 @@ public final class MapleMap {
         if (first && spawnSize > 0) {
             lastSpawnTime = System.currentTimeMillis();
             if (GameConstants.isForceRespawn(mapid)) {
-                createMobInterval = 15000;
+                createMobInterval = 500;
             }
             respawn(false); // this should do the trick, we don't need to wait upon entering map
         }

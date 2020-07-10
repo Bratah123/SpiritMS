@@ -533,11 +533,11 @@ public class InventoryHandler {
             final StructItemOption pot = ii.getSocketInfo(nebuliteId);
             if (pot != null && GameConstants.optionTypeFits(pot.optionType, eqq.getItemId())) {
                 //if (eqq.getSocket1() == 0) { // priority comes first
-                eqq.setSocket1(pot.opID);
+                eqq.setSocket1(pot.potentialID);
                 //}// else if (eqq.getSocket2() == 0) {
-                //    eqq.setSocket2(pot.opID);
+                //    eqq.setSocket2(pot.potentialID);
                 //} else if (eqq.getSocket3() == 0) {
-                //    eqq.setSocket3(pot.opID);
+                //    eqq.setSocket3(pot.potentialID);
                 //}
                 MapleInventoryManipulator.removeFromSlot(c, MapleInventoryType.SETUP, nebulite.getPosition(), (short) 1, false);
                 c.getPlayer().forceReAddItem(toMount, MapleInventoryType.EQUIP);
@@ -581,7 +581,7 @@ public class InventoryHandler {
         while (newId == 0) {
             StructItemOption pot = pots.get(Randomizer.nextInt(pots.size()));
             if (pot != null) {
-                newId = pot.opID;
+                newId = pot.potentialID;
             }
         }
         if (mesos > 0) {
@@ -677,17 +677,17 @@ public class InventoryHandler {
                     boolean rewarded = false;
                     while (!rewarded) {
                         StructItemOption pot = pots.get(Randomizer.nextInt(pots.size())).get(reqLevel);
-                        if (pot != null && pot.reqLevel / 1 <= reqLevel && GameConstants.optionTypeFits(pot.optionType, eqq.getItemId()) && GameConstants.potentialIDFits(pot.opID, new_state, i)) { //optionType
+                        if (pot != null && pot.reqLevel / 1 <= reqLevel && GameConstants.optionTypeFits(pot.optionType, eqq.getItemId()) && GameConstants.potentialIDFits(pot.potentialID, new_state, i)) { //optionType
                             //have to research optionType before making this truely official-like
-                            if (isAllowedPotentialStat(eqq, pot.opID)) {
+                            if (isAllowedPotentialStat(eqq, pot.potentialID)) {
                                 if (i == 0) {
-                                    eqq.setPotential1(pot.opID);
+                                    eqq.setPotential1(pot.potentialID);
                                 } else if (i == 1) {
-                                    eqq.setPotential2(pot.opID);
+                                    eqq.setPotential2(pot.potentialID);
                                 } else if (i == 2) {
-                                    eqq.setPotential3(pot.opID);
+                                    eqq.setPotential3(pot.potentialID);
                                 } else if (i == 3) {
-                                    eqq.setPotential4(pot.opID);
+                                    eqq.setPotential4(pot.potentialID);
                                 }
                                 rewarded = true;
                             }
@@ -762,17 +762,17 @@ public class InventoryHandler {
                     boolean rewarded = false;
                     while (!rewarded) {
                         StructItemOption pot = pots.get(Randomizer.nextInt(pots.size())).get(reqLevel);
-                        if (pot != null && pot.reqLevel / 10 <= reqLevel && GameConstants.optionTypeFits(pot.optionType, eqq.getItemId()) && GameConstants.potentialIDFits(pot.opID, new_state, i)) { //optionType
+                        if (pot != null && pot.reqLevel / 10 <= reqLevel && GameConstants.optionTypeFits(pot.optionType, eqq.getItemId()) && GameConstants.potentialIDFits(pot.potentialID, new_state, i)) { //optionType
                             //have to research optionType before making this truely official-like
-                            if (isAllowedPotentialStat(eqq, pot.opID)) {
+                            if (isAllowedPotentialStat(eqq, pot.potentialID)) {
                                 if (i == 0) {
-                                    eqq.setPotential1(pot.opID);
+                                    eqq.setPotential1(pot.potentialID);
                                 } else if (i == 1) {
-                                    eqq.setPotential2(pot.opID);
+                                    eqq.setPotential2(pot.potentialID);
                                 } else if (i == 2) {
-                                    eqq.setPotential3(pot.opID);
+                                    eqq.setPotential3(pot.potentialID);
                                 }  else if (i == 3) {
-                                    eqq.setPotential4(pot.opID);
+                                    eqq.setPotential4(pot.potentialID);
                                 }
                                 rewarded = true;
                             }
@@ -804,11 +804,11 @@ public class InventoryHandler {
         }
     }
 
-    public static boolean isAllowedPotentialStat(Equip eqq, int opID) { //For now
+    public static boolean isAllowedPotentialStat(Equip eqq, int potentialID) { //For now
         //if (GameConstants.isWeapon(eqq.getItemId())) {
-        //    return !(opID > 60000) || (opID >= 1 && opID <= 4) || (opID >= 9 && opID <= 12) || (opID >= 10001 && opID <= 10006) || (opID >= 10011 && opID <= 10012) || (opID >= 10041 && opID <= 10046) || (opID >= 10051 && opID <= 10052) || (opID >= 10055 && opID <= 10081) || (opID >= 10201 && opID <= 10291) || (opID >= 210001 && opID <= 20006) || (opID >= 20011 && opID <= 20012) || (opID >= 20041 && opID <= 20046) || (opID >= 20051 && opID <= 20052) || (opID >= 20055 && opID <= 20081) || (opID >= 20201 && opID <= 20291) || (opID >= 30001 && opID <= 30006) || (opID >= 30011 && opID <= 30012) || (opID >= 30041 && opID <= 30046) || (opID >= 30051 && opID <= 30052) || (opID >= 30055 && opID <= 30081) || (opID >= 30201 && opID <= 30291) || (opID >= 40001 && opID <= 40006) || (opID >= 40011 && opID <= 40012) || (opID >= 40041 && opID <= 40046) || (opID >= 40051 && opID <= 40052) || (opID >= 40055 && opID <= 40081) || (opID >= 40201 && opID <= 40291);
+        //    return !(potentialID > 60000) || (potentialID >= 1 && potentialID <= 4) || (potentialID >= 9 && potentialID <= 12) || (potentialID >= 10001 && potentialID <= 10006) || (potentialID >= 10011 && potentialID <= 10012) || (potentialID >= 10041 && potentialID <= 10046) || (potentialID >= 10051 && potentialID <= 10052) || (potentialID >= 10055 && potentialID <= 10081) || (potentialID >= 10201 && potentialID <= 10291) || (potentialID >= 210001 && potentialID <= 20006) || (potentialID >= 20011 && potentialID <= 20012) || (potentialID >= 20041 && potentialID <= 20046) || (potentialID >= 20051 && potentialID <= 20052) || (potentialID >= 20055 && potentialID <= 20081) || (potentialID >= 20201 && potentialID <= 20291) || (potentialID >= 30001 && potentialID <= 30006) || (potentialID >= 30011 && potentialID <= 30012) || (potentialID >= 30041 && potentialID <= 30046) || (potentialID >= 30051 && potentialID <= 30052) || (potentialID >= 30055 && potentialID <= 30081) || (potentialID >= 30201 && potentialID <= 30291) || (potentialID >= 40001 && potentialID <= 40006) || (potentialID >= 40011 && potentialID <= 40012) || (potentialID >= 40041 && potentialID <= 40046) || (potentialID >= 40051 && potentialID <= 40052) || (potentialID >= 40055 && potentialID <= 40081) || (potentialID >= 40201 && potentialID <= 40291);
         //}
-        return opID < 60000;
+        return potentialID < 60000;
     }
 
     public static void addToScrollLog(int accountID, int charID, int scrollID, int itemID, byte oldSlots, byte newSlots, byte viciousHammer, String result, boolean ws, boolean ls, int vega) {
@@ -1260,14 +1260,14 @@ public class InventoryHandler {
                         boolean rewarded = false;
                         while (!rewarded) {
                             StructItemOption pot = pots.get(Randomizer.nextInt(pots.size())).get(reqLevel);
-                            if (pot != null && pot.reqLevel / 10 <= reqLevel && GameConstants.optionTypeFits(pot.optionType, eq.getItemId()) && GameConstants.potentialIDFits(pot.opID, new_state, i)) { //optionType
-                                if (isAllowedPotentialStat(eq, pot.opID)) {
+                            if (pot != null && pot.reqLevel / 10 <= reqLevel && GameConstants.optionTypeFits(pot.optionType, eq.getItemId()) && GameConstants.potentialIDFits(pot.potentialID, new_state, i)) { //optionType
+                                if (isAllowedPotentialStat(eq, pot.potentialID)) {
                                     if (i == 0) {
-                                        eq.setBonusPotential1(pot.opID);
+                                        eq.setBonusPotential1(pot.potentialID);
                                     } else if (i == 1) {
-                                        eq.setBonusPotential2(pot.opID);
+                                        eq.setBonusPotential2(pot.potentialID);
                                     } else if (i == 2) {
-                                        eq.setBonusPotential3(pot.opID);
+                                        eq.setBonusPotential3(pot.potentialID);
                                     }
                                     rewarded = true;
                                 }
@@ -1539,7 +1539,7 @@ public class InventoryHandler {
                             while (newId == 0) {
                                 StructItemOption pot = pots.get(Randomizer.nextInt(pots.size()));
                                 if (pot != null) {
-                                    newId = pot.opID;
+                                    newId = pot.potentialID;
                                 }
                             }
                             if (MapleInventoryManipulator.checkSpace(c, newId, 1, "") && MapleInventoryManipulator.removeById(c, MapleInventoryType.USE, toUse.getItemId(), 1, true, false)) {
@@ -3489,8 +3489,8 @@ public class InventoryHandler {
                     boolean rewarded = false;
                     while (!rewarded) {
                         StructItemOption pot = pots.get(Randomizer.nextInt(pots.size())).get(reqLevel);
-                        if (pot != null && pot.reqLevel / 10 <= reqLevel && GameConstants.optionTypeFits(pot.optionType, eq.getItemId()) && GameConstants.potentialIDFits(pot.opID, new_state, 3)) { //optionType
-                            eq.setPotential3(pot.opID);
+                        if (pot != null && pot.reqLevel / 10 <= reqLevel && GameConstants.optionTypeFits(pot.optionType, eq.getItemId()) && GameConstants.potentialIDFits(pot.potentialID, new_state, 3)) { //optionType
+                            eq.setPotential3(pot.potentialID);
                             rewarded = true;
                         }
                     }
@@ -3537,7 +3537,7 @@ public class InventoryHandler {
                             while (newId == 0) {
                                 StructItemOption pot = pots.get(Randomizer.nextInt(pots.size()));
                                 if (pot != null) {
-                                    newId = pot.opID;
+                                    newId = pot.potentialID;
                                 }
                             }
                             MapleInventoryManipulator.removeFromSlot(c, MapleInventoryType.SETUP, item.getPosition(), (short) 1, false);

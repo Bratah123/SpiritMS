@@ -180,6 +180,7 @@ public class MapleCharacter extends AnimatedMapleMapObject implements Serializab
     private List<MaplePotionPot> potionPots;
     private int deathCount = 0;
     private MapleMarriage marriage;
+    public String savedUser = null;
 
     private MapleCharacter(final boolean ChannelServer) {
         setStance(0);
@@ -10833,5 +10834,9 @@ public class MapleCharacter extends AnimatedMapleMapObject implements Serializab
     }
     public int getMaplePoints(){
         return maplepoints;
+    }
+
+    public void setSavedUser(String user){
+        savedUser = user;
     }
 }

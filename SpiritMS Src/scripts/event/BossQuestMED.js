@@ -87,7 +87,7 @@ function monsterSpawn(eim) { // Custom function
 	case 9300028: // Ergoth
 	    var modified = em.newMonsterStats();
 	    modified.setOExp(mob.getMobExp() * 3);
-	    modified.setOHp(mob.getMobMaxHp() * 3);
+	    modified.setOHp(50000000); //50m hp
 	    modified.setOMp(mob.getMobMaxMp() * 1.5);
 
 	    mob.setOverrideStats(modified);
@@ -159,10 +159,11 @@ function allMonstersDead(eim) {
     var mobnum = parseInt(eim.getProperty("monster_number"));
     var num = mobnum * 35; // Total 1170
     var totalp = parseInt(eim.getProperty("points")) + num;
+     var iter = eim.getMapInstance(0).getCharactersThreadsafe().iterator();
 
     eim.setProperty("points", totalp);
 
-    eim.broadcastPlayerMsg(5, "Your team've gained "+num+" points! With a total of "+totalp+".");
+    eim.broadcastPlayerMsg(5, "Your team gained "+num+" points! With a total of "+totalp+".");
 
     eim.saveBossQuest(num);
     
@@ -170,7 +171,11 @@ function allMonstersDead(eim) {
 	eim.broadcastPlayerMsg(6, "Prepare! The next boss will appear in a glimpse of an eye!");
 	} else {
 	eim.saveBossQuest(1000);
-	eim.broadcastPlayerMsg(5, "Your team've beaten the MED mode and have gained an extra 1000 points!");
+	eim.broadcastPlayerMsg(5, "Your team beaten the MED mode and have gained an extra 1000 points!");
+    }
+    while(iter.hasNext()){
+            var chr = iter.next();
+            chr.gainMaplePoints(250000);
     }
 // When invoking unregisterMonster(MapleMonster mob) OR killed
 // Happens only when size = 0

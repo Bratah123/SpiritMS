@@ -5632,4 +5632,8 @@ public class GameConstants {
         //return job == 11000 || (job >= 11200 && job <= 11212);
     }
 
+    public static boolean isEmblem(final int itemId)
+    {
+        return (itemId >= 1190000 && itemId <= 1191109);
+    }
 }

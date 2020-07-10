@@ -93,10 +93,12 @@ function allMonstersDead(eim) {
     var mobnum = parseInt(eim.getProperty("monster_number"));
     var num = mobnum * 5; // 765 points in total
     var totalp = parseInt(eim.getProperty("points")) + num;
+    var iter = eim.getMapInstance(0).getCharactersThreadsafe().iterator();
+
 
     eim.setProperty("points", totalp);
 
-    eim.broadcastPlayerMsg(5, "Your team've gained "+num+" points! With a total of "+totalp+".");
+    eim.broadcastPlayerMsg(5, "Your team gained "+num+" points! With a total of "+totalp+".");
 
     eim.saveBossQuest(num);
 
@@ -104,7 +106,11 @@ function allMonstersDead(eim) {
 	eim.broadcastPlayerMsg(6, "Prepare! The next boss will appear in a glimpse of an eye!");
 } else {
 	eim.saveBossQuest(200);
-	eim.broadcastPlayerMsg(5, "Your team've beaten the EASY mode and have gained an extra 200 points!");
+	eim.broadcastPlayerMsg(5, "Your team beaten the EASY mode and have gained an extra 200 points!");
+	while(iter.hasNext()){
+                var chr = iter.next();
+                chr.gainMaplePoints(95000);
+            }
     }
 // When invoking unregisterMonster(MapleMonster mob) OR killed
 // Happens only when size = 0

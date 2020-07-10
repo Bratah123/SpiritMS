@@ -36,7 +36,7 @@ import tools.Triple;
 
 public class MapleItemInformationProvider {
 
-    private final static MapleItemInformationProvider instance = new MapleItemInformationProvider();
+    private static final MapleItemInformationProvider instance = new MapleItemInformationProvider();
     protected final MapleDataProvider chrData = MapleDataProviderFactory.getDataProvider(new File(System.getProperty("wzpath") + "/Character.wz"));
     protected final MapleDataProvider etcData = MapleDataProviderFactory.getDataProvider(new File(System.getProperty("wzpath") + "/Etc.wz"));
     protected final MapleDataProvider itemData = MapleDataProviderFactory.getDataProvider(new File(System.getProperty("wzpath") + "/Item.wz"));
@@ -56,6 +56,12 @@ public class MapleItemInformationProvider {
     protected final Map<Integer, Triple<List<Integer>, List<Integer>, List<Integer>>> androids = new HashMap<>();
     protected final Map<Integer, Triple<Integer, List<Integer>, List<Integer>>> monsterBookSets = new HashMap<>();
     protected final Map<Integer, StructSetItem> setItems = new HashMap<>();
+    protected final Map<Integer, List<Triple<Boolean, Integer, Integer>>> potentialOpCache;
+
+    public MapleItemInformationProvider() {
+        this.potentialOpCache = new HashMap<>();
+        this.tmpInfo = null;
+    }
 
     public void runEtc() {
         if (!setItems.isEmpty() || !potentialCache.isEmpty() || !socketCache.isEmpty()) {
@@ -104,43 +110,6 @@ public class MapleItemInformationProvider {
             }
             setItems.put(itemz.setItemID, itemz);
         }
-        StructItemOption item;
-        final MapleData potsData = itemData.getData("ItemOption.img");
-        List<StructItemOption> items;
-        for (MapleData dat : potsData) {
-            items = new LinkedList<>();
-            for (MapleData potLevel : dat.getChildByPath("level")) {
-                item = new StructItemOption();
-                item.opID = Integer.parseInt(dat.getName());
-                item.optionType = MapleDataTool.getIntConvert("info/optionType", dat, 0);
-                item.reqLevel = MapleDataTool.getIntConvert("info/reqLevel", dat, 0);
-                for (final String i : StructItemOption.types) {
-                    if (i.equals("face")) {
-                        item.face = MapleDataTool.getString("face", potLevel, "");
-                    } else {
-                        final int level = MapleDataTool.getIntConvert(i, potLevel, 0);
-                        if (level > 0) { // Save memory
-                            item.data.put(i, level);
-                        }
-                    }
-                }
-                switch (item.opID) {
-                    case 31001: // Haste
-                    case 31002: // Mystic Door
-                    case 31003: // Sharp Eyes
-                    case 31004: // Hyper Body
-                        item.data.put("skillID", (item.opID - 23001));
-                        break;
-                    case 41005: // Combat Orders
-                    case 41006: // Advanced Blessing
-                    case 41007: // Speed Infusion
-                        item.data.put("skillID", (item.opID - 33001));
-                        break;
-                }
-                items.add(item);
-            }
-            potentialCache.put(Integer.parseInt(dat.getName()), items);
-        }
         final Map<Integer, StructItemOption> gradeS = new HashMap<>();
         final Map<Integer, StructItemOption> gradeA = new HashMap<>();
         final Map<Integer, StructItemOption> gradeB = new HashMap<>();
@@ -148,8 +117,8 @@ public class MapleItemInformationProvider {
         final Map<Integer, StructItemOption> gradeD = new HashMap<>();
         final MapleData nebuliteData = itemData.getData("Install/0306.img");
         for (MapleData dat : nebuliteData) {
-            item = new StructItemOption();
-            item.opID = Integer.parseInt(dat.getName()); // Item Id
+            StructItemOption item = new StructItemOption();
+            item.potentialID = Integer.parseInt(dat.getName()); // Item Id
             item.optionType = MapleDataTool.getInt("optionType", dat.getChildByPath("socket"), 0);
             for (MapleData info : dat.getChildByPath("socket/option")) {
                 final String optionString = MapleDataTool.getString("optionString", info, "");
@@ -158,7 +127,7 @@ public class MapleItemInformationProvider {
                     item.data.put(optionString, level);
                 }
             }
-            switch (item.opID) {
+            switch (item.potentialID) {
                 case 3063370: // Haste
                     item.data.put("skillID", 8000);
                     break;
@@ -181,7 +150,7 @@ public class MapleItemInformationProvider {
                     item.data.put("skillID", 8006);
                     break;
             }
-            switch (GameConstants.getNebuliteGrade(item.opID)) {
+            switch (GameConstants.getNebuliteGrade(item.potentialID)) {
                 case 4: //S
                     gradeS.put(Integer.parseInt(dat.getName()), item);
                     break;
@@ -293,6 +262,246 @@ public class MapleItemInformationProvider {
         afterImage.put("katara", thePointK); //hackish
         afterImage.put("aran", thePointA); //hackish
     }
+    private boolean isEditinalDamageCheck(final int potential) {
+        switch (potential) {
+            case 12070:
+            case 12071:
+            case 22070:
+            case 22071:
+            case 32070:
+            case 32071:
+            case 42070:
+            case 42071: {
+                return true;
+            }
+            default: {
+                return false;
+            }
+        }
+    }
+    private boolean isAdditionalStatValue(final int potential) {
+        switch (potential) {
+            case 22057:
+            case 22058:
+            case 22059:
+            case 22060:
+            case 22087:
+            case 32059:
+            case 32060:
+            case 32061:
+            case 32062:
+            case 32087:
+            case 42063:
+            case 42064:
+            case 42065:
+            case 42066:
+            case 42087: {
+                return true;
+            }
+            default: {
+                return false;
+            }
+        }
+    }
+    private boolean isAdditionalDamage(final int potential) {
+        switch (potential) {
+            case 32052:
+            case 32054:
+            case 42052:
+            case 42054: {
+                return true;
+            }
+            default: {
+                return false;
+            }
+        }
+    }
+    private boolean isHMPCheck(final int potential) {
+        switch (potential) {
+            case 10045:
+            case 10046:
+            case 20045:
+            case 20046:
+            case 30045:
+            case 30046:
+            case 40045:
+            case 40046:
+            case 40047:
+            case 40048: {
+                return true;
+            }
+            default: {
+                return false;
+            }
+        }
+    }
+
+    private boolean isAdditionalHMPCheck(final int potential) {
+        switch (potential) {
+            case 12045:
+            case 12046:
+            case 22045:
+            case 22046:
+            case 22047:
+            case 22048:
+            case 32045:
+            case 32046:
+            case 32047:
+            case 32048:
+            case 42045:
+            case 42046:
+            case 42047:
+            case 42048: {
+                return true;
+            }
+            default: {
+                return false;
+            }
+        }
+    }
+
+    public void cachePotentialOption() {
+        final MapleData potsData = this.itemData.getData("ItemOption.img");
+        for (final MapleData data : potsData) {
+            final int potentialID = Integer.parseInt(data.getName());
+            int type = MapleDataTool.getInt("info/optionType", data, -1);
+            final int reqLevel = MapleDataTool.getInt("info/reqLevel", data, 0);
+            switch (potentialID) {
+                case 31001:
+                case 31002:
+                case 31003:
+                case 31004:
+                case 32091:
+                case 32092:
+                case 32093:
+                case 32094:
+                case 32661:
+                case 40081:
+                case 42059:
+                case 42116:
+                case 42650:
+                case 42656:
+                case 42661: {
+                    continue;
+                }
+                default: {
+                    boolean additional = type == 11 || type == 20;
+                    if (potentialID > 50000 || potentialID < 10000 || potentialID % 1000 < 40) {
+                        continue;
+                    }
+                    if (potentialID % 1000 >= 800) {
+                        continue;
+                    }
+                    if (potentialID == 42601 || this.isEditinalDamageCheck(potentialID) || this.isAdditionalStatValue(potentialID) || this.isAdditionalDamage(potentialID) || potentialID == 32071 || potentialID == 40091 || potentialID == 40092) {
+                        continue;
+                    }
+                    if (potentialID >= 42091 && potentialID <= 42096) {
+                        continue;
+                    }
+                    if (this.isAdditionalHMPCheck(potentialID) || potentialID % 10000 / 1000 == 2) {
+                        additional = true;
+                    }
+                    if (this.isHMPCheck(potentialID)) {
+                        type = -1;
+                        additional = false;
+                    }
+                    if (this.potentialOpCache.get(type) == null) {
+                        final List<Triple<Boolean, Integer, Integer>> potentialIds = new ArrayList<>();
+                        potentialIds.add(new Triple<>(additional, reqLevel, potentialID));
+                        this.potentialOpCache.put(type, potentialIds);
+                    }
+                    else {
+                        this.potentialOpCache.get(type).add(new Triple<>(additional, reqLevel, potentialID));
+                    }
+                }
+            }
+        }
+    }
+
+    public void cachePotentialItems() {
+        final MapleData potsData = this.itemData.getData("ItemOption.img");
+        for (final MapleData data : potsData) {
+            final List<StructItemOption> items = new LinkedList<>();
+            for (final MapleData level : data.getChildByPath("level")) {
+                final StructItemOption item = new StructItemOption();
+                item.optionType = MapleDataTool.getIntConvert("info/optionType", data, 0);
+                item.reqLevel = MapleDataTool.getIntConvert("info/reqLevel", data, 0);
+                item.weight = MapleDataTool.getIntConvert("info/weight", data, 0);
+                item.string = MapleDataTool.getString("info/string", level, "");
+                item.face = MapleDataTool.getString("face", level, "");
+                item.boss = (MapleDataTool.getIntConvert("boss", level, 0) > 0);
+                item.potentialID = Integer.parseInt(data.getName());
+                item.attackType = (short)MapleDataTool.getIntConvert("attackType", level, 0);
+                item.incMHP = (short)MapleDataTool.getIntConvert("incMHP", level, 0);
+                item.incMMP = (short)MapleDataTool.getIntConvert("incMMP", level, 0);
+                item.incSTR = (byte)MapleDataTool.getIntConvert("incSTR", level, 0);
+                item.incDEX = (byte)MapleDataTool.getIntConvert("incDEX", level, 0);
+                item.incINT = (byte)MapleDataTool.getIntConvert("incINT", level, 0);
+                item.incLUK = (byte)MapleDataTool.getIntConvert("incLUK", level, 0);
+                item.incACC = (byte)MapleDataTool.getIntConvert("incACC", level, 0);
+                item.incEVA = (byte)MapleDataTool.getIntConvert("incEVA", level, 0);
+                item.incSpeed = (byte)MapleDataTool.getIntConvert("incSpeed", level, 0);
+                item.incJump = (byte)MapleDataTool.getIntConvert("incJump", level, 0);
+                item.incPAD = (byte)MapleDataTool.getIntConvert("incPAD", level, 0);
+                item.incMAD = (byte)MapleDataTool.getIntConvert("incMAD", level, 0);
+                item.incPDD = (byte)MapleDataTool.getIntConvert("incPDD", level, 0);
+                item.incMDD = (byte)MapleDataTool.getIntConvert("incMDD", level, 0);
+                item.prop = (byte)MapleDataTool.getIntConvert("prop", level, 0);
+                item.time = (byte)MapleDataTool.getIntConvert("time", level, 0);
+                item.incSTRr = (byte)MapleDataTool.getIntConvert("incSTRr", level, 0);
+                item.incDEXr = (byte)MapleDataTool.getIntConvert("incDEXr", level, 0);
+                item.incINTr = (byte)MapleDataTool.getIntConvert("incINTr", level, 0);
+                item.incLUKr = (byte)MapleDataTool.getIntConvert("incLUKr", level, 0);
+                item.incMHPr = (byte)MapleDataTool.getIntConvert("incMHPr", level, 0);
+                item.incMMPr = (byte)MapleDataTool.getIntConvert("incMMPr", level, 0);
+                item.incACCr = (byte)MapleDataTool.getIntConvert("incACCr", level, 0);
+                item.incEVAr = (byte)MapleDataTool.getIntConvert("incEVAr", level, 0);
+                item.incPADr = (byte)MapleDataTool.getIntConvert("incPADr", level, 0);
+                item.incMADr = (byte)MapleDataTool.getIntConvert("incMADr", level, 0);
+                item.incPDDr = (byte)MapleDataTool.getIntConvert("incPDDr", level, 0);
+                item.incMDDr = (byte)MapleDataTool.getIntConvert("incMDDr", level, 0);
+                item.incCr = (byte)MapleDataTool.getIntConvert("incCr", level, 0);
+                item.incDAMr = (byte)MapleDataTool.getIntConvert("incDAMr", level, 0);
+                item.RecoveryHP = (byte)MapleDataTool.getIntConvert("RecoveryHP", level, 0);
+                item.RecoveryMP = (byte)MapleDataTool.getIntConvert("RecoveryMP", level, 0);
+                item.HP = (byte)MapleDataTool.getIntConvert("HP", level, 0);
+                item.MP = (byte)MapleDataTool.getIntConvert("MP", level, 0);
+                item.level = (byte)MapleDataTool.getIntConvert("level", level, 0);
+                item.ignoreTargetDEF = (byte)MapleDataTool.getIntConvert("ignoreTargetDEF", level, 0);
+                item.ignoreDAM = (byte)MapleDataTool.getIntConvert("ignoreDAM", level, 0);
+                item.DAMreflect = (byte)MapleDataTool.getIntConvert("DAMreflect", level, 0);
+                item.mpconReduce = (byte)MapleDataTool.getIntConvert("mpconReduce", level, 0);
+                item.mpRestore = (byte)MapleDataTool.getIntConvert("mpRestore", level, 0);
+                item.incMesoProp = (byte)MapleDataTool.getIntConvert("incMesoProp", level, 0);
+                item.incRewardProp = (byte)MapleDataTool.getIntConvert("incRewardProp", level, 0);
+                item.incAllskill = (byte)MapleDataTool.getIntConvert("incAllskill", level, 0);
+                item.ignoreDAMr = (byte)MapleDataTool.getIntConvert("ignoreDAMr", level, 0);
+                item.RecoveryUP = (byte)MapleDataTool.getIntConvert("RecoveryUP", level, 0);
+                item.reduceCooltime = (byte)MapleDataTool.getIntConvert("reduceCooltime", level, 0);
+                switch (item.potentialID) {
+                    case 31001:
+                    case 31002:
+                    case 31003:
+                    case 31004: {
+                        item.skillID = item.potentialID - 23001;
+                        break;
+                    }
+                    case 41005:
+                    case 41006:
+                    case 41007: {
+                        item.skillID = item.potentialID - 33001;
+                        break;
+                    }
+                    default: {
+                        item.skillID = 0;
+                        break;
+                    }
+                }
+                items.add(item);
+            }
+            this.potentialCache.put(Integer.parseInt(data.getName()), items);
+        }
+    }
 
     public void runItems() {
         if (GameConstants.GMS) { //these must be loaded before items..
@@ -334,6 +543,8 @@ public class MapleItemInformationProvider {
                     set.add(MapleDataTool.getInt(ds, 0));
                 }
                 monsterBookSets.put(Integer.parseInt(d.getName()), new Triple<>(MapleDataTool.getInt("setScore", d, 0), set, potential));
+                cachePotentialItems();
+                cachePotentialOption();
             }
         }
 

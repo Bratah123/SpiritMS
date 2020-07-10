@@ -268,7 +268,7 @@ function action(mode, type, selection)
 					cm.sendOk("You do not have enough mesos to cube.");
 					return cm.dispose();
 				}
-				else if(GameConstants.isWeapon(equipment.getItemId()) || GameConstants.isSecondaryWeapon(equipment.getItemId()) || GameConstants.isEmblem(equipment.getItemId())) // Weapon, 2ndry, Emblem
+				else if(cm.isWeapon(equipment.getItemId()) || cm.isSecondaryWeapon(equipment.getItemId()) || cm.isEmblem(equipment.getItemId())) // Weapon, 2ndry, Emblem
 				{
 				var wepPrimePotentials = [40001, 40002, 40003, 40004, 40011, 40012, 40041, 40042, 40043, 40044, 40045, 40046,40047,40051,40052, 40070,40081,40086,40291,40292,40601,40602,40603];
 				var wepUniquePotentials = [30001, 30002, 30003, 30004, 30011, 30012, 30041, 30042, 30043, 30044, 30045, 30046,30047,30051,30052,30054, 30070,30086,30291,30601,30602,30001, 30002, 30003, 30004, 30011, 30012, 30041, 30042, 30043, 30044, 30045, 30046,30047,30051,30052,30054, 30070,30086,30291,30601,30602,30001, 30002, 30003, 30004, 30011, 30012, 30041, 30042, 30043, 30044, 30045, 30046,30047,30051,30052,30054, 30070,30086,30291,30601,30602, 40001, 40002, 40003, 40004 , 40011, 40012, 40041, 40041, 40042, 40043, 40044, 40045, 40046,40047,40051,40052, 40070,40081,40086,40291,40292,40601,40602,40603];				var randomPot = wepPrimePotentials[Math.floor(Math.random() * wepPrimePotentials.length)]; // Prime Line
@@ -366,7 +366,7 @@ function action(mode, type, selection)
 				status--;
 				}
 				}
-				else if(GameConstants.getOptionType(equipment.getItemId()) == 54) // Gloves
+				else if(cm.isGloves(equipment.getItemId())) // Gloves
 				{
 				var equipPrimePotentials = [40001, 40002, 40003, 40004,40057, 40008, 40009, 40041, 40042, 40043, 40044,40056, 40045, 40046, 40048,   40081, 40086];
 				var equipUniquePotentials = [30001, 30002, 30003, 30004, 30008,40057,  30041, 30042,40056, 30043, 30044, 30045, 30046,30048,30053,30054,30001, 30002, 30003, 30004, 30006, 30008,  30041, 30042, 30043, 30044, 30045, 30046,30048,30053,30054,30001, 30002, 30003, 30004, 30006, 30008,  30041, 30042, 30043, 30044, 30045, 30046,30048,30053,30054,40001, 40002, 40003, 40004, 40008, 40009, 40041, 40042, 40043, 40044, 40045, 40046, 40048,   40081, 40086];
@@ -470,7 +470,7 @@ function action(mode, type, selection)
 				status--;
 				}
 				}
-				else if(GameConstants.isEquip(equipment.getItemId()) && GameConstants.isAccessory(equipment.getItemId()) == false && GameConstants.isRing(equipment.getItemId()) == false && GameConstants.isEmblem(equipment.getItemId()) == false && GameConstants.getOptionType(equipment.getItemId()) != 54)
+				else if(cm.isEquip(equipment.getItemId()) && cm.isAccessory(equipment.getItemId()) == false && cm.isRing(equipment.getItemId()) == false && cm.isEmblem(equipment.getItemId()) == false && !cm.isGloves(equipment.getItemId()))
 				{
 				var equipPrimePotentials = [40001, 40002, 40003, 40004, 40008, 40009, 40041, 40042, 40043, 40044, 40045, 40046, 40048,   40081, 40086];
 				var equipUniquePotentials = [30001, 30002, 30003, 30004, 30006, 30008,  30041, 30042, 30043, 30044, 30045, 30046,30048,30053,30054,30001, 30002, 30003, 30004, 30006, 30008,  30041, 30042, 30043, 30044, 30045, 30046,30048,30053,30054,30001, 30002, 30003, 30004, 30006, 30008,  30041, 30042, 30043, 30044, 30045, 30046,30048,30053,30054,40001, 40002, 40003, 40004, 40008, 40009, 40041, 40042, 40043, 40044, 40045, 40046, 40048,   40081, 40086];
@@ -570,7 +570,7 @@ function action(mode, type, selection)
 				status--;
 				}
 			}
-			else if(GameConstants.isAccessory(equipment.getItemId()) || GameConstants.isRing(equipment.getItemId()))
+			else if(cm.isAccessory(equipment.getItemId()) || cm.isRing(equipment.getItemId()))
 			{
 				var equipPrimePotentials = [40001, 40002, 40003, 40004, 40008, 40009, 40041, 40042,40650, 40043, 40044, 40045, 40046, 40048,   40081, 40086,40656];
 				var equipUniquePotentials = [30001, 30002, 30003, 30004, 30008,  30041, 30042, 30043, 30044, 30045, 30046,30048,30054,30001, 30002, 30003, 30004, 30008,  30041, 30042, 30043, 30044, 30045, 30046,30048,30054,30001, 30002, 30003, 30004, 30008,  30041, 30042, 30043, 30044, 30045, 30046,30048,30054,40001, 40002, 40003,40650, 40004,40008, 40009, 40041, 40042, 40043, 40044, 40045, 40046, 40048,   40081, 40086,40656];
@@ -695,7 +695,7 @@ function action(mode, type, selection)
 					cm.sendOk("You do not have enough mesos to Auto Cube.");
 					return cm.dispose();
 				}
-				else if(GameConstants.isWeapon(equipment.getItemId()) || GameConstants.isSecondaryWeapon(equipment.getItemId()) || GameConstants.isEmblem(equipment.getItemId()))
+				else if(cm.isWeapon(equipment.getItemId()) || cm.isSecondaryWeapon(equipment.getItemId()) || cm.isEmblem(equipment.getItemId()))
 				{
 				var wepPrimePotentials = [40001, 40002, 40003, 40004, 40011, 40012, 40041, 40042, 40043, 40044, 40045, 40046,40047,40051,40052, 40070,40081,40086,40291,40292,40601,40602,40603];
 				var wepUniquePotentials = [30001, 30002, 30003, 30004, 30006, 30011, 30012, 30041, 30042, 30043, 30044, 30045, 30046,30047,30051,30052,30054, 30070,30086,30291,30601,30602,30001, 30002, 30003, 30004, 30006, 30011, 30012, 30041, 30042, 30043, 30044, 30045, 30046,30047,30051,30052,30054, 30070,30086,30291,30601,30602,30001, 30002, 30003, 30004, 30006, 30011, 30012, 30041, 30042, 30043, 30044, 30045, 30046,30047,30051,30052,30054, 30070,30086,30291,30601,30602, 40001, 40002, 40003, 40004, 40011, 40012, 40041, 40041, 40042, 40043, 40044, 40045, 40046,40047,40051,40052, 40070,40081,40086,40291,40292,40601,40602,40603];				var randomPot = wepPrimePotentials[Math.floor(Math.random() * wepPrimePotentials.length)]; // Prime Line
@@ -793,7 +793,7 @@ function action(mode, type, selection)
 				status--;
 				}
 				}
-				else if(GameConstants.getOptionType(equipment.getItemId()) == 54)
+				else if(cm.isGloves(equipment.getItemId()))
 				{
 				var equipPrimePotentials = [40001, 40002, 40003, 40004,40057, 40008, 40009, 40041, 40042, 40043, 40044,40056, 40045, 40046, 40048,   40081, 40086];
 				var equipUniquePotentials = [30001, 30002, 30003, 30004, 30006, 30008,40057,  30041, 30042,40056, 30043, 30044, 30045, 30046,30048,30053,30054,30001, 30002, 30003, 30004, 30006, 30008,40057,  30041, 30042,40056, 30043, 30044, 30045, 30046,30048,30053,30054,30001, 30002, 30003, 30004, 30006, 30008,40057,  30041, 30042,40056, 30043, 30044, 30045, 30046,30048,30053,30054,40001, 40002, 40003, 40004, 40008, 40009, 40041, 40042, 40043, 40044, 40045, 40046, 40048,   40081, 40086];
@@ -896,7 +896,7 @@ function action(mode, type, selection)
 				status--;
 				}
 				}
-				else if(GameConstants.isEquip(equipment.getItemId()) && GameConstants.isAccessory(equipment.getItemId()) == false && GameConstants.isRing(equipment.getItemId()) == false && GameConstants.isEmblem(equipment.getItemId()) == false && GameConstants.getOptionType(equipment.getItemId()) != 54)
+				else if(cm.isEquip(equipment.getItemId()) && cm.isAccessory(equipment.getItemId()) == false && cm.isRing(equipment.getItemId()) == false && cm.isEmblem(equipment.getItemId()) == false && !cm.isGloves(equipment.getItemId()))
 				{
 				var equipPrimePotentials = [40001, 40002, 40003, 40004, 40008, 40009, 40041, 40042, 40043, 40044, 40045, 40046, 40048,   40081, 40086];
 				var equipUniquePotentials = [30001, 30002, 30003, 30004, 30006, 30008,  30041, 30042, 30043, 30044, 30045, 30046,30048,30053,30054,40001, 40002, 40003, 40004, 40008, 40009, 40041, 40042, 40043, 40044, 40045, 40046, 40048,   40081, 40086];
@@ -995,7 +995,7 @@ function action(mode, type, selection)
 				status--;
 				}
 			}
-			else if(GameConstants.isAccessory(equipment.getItemId()) || GameConstants.isRing(equipment.getItemId()))
+			else if(cm.isAccessory(equipment.getItemId()) || cm.isRing(equipment.getItemId()))
 			{
 				var equipPrimePotentials = [40001, 40002, 40003, 40004,40650, 40008, 40009, 40041, 40042, 40043, 40044, 40045, 40046, 40048,   40081, 40086,40656];
 				var equipUniquePotentials = [30001, 30002, 30003, 30004, 30006, 30008,  30041, 30042, 30043, 30044, 30045, 30046,30048,30053,30054,30001, 30002, 30003, 30004, 30006, 30008,  30041, 30042, 30043, 30044, 30045, 30046,30048,30053,30054,30001, 30002, 30003, 30004, 30006, 30008,  30041, 30042, 30043, 30044, 30045, 30046,30048,30053,30054,40001, 40002, 40003, 40004, 40656, 40008, 40009, 40041, 40042, 40043,40650, 40044, 40045, 40046, 40048,   40081, 40086];
@@ -1113,7 +1113,7 @@ function action(mode, type, selection)
 					cm.sendOk("You do not have enough red cubes.");
 					return cm.dispose();
 				}
-				else if(GameConstants.isWeapon(equipment.getItemId()) || GameConstants.isSecondaryWeapon(equipment.getItemId()) || GameConstants.isEmblem(equipment.getItemId())) // Weapon, 2ndry, Emblem
+				else if(cm.isWeapon(equipment.getItemId()) || cm.isSecondaryWeapon(equipment.getItemId()) || cm.isEmblem(equipment.getItemId())) // Weapon, 2ndry, Emblem
 				{
 				var wepPrimePotentials = [40001, 40002, 40003, 40004, 40011, 40012, 40041, 40042, 40043, 40044, 40045, 40046,40047,40051,40052, 40070,40081,40086,40291,40292,40601,40602,40603];
 				var wepUniquePotentials = [30001, 30002, 30003, 30004, 30011, 30012, 30041, 30042, 30043, 30044, 30045, 30046,30047,30051,30052,30054, 30070,30086,30291,30601,30602,30001, 30002, 30003, 30004, 30011, 30012, 30041, 30042, 30043, 30044, 30045, 30046,30047,30051,30052,30054, 30070,30086,30291,30601,30602,30001, 30002, 30003, 30004, 30011, 30012, 30041, 30042, 30043, 30044, 30045, 30046,30047,30051,30052,30054, 30070,30086,30291,30601,30602, 40001, 40002, 40003, 40004 , 40011, 40012, 40041, 40041, 40042, 40043, 40044, 40045, 40046,40047,40051,40052, 40070,40081,40086,40291,40292,40601,40602,40603];				var randomPot = wepPrimePotentials[Math.floor(Math.random() * wepPrimePotentials.length)]; // Prime Line
@@ -1168,7 +1168,7 @@ function action(mode, type, selection)
 				cm.sendNext(cubingDiag + "#l");
 				status--;
 				}
-				else if(GameConstants.getOptionType(equipment.getItemId()) == 54) // Gloves
+				else if(cm.isGloves(equipment.getItemId())) // Gloves
 				{
 				var equipPrimePotentials = [40001, 40002, 40003, 40004,40057, 40008, 40009, 40041, 40042, 40043, 40044,40056, 40045, 40046, 40048,   40081, 40086];
 				var equipUniquePotentials = [30001, 30002, 30003, 30004, 30008,40057,  30041, 30042,40056, 30043, 30044, 30045, 30046,30048,30053,30054,30001, 30002, 30003, 30004, 30006, 30008,  30041, 30042, 30043, 30044, 30045, 30046,30048,30053,30054,30001, 30002, 30003, 30004, 30006, 30008,  30041, 30042, 30043, 30044, 30045, 30046,30048,30053,30054,40001, 40002, 40003, 40004, 40008, 40009, 40041, 40042, 40043, 40044, 40045, 40046, 40048,   40081, 40086];
@@ -1228,7 +1228,7 @@ function action(mode, type, selection)
 				cm.sendNext(cubingDiag + "#l");
 				status--;
 				}
-				else if(GameConstants.isEquip(equipment.getItemId()) && GameConstants.isAccessory(equipment.getItemId()) == false && GameConstants.isRing(equipment.getItemId()) == false && GameConstants.isEmblem(equipment.getItemId()) == false && GameConstants.getOptionType(equipment.getItemId()) != 54)
+				else if(cm.isEquip(equipment.getItemId()) && cm.isAccessory(equipment.getItemId()) == false && cm.isRing(equipment.getItemId()) == false && cm.isEmblem(equipment.getItemId()) == false && !cm.isGloves(equipment.getItemId()))
 				{
 				var equipPrimePotentials = [40001, 40002, 40003, 40004, 40008, 40009, 40041, 40042, 40043, 40044, 40045, 40046, 40048,   40081, 40086];
 				var equipUniquePotentials = [30001, 30002, 30003, 30004, 30006, 30008,  30041, 30042, 30043, 30044, 30045, 30046,30048,30053,30054,30001, 30002, 30003, 30004, 30006, 30008,  30041, 30042, 30043, 30044, 30045, 30046,30048,30053,30054,30001, 30002, 30003, 30004, 30006, 30008,  30041, 30042, 30043, 30044, 30045, 30046,30048,30053,30054,40001, 40002, 40003, 40004, 40008, 40009, 40041, 40042, 40043, 40044, 40045, 40046, 40048,   40081, 40086];
@@ -1284,7 +1284,7 @@ function action(mode, type, selection)
 				cm.sendNext(cubingDiag + "#l");
 				status--;
 				}
-			else if(GameConstants.isAccessory(equipment.getItemId()) || GameConstants.isRing(equipment.getItemId()))
+			else if(cm.isAccessory(equipment.getItemId()) || cm.isRing(equipment.getItemId()))
 			{
 				var equipPrimePotentials = [40001, 40002, 40003, 40004, 40008, 40009, 40041, 40042,40650, 40043, 40044, 40045, 40046, 40048,   40081, 40086,40656];
 				var equipUniquePotentials = [30001, 30002, 30003, 30004, 30008,  30041, 30042, 30043, 30044, 30045, 30046,30048,30054,30001, 30002, 30003, 30004, 30008,  30041, 30042, 30043, 30044, 30045, 30046,30048,30054,30001, 30002, 30003, 30004, 30008,  30041, 30042, 30043, 30044, 30045, 30046,30048,30054,40001, 40002, 40003,40650, 40004,40008, 40009, 40041, 40042, 40043, 40044, 40045, 40046, 40048,   40081, 40086,40656];
@@ -1355,7 +1355,7 @@ function action(mode, type, selection)
 					cm.sendOk("You do not have enough bonus potential cubes.");
 					return cm.dispose();
 				}
-				else if(GameConstants.isWeapon(equipment.getItemId()) || GameConstants.isSecondaryWeapon(equipment.getItemId()) || GameConstants.isEmblem(equipment.getItemId()))
+				else if(cm.isWeapon(equipment.getItemId()) || cm.isSecondaryWeapon(equipment.getItemId()) || cm.isEmblem(equipment.getItemId()))
 				{
 				var wepPrimePotentials = [40001, 40002, 40003, 40004, 40011, 40012, 40041, 40042, 40043, 40044, 40045, 40046,40047,40051,40052, 40070,40081,40086,40291,40292,40601,40602,40603];
 				var wepUniquePotentials = [30001, 30002, 30003, 30004, 30006, 30011, 30012, 30041, 30042, 30043, 30044, 30045, 30046,30047,30051,30052,30054, 30070,30086,30291,30601,30602,30001, 30002, 30003, 30004, 30006, 30011, 30012, 30041, 30042, 30043, 30044, 30045, 30046,30047,30051,30052,30054, 30070,30086,30291,30601,30602,30001, 30002, 30003, 30004, 30006, 30011, 30012, 30041, 30042, 30043, 30044, 30045, 30046,30047,30051,30052,30054, 30070,30086,30291,30601,30602, 40001, 40002, 40003, 40004, 40011, 40012, 40041, 40041, 40042, 40043, 40044, 40045, 40046,40047,40051,40052, 40070,40081,40086,40291,40292,40601,40602,40603];				var randomPot = wepPrimePotentials[Math.floor(Math.random() * wepPrimePotentials.length)]; // Prime Line
@@ -1410,7 +1410,7 @@ function action(mode, type, selection)
 				cm.sendNext(cubingDiag + "#l");
 				status--;
 				}
-				else if(GameConstants.getOptionType(equipment.getItemId()) == 54)
+				else if(cm.isGloves(equipment.getItemId()))
 				{
 				var equipPrimePotentials = [40001, 40002, 40003, 40004,40057, 40008, 40009, 40041, 40042, 40043, 40044,40056, 40045, 40046, 40048,   40081, 40086];
 				var equipUniquePotentials = [30001, 30002, 30003, 30004, 30006, 30008,40057,  30041, 30042,40056, 30043, 30044, 30045, 30046,30048,30053,30054,30001, 30002, 30003, 30004, 30006, 30008,40057,  30041, 30042,40056, 30043, 30044, 30045, 30046,30048,30053,30054,30001, 30002, 30003, 30004, 30006, 30008,40057,  30041, 30042,40056, 30043, 30044, 30045, 30046,30048,30053,30054,40001, 40002, 40003, 40004, 40008, 40009, 40041, 40042, 40043, 40044, 40045, 40046, 40048,   40081, 40086];
@@ -1470,7 +1470,7 @@ function action(mode, type, selection)
 				cm.sendNext(cubingDiag + "#l");
 				status--;
 				}
-				else if(GameConstants.isEquip(equipment.getItemId()) && GameConstants.isAccessory(equipment.getItemId()) == false && GameConstants.isRing(equipment.getItemId()) == false && GameConstants.isEmblem(equipment.getItemId()) == false && GameConstants.getOptionType(equipment.getItemId()) != 54)
+				else if(cm.isEquip(equipment.getItemId()) && cm.isAccessory(equipment.getItemId()) == false && cm.isRing(equipment.getItemId()) == false && cm.isEmblem(equipment.getItemId()) == false && !cm.isGloves(equipment.getItemId()))
 				{
 				var equipPrimePotentials = [40001, 40002, 40003, 40004, 40008, 40009, 40041, 40042, 40043, 40044, 40045, 40046, 40048,   40081, 40086];
 				var equipUniquePotentials = [30001, 30002, 30003, 30004, 30006, 30008,  30041, 30042, 30043, 30044, 30045, 30046,30048,30053,30054,40001, 40002, 40003, 40004, 40008, 40009, 40041, 40042, 40043, 40044, 40045, 40046, 40048,   40081, 40086];
@@ -1526,7 +1526,7 @@ function action(mode, type, selection)
 				cm.sendNext(cubingDiag);
 				status--;
 			}
-			else if(GameConstants.isAccessory(equipment.getItemId()) || GameConstants.isRing(equipment.getItemId()))
+			else if(cm.isAccessory(equipment.getItemId()) || cm.isRing(equipment.getItemId()))
 			{
 				var equipPrimePotentials = [40001, 40002, 40003, 40004,40650, 40008, 40009, 40041, 40042, 40043, 40044, 40045, 40046, 40048,   40081, 40086,40656];
 				var equipUniquePotentials = [30001, 30002, 30003, 30004, 30006, 30008,  30041, 30042, 30043, 30044, 30045, 30046,30048,30053,30054,30001, 30002, 30003, 30004, 30006, 30008,  30041, 30042, 30043, 30044, 30045, 30046,30048,30053,30054,30001, 30002, 30003, 30004, 30006, 30008,  30041, 30042, 30043, 30044, 30045, 30046,30048,30053,30054,40001, 40002, 40003, 40004, 40656, 40008, 40009, 40041, 40042, 40043,40650, 40044, 40045, 40046, 40048,   40081, 40086];

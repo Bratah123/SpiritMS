@@ -1,5 +1,6 @@
 package handling.channel.handler;
 
+import bot.DiscordWebhook;
 import client.MapleBuffStat;
 import client.MapleCharacter;
 import client.MapleQuestStatus;
@@ -300,6 +301,9 @@ public static void applyAttack(AttackInfo attack, Skill theSkill, MapleCharacter
                     player.handleKaiserCombo();
                 }
                 if (attack.skill != 1221011) {
+                    if(totDamageToOneMonster > 100000000){
+                        DiscordWebhook.sendDamageLogMessage(String.valueOf("Damage: " + totDamageToOneMonster),player.getName());
+                    }
                     monster.damage(player, totDamageToOneMonster, true, attack.skill);
                 } else {
                     monster.damage(player, monster.getStats().isBoss() ? 500000L : monster.getHp() - 1L, true, attack.skill);
@@ -758,6 +762,9 @@ public static void applyAttack(AttackInfo attack, Skill theSkill, MapleCharacter
                     player.handleLuminous(attack.skill);
                 }
 
+                if(totDamage > 100000000){
+                    DiscordWebhook.sendDamageLogMessage("Damage: " + String.valueOf(totDamage),player.getName());
+                }
                 monster.damage(player, totDamage, true, attack.skill);
             }
 //      else if (player.getDamage() > 2147483647L) {

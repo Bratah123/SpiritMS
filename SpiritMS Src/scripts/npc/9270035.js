@@ -44,9 +44,11 @@ function action(mode, type, selection) {
             	if (cm.canHold(1142184,1)) {
                     cm.gainItem(1142184, 1);
                     cm.gainMeso(250000); //yo shit who the hell added this
-		    cm.forceCompleteQuest(29003);
+                    cm.gainItem(2000005, 150);
+		            cm.forceCompleteQuest(29003);
 			cm.sendOk("Welcome! As a complementary gift, I present to you these for your journey! If you wish to buy Cash related items, please visit the Cash Shop or visit the NPC in FM!");
-            	} else {
+            	}
+            	else {
 		    cm.sendOk("Please get an inventory space.");
 			}
 			cm.dispose();

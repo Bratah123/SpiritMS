@@ -8,12 +8,14 @@ import client.MapleBuffStat;
 import client.MapleCharacter;
 import client.MapleCoolDownValueHolder;
 import client.MapleDiseaseValueHolder;
+import client.inventory.Item;
 import client.inventory.MapleInventoryType;
 import client.inventory.MaplePet;
 import client.inventory.PetDataFactory;
 import client.MonsterStatusEffect;
 import constants.WorldConstants.WorldOption;
 import database.DatabaseConnection;
+import handling.RecvPacketOpcode;
 import handling.cashshop.CashShopServer;
 import handling.channel.ChannelServer;
 import handling.channel.PlayerStorage;
@@ -31,15 +33,7 @@ import handling.world.guild.MapleGuildCharacter;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.SQLException;
-import java.util.ArrayList;
-import java.util.Calendar;
-import java.util.Collection;
-import java.util.Collections;
-import java.util.EnumMap;
-import java.util.HashMap;
-import java.util.LinkedHashMap;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 import java.util.concurrent.atomic.AtomicInteger;
 import java.util.concurrent.locks.ReentrantReadWriteLock;
 import server.Timer.WorldTimer;
@@ -47,6 +41,7 @@ import server.life.MapleMonster;
 import server.maps.MapleMap;
 import server.maps.MapleMapItem;
 import tools.CollectionUtil;
+import tools.data.LittleEndianAccessor;
 import tools.packet.CField;
 import tools.packet.CWvsContext;
 import tools.packet.CWvsContext.AlliancePacket;
@@ -234,26 +229,25 @@ public class World {
                 }
             }
         }
-
-        public static void partyChat(int partyid, String chattext, String namefrom, int mode) {
-            MapleParty party = getParty(partyid);
-            if (party == null) {
-                return;
-            }
-
-            for (MaplePartyCharacter partychar : party.getMembers()) {
-                int ch = Find.findChannel(partychar.getName());
-                if (ch > 0) {
-                    MapleCharacter chr = ChannelServer.getInstance(ch).getPlayerStorage().getCharacterByName(partychar.getName());
-                    if (chr != null && !chr.getName().equalsIgnoreCase(namefrom)) { //Extra check just in case
-                        chr.getClient().getSession().write(CField.multiChat(namefrom, chattext, mode));
-                        if (chr.getClient().isMonitored()) {
-                            World.Broadcast.broadcastGMMessage(CWvsContext.broadcastMsg(6, "[GM Message] " + namefrom + " said to " + chr.getName() + " (Party): " + chattext));
-                        }
-                    }
+        
+public static void partyChat(final int partyid, final String chattext, final String namefrom, final int mode) {
+    final MapleParty party = getParty(partyid);
+    if (party == null) {
+        return;
+    }
+    for (final MaplePartyCharacter partychar : party.getMembers()) {
+        final int ch = Find.findChannel(partychar.getName());
+        if (ch > 0) {
+            final MapleCharacter chr = ChannelServer.getInstance(ch).getPlayerStorage().getCharacterByName(partychar.getName());
+            if (chr != null && !chr.getName().equalsIgnoreCase(namefrom)) {
+                chr.getClient().getSession().write(CField.multiChat(namefrom, chattext, mode));
+                if (chr.getClient().isMonitored()) {
+                    Broadcast.broadcastGMMessage(CWvsContext.broadcastMsg(6, "[GM Message] " + namefrom + " said to " + chr.getName() + " (Party): " + chattext));
                 }
             }
         }
+    }
+}
 
         public static void partyMessage(int partyid, String chattext) {
             MapleParty party = getParty(partyid);
@@ -547,6 +541,7 @@ public class World {
                 }
             }
         }
+
 
         private static void updateBuddies(int characterId, int channel, int[] buddies, boolean offline) {
             for (int buddy : buddies) {

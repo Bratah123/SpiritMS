@@ -26,12 +26,14 @@ var onyxWep = [
 	1332227, // Onyx Maple Cutter
 	1322205 // Onyx Maple Mace
 ];
-var onyxEqp = [ // Maple suit and Ring have wrong IDs TODO: Find them
+var onyxEqp = [
+    //1052612, // onyx Maple suit
 	1102562, // Onyx Maple Cape
 	1003863, // Onyx Maple Hat
 	1122252, // Onyx Maple Pendant
 	1132228, // Onyx Maple Buckle
 	1012376 // Onyx Maple Gum
+	//1113034, onyx Maple ring
 ];
 
 var pearlWep = [
@@ -57,7 +59,7 @@ var pearlEqp = [
 	1102563, // Pearl Maple Cape
 	1003864, // Pearl Maple Hat
 	1122253, // Pearl Maple Pendant
-	//1132229, // Pearl Maple Buckle
+	1132229, // Pearl Maple Buckle
 	1012377 // Pearl Maple Gum
 ];
 

@@ -173,7 +173,6 @@ function allMonstersDead(eim) {
 	} else {
 	eim.saveBossQuest(1000);
 	eim.broadcastPlayerMsg(5, "Your team beaten the MED mode and have gained an extra 1000 points!");
-    }
 	while(iter.hasNext()){
                 var chr = iter.next();
                 if(chr.getSavedAmount() == null && chr.getSavedUser().equals(null)){
@@ -185,7 +184,7 @@ function allMonstersDead(eim) {
                     chr.gainMaplePoints(totalMaplePoints - amountToGain)
                     target.gainMaplePoints(amountToGain)
                 }
-            }
+          }
     }
 // When invoking unregisterMonster(MapleMonster mob) OR killed
 // Happens only when size = 0

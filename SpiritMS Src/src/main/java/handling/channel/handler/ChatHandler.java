@@ -149,6 +149,7 @@ public class ChatHandler {
     public static void Others(final LittleEndianAccessor slea, final MapleClient c, final MapleCharacter chr) {
         final int type = slea.readByte();
         final byte numRecipients = slea.readByte();
+
         if (numRecipients <= 0) {
             return;
         }
@@ -182,12 +183,8 @@ public class ChatHandler {
                     chattype = "Expedition";
                     break;
             }
-            World.Broadcast.broadcastGMMessage(
-                    CWvsContext.broadcastMsg(6, "[GM Message] " + MapleCharacterUtil.makeMapleReadable(chr.getName())
-                            + " said (" + chattype + "): " + chattext));
-
         }
-        if (chattext.length() <= 0 || CommandProcessor.processCommand(c, chattext, CommandType.NORMAL)) {
+        if (chattext.length() <= 0) {
             return;
         }
         chr.getCheatTracker().checkMsg();

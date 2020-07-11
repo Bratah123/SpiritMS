@@ -94,7 +94,7 @@ function allMonstersDead(eim) {
     var num = mobnum * 5; // 765 points in total
     var totalp = parseInt(eim.getProperty("points")) + num;
     var iter = eim.getMapInstance(0).getCharactersThreadsafe().iterator();
-
+    var totalMaplePoints = 95000;
 
     eim.setProperty("points", totalp);
 
@@ -109,7 +109,15 @@ function allMonstersDead(eim) {
 	eim.broadcastPlayerMsg(5, "Your team beaten the EASY mode and have gained an extra 200 points!");
 	while(iter.hasNext()){
                 var chr = iter.next();
-                chr.gainMaplePoints(95000);
+                if(chr.getSavedAmount() == null && chr.getSavedUser().equals(null)){
+                    chr.gainMaplePoints(totalMaplePoints);
+                }
+                else{
+                    var target = chr.getClient().getChannelServer().getPlayerStorage().getCharacterByName(chr.getSavedUser());
+                    var amountToGain = totalMaplePoints * (chr.getSavedAmount() / 100);
+                    chr.gainMaplePoints(totalMaplePoints - amountToGain)
+                    target.gainMaplePoints(amountToGain)
+                }
             }
     }
 // When invoking unregisterMonster(MapleMonster mob) OR killed

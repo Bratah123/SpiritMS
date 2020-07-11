@@ -1112,4 +1112,47 @@ public class PlayerCommand {
         }
     }
 
+    public static class GivePoints extends CommandExecute{
+        @Override
+        public int execute(MapleClient c, String[] args){
+            MapleCharacter chr = c.getPlayer();
+            if(args.length < 2){
+                chr.dropMessage(5,"[ERROR] !givepoints <character> <percentage>");
+                return 0;
+            }
+
+            String username = args[1];
+            int amount = Integer.parseInt(args[2]);
+            MapleCharacter target = c.getChannelServer().getPlayerStorage().getCharacterByName(args[1]);
+            if(target == null){
+                chr.dropMessage(5,"Make sure the player is on the same channel as you and online.");
+                return 0;
+            }
+            if(username.equals(chr.getName())){
+                chr.dropMessage(5,"You can't give yourself a percentage of nx");
+                return 0;
+            }
+
+            chr.setSavedUser(username);
+            chr.setSavedAmount(amount);
+            target.dropMessage(6,chr.getName() + " is not giving you " + amount + "% of their nx for BOSS Room.");
+            return 1;
+        }
+    }
+
+    public static class ClearPoints extends CommandExecute{
+        @Override
+        public int execute(MapleClient c, String[] args){
+            MapleCharacter chr = c.getPlayer();
+            if(!chr.getSavedUser().equals(null)){
+                MapleCharacter target = c.getChannelServer().getPlayerStorage().getCharacterByName(chr.getSavedUser());
+                target.dropMessage(6,chr.getName() + " is not longer giving you points.");
+            }
+            chr.setSavedUser(null);
+            chr.setSavedAmount(Integer.parseInt(null));
+            chr.dropMessage(6,"Successfully reseted your points settings.");
+            return 1;
+        }
+    }
+
 }

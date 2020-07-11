@@ -27,13 +27,12 @@ var onyxWep = [
 	1322205 // Onyx Maple Mace
 ];
 var onyxEqp = [
-    //1052612, // onyx Maple suit
+    1052612, // onyx Maple suit
 	1102562, // Onyx Maple Cape
 	1003863, // Onyx Maple Hat
 	1122252, // Onyx Maple Pendant
 	1132228, // Onyx Maple Buckle
 	1012376 // Onyx Maple Gum
-	//1113034, onyx Maple ring
 ];
 
 var pearlWep = [
@@ -56,6 +55,7 @@ var pearlWep = [
 	1322207 // Pearl Maple Mace
 ];
 var pearlEqp = [
+    1052613, // Pearl Maple Suit
 	1102563, // Pearl Maple Cape
 	1003864, // Pearl Maple Hat
 	1122253, // Pearl Maple Pendant

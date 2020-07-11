@@ -1716,7 +1716,6 @@ public class InventoryHandler {
                         c.getPlayer().dropMessage(5, "Make some space.");
                     }
                     break;
-
                 case 2430218:
                 case 2430230:
                 case 2430473:
@@ -2331,13 +2330,26 @@ public class InventoryHandler {
                     NPCScriptManager.getInstance().start(c, 9010010, "consume_2430611");
                     break;
                 }
-                case 2431676:
-                    NPCScriptManager.getInstance().start(c,  9010010, "Maple_Beryl");
-
+                case 2431676: {
+                    NPCScriptManager.getInstance().start(c, 9010010, "Maple_Beryl");
+                    break;
+                }
                 case 2430182:   {
                     NPCScriptManager.getInstance().start(c,  9010010, "SBC");
                     break;
-                 }
+                }
+                case 2431892: { //Mastery Book 20
+                    NPCScriptManager.getInstance().start(c, 9010010, "INSERT 20 MASTERY BOOK SCRIPT HERE");
+                    break;
+                }
+                case 2431936: { //Mastery Book 20
+                    NPCScriptManager.getInstance().start(c, 9010010, "INSERT 30 MASTERY BOOK SCRIPT HERE");
+                    break;
+                }
+                case 2431349: { // Surprising Growth Crystal
+                    NPCScriptManager.getInstance().start(c, 9010010, "consume_2431349");
+                    break;
+                }
                 case 2430690: {
                     if (c.getPlayer().getInventory(MapleInventoryType.CASH).getNumFreeSlot() >= 1 && c.getPlayer().getInventory(MapleInventoryType.EQUIP).getNumFreeSlot() >= 1) {
                         if (Randomizer.nextInt(100) < 30) { //30% for Hilla's Pet
@@ -2359,9 +2371,11 @@ public class InventoryHandler {
                     break;
                 }
                 case 2430403: {// Sapphire EXP Coupon
+                    expiration_days = 1;
                     if (c.getPlayer().getInventory(MapleInventoryType.CASH).getNumFreeSlot() >= 1) {
                         if (MapleInventoryManipulator.checkSpace(c, 5211067, 1, "") && MapleInventoryManipulator.removeById(c, MapleInventoryType.USE, toUse.getItemId(), 1, true, false)) {
                             MapleInventoryManipulator.addById(c, 5211067, (short) 1, "Scripted item: " + toUse.getItemId() + " on " + FileoutputUtil.CurrentReadable_Date());
+
                         } else {
                             c.getPlayer().dropMessage(0, "Please make more space");
                         }
@@ -2371,6 +2385,7 @@ public class InventoryHandler {
                     break;
                 }
                 case 2430404: {// Ruby EXP Coupon
+                    expiration_days = 1;
                     if (c.getPlayer().getInventory(MapleInventoryType.CASH).getNumFreeSlot() >= 1) {
                         if (MapleInventoryManipulator.checkSpace(c, 5211068, 1, "") && MapleInventoryManipulator.removeById(c, MapleInventoryType.USE, toUse.getItemId(), 1, true, false)) {
                             MapleInventoryManipulator.addById(c, 5211068, (short) 1, "Scripted item: " + toUse.getItemId() + " on " + FileoutputUtil.CurrentReadable_Date());

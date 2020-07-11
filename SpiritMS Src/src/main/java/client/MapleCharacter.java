@@ -164,6 +164,8 @@ public class MapleCharacter extends AnimatedMapleMapObject implements Serializab
      * Start of Custom Feature
      */
     private int reborns, apstorage;
+    private String savedUser = "f";
+    private int savedAmount = -1;
     /*
      * End of Custom Feature
      */
@@ -180,8 +182,6 @@ public class MapleCharacter extends AnimatedMapleMapObject implements Serializab
     private List<MaplePotionPot> potionPots;
     private int deathCount = 0;
     private MapleMarriage marriage;
-    public String savedUser = null;
-    public int savedAmount = Integer.parseInt(null);
 
     private MapleCharacter(final boolean ChannelServer) {
         setStance(0);
@@ -304,6 +304,8 @@ public class MapleCharacter extends AnimatedMapleMapObject implements Serializab
             friendshippoints = new int[4];
             coreAura = new MapleCoreAura(id, 24 * 60);
             potionPots = new ArrayList<>();
+//            savedUser = null;
+//            savedAmount = Integer.parseInt(null);
         }
     }
 
@@ -335,6 +337,8 @@ public class MapleCharacter extends AnimatedMapleMapObject implements Serializab
         ret.starterquest = 0;
         ret.starterquestid = 0;
         ret.evoentry = 5;
+//        ret.savedUser = null;
+//        ret.savedAmount = Integer.parseInt(null);
 
         try {
             Connection con = DatabaseConnection.getConnection();
@@ -437,6 +441,8 @@ public class MapleCharacter extends AnimatedMapleMapObject implements Serializab
          */
         ret.reborns = ct.reborns;
         ret.apstorage = ct.apstorage;
+        //ret.savedUser = ct.savedUser;
+        //ret.savedAmount = ct.savedAmount;
         /*
          * End of Custom Feature
          */

@@ -175,7 +175,7 @@ function allMonstersDead(eim) {
 	eim.broadcastPlayerMsg(5, "Your team beaten the MED mode and have gained an extra 1000 points!");
 	while(iter.hasNext()){
                 var chr = iter.next();
-                if(chr.getSavedAmount() == null && chr.getSavedUser().equals(null)){
+                if(chr.getSavedAmount() < 0 && chr.getSavedUser().equals("f")){
                     chr.gainMaplePoints(totalMaplePoints);
                 }
                 else{

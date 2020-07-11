@@ -1144,12 +1144,12 @@ public class PlayerCommand {
         @Override
         public int execute(MapleClient c, String[] args){
             MapleCharacter chr = c.getPlayer();
-            if(!chr.getSavedUser().equals(null)){
+            if(!chr.getSavedUser().equals("f")){
                 MapleCharacter target = c.getChannelServer().getPlayerStorage().getCharacterByName(chr.getSavedUser());
                 target.dropMessage(6,chr.getName() + " is not longer giving you points.");
             }
-            chr.setSavedUser(null);
-            chr.setSavedAmount(Integer.parseInt(null));
+            chr.setSavedUser("f");
+            chr.setSavedAmount(-1);
             chr.dropMessage(6,"Successfully reseted your points settings.");
             return 1;
         }

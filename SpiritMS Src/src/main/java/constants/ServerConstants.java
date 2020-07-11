@@ -58,7 +58,7 @@ public class ServerConstants {
     public static final boolean BLOCK_CS = false;  //true = cash shop disabled
     public static final boolean Old_Maps = false; //example: it will use old maple event's henesys instead of current one
     public static final boolean Use_Localhost = false; //true = packets are logged, false = others can connect to server
-    public static final boolean Redirector = true; //false = not using redirector
+    public static final boolean Redirector = false; //false = not using redirector
     public static final boolean LOG_SHARK = false;  //true = enable shark to log 
     public static boolean MultiLevel = true; //true = enable multi leveling
     public static final boolean AntiKS = false;

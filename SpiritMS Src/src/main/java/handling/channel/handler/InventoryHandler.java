@@ -2358,6 +2358,30 @@ public class InventoryHandler {
                     }
                     break;
                 }
+                case 2430403: {// Sapphire EXP Coupon
+                    if (c.getPlayer().getInventory(MapleInventoryType.CASH).getNumFreeSlot() >= 1) {
+                        if (MapleInventoryManipulator.checkSpace(c, 5211067, 1, "") && MapleInventoryManipulator.removeById(c, MapleInventoryType.USE, toUse.getItemId(), 1, true, false)) {
+                            MapleInventoryManipulator.addById(c, 5211067, (short) 1, "Scripted item: " + toUse.getItemId() + " on " + FileoutputUtil.CurrentReadable_Date());
+                        } else {
+                            c.getPlayer().dropMessage(0, "Please make more space");
+                        }
+                    } else {
+                        c.getPlayer().dropMessage(0, "Please make more space");
+                    }
+                    break;
+                }
+                case 2430404: {// Ruby EXP Coupon
+                    if (c.getPlayer().getInventory(MapleInventoryType.CASH).getNumFreeSlot() >= 1) {
+                        if (MapleInventoryManipulator.checkSpace(c, 5211068, 1, "") && MapleInventoryManipulator.removeById(c, MapleInventoryType.USE, toUse.getItemId(), 1, true, false)) {
+                            MapleInventoryManipulator.addById(c, 5211068, (short) 1, "Scripted item: " + toUse.getItemId() + " on " + FileoutputUtil.CurrentReadable_Date());
+                        } else {
+                            c.getPlayer().dropMessage(0, "Please make more space");
+                        }
+                    } else {
+                        c.getPlayer().dropMessage(0, "Please make more space");
+                    }
+                    break;
+                }
                 case 2431855: {//First Explorer Gift Box
                     if (c.getPlayer().getInventory(MapleInventoryType.EQUIP).getNumFreeSlot() >= 2 && c.getPlayer().getInventory(MapleInventoryType.USE).getNumFreeSlot() >= 2) {
                         if (MapleInventoryManipulator.checkSpace(c, 1052646, 1, "") && MapleInventoryManipulator.removeById(c, MapleInventoryType.USE, toUse.getItemId(), 1, true, false)) {

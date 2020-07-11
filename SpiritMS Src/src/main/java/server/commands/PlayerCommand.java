@@ -1139,6 +1139,19 @@ public class PlayerCommand {
             return 1;
         }
     }
+    public static class PointsSettings extends CommandExecute {
+        @Override
+        public int execute(MapleClient c, String[] args){
+            MapleCharacter chr = c.getPlayer();
+            if(chr.getSavedUser().equals("f") && chr.getSavedAmount() < 0){
+                chr.dropMessage(6,"You are currently not giving anyone points.");
+            }
+            else{
+                chr.dropMessage(6,"You are currently giving " + chr.getSavedUser() + " " + chr.getSavedAmount() + "% of your NX(BOSS Room only).");
+            }
+            return 1;
+        }
+    }
 
     public static class ClearPoints extends CommandExecute{
         @Override

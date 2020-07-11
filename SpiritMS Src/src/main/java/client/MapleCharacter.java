@@ -5339,9 +5339,21 @@ public class MapleCharacter extends AnimatedMapleMapObject implements Serializab
                 case 100:
                     changeJob((short) 2112);
                     break;
-            }    
-            
-    }
+            }
+        } else if (GameConstants.isMihile(job)) {
+            switch (getLevel()) {
+                case 30:
+                    changeJob((short) 5110);
+                    break;
+                case 60:
+                    changeJob((short) 5111);
+                    break;
+                case 100:
+                    changeJob((short) 5112);
+                    break;
+            }
+
+        }
   }       
 
     public void sendPolice(int greason, String reason, int duration) {

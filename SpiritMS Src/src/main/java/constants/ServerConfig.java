@@ -11,7 +11,7 @@ public class ServerConfig {
     public static boolean logAccounts = false; //Writes to a loose file called Account, unhashed.
     public static boolean DISABLE_PIC = false;
     public static final int flags = 3;
-    public static final String serverName = "Amoria";
+    public static final String serverName = "SpiritMS";
     public static final String eventMessage = "v146 SpiritMS Development!";
     public static final String rankingURL = "";
     public static final int flag = 3;

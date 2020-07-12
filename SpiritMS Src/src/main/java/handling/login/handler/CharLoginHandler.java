@@ -360,16 +360,175 @@ public class CharLoginHandler {
         if (hairColor < 0) {
             hairColor = 0;
         }
-        if (job !=JobType.Cannoneer) {
+        if (job !=JobType.Resistance) {
+            newchar.setLevel((short) 10);
+            newchar.setRemainingAp(68);
+            newchar.getStat().maxhp = 800;
+            newchar.getStat().hp = 800;
+            newchar.getStat().maxmp = 800;
+            newchar.getStat().mp = 800;
+            newchar.setRemainingSp(9);
+        }
+        else if (job !=JobType.Adventurer) {
+            newchar.setLevel((short) 10);
+            newchar.setRemainingAp(68);
+            newchar.getStat().maxhp = 800;
+            newchar.getStat().hp = 800;
+            newchar.getStat().maxmp = 800;
+            newchar.getStat().mp = 800;
+            newchar.setRemainingSp(8);
+        }
+        else if (job !=JobType.Cygnus) {
+            newchar.setLevel((short) 10);
+            newchar.setRemainingAp(68);
+            newchar.getStat().maxhp = 800;
+            newchar.getStat().hp = 800;
+            newchar.getStat().maxmp = 800;
+            newchar.getStat().mp = 800;
+            newchar.setRemainingSp(8);
+        }
+        else if (job !=JobType.Aran) {
+            newchar.setJob((short) 2100);
+            newchar.setLevel((short) 10);
+            newchar.getStat().str = 68;
+            newchar.getStat().maxhp = 800;
+            newchar.getStat().hp = 800;
+            newchar.getStat().maxmp = 800;
+            newchar.getStat().mp = 800;
+            newchar.setRemainingSp(3);
+        }
+        else if (job !=JobType.Evan) {
+            newchar.setJob((short) 2200);
+            newchar.setLevel((short) 10);
+            newchar.getStat().int_ = 68;
+            newchar.getStat().maxhp = 800;
+            newchar.getStat().hp = 800;
+            newchar.getStat().maxmp = 800;
+            newchar.getStat().mp = 800;
+            newchar.setRemainingSp(3);
+        }
+        else if (job !=JobType.Mercedes) {
+            newchar.setJob((short) 2300);
+            newchar.setLevel((short) 10);
+            newchar.getStat().dex = 68;
+            newchar.getStat().maxhp = 800;
+            newchar.getStat().hp = 800;
+            newchar.getStat().maxmp = 800;
+            newchar.getStat().mp = 800;
+            newchar.setRemainingSp(3);
+        }
+        else if (job !=JobType.Luminous) {
+            newchar.setJob((short) 2700);
+            newchar.setLevel((short) 10);
+            newchar.getStat().int_ = 68;
+            newchar.getStat().maxhp = 800;
+            newchar.getStat().hp = 800;
+            newchar.getStat().maxmp = 800;
+            newchar.getStat().mp = 800;
+            newchar.setRemainingSp(3);
+        }
+        else if (job !=JobType.Phantom) {
+            newchar.setJob((short) 2400);
+            newchar.setLevel((short) 10);
+            newchar.getStat().luk = 68;
+            newchar.getStat().maxhp = 800;
+            newchar.getStat().hp = 800;
+            newchar.getStat().maxmp = 800;
+            newchar.getStat().mp = 800;
+            newchar.setRemainingSp(3);
+        }
+        else if (job !=JobType.BeastTamer) {
+            newchar.setJob((short) 11212);
+            newchar.setLevel((short) 10);
+            newchar.getStat().int_ = 68;
+            newchar.getStat().maxhp = 800;
+            newchar.getStat().hp = 800;
+            newchar.getStat().maxmp = 800;
+            newchar.getStat().mp = 800;
+            newchar.setRemainingSp(3);
+        }
+        else if (job !=JobType.Demon) {
+            newchar.setJob((short) 3100);
+            newchar.setLevel((short) 10);
+            newchar.setRemainingAp(68);
+            newchar.getStat().maxhp = 800;
+            newchar.getStat().hp = 800;
+            newchar.getStat().maxmp = 800;
+            newchar.getStat().mp = 800;
+            newchar.setRemainingSp(3);
+        }
+        else if (job !=JobType.Xenon) {
+            newchar.setJob((short) 3600);
+            newchar.setLevel((short) 10);
+            newchar.setRemainingAp(68);
+            newchar.getStat().maxhp = 800;
+            newchar.getStat().hp = 800;
+            newchar.getStat().maxmp = 800;
+            newchar.getStat().mp = 800;
+            newchar.setRemainingSp(3);
+        }
+        else if (job !=JobType.Cannoneer) {
             newchar.setSubcategory(2);
+            newchar.setJob((short) 501);
+            newchar.setLevel((short) 10);
+            newchar.getStat().str = 68;
+            newchar.getStat().maxhp = 800;
+            newchar.getStat().hp = 800;
+            newchar.getStat().maxmp = 800;
+            newchar.getStat().mp = 800;
+            newchar.setRemainingSp(3);
         }
-        
-        if (job !=JobType.Jett) {
+        else if (job !=JobType.Kaiser) {
+            newchar.setJob((short) 6100);
+            newchar.setLevel((short) 10);
+            newchar.getStat().str = 68;
+            newchar.getStat().maxhp = 800;
+            newchar.getStat().hp = 800;
+            newchar.getStat().maxmp = 800;
+            newchar.getStat().mp = 800;
+            newchar.setRemainingSp(3);
+        }
+        else if (job !=JobType.Hayato) {
+            newchar.setJob((short) 4100);
+            newchar.setLevel((short) 10);
+            newchar.getStat().str = 68;
+            newchar.getStat().maxhp = 800;
+            newchar.getStat().hp = 800;
+            newchar.getStat().maxmp = 800;
+            newchar.getStat().mp = 800;
+            newchar.setRemainingSp(3);
+        }
+        else if (job !=JobType.Kanna) {
+            newchar.setJob((short) 4200);
+            newchar.setLevel((short) 10);
+            newchar.getStat().int_ = 68;
+            newchar.getStat().maxhp = 800;
+            newchar.getStat().hp = 800;
+            newchar.getStat().maxmp = 30;
+            newchar.getStat().mp = 30;
+            newchar.setRemainingSp(3);
+        }
+        else if (job !=JobType.Jett) {
             newchar.setSubcategory(10);
+            newchar.setJob((short) 508);
+            newchar.setLevel((short) 10);
+            newchar.getStat().dex = 68;
+            newchar.getStat().maxhp = 800;
+            newchar.getStat().hp = 800;
+            newchar.getStat().maxmp = 800;
+            newchar.getStat().mp = 800;
+            newchar.setRemainingSp(3);
         }
-    
-        if (job !=JobType.DualBlade) {
+        else if (job !=JobType.DualBlade) {
             newchar.setSubcategory(1);
+            newchar.setJob((short) 400);
+            newchar.setLevel((short) 10);
+            newchar.getStat().luk = 68;
+            newchar.getStat().maxhp = 800;
+            newchar.getStat().hp = 800;
+            newchar.getStat().maxmp = 800;
+            newchar.getStat().mp = 800;
+            newchar.setRemainingSp(3);
         }
         if (job != JobType.Mihile) {
             hair += hairColor;

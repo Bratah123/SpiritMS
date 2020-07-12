@@ -64,7 +64,7 @@ public class ServerConstants {
     public static final boolean AntiKS = false;
     public static final int miracleRate = 1; //cube tier up rate
     public static final byte SHOP_DISCOUNT = 0; //Discount Rate (%) Higher than 100 or lower than 1 means no discount
-    public static final int BUFFED_CHANNELS = 1;
+    public static final int BUFFED_CHANNELS = 3;
 
         // Login Backgrounds
     public static Triple<String, Integer, Boolean>[] backgrounds = new Triple[]{ //boolean for randomize

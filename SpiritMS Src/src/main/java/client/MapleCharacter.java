@@ -164,6 +164,8 @@ public class MapleCharacter extends AnimatedMapleMapObject implements Serializab
      * Start of Custom Feature
      */
     private int reborns, apstorage;
+    private String savedUser = "f";
+    private int savedAmount = -1;
     /*
      * End of Custom Feature
      */
@@ -180,7 +182,6 @@ public class MapleCharacter extends AnimatedMapleMapObject implements Serializab
     private List<MaplePotionPot> potionPots;
     private int deathCount = 0;
     private MapleMarriage marriage;
-    public String savedUser = null;
 
     private MapleCharacter(final boolean ChannelServer) {
         setStance(0);
@@ -303,6 +304,8 @@ public class MapleCharacter extends AnimatedMapleMapObject implements Serializab
             friendshippoints = new int[4];
             coreAura = new MapleCoreAura(id, 24 * 60);
             potionPots = new ArrayList<>();
+//            savedUser = null;
+//            savedAmount = Integer.parseInt(null);
         }
     }
 
@@ -334,6 +337,8 @@ public class MapleCharacter extends AnimatedMapleMapObject implements Serializab
         ret.starterquest = 0;
         ret.starterquestid = 0;
         ret.evoentry = 5;
+//        ret.savedUser = null;
+//        ret.savedAmount = Integer.parseInt(null);
 
         try {
             Connection con = DatabaseConnection.getConnection();
@@ -436,6 +441,8 @@ public class MapleCharacter extends AnimatedMapleMapObject implements Serializab
          */
         ret.reborns = ct.reborns;
         ret.apstorage = ct.apstorage;
+        //ret.savedUser = ct.savedUser;
+        //ret.savedAmount = ct.savedAmount;
         /*
          * End of Custom Feature
          */
@@ -5339,9 +5346,21 @@ public class MapleCharacter extends AnimatedMapleMapObject implements Serializab
                 case 100:
                     changeJob((short) 2112);
                     break;
-            }    
-            
-    }
+            }
+        } else if (GameConstants.isMihile(job)) {
+            switch (getLevel()) {
+                case 30:
+                    changeJob((short) 5110);
+                    break;
+                case 60:
+                    changeJob((short) 5111);
+                    break;
+                case 100:
+                    changeJob((short) 5112);
+                    break;
+            }
+
+        }
   }       
 
     public void sendPolice(int greason, String reason, int duration) {
@@ -10836,7 +10855,16 @@ public class MapleCharacter extends AnimatedMapleMapObject implements Serializab
         return maplepoints;
     }
 
+    public String getSavedUser(){
+        return savedUser;
+    }
     public void setSavedUser(String user){
         savedUser = user;
+    }
+    public int getSavedAmount(){
+        return savedAmount;
+    }
+    public void setSavedAmount(int amount){
+        savedAmount = amount;
     }
 }

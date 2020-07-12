@@ -229,7 +229,7 @@ public class World {
                 }
             }
         }
-        
+
 public static void partyChat(final int partyid, final String chattext, final String namefrom, final int mode) {
     final MapleParty party = getParty(partyid);
     if (party == null) {

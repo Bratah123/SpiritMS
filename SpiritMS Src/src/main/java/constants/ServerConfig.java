@@ -11,7 +11,7 @@ public class ServerConfig {
     public static boolean logAccounts = false; //Writes to a loose file called Account, unhashed.
     public static boolean DISABLE_PIC = false;
     public static final int flags = 3;
-    public static final String serverName = "Amoria";
+    public static final String serverName = "SpiritMS";
     public static final String eventMessage = "v146 SpiritMS Development!";
     public static final String rankingURL = "";
     public static final int flag = 3;
@@ -21,7 +21,7 @@ public class ServerConfig {
     public static final String scrollingMessage = "";
     public static final int userLimit = 1500;
     public static String interface_;
-    public static final int channelCount = 3;
+    public static final int channelCount = 6;
     public static final String events = "" + "AutomatedEvent," + "EvolutionLab,PinkZakumEntrance,PVP,CygnusBattle,ScarTarBattle,BossBalrog_EASY,BossBalrog_NORMAL,HorntailBattle,Nibergen,PinkBeanBattle,ZakumBattle,NamelessMagicMonster,Dunas,Dunas2,2095_tokyo,ZakumPQ,LudiPQ,KerningPQ,ProtectTylus,WitchTower_EASY,WitchTower_Med,WitchTower_Hard,Vergamot,ChaosHorntail,ChaosZakum,CoreBlaze,BossQuestEASY,BossQuestMed,BossQuestHARD,BossQuestHELL,BossQuestCHAOS,Ravana_EASY,Ravana_HARD,Ravana_MED,GuildQuest,Aufhaven,Dragonica,Rex,MonsterPark,KentaPQ,ArkariumBattle,AswanOffSeason,HillaBattle,The Dragon Shout,VonLeonBattle,Ghost,OrbisPQ,Romeo,Juliet,Pirate,Amoria,Ellin,CWKPQ,DollHouse,Kenta,Prison,Azwan,HenesysPQ,jett2ndjob,cpq,cpq2,Rex,Trains,Boats,Flight,Visitor,AirPlane,Ghost,PinkBeanBattle,Aswan,AswanOffSeason,Subway,PierreBattle,PierreEasy,QueenBattle,QueenEasy,VellumBattle,VellumEasy,VonBonBattle,VonBonEasy,EasyMagnus,MagnusBattle";
     // Scripts TODO: Amoria,CWKPQ,BossBalrog_EASY,BossBalrog_NORMAL,ZakumPQ,ProtectTylus,GuildQuest,Ravana_EASY,Ravna_MED,Ravana_HARD (untested or not working)
     

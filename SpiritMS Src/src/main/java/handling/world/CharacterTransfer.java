@@ -61,6 +61,9 @@ public class CharacterTransfer implements Externalizable {
     /*Start of Custom Feature*/
     /*All custom shit declare here*/
     public int reborns, apstorage, str, dex, int_, luk, remainingAp;
+    public String savedUser;
+    public int savedAmount;
+
     /*End of Custom Feature*/
 
     public CharacterTransfer() {
@@ -111,6 +114,8 @@ public class CharacterTransfer implements Externalizable {
          */
         this.reborns = chr.getReborns();
         this.apstorage = chr.getAPS();
+//        this.savedUser = chr.getSavedUser();
+//        this.savedAmount = chr.getSavedAmount();
         /*
          * End of Custom Feature
          */

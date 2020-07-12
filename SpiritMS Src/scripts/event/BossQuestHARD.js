@@ -137,6 +137,8 @@ function allMonstersDead(eim) {
     var mobnum = parseInt(eim.getProperty("monster_number"));
     var num = mobnum * 85;
     var totalp = parseInt(eim.getProperty("points")) + num;
+    var iter = eim.getMapInstance(0).getCharactersThreadsafe().iterator();
+    var totalMaplePoints = 400000;
 
     eim.setProperty("points", totalp);
 
@@ -149,6 +151,18 @@ function allMonstersDead(eim) {
 	} else {
 		eim.saveBossQuest(3000);
 		eim.broadcastPlayerMsg(5, "Your team've beaten the HARD mode and have gained an extra 3,000 points!");
+	    while(iter.hasNext()){
+                var chr = iter.next();
+                if(chr.getSavedAmount() < 0 && chr.getSavedUser().equals("f")){
+                    chr.gainMaplePoints(totalMaplePoints);
+                }
+                else{
+                    var target = chr.getClient().getChannelServer().getPlayerStorage().getCharacterByName(chr.getSavedUser());
+                    var amountToGain = totalMaplePoints * (chr.getSavedAmount() / 100);
+                    chr.gainMaplePoints(totalMaplePoints - amountToGain)
+                    target.gainMaplePoints(amountToGain)
+                }
+            }
     }
 // When invoking unregisterMonster(MapleMonster mob) OR killed
 // Happens only when size = 0

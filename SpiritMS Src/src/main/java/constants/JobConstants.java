@@ -30,7 +30,7 @@ public class JobConstants {
         AngelicBuster(12, JobFlag.ENABLED),
         Cannoneer(13, JobFlag.ENABLED),
         Xenon(14, JobFlag.ENABLED),
-        Zero(15, JobFlag.ENABLED),
+        Zero(15, JobFlag.DISABLED),
         Jett(16, JobFlag.ENABLED),
         Hayato(17, JobFlag.ENABLED),
         Kanna(18, JobFlag.ENABLED),

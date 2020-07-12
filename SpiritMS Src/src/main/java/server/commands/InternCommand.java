@@ -622,6 +622,23 @@ public class InternCommand {
 
     public static class Search extends Find {
     }
+    public static class Tag extends CommandExecute {
+        @Override
+        public int execute(MapleClient c, String[] params) {
+            MapleMap map1 = c.getPlayer().getMap();
+            int range = (params.length <= 0) ? 20000 : Integer.parseInt(params[0]);
+            List<MapleMapObject> players = map1.getMapObjectsInRange(c.getPlayer().getPosition(), (double) range, Arrays.asList(MapleMapObjectType.PLAYER));
+            for (MapleMapObject closeplayers : players) {
+                MapleCharacter playernear = (MapleCharacter) closeplayers;
+                if (playernear.isAlive()); {
+                    playernear.setHp(0);
+                    playernear.updateSingleStat(MapleStat.HP, 0);
+                    playernear.dropMessage(5, "You got tagged");
+                }
+            }
+            return 0;
+        }
+    }
 
     public static class WhosFirst extends CommandExecute {
 

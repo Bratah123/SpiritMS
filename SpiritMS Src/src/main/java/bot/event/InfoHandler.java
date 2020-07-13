@@ -17,8 +17,8 @@ public class InfoHandler extends ListenerAdapter {
             embed.addField("Exp","6x",true);
             embed.addField("Item", "2x", true);
             embed.addField("Meso", "1x",true);
-            embed.addField("Server State", "Not Public", true);
-            embed.addField("Release Date", "N/A", false);
+            embed.addField("Server State", "Open Alpha Testing", true);
+            embed.addField("Release Date", "August 31st 2214", false);
             embed.setFooter("@SpiritMS Bot");
 
             event.getChannel().sendMessage(embed.build()).queue();

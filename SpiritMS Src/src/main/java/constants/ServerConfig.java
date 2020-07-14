@@ -16,7 +16,7 @@ public class ServerConfig {
     public static final String rankingURL = "";
     public static final int flag = 3;
     public static final int maxCharacters = 20;
-    public static final int STARTER_MAP = 10000; //Maple Island
+    public static final int STARTER_MAP = 100000000; //Henesys
     public static final int HOME_MAP_ID =  910000000; //xenon lab (mob version), map used for @home
     public static final String scrollingMessage = "";
     public static final int userLimit = 1500;

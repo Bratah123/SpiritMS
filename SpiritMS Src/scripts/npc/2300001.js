@@ -24,7 +24,6 @@ function action(mode, type, selection) {
         } 
     } else if (status == 1) { 
         cm.sendOk("Allright, here you go!");
-	cm.maxSkillsByJob();
 	cm.dispose()
 	}
 }

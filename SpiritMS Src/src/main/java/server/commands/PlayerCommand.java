@@ -797,7 +797,7 @@ public class PlayerCommand {
             sb.append("\r\n@check < Displays various information; also use if you are stuck or unable to talk to NPC >");
             //sb.append("\r\n@npc < Universal NPC >");
             sb.append("\r\n@callgm < Send a message to all online GameMasters.");
-            sb.append("\r\n@home < Warp to Amoria base >");
+            sb.append("\r\n@home < Warp to Spirit base >");
             sb.append("\r\n@fm < Warp to the FreeMarket instantly. >");
             sb.append("\r\n@job < Job advancements! >");
             sb.append("\r\n@save < Fixes your experience and saves your character >");
@@ -830,11 +830,11 @@ public class PlayerCommand {
             if (c.getPlayer().isInBlockedMap() || c.getPlayer().hasBlockedInventory()) {
                 c.getPlayer().dropMessage(5, "You may not use this command here.");
                 return 0;
-            } else if (c.getPlayer().getLevel() < 30) {
-                c.getPlayer().dropMessage(5, "You need to be at least lvl 30 in order to advance.");
+            } else if (c.getPlayer().getLevel() < 10) {
+                c.getPlayer().dropMessage(5, "You need to be at least lvl 10 in order to advance.");
                 return 0;
             } else {
-                NPCScriptManager.getInstance().start(c, 2300001, null);
+                NPCScriptManager.getInstance().start(c, 9900002, null);
                 return 1;
             }
         }
@@ -849,9 +849,6 @@ public class PlayerCommand {
                 return 0;
             }
             if(chr.getLevel() < 10){
-                c.getPlayer().setLevel((short)10);
-                c.getPlayer().updateSingleStat(MapleStat.LEVEL, 10);
-                c.getPlayer().setExp(0);
                 chr.changeMap(100000000, 0); // warp them to henesys
             }
             else{

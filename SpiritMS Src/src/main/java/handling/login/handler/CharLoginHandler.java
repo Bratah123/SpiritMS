@@ -355,199 +355,17 @@ public class CharLoginHandler {
         }
         MapleCharacter newchar = MapleCharacter.getDefault(c, job);
         newchar.setWorld((byte) c.getWorld());
+        newchar.setRemainingSp(3);
         newchar.setFace(face);
         newchar.setSecondFace(face);
         if (hairColor < 0) {
             hairColor = 0;
-        }
-        if (job !=JobType.Resistance) {
-            newchar.setLevel((short) 10);
-            newchar.setRemainingAp(68);
-            newchar.getStat().maxhp = 800;
-            newchar.getStat().hp = 800;
-            newchar.getStat().maxmp = 800;
-            newchar.getStat().mp = 800;
-            newchar.setRemainingSp(9);
-        }
-        else if (job !=JobType.Adventurer) {
-            newchar.setLevel((short) 10);
-            newchar.setRemainingAp(68);
-            newchar.getStat().maxhp = 800;
-            newchar.getStat().hp = 800;
-            newchar.getStat().maxmp = 800;
-            newchar.getStat().mp = 800;
-            newchar.setRemainingSp(8);
-        }
-        else if (job !=JobType.Cygnus) {
-            newchar.setLevel((short) 10);
-            newchar.setRemainingAp(68);
-            newchar.getStat().maxhp = 800;
-            newchar.getStat().hp = 800;
-            newchar.getStat().maxmp = 800;
-            newchar.getStat().mp = 800;
-            newchar.setRemainingSp(8);
-        }
-        else if (job !=JobType.Aran) {
-            newchar.setJob((short) 2100);
-            newchar.setLevel((short) 10);
-            newchar.getStat().str = 68;
-            newchar.getStat().maxhp = 800;
-            newchar.getStat().hp = 800;
-            newchar.getStat().maxmp = 800;
-            newchar.getStat().mp = 800;
-            newchar.setRemainingSp(3);
-        }
-        else if (job !=JobType.Evan) {
-            newchar.setJob((short) 2200);
-            newchar.setLevel((short) 10);
-            newchar.getStat().int_ = 68;
-            newchar.getStat().maxhp = 800;
-            newchar.getStat().hp = 800;
-            newchar.getStat().maxmp = 800;
-            newchar.getStat().mp = 800;
-            newchar.setRemainingSp(3);
-        }
-        else if (job !=JobType.Mercedes) {
-            newchar.setJob((short) 2300);
-            newchar.setLevel((short) 10);
-            newchar.getStat().dex = 68;
-            newchar.getStat().maxhp = 800;
-            newchar.getStat().hp = 800;
-            newchar.getStat().maxmp = 800;
-            newchar.getStat().mp = 800;
-            newchar.setRemainingSp(3);
-        }
-        else if (job !=JobType.Luminous) {
-            newchar.setJob((short) 2700);
-            newchar.setLevel((short) 10);
-            newchar.getStat().int_ = 68;
-            newchar.getStat().maxhp = 800;
-            newchar.getStat().hp = 800;
-            newchar.getStat().maxmp = 800;
-            newchar.getStat().mp = 800;
-            newchar.setRemainingSp(3);
-        }
-        else if (job !=JobType.Phantom) {
-            newchar.setJob((short) 2400);
-            newchar.setLevel((short) 10);
-            newchar.getStat().luk = 68;
-            newchar.getStat().maxhp = 800;
-            newchar.getStat().hp = 800;
-            newchar.getStat().maxmp = 800;
-            newchar.getStat().mp = 800;
-            newchar.setRemainingSp(3);
-        }
-        else if (job !=JobType.BeastTamer) {
-            newchar.setJob((short) 11212);
-            newchar.setLevel((short) 10);
-            newchar.getStat().int_ = 68;
-            newchar.getStat().maxhp = 800;
-            newchar.getStat().hp = 800;
-            newchar.getStat().maxmp = 800;
-            newchar.getStat().mp = 800;
-            newchar.setRemainingSp(3);
-        }
-        else if (job !=JobType.Demon) {
-            newchar.setJob((short) 3100);
-            newchar.setLevel((short) 10);
-            newchar.setRemainingAp(68);
-            newchar.getStat().maxhp = 800;
-            newchar.getStat().hp = 800;
-            newchar.getStat().maxmp = 800;
-            newchar.getStat().mp = 800;
-            newchar.setRemainingSp(3);
-        }
-        else if (job !=JobType.Xenon) {
-            newchar.setJob((short) 3600);
-            newchar.setLevel((short) 10);
-            newchar.setRemainingAp(68);
-            newchar.getStat().maxhp = 800;
-            newchar.getStat().hp = 800;
-            newchar.getStat().maxmp = 800;
-            newchar.getStat().mp = 800;
-            newchar.setRemainingSp(3);
-        }
-        else if (job !=JobType.Cannoneer) {
-            newchar.setSubcategory(2);
-            newchar.setJob((short) 501);
-            newchar.setLevel((short) 10);
-            newchar.getStat().str = 68;
-            newchar.getStat().maxhp = 800;
-            newchar.getStat().hp = 800;
-            newchar.getStat().maxmp = 800;
-            newchar.getStat().mp = 800;
-            newchar.setRemainingSp(3);
-        }
-        else if (job !=JobType.Kaiser) {
-            newchar.setJob((short) 6100);
-            newchar.setLevel((short) 10);
-            newchar.getStat().str = 68;
-            newchar.getStat().maxhp = 800;
-            newchar.getStat().hp = 800;
-            newchar.getStat().maxmp = 800;
-            newchar.getStat().mp = 800;
-            newchar.setRemainingSp(3);
-        }
-        else if (job !=JobType.Hayato) {
-            newchar.setJob((short) 4100);
-            newchar.setLevel((short) 10);
-            newchar.getStat().str = 68;
-            newchar.getStat().maxhp = 800;
-            newchar.getStat().hp = 800;
-            newchar.getStat().maxmp = 800;
-            newchar.getStat().mp = 800;
-            newchar.setRemainingSp(3);
-        }
-        else if (job !=JobType.Kanna) {
-            newchar.setJob((short) 4200);
-            newchar.setLevel((short) 10);
-            newchar.getStat().int_ = 68;
-            newchar.getStat().maxhp = 800;
-            newchar.getStat().hp = 800;
-            newchar.getStat().maxmp = 30;
-            newchar.getStat().mp = 30;
-            newchar.setRemainingSp(3);
-        }
-        else if (job !=JobType.Jett) {
-            newchar.setSubcategory(10);
-            newchar.setJob((short) 508);
-            newchar.setLevel((short) 10);
-            newchar.getStat().dex = 68;
-            newchar.getStat().maxhp = 800;
-            newchar.getStat().hp = 800;
-            newchar.getStat().maxmp = 800;
-            newchar.getStat().mp = 800;
-            newchar.setRemainingSp(3);
-        }
-        else if (job !=JobType.DualBlade) {
-            newchar.setSubcategory(1);
-            newchar.setJob((short) 400);
-            newchar.setLevel((short) 10);
-            newchar.getStat().luk = 68;
-            newchar.getStat().maxhp = 800;
-            newchar.getStat().hp = 800;
-            newchar.getStat().maxmp = 800;
-            newchar.getStat().mp = 800;
-            newchar.setRemainingSp(3);
         }
         if (job != JobType.Mihile) {
             hair += hairColor;
         }
         newchar.setHair(hair);
         newchar.setSecondHair(hair);
-        if (job == JobType.AngelicBuster) {
-            newchar.setSecondFace(21173);
-            newchar.setSecondHair(37141);
-            newchar.setJob((short) 6500);
-            newchar.setLevel((short) 10);
-            newchar.getStat().dex = 68;
-            newchar.getStat().maxhp = 1000;
-            newchar.getStat().hp = 1000;          
-            newchar.setRemainingSp(3);        
-        } else if (job == JobType.Zero) {
-            newchar.setSecondFace(21290);
-            newchar.setSecondHair(37623);
-        }
         newchar.setGender(gender);
         newchar.setName(name);
         newchar.setSkinColor(skin);
@@ -592,12 +410,22 @@ public class CharLoginHandler {
                 equip.addFromDB(item);
             }
         }
+
          if (job == JobType.AngelicBuster || job == JobType.Kaiser) {
              item = li.getEquipById(job == JobType.Kaiser ? 1352500 : 1352601);
                 item.setPosition((byte) -10);
                 item.setGMLog("Nova Shield");
                 equip.addFromDB(item);
          }
+        if (job == JobType.DualBlade) {
+            newchar.setSubcategory(1);
+        }
+        if (job == JobType.Cannoneer) {
+            newchar.setSubcategory(2);
+        }
+        if (job == JobType.Jett) {
+            newchar.setSubcategory(10);
+        }
         // Additional skills for all first job classes. Some skills are not added by default,
         // so adding the skill ID here between the {}, will give the skills you entered to the desired job.
         int[][] skills = new int[][]{
@@ -662,37 +490,6 @@ public class CharLoginHandler {
         if (guidebook > 0) {
             newchar.getInventory(MapleInventoryType.ETC).addItem(new Item(guidebook, (byte) 0, (short) 1, (byte) 0));
         }
-        if (job == JobType.Zero) {
-            newchar.setLevel((short) 100);
-            newchar.getStat().str = 518;
-            newchar.getStat().maxhp = 6910;
-            newchar.getStat().hp = 6910;
-            newchar.getStat().maxmp = 100;
-            newchar.getStat().mp = 100;
-            newchar.setRemainingSp(3, 0); //alpha
-            newchar.setRemainingSp(3, 1); //beta
-        }
-        if (job == JobType.BeastTamer) {
-            newchar.setJob((short) 11212);
-            newchar.setLevel((short) 10);
-            newchar.getStat().maxhp = 567;
-            newchar.getStat().hp = 551;
-            newchar.getStat().maxmp = 270;
-            newchar.getStat().mp = 263;
-            newchar.setRemainingAp(45);
-            newchar.setRemainingSp(3, 0);
-        }
-        if (job == JobType.Luminous) {
-            newchar.setJob((short) 2700);
-            newchar.setLevel((short) 10);
-            newchar.getStat().str = 4;
-            newchar.getStat().int_ = 57;
-            newchar.getStat().maxhp = 500;
-            newchar.getStat().hp = 500;
-            newchar.getStat().maxmp = 1000;
-            newchar.getStat().mp = 1000;            
-            newchar.setRemainingSp(3);            
-        }        
         if (MapleCharacterUtil.canCreateChar(name, c.isGm()) && (!LoginInformationProvider.getInstance().isForbiddenName(name) || c.isGm()) && (c.isGm() || c.canMakeCharacter(c.getWorld()))) {
             MapleCharacter.saveNewCharToDB(newchar, job, subcategory);
             c.getSession().write(LoginPacket.addNewCharEntry(newchar, true));

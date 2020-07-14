@@ -12,7 +12,8 @@ var job = [
 [[210, "Wizard (F/P)"], [220, "Wizard (I/L)"], [230, "Cleric"]],
 [[310, "Hunter"], [320, "Crossbow Man"]],
 [[410, "Assassin"], [420, "Bandit"]],
-[[510, "Brawler"], [520, "Gunslinger"]]];
+[[510, "Brawler"], [520, "Gunslinger"]],
+[[3100, "Demon Slayer"]]];
 var extrajobs = [
 [2300, "Mercedes"], [3100, "Demon Slayer"]
 ];
@@ -110,6 +111,9 @@ function action(mode, type, selection) {
             case 500: // Pirate
                 jobSelection(7);
                 break;
+            case 3001: // Demon Slayer
+                jobSelection(8);
+                break;
             //Special Jobs
             case 501: // Pirate(Cannoneer)
                 cm.getPlayer().changeJob(530);
@@ -137,10 +141,6 @@ function action(mode, type, selection) {
                 return;
             case 2004: // Luminous
                 cm.getPlayer().changeJob(2700);
-                cm.dispose();
-                return;
-            case 3001: // Demon Slayer
-                cm.getPlayer().changeJob(3100);
                 cm.dispose();
                 return;
             case 5000: // Nameless Warden (Mihile)
@@ -175,6 +175,7 @@ function action(mode, type, selection) {
             case 2400: // Phantom
             case 2700: // Luminous
             case 3100: // Demon Slayer
+            case 3101: // Demon Avenger
             case 3200: // Battle Mage
             case 3300: // Wild Hunter
             case 3500: // Mechanic
@@ -209,6 +210,7 @@ function action(mode, type, selection) {
             case 2410: // Phantom
             case 2710: // Luminous
             case 3110: // Demon Slayer
+            case 3120: // Demon Avenger
             case 3210: // Battle Mage
             case 3310: // Wild Hunter
             case 3510: // Mechanic
@@ -240,6 +242,7 @@ function action(mode, type, selection) {
             case 2411: // Phantom
             case 2711: // Luminous
             case 3111: // Demon Slayer
+            case 3121: // Demon Avenger
             case 3211: // Battle Mage
             case 3311: // Wild Hunter
             case 3511: // Mechanic

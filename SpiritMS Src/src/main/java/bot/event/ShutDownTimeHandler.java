@@ -36,7 +36,7 @@ public class ShutDownTimeHandler extends ListenerAdapter {
                     @Override
                     public void run() {
                         if (minutesLeft[0] == 0) {
-                            DiscordWebhook.sendServerStatusMessage("Server is down.","SpiritMS");
+                            DiscordWebhook.sendServerStatusMessage("The Server is now offline.","SpiritMS");
                             ShutdownServer.getInstance().shutdown();
                             finalT.start();
                             finalTs.cancel(false);

@@ -476,6 +476,15 @@ public class CharLoginHandler {
             if (job == JobType.Resistance){ // hacky fix for mech.
                 ss.put(SkillFactory.getSkill(35120000), new SkillEntry((byte) 1, (byte) 10, -1));
             }
+            if (job == JobType.Kaiser) {
+                ss.put(SkillFactory.getSkill(60001218), new SkillEntry((byte) 1, (byte) 1, -1));
+                ss.put(SkillFactory.getSkill(60001217), new SkillEntry((byte) 1, (byte) 1, -1));
+                ss.put(SkillFactory.getSkill(60001216), new SkillEntry((byte) 1, (byte) 1, -1));
+                ss.put(SkillFactory.getSkill(60000219), new SkillEntry((byte) 1, (byte) 1, -1));
+
+
+
+            }
             newchar.changeSkillLevel_Skip(ss, false);
         }
         int[][] guidebooks = new int[][]{{4161001, 0}, {4161047, 1}, {4161048, 2000}, {4161052, 2001}, {4161054, 3}, {4161079, 2002}};

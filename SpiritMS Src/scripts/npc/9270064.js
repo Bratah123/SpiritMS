@@ -62,9 +62,9 @@ function action(mode, type, selection)
 		if(selection == 500) // red cube
 		{
 			cubeSelection = 1;
-			if(equipment.getPotential1() == 0 && equipment.getPotential2() == 0 || equipment.getPotential1() < 40000)
+			if(equipment.getPotential1() == 0 && equipment.getPotential2() == 0)
 			{
-				cm.sendOk("Your item does not have a potential, or is not legendary.");
+				cm.sendOk("Your item does not have a potential.");
 				return cm.dispose();
 			}
 			else if(cm.getQuantityOfItem(redCube) <= 0)
@@ -81,10 +81,6 @@ function action(mode, type, selection)
 					if(basePot[i] == 0)
 					{
 							cubingDiag += "(None) ";
-					}
-					if(basePot[i] == 40056 || basePot[i] == 40057)
-					{
-						cubingDiag += "#g(Legendary)#k Critical Damage 8%";
 					}
 					else
 					{
@@ -119,15 +115,14 @@ function action(mode, type, selection)
 					cubingDiag += "\r\n"
 				}
 				cm.sendNext(cubingDiag + "#l");
-
 			}
 		}
 		else if(selection == 1000)
 		{
 			cubeSelection = 2;
-			if(equipment.getPotential4() == 0 && equipment.getPotential5() == 0 || equipment.getPotential4() < 40000)
+			if(equipment.getPotential4() == 0 && equipment.getPotential5() == 0)
 			{
-				cm.sendOk("Your item does not have a potential, or is not legendary.");
+				cm.sendOk("Your item does not have a potential.");
 				return cm.dispose();
 			}
 			else if(cm.getQuantityOfItem(bonusCube) <= 0)

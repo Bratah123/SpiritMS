@@ -62,7 +62,7 @@ function action(mode, type, selection)
 		if(selection == 500) // red cube
 		{
 			cubeSelection = 1;
-			if(equipment.getPotential1() == 0 && equipment.getPotential2() == 0 || equipment.getPotential1() < 40000)
+			if(equipment.getPotential1() == 0 && equipment.getPotential2() == 0)
 			{
 				cm.sendOk("Your item does not have a potential, or is not legendary.");
 				return cm.dispose();

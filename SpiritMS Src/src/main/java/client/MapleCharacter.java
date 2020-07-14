@@ -4076,7 +4076,7 @@ public class MapleCharacter extends AnimatedMapleMapObject implements Serializab
             dropMessage(5, "An item has run out of durability but has no inventory room to go to.");
         } //lol
         if (pyramidSubway != null) {
-            stats.setHp((short) 50, this);
+            setHp(50);
             setXenonSurplus((short) 0);
             pyramidSubway.fail(this);
         }

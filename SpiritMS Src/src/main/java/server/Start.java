@@ -244,7 +244,7 @@ public class Start {
         long seconds = now / 1000;
         long ms = now % 1000;
         System.out.println("Total loading time: " + seconds + "s " + ms + "ms");
-        DiscordWebhook.sendServerStatusMessage("Server is on.","SpiritMS");
+        DiscordWebhook.sendServerStatusMessage("The Server is now online.","SpiritMS");
         SpiritBot.start();
     }
 

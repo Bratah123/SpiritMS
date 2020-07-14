@@ -151,7 +151,7 @@ function action(mode, type, selection) {
 		}
 		
 		cm.gainItem(mapleLeaf, -2500);
-		cm.getChar().gainMeso(-3000000)
+		cm.getChar().gainMeso(-3000000, true)
 		cm.gainItem(pearlWep[itemSelected], 1);
 		cm.sendOk("Successfully purchased a #i" + pearlWep[itemSelected] + "#");
 		return cm.dispose();
@@ -167,7 +167,7 @@ function action(mode, type, selection) {
 			return cm.dispose();
 		}
 		cm.gainItem(mapleLeaf, -2500);
-		cm.getChar().gainMeso(-3000000)
+		cm.getChar().gainMeso(-3000000, true)
 		cm.gainItem(pearlEqp[itemSelected], 1);
 		cm.sendOk("Successfully purchased a #i" + pearlEqp[itemSelected] + "#");
 		return cm.dispose();
@@ -239,7 +239,7 @@ function action(mode, type, selection) {
 		}
 		
 		cm.gainItem(mapleLeaf, -5000);
-		cm.getChar().gainMeso(-5000000)
+		cm.getChar().gainMeso(-5000000, true)
 		cm.gainItem(pearlWep[itemSelected], -1);
 		cm.gainItem(onyxWep[itemSelected], 1);
 		cm.sendOk("Successfully purchased a #i" + onyxWep[itemSelected] + "#");
@@ -262,7 +262,7 @@ function action(mode, type, selection) {
 		
 		cm.gainItem(mapleLeaf, -5000);
 		cm.gainItem(pearlEqp[itemSelected], -1);
-		cm.getChar().gainMeso(-5000000)
+		cm.getChar().gainMeso(-5000000, true)
 		cm.gainItem(onyxEqp[itemSelected], 1);
 		cm.sendOk("Successfully purchased a #i" + onyxEqp[itemSelected] + "#");
 		return cm.dispose();

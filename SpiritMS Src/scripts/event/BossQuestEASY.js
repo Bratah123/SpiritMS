@@ -19,7 +19,6 @@ var monster = new Array(
     7220000, // Tae Roon
     7220002, // Ghost Priest
     8220002, // Chimera
-    6160003, //Xerxes
     8220001 // Yeti on Skis
     );
 

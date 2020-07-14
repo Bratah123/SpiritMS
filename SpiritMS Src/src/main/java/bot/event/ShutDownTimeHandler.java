@@ -1,5 +1,6 @@
 package bot.event;
 
+import bot.DiscordWebhook;
 import handling.world.World;
 import net.dv8tion.jda.api.Permission;
 import net.dv8tion.jda.api.events.message.guild.GuildMessageReceivedEvent;
@@ -35,7 +36,7 @@ public class ShutDownTimeHandler extends ListenerAdapter {
                     @Override
                     public void run() {
                         if (minutesLeft[0] == 0) {
-                            e.getGuild().getTextChannelById("722160746565468291").sendMessage("Server is down.").queue();
+                            DiscordWebhook.sendServerStatusMessage("Server is down.","SpiritMS");
                             ShutdownServer.getInstance().shutdown();
                             finalT.start();
                             finalTs.cancel(false);

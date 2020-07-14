@@ -1,5 +1,6 @@
 package bot.event;
 
+import bot.DiscordWebhook;
 import net.dv8tion.jda.api.Permission;
 import net.dv8tion.jda.api.events.message.guild.GuildMessageReceivedEvent;
 import net.dv8tion.jda.api.hooks.ListenerAdapter;
@@ -16,7 +17,7 @@ public class ShutDownHandler extends ListenerAdapter {
 
             if (t == null || !t.isAlive()) {
                 e.getChannel().sendMessage("Server now shutting down.").queue();
-                e.getGuild().getTextChannelById("722160746565468291").sendMessage("Server is down.").queue();
+                DiscordWebhook.sendServerStatusMessage("Server is down.","SpiritMS");
                 t = new Thread(ShutdownServer.getInstance());
                 ShutdownServer.getInstance().shutdown();
                 t.start();

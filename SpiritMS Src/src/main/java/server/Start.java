@@ -1,5 +1,6 @@
 package server;
 
+import bot.DiscordWebhook;
 import bot.SpiritBot;
 import client.SkillFactory;
 import client.inventory.MapleInventoryIdentifier;
@@ -243,6 +244,7 @@ public class Start {
         long seconds = now / 1000;
         long ms = now % 1000;
         System.out.println("Total loading time: " + seconds + "s " + ms + "ms");
+        DiscordWebhook.sendServerStatusMessage("Server is on.","SpiritMS");
         SpiritBot.start();
     }
 

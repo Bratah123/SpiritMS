@@ -40,7 +40,7 @@ public class LoginInformationProvider {
         Cygnus(2, 1000, 100000000, false, true, false, false, false, true, false, false),
         Aran(3, 2000, 100000000, true, true, false, false, true, false, false, false),
         Evan(4, 2001, 100000000, true, true, false, false, true, false, false, false),//evan starter map - need to test tutorial
-        Mercedes(5, 2002, 100000000, false, false, false, false, false, false, false, false),//101050000 - 910150000
+        Mercedes(5, 2300, 100000000, false, false, false, false, false, false, false, false),//101050000 - 910150000
         Demon(6, 3001, 100000000, false, false, true, false, false, false, false, false),
         Phantom(7, 2003, 100000000, false, true, false, false, false, true, false, false),
         DualBlade(8, 400, 100000000, false, true, false, false, false, false, false, false),//tutorial fixed

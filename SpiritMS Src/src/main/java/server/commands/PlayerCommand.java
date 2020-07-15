@@ -797,10 +797,12 @@ public class PlayerCommand {
             sb.append("\r\n@check < Displays various information; also use if you are stuck or unable to talk to NPC >");
             //sb.append("\r\n@npc < Universal NPC >");
             sb.append("\r\n@callgm < Send a message to all online GameMasters.");
-            sb.append("\r\n@home < Warp to Spirit base >");
+            //sb.append("\r\n@home < Warp to Spirit base >");
             sb.append("\r\n@fm < Warp to the FreeMarket instantly. >");
-            sb.append("\r\n@job < Job advancements! >");
+            sb.append("\r\n@job < First Job Advancement >");
             sb.append("\r\n@save < Fixes your experience and saves your character >");
+            sb.append("\r\n@eunice < All in one NPC >");
+            sb.append("\r\n@skiptutorial < Let's players skip tutorial on character creation. >");
             //sb.append("\r\n@joinevent < Join ongoing event >");
             //sb.append("\r\n@crescent < Universal Town Warp / Event NPC>");
             //sb.append("\r\n@dcash < Universal Cash Item Dropper >");

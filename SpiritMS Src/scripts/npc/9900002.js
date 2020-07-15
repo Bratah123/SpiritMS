@@ -60,7 +60,7 @@ function action(mode, type, selection) {
         }
         if(cm.getChar().getJob() == 0 && cm.getPlayer().getSubcategory() == 2) //Cannoneer
         {
-           cm.getChar().changeMap(100000000);
+           cm.getChar().changeMap(100000000, 0);
            cm.getChar().changeJob(501);
            cm.sendOk("Successfully job advanced to 1st job Cannoneer.")
            return cm.dispose();

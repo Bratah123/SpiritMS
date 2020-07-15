@@ -120,7 +120,7 @@ function action(mode, type, selection)
 		else if(selection == 1000)
 		{
 			cubeSelection = 2;
-			if(equipment.getPotential4() == 0 && equipment.getPotential5() == 0)
+			if(equipment.getBonusPotential1() == 0 && equipment.getBonusPotential2() == 0)
 			{
 				cm.sendOk("Your item does not have a potential.");
 				return cm.dispose();
@@ -133,7 +133,7 @@ function action(mode, type, selection)
 			else
 			{
 				var cubingDiag = "These are your bonus potentials, would you like to use a cube?\r\n#v" + bonusCube +": #" + cm.getQuantityOfItem(bonusCube) + "\r\nDP: " + "#L2\r\n\r\n";
-				var bonusPot = [equipment.getPotential4(), equipment.getPotential5(),equipment.getPotential6()];
+				var bonusPot = [equipment.getBonusPotential1(), equipment.getBonusPotential2(),equipment.getBonusPotential3()];
 				for(var i = 0; i < bonusPot.length; i++)
 				{
 					if(bonusPot[i] == 0)
@@ -680,7 +680,7 @@ function action(mode, type, selection)
 					cm.sendOk("You do not have enough bonus potential cubes.");
 					return cm.dispose();
 				}
-				else if(equipment.getPotential4() < 40000)
+				else if(equipment.getBonusPotential1() < 40000)
 				{
 					cm.sendOk("Your item is not Legendary or does not have a potential.");
 					return cm.dispose();
@@ -696,15 +696,15 @@ function action(mode, type, selection)
 				var wepUniquePotentials = [30001, 30002, 30003, 30004, 30006, 30011, 30012, 30041, 30042, 30043, 30044, 30045, 30046,30047,30051,30052,30054, 30070,30086,30291,30601,30602,30001, 30002, 30003, 30004, 30006, 30011, 30012, 30041, 30042, 30043, 30044, 30045, 30046,30047,30051,30052,30054, 30070,30086,30291,30601,30602,30001, 30002, 30003, 30004, 30006, 30011, 30012, 30041, 30042, 30043, 30044, 30045, 30046,30047,30051,30052,30054, 30070,30086,30291,30601,30602, 40001, 40002, 40003, 40004, 40011, 40012, 40041, 40041, 40042, 40043, 40044, 40045, 40046,40047,40051,40052, 40070,40081,40086,40291,40292,40601,40602,40603];				var randomPot = wepPrimePotentials[Math.floor(Math.random() * wepPrimePotentials.length)]; // Prime Line
 				var randomPot2 = wepUniquePotentials[Math.floor(Math.random() * wepUniquePotentials.length)]; // Unique
 				var randomPot3 = wepUniquePotentials[Math.floor(Math.random() * wepUniquePotentials.length)]; // Unique
-				equipment.setPotential4(randomPot);
-				equipment.setPotential5(randomPot2);
-				equipment.setPotential6(randomPot3);
+				equipment.setBonusPotential1(randomPot);
+				equipment.setBonusPotential2(randomPot2);
+				equipment.setBonusPotential3(randomPot3);
 				cm.updateEquipSlot(equipment);
 				cm.gainItem(bonusCube, -1);
 				cm.getChar().gainMaplePoints(-autoCubePriceBonus);
 				cm.getChar().dropMessage(5,"You lost 1 bonus cube");
 				var cubingDiag = "These are your bonus potentials, would you like to use a cube?\r\n#rAUTO CUBING: ON#k\r\n#v" + bonusCube +": #" + cm.getQuantityOfItem(bonusCube) + "\r\nDP: " + "\r\n\r\n";
-				var basePot = [equipment.getPotential4(), equipment.getPotential5(),equipment.getPotential6()];
+				var basePot = [equipment.getBonusPotential1(), equipment.getBonusPotential2(),equipment.getBonusPotential3()];
 				for(var i = 0; i < basePot.length; i++)
 				{
 					if(basePot[i] == 0)
@@ -795,15 +795,15 @@ function action(mode, type, selection)
 				var randomPrimePot = equipPrimePotentials[Math.floor(Math.random() * equipPrimePotentials.length)]; // Prime Line
 				var randomPot2 = equipUniquePotentials[Math.floor(Math.random() * equipUniquePotentials.length)]; // Unique
 				var randomPot3 = equipUniquePotentials[Math.floor(Math.random() * equipUniquePotentials.length)]; // Unique
-				equipment.setPotential4(randomPrimePot);
-				equipment.setPotential5(randomPot2);
-				equipment.setPotential6(randomPot3);
+				equipment.setBonusPotential1(randomPrimePot);
+				equipment.setBonusPotential2(randomPot2);
+				equipment.setBonusPotential3(randomPot3);
 				cm.updateEquipSlot(equipment);
 				cm.gainItem(bonusCube, -1);
 				cm.getChar().gainMaplePoints(-autoCubePriceBonus);
 				cm.getChar().dropMessage(5,"You lost 1 bonus cube");
 				var cubingDiag = "These are your bonus potentials, would you like to use a cube?\r\n#rAUTO CUBING: ON#k\r\n#v" + bonusCube +": #" + cm.getQuantityOfItem(bonusCube) + "\r\nDP: " + "\r\n\r\n";
-				var basePot = [equipment.getPotential4(), equipment.getPotential5(),equipment.getPotential6()];
+				var basePot = [equipment.getBonusPotential1(), equipment.getBonusPotential2(),equipment.getBonusPotential3()];
 				for(var i = 0; i < basePot.length; i++)
 				{
 					if(basePot[i] == 0)
@@ -898,15 +898,15 @@ function action(mode, type, selection)
 				var randomPrimePot = equipPrimePotentials[Math.floor(Math.random() * equipPrimePotentials.length)]; // Prime Line
 				var randomPot2 = equipUniquePotentials[Math.floor(Math.random() * equipUniquePotentials.length)]; // Unique
 				var randomPot3 = equipUniquePotentials[Math.floor(Math.random() * equipUniquePotentials.length)]; // Unique
-				equipment.setPotential4(randomPrimePot);
-				equipment.setPotential5(randomPot2);
-				equipment.setPotential6(randomPot3);
+				equipment.setBonusPotential1(randomPrimePot);
+				equipment.setBonusPotential2(randomPot2);
+				equipment.setBonusPotential3(randomPot3);
 				cm.updateEquipSlot(equipment);
 				cm.gainItem(bonusCube, -1);
 				cm.getChar().gainMaplePoints(-autoCubePriceBonus);
 				cm.getChar().dropMessage(5,"You lost 1 bonus cube");
 				var cubingDiag = "These are your bonus potentials, would you like to use a cube?\r\n#rAUTO CUBING: ON#k\r\n#v" + bonusCube +": #" + cm.getQuantityOfItem(bonusCube) + "\r\nDP: " + "\r\n\r\n";
-				var basePot = [equipment.getPotential4(), equipment.getPotential5(),equipment.getPotential6()];
+				var basePot = [equipment.getBonusPotential1(), equipment.getBonusPotential2(),equipment.getBonusPotential3()];
 				for(var i = 0; i < basePot.length; i++)
 				{
 					if(basePot[i] == 0)
@@ -997,15 +997,15 @@ function action(mode, type, selection)
 				var randomPrimePot = equipPrimePotentials[Math.floor(Math.random() * equipPrimePotentials.length)]; // Prime Line
 				var randomPot2 = equipUniquePotentials[Math.floor(Math.random() * equipUniquePotentials.length)]; // Unique
 				var randomPot3 = equipUniquePotentials[Math.floor(Math.random() * equipUniquePotentials.length)]; // Unique
-				equipment.setPotential4(randomPrimePot);
-				equipment.setPotential5(randomPot2);
-				equipment.setPotential6(randomPot3);
+				equipment.setBonusPotential1(randomPrimePot);
+				equipment.setBonusPotential2(randomPot2);
+				equipment.setBonusPotential3(randomPot3);
 				cm.updateEquipSlot(equipment);
 				cm.gainItem(bonusCube, -1);
 				cm.getChar().gainMaplePoints(-autoCubePriceBonus);
 				cm.getChar().dropMessage(5,"You lost 1 bonus cube");
 				var cubingDiag = "These are your bonus potentials, would you like to use a cube?\r\n#rAUTO CUBING: ON#k\r\n#v" + bonusCube +": #" + cm.getQuantityOfItem(bonusCube) + "\r\nDP: " + "\r\n\r\n";
-				var basePot = [equipment.getPotential4(), equipment.getPotential5(),equipment.getPotential6()];
+				var basePot = [equipment.getBonusPotential1(), equipment.getBonusPotential2(),equipment.getBonusPotential3()];
 				for(var i = 0; i < basePot.length; i++)
 				{
 					if(basePot[i] == 0)
@@ -1356,14 +1356,14 @@ function action(mode, type, selection)
 				var wepUniquePotentials = [30001, 30002, 30003, 30004, 30006, 30011, 30012, 30041, 30042, 30043, 30044, 30045, 30046,30047,30051,30052,30054, 30070,30086,30291,30601,30602,30001, 30002, 30003, 30004, 30006, 30011, 30012, 30041, 30042, 30043, 30044, 30045, 30046,30047,30051,30052,30054, 30070,30086,30291,30601,30602,30001, 30002, 30003, 30004, 30006, 30011, 30012, 30041, 30042, 30043, 30044, 30045, 30046,30047,30051,30052,30054, 30070,30086,30291,30601,30602, 40001, 40002, 40003, 40004, 40011, 40012, 40041, 40041, 40042, 40043, 40044, 40045, 40046,40047,40051,40052, 40070,40081,40086,40291,40292,40601,40602,40603];				var randomPot = wepPrimePotentials[Math.floor(Math.random() * wepPrimePotentials.length)]; // Prime Line
 				var randomPot2 = wepUniquePotentials[Math.floor(Math.random() * wepUniquePotentials.length)]; // Unique
 				var randomPot3 = wepUniquePotentials[Math.floor(Math.random() * wepUniquePotentials.length)]; // Unique
-				equipment.setPotential4(randomPot);
-				equipment.setPotential5(randomPot2);
-				equipment.setPotential6(randomPot3);
+				equipment.setBonusPotential1(randomPot);
+				equipment.setBonusPotential2(randomPot2);
+				equipment.setBonusPotential3(randomPot3);
 				cm.updateEquipSlot(equipment);
 				cm.gainItem(bonusCube, -1);
 				cm.getChar().dropMessage(5,"You lost 1 bonus cube");
 				var cubingDiag = "These are your bonus potentials, would you like to use a cube?\r\n#v" + bonusCube +": #" + cm.getQuantityOfItem(bonusCube) + "\r\nDP: " + "#L2\r\n\r\n";
-				var basePot = [equipment.getPotential4(), equipment.getPotential5(),equipment.getPotential6()];
+				var basePot = [equipment.getBonusPotential1(), equipment.getBonusPotential2(),equipment.getBonusPotential3()];
 				for(var i = 0; i < basePot.length; i++)
 				{
 					if(basePot[i] == 0)
@@ -1412,14 +1412,14 @@ function action(mode, type, selection)
 				var randomPrimePot = equipPrimePotentials[Math.floor(Math.random() * equipPrimePotentials.length)]; // Prime Line
 				var randomPot2 = equipUniquePotentials[Math.floor(Math.random() * equipUniquePotentials.length)]; // Unique
 				var randomPot3 = equipUniquePotentials[Math.floor(Math.random() * equipUniquePotentials.length)]; // Unique
-				equipment.setPotential4(randomPrimePot);
-				equipment.setPotential5(randomPot2);
-				equipment.setPotential6(randomPot3);
+				equipment.setBonusPotential1(randomPrimePot);
+				equipment.setBonusPotential2(randomPot2);
+				equipment.setBonusPotential3(randomPot3);
 				cm.updateEquipSlot(equipment);
 				cm.gainItem(bonusCube, -1);
 				cm.getChar().dropMessage(5,"You lost 1 bonus cube");
 				var cubingDiag = "These are your bonus potentials, would you like to use a cube?\r\n#v" + bonusCube +": #" + cm.getQuantityOfItem(bonusCube) + "\r\nDP: " + "#L2\r\n\r\n";
-				var basePot = [equipment.getPotential4(), equipment.getPotential5(),equipment.getPotential6()];
+				var basePot = [equipment.getBonusPotential1(), equipment.getBonusPotential2(),equipment.getBonusPotential3()];
 				for(var i = 0; i < basePot.length; i++)
 				{
 					if(basePot[i] == 0)
@@ -1472,14 +1472,14 @@ function action(mode, type, selection)
 				var randomPrimePot = equipPrimePotentials[Math.floor(Math.random() * equipPrimePotentials.length)]; // Prime Line
 				var randomPot2 = equipUniquePotentials[Math.floor(Math.random() * equipUniquePotentials.length)]; // Unique
 				var randomPot3 = equipUniquePotentials[Math.floor(Math.random() * equipUniquePotentials.length)]; // Unique
-				equipment.setPotential4(randomPrimePot);
-				equipment.setPotential5(randomPot2);
-				equipment.setPotential6(randomPot3);
+				equipment.setBonusPotential1(randomPrimePot);
+				equipment.setBonusPotential2(randomPot2);
+				equipment.setBonusPotential3(randomPot3);
 				cm.updateEquipSlot(equipment);
 				cm.gainItem(bonusCube, -1);
 				cm.getChar().dropMessage(5,"You lost 1 bonus cube");
 				var cubingDiag = "These are your bonus potentials, would you like to use a cube?\r\n#v" + bonusCube +": #" + cm.getQuantityOfItem(bonusCube) + "\r\nDP: " + "#L2\r\n\r\n";
-				var basePot = [equipment.getPotential4(), equipment.getPotential5(),equipment.getPotential6()];
+				var basePot = [equipment.getBonusPotential1(), equipment.getBonusPotential2(),equipment.getBonusPotential3()];
 				for(var i = 0; i < basePot.length; i++)
 				{
 					if(basePot[i] == 0)
@@ -1528,14 +1528,14 @@ function action(mode, type, selection)
 				var randomPrimePot = equipPrimePotentials[Math.floor(Math.random() * equipPrimePotentials.length)]; // Prime Line
 				var randomPot2 = equipUniquePotentials[Math.floor(Math.random() * equipUniquePotentials.length)]; // Unique
 				var randomPot3 = equipUniquePotentials[Math.floor(Math.random() * equipUniquePotentials.length)]; // Unique
-				equipment.setPotential4(randomPrimePot);
-				equipment.setPotential5(randomPot2);
-				equipment.setPotential6(randomPot3);
+				equipment.setBonusPotential1(randomPrimePot);
+				equipment.setBonusPotential2(randomPot2);
+				equipment.setBonusPotential3(randomPot3);
 				cm.updateEquipSlot(equipment);
 				cm.gainItem(bonusCube, -1);
 				cm.getChar().dropMessage(5,"You lost 1 bonus cube");
 				var cubingDiag = "These are your bonus potentials, would you like to use a cube?\r\n#v" + bonusCube +": #" + cm.getQuantityOfItem(bonusCube) + "\r\nDP: " + "#L2\r\n\r\n";
-				var basePot = [equipment.getPotential4(), equipment.getPotential5(),equipment.getPotential6()];
+				var basePot = [equipment.getBonusPotential1(), equipment.getBonusPotential2(),equipment.getBonusPotential3()];
 				for(var i = 0; i < basePot.length; i++)
 				{
 					if(basePot[i] == 0)

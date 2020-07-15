@@ -4056,7 +4056,8 @@ public class MapleCharacter extends AnimatedMapleMapObject implements Serializab
                     charms = 0xFF;
                 }
                 client.getSession().write(EffectPacket.useCharm((byte) charms, (byte) 0, true));
-            } else {
+            }
+            else {
                 float diepercentage;
                 long expforlevel = getNeededExp();
                 if (map.isTown() || FieldLimitType.RegularExpLoss.check(map.getFieldLimit())) {
@@ -10848,6 +10849,12 @@ public class MapleCharacter extends AnimatedMapleMapObject implements Serializab
     }
 
     public void gainMaplePoints(int amount){ // gain maple points
+        if(maplepoints + amount > 2000000000){
+            amount = 0;
+        }
+        if(maplepoints < 0){
+            maplepoints = 0;
+        }
         maplepoints += amount;
         if(amount > 0){ // if they gain negative amount then say they lost instead of gain
             getClient().getSession().write(CWvsContext.getTopMsg("Gained " + amount + " NX."));

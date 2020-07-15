@@ -531,4 +531,13 @@ public class AdminCommand {
             return 1;
         }
     }
+    public static class GetNX extends CommandExecute{
+        @Override
+        public int execute(MapleClient c, String[] args){
+            MapleCharacter chr = c.getPlayer();
+            int amount = Integer.parseInt(args[1]);
+            chr.gainMaplePoints(amount);
+            return 1;
+        }
+    }
 }

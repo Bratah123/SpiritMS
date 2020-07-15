@@ -58,6 +58,13 @@ function action(mode, type, selection) {
             }
             cm.sendYesNo("Would you like to job advance?");
         }
+        if(cm.getChar().getJob() == 0 && cm.getPlayer().getSubcategory() == 2) //Cannoneer
+        {
+           cm.getChar().changeMap(100000000);
+           cm.getChar().changeJob(501);
+           cm.sendOk("Successfully job advanced to 1st job Cannoneer.")
+           return cm.dispose();
+        }
         if(cm.getChar().getJob() == 4002) // Kanna
         {
             cm.getChar().changeJob(4200);

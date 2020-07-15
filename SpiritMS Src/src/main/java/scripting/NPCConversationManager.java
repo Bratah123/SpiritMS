@@ -758,7 +758,10 @@ public class NPCConversationManager extends AbstractPlayerInteraction {
             if (rareness > 0) {
                 World.Broadcast.broadcastMessage(CWvsContext.getGachaponMega(this.c.getPlayer().getName(), " : got a(n)", item, rareness, "from The Great Gachapierrot!"));
             }
-            World.Broadcast.broadcastMessage(CWvsContext.getGachaponMega(this.c.getPlayer().getName(), " : got a(n)", item, rareness, "from The Great Gachapierrot!"));
+            if(id == 4033667 || id == 1113020 || id == 2049160){
+                World.Broadcast.broadcastMessage(CWvsContext.getGachaponMega(this.c.getPlayer().getName(), " : got a(n)", item, rareness, "from The Great Gachapierrot!"));
+            }
+            //World.Broadcast.broadcastMessage(CWvsContext.getGachaponMega(this.c.getPlayer().getName(), " : got a(n)", item, rareness, "from The Great Gachapierrot!"));
             this.c.getSession().write(CWvsContext.InfoPacket.getShowItemGain(item.getItemId(), (short) quantity, true));
             return item.getItemId();
         } catch (Exception e) {

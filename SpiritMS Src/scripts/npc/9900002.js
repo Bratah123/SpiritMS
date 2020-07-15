@@ -58,11 +58,25 @@ function action(mode, type, selection) {
                // }
             }
             cm.sendYesNo("Would you like to job advance?");
-        } else {
+        }
+        if(cm.getChar().getJob() == 4002) // Kanna
+        {
+            cm.getChar().changeJob(4200);
+            cm.sendOk("Successfully job advanced to 1st job Kanna.")
+            return cm.dispose();
+        }
+        if(cm.getChar().getJob() == 4001) // Hayato
+        {
+                cm.getChar().changeJob(4100);
+                cm.sendOk("Successfully job advanced to 1st job Hayato.")
+                return cm.dispose();
+        }
+         else {
             cm.sendOk("You may not advance at the current state.");
             cm.dispose();
         }
-    } else if (status == 1) {
+    }
+     else if (status == 1) {
         if (cm.getPlayer().getSubcategory() == 1 && cm.getPlayer().getJob() == 0) { //Dual Blade
             cm.getPlayer().changeJob(400);
             cm.dispose();
@@ -143,10 +157,10 @@ function action(mode, type, selection) {
                 cm.getPlayer().changeJob(2700);
                 cm.dispose();
                 return;
-            case 4000: // Hayato
+            case 4001: // Hayato
                 cm.getPlayer().changeJob(4100);
                 cm.dispose();
-            case 4001: // Kanna
+            case 4002: // Kanna
                 cm.getPlayer().changeJob(4200);
                 cm.dispose();
             case 5000: // Nameless Warden (Mihile)
@@ -263,7 +277,8 @@ function action(mode, type, selection) {
                 cm.dispose();
                 return;
         }
-    } else if (status == 2) {
+    }
+    else if (status == 2) {
         select = selection;
         cm.sendYesNo("Are you sure you want to Job Advance"/* + selection <= job[jobindex].length ? (" into a(n) #b" + job[jobindex][selection][1] + "#k") : ""*/ + "?");
     } else if (status == 3) {

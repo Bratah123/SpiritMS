@@ -70,6 +70,12 @@ function action(mode, type, selection) {
                 cm.sendOk("Successfully job advanced to 1st job Hayato.")
                 return cm.dispose();
         }
+        if(cm.getChar().getJob() == 3002) //Xwnon
+        {
+               cm.getChar().changeJob(3600);
+               cm.sendOk("Successfully job advanced to 1st job Xenon")
+               return cm.dispose();
+        }
          else {
             cm.sendOk("You may not advance at the current state.");
             cm.dispose();

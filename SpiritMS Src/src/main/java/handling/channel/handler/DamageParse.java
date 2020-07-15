@@ -301,7 +301,7 @@ public static void applyAttack(AttackInfo attack, Skill theSkill, MapleCharacter
                     player.handleKaiserCombo();
                 }
                 if (attack.skill != 1221011) {
-                    if(totDamageToOneMonster > 100000000){
+                    if(totDamageToOneMonster > 300000000){
                         DiscordWebhook.sendDamageLogMessage(String.valueOf("Damage: " + totDamageToOneMonster),player.getName());
                     }
                     monster.damage(player, totDamageToOneMonster, true, attack.skill);
@@ -762,7 +762,7 @@ public static void applyAttack(AttackInfo attack, Skill theSkill, MapleCharacter
                     player.handleLuminous(attack.skill);
                 }
 
-                if(totDamage > 100000000){
+                if(totDamage > 300000000){
                     DiscordWebhook.sendDamageLogMessage("Damage: " + String.valueOf(totDamage),player.getName());
                 }
                 monster.damage(player, totDamage, true, attack.skill);

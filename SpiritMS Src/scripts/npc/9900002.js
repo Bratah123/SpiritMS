@@ -13,8 +13,7 @@ var job = [
 [[310, "Hunter"], [320, "Crossbow Man"]],
 [[410, "Assassin"], [420, "Bandit"]],
 [[510, "Brawler"], [520, "Gunslinger"]],
-[[3100, "Demon Slayer"], [3101, "Demon Avenger"]],
-[[4100, "Hayato"], [4200, "Kanna"]]];
+[[3100, "Demon Slayer"], [3101, "Demon Avenger"]]];
 var extrajobs = [
 [2300, "Mercedes"]];
 var specialextrajobs = [
@@ -44,7 +43,7 @@ function action(mode, type, selection) {
         if ((cm.getPlayer().getLevel() >= 10 &&
             (cm.getPlayer().getJob() % 1000 == 0 || cm.getPlayer().getJob() == 501 || cm.getPlayer().getJob() == 3001 || cm.getPlayer().getJob() >= 2001 && cm.getPlayer().getJob() <= 2003) ||
             cm.getPlayer().getLevel() >= 30 && (cm.getPlayer().getJob() % 1000 > 0 && cm.getPlayer().getJob() % 100 == 0 ||
-                cm.getPlayer().getJob() == 508) ||
+            cm.getPlayer().getJob() == 508) ||
             cm.getPlayer().getLevel() >= (tempest ? 60 : 70) && cm.getPlayer().getJob() % 10 == 0 && cm.getPlayer().getJob() % 100 != 0 ||
             cm.getPlayer().getLevel() >= (tempest ? 100 : 120) && cm.getPlayer().getJob() % 10 == 1 ||
             cm.getPlayer().getLevel() >= 20 && cm.getPlayer().getJob() == 400 && cm.getPlayer().getSubcategory() == 1 ||
@@ -143,10 +142,10 @@ function action(mode, type, selection) {
                 cm.getPlayer().changeJob(2700);
                 cm.dispose();
                 return;
-            case 4000: // Hayato
+            case 4001: // Hayato
                 cm.getPlayer().changeJob(4100);
                 cm.dispose();
-            case 4001: // Kanna
+            case 4002: // Kanna
                 cm.getPlayer().changeJob(4200);
                 cm.dispose();
             case 5000: // Nameless Warden (Mihile)
@@ -185,6 +184,8 @@ function action(mode, type, selection) {
             case 3200: // Battle Mage
             case 3300: // Wild Hunter
             case 3500: // Mechanic
+            case 4100: // Hayato
+            case 4200: // Kanna
             case 5100: // Mihile
             case 6100: // Kaiser
             case 6500: // Angelic Burster

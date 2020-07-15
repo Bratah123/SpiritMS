@@ -24,7 +24,10 @@ var onyxWep = [
 	1372179, // Onyx Maple Wand
 	1362092, // Onyx Maple Cane
 	1332227, // Onyx Maple Cutter
-	1322205 // Onyx Maple Mace
+	1322205, // Onyx Maple Mace
+	1212066, //Onyx shining rod
+	1242065, // Onyx Whip Blade
+	1362092 // Onyx Maple Cane
 ];
 var onyxEqp = [
     1052612, // onyx Maple suit
@@ -52,7 +55,10 @@ var pearlWep = [
 	1372181, // Pearl Maple Wand
 	1362094, // Pearl Maple Cane
 	1332229, // Pearl Maple Cutter
-	1322207 // Pearl Maple Mace
+	1322207, // Pearl Maple Mace
+	1212067, // Pearl Lumi Wep
+	1242066, // Pearl Whip Blade
+	1362093 // Pearl Maple Cane
 ];
 var pearlEqp = [
     1052613, // Pearl Maple Suit
@@ -151,7 +157,7 @@ function action(mode, type, selection) {
 		}
 		
 		cm.gainItem(mapleLeaf, -2500);
-		cm.getChar().gainMeso(-3000000, true)
+		cm.getChar().gainMeso(-3000000, true);
 		cm.gainItem(pearlWep[itemSelected], 1);
 		cm.sendOk("Successfully purchased a #i" + pearlWep[itemSelected] + "#");
 		return cm.dispose();

@@ -27,7 +27,8 @@ var onyxWep = [
 	1322205, // Onyx Maple Mace
 	1212066, //Onyx shining rod
 	1242065, // Onyx Whip Blade
-	1362092 // Onyx Maple Cane
+	1362092, // Onyx Maple Cane
+	1232060 // Onyx Maple Desparado
 ];
 var onyxEqp = [
     1052612, // onyx Maple suit
@@ -58,7 +59,8 @@ var pearlWep = [
 	1322207, // Pearl Maple Mace
 	1212067, // Pearl Lumi Wep
 	1242066, // Pearl Whip Blade
-	1362093 // Pearl Maple Cane
+	1362093, // Pearl Maple Cane
+	1232061 // Pearl Maple Desparado
 ];
 var pearlEqp = [
     1052613, // Pearl Maple Suit

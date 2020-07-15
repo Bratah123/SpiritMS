@@ -13,10 +13,10 @@ var job = [
 [[310, "Hunter"], [320, "Crossbow Man"]],
 [[410, "Assassin"], [420, "Bandit"]],
 [[510, "Brawler"], [520, "Gunslinger"]],
-[[3100, "Demon Slayer"]]];
+[[3100, "Demon Slayer"], [3101, "Demon Avenger"]],
+[[4100, "Hayato"], [4200, "Kanna"]]];
 var extrajobs = [
-[2300, "Mercedes"], [3100, "Demon Slayer"]
-];
+[2300, "Mercedes"]];
 var specialextrajobs = [
 [9400, "Dual Blade"], [9501, "Cannoneer"], [9508, "Jett"]
 ];
@@ -143,6 +143,12 @@ function action(mode, type, selection) {
                 cm.getPlayer().changeJob(2700);
                 cm.dispose();
                 return;
+            case 4000: // Hayato
+                cm.getPlayer().changeJob(4100);
+                cm.dispose();
+            case 4001: // Kanna
+                cm.getPlayer().changeJob(4200);
+                cm.dispose();
             case 5000: // Nameless Warden (Mihile)
                 cm.getPlayer().changeJob(5100);
                 cm.dispose();
@@ -266,7 +272,7 @@ function action(mode, type, selection) {
             if (!specialSecondaryWeaponJob(getRealJob(select)))
                 cm.dispose();
             return;
-        } else 
+        } else
             cm.sendSimple("As a Demon Slayer, you will have to choose a #bDemon Marking#k.\r\n#L1012276##i1012276##l\r\n#L1012277##i1012277##l\r\n#L1012278##i1012278##l\r\n#L1012279##i1012279##l\r\n#L1012280##i1012280##l");
         if (getSubcategory(select) != 0) {
             cm.getPlayer().changeJob(getRealJob(select));

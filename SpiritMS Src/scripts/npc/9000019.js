@@ -135,7 +135,7 @@ function action(mode, type, selection) {
 		var confirmDiag = "This is the item you want to buy?#i" + pearlEqp[itemSelected] + "#\r\n\r\n"
 		confirmDiag += "Here is the required materials needed to buy it.\r\n";
 		confirmDiag += "#i" + mapleLeaf + "# 2500\r\n";
-		confirmDIag += "#i" + mesoBag + "# 3,000,000";
+		confirmDiag += "#i" + mesoBag + "# 3,000,000";
 		
 		cm.sendYesNo(confirmDiag);
 	}

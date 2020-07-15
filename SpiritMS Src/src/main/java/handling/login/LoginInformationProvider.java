@@ -45,7 +45,7 @@ public class LoginInformationProvider {
         Phantom(7, 2003, 100000000, false, true, false, false, false, true, false, false),
         DualBlade(8, 400, 100000000, false, true, false, false, false, false, false, false),//tutorial fixed
         Mihile(9, 5000, 100000000, true, true, false, false, true, false, false, false),
-        Luminous(10, 2004, 100000000, false, true, false, false, false, true, false, false),//Ellinia atm TODO tutorial
+        Luminous(10, 2004, 927020000, false, true, false, false, false, true, false, false),//Ellinia atm TODO tutorial
         Kaiser(11, 6000, 100000000, false, true, false, false, false, false, false, false),
         AngelicBuster(12, 6001, 100000000, false, true, false, false, false, false, false, false),//400000000 - 940011000 - town now TODO tutorial
         Cannoneer(13, 0, 100000000, true, true, false, false, true, false, false, false),//portal problem

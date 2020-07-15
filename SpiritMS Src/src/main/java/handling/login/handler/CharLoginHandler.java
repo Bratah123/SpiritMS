@@ -280,7 +280,8 @@ public class CharLoginHandler {
         String name;
         byte gender, skin, unk;
         short subcategory;
-        int face, hair, hairColor = -1, hat = -1, top, bottom = -1, shoes, weapon, cape = -1, faceMark = -1, ears = -1, tail = -1, shield = -1;
+        int face, hair, hairColor = -1, hat = -1, top, bottom = -1, shoes, weapon, cape = -1, faceMark = -1, ears = -1,
+                tail = -1, shield = -1;
         JobType job;
         name = slea.readMapleAsciiString();
         System.out.println("char name: " + name);
@@ -288,7 +289,7 @@ public class CharLoginHandler {
             System.out.println("char name hack: " + name);
             return;
         }
-        slea.readInt(); //-1
+        slea.readInt(); // -1
         int job_type = slea.readInt();
         job = JobType.getByType(job_type);
         if (job == null) {
@@ -306,7 +307,7 @@ public class CharLoginHandler {
         subcategory = slea.readShort();
         gender = slea.readByte();
         skin = slea.readByte();
-        unk = slea.readByte(); //6/7/8
+        unk = slea.readByte(); // 6/7/8
         face = slea.readInt();
         hair = slea.readInt();
         if (job.hairColor) {
@@ -341,23 +342,23 @@ public class CharLoginHandler {
         }
         int index = 0;
         boolean noSkin = job == JobType.Demon || job == JobType.Mercedes || job == JobType.Jett;
-        int[] items = new int[]{face, hair, hairColor, noSkin ? -1 : skin, faceMark, ears, tail, hat, top, bottom, cape, shoes, weapon, shield};
-        if (job != JobType.BeastTamer){
-        for (int i : items) {
-            if (i > -1) {
-                if (!LoginInformationProvider.getInstance().isEligibleItem(gender, index, job.type, i)) {
-                    System.out.println(gender + " | " + index + " | " + job.type + " | " + i);
-                    return;
+        int[] items = new int[] { face, hair, hairColor, noSkin ? -1 : skin, faceMark, ears, tail, hat, top, bottom,
+                cape, shoes, weapon, shield };
+        if (job != JobType.BeastTamer) {
+            for (int i : items) {
+                if (i > -1) {
+                    if (!LoginInformationProvider.getInstance().isEligibleItem(gender, index, job.type, i)) {
+                        System.out.println(gender + " | " + index + " | " + job.type + " | " + i);
+                        return;
+                    }
+                    index++;
                 }
-                index++;
             }
-        }
         }
         MapleCharacter newchar = MapleCharacter.getDefault(c, job);
         newchar.setWorld((byte) c.getWorld());
-        newchar.setRemainingSp(3);
         newchar.setFace(face);
-        newchar.setSecondFace(face);
+        newchar.setSecondFace(21290);
         if (hairColor < 0) {
             hairColor = 0;
         }
@@ -365,7 +366,20 @@ public class CharLoginHandler {
             hair += hairColor;
         }
         newchar.setHair(hair);
-        newchar.setSecondHair(hair);
+        newchar.setSecondHair(37623);
+        if (job == JobType.AngelicBuster) {
+            newchar.setSecondFace(21173);
+            newchar.setSecondHair(37141);
+            newchar.setJob((short) 6500);
+            newchar.setLevel((short) 10);
+            newchar.getStat().dex = 68;
+            newchar.getStat().maxhp = 1000;
+            newchar.getStat().hp = 1000;
+            newchar.setRemainingSp(3);
+        } else if (job == JobType.Zero) {
+            newchar.setSecondFace(21290);
+            newchar.setSecondHair(37623);
+        }
         newchar.setGender(gender);
         newchar.setName(name);
         newchar.setSkinColor(skin);
@@ -373,10 +387,10 @@ public class CharLoginHandler {
             faceMark = 0;
         }
         newchar.setFaceMarking(faceMark);
-        int[] wrongEars = {1004062, 1004063, 1004064};
-        int[] correctEars = {5010116, 5010117, 5010118};
-        int[] wrongTails = {1102661, 1102662, 1102663};
-        int[] correctTails = {5010119, 5010120, 5010121};
+        int[] wrongEars = { 1004062, 1004063, 1004064 };
+        int[] correctEars = { 5010116, 5010117, 5010118 };
+        int[] wrongTails = { 1102661, 1102662, 1102663 };
+        int[] correctTails = { 5010119, 5010120, 5010121 };
         for (int i = 0; i < wrongEars.length; i++) {
             if (ears == wrongEars[i]) {
                 ears = correctEars[i];
@@ -398,10 +412,11 @@ public class CharLoginHandler {
         final MapleItemInformationProvider li = MapleItemInformationProvider.getInstance();
         final MapleInventory equip = newchar.getInventory(MapleInventoryType.EQUIPPED);
         Item item;
-        //-1 Hat | -2 Face | -3 Eye acc | -4 Ear acc | -5 Topwear 
-        //-6 Bottom | -7 Shoes | -9 Cape | -10 Shield | -11 Weapon
-        //todo check zero's beta weapon slot
-        int[][] equips = new int[][]{{hat, -1}, {top, -5}, {bottom, -6}, {cape, -9}, {shoes, -7}, {weapon, -11}, {shield, -10}};
+        // -1 Hat | -2 Face | -3 Eye acc | -4 Ear acc | -5 Topwear
+        // -6 Bottom | -7 Shoes | -9 Cape | -10 Shield | -11 Weapon
+        // todo check zero's beta weapon slot
+        int[][] equips = new int[][] { { hat, -1 }, { top, -5 }, { bottom, -6 }, { cape, -9 }, { shoes, -7 },
+                { weapon, -11 }, { shield, -10 } };
         for (int[] i : equips) {
             if (i[0] > 0) {
                 item = li.getEquipById(i[0]);
@@ -410,47 +425,37 @@ public class CharLoginHandler {
                 equip.addFromDB(item);
             }
         }
-
-         if (job == JobType.AngelicBuster || job == JobType.Kaiser) {
-             item = li.getEquipById(job == JobType.Kaiser ? 1352500 : 1352601);
-                item.setPosition((byte) -10);
-                item.setGMLog("Nova Shield");
-                equip.addFromDB(item);
-         }
-        if (job == JobType.DualBlade) {
-            newchar.setSubcategory(1);
+        if (job == JobType.AngelicBuster || job == JobType.Kaiser) {
+            item = li.getEquipById(job == JobType.Kaiser ? 1352500 : 1352601);
+            item.setPosition((byte) -10);
+            item.setGMLog("Nova Shield");
+            equip.addFromDB(item);
         }
-        if (job == JobType.Cannoneer) {
-            newchar.setSubcategory(2);
-        }
-        if (job == JobType.Jett) {
-            newchar.setSubcategory(10);
-        }
-        // Additional skills for all first job classes. Some skills are not added by default,
-        // so adding the skill ID here between the {}, will give the skills you entered to the desired job.
-        int[][] skills = new int[][]{
-            {80000186, 80000187}, //Reboot Skill
-            {80001152},//Resistance
-            {80001152, 1281},//Explorer
-            {10001244, 10000252, 80001152},//Cygnus
-            {20000194},//Aran
-            {20010022, 20010194},//Evan
-            {20020109, 20021110, 20020111, 20020112, 80001040}, //Mercedes
-            {30010112, 30010110, 30010111, 30010185},//Demon
-            {20031251, 20030204, 20030206, 20031208, 20031207, 20031203},//Phantom
-            {80001152, 1281},//Dualblade
-            {50001214},//Mihile
-          //  {},//Luminous
-            {20040216, 20040217, 20040218, 20040219, 20040220, 20040221, 20041222, 27001100, 27000207, 27001201},//Luminous
-            {},//Kaiser
-            {60011216, 60010217, 60011218, 60011219, 60011220, 60011221, 60011222},//AngelicBuster
-            {},//Cannoneer
-            {30020232, 30020233, 30020234, 30020240, 30021238},//Xenon
-            {100000279, 100000282, 100001262, 100001263, 100001264, 100001265, 100001266, 100001268},//Zero
-            {228, 80001151},//Jett
-            {},//Hayato
-            {40020000, 40020001, 40020002, 40021023, 40020109},//Kanna
-            {80001152, 110001251}//BeastTamer
+        // Additional skills for all first job classes. Some skills are not
+        // added by default,
+        // so adding the skill ID here between the {}, will give the skills you
+        // entered to the desired job.
+        int[][] skills = new int[][] { { 80001152, 20021061 }, // Resistance
+                { 80001152, 1281 }, // Explorer
+                { 10001244, 10000252, 80001152 }, // Cygnus
+                { 20000194 }, // Aran
+                { 20010022, 20010194 }, // Evan
+                { 20020109, 20021110, 20020111, 20020112 }, // Mercedes
+                { 30010112, 30010110, 30010111, 30010185 }, // Demon
+                { 20031251, 20030204, 20030206, 20031208, 20031207, 20031203 }, // Phantom
+                { 80001152, 1281 }, // Dualblade
+                { 50001214 }, // Mihile
+                // {},//Luminous
+                { 20040216, 20040217, 20040218, 20040219, 20040220, 20040221, 20041222, 27001100, 27000207, 27001201 }, // Luminous
+                {}, // Kaiser
+                { 60011216, 60010217, 60011218, 60011219, 60011220, 60011221, 60011222 }, // AngelicBuster
+                {}, // Cannoneer
+                { 30020232, 30020233, 30020234, 30020240, 30021238 }, // Xenon
+                { 100000279, 100000282, 100001262, 100001263, 100001264, 100001265, 100001266, 100001268 }, // Zero
+                { 228, 80001151 }, // Jett
+                {}, // Hayato
+                { 40020000, 40020001, 40020002, 40021023, 40020109 }, // Kanna
+                { 80001152, 110001251 }// BeastTamer
         };
         if (skills[job.type].length > 0) {
             final Map<Skill, SkillEntry> ss = new HashMap<>();
@@ -472,22 +477,18 @@ public class CharLoginHandler {
                 ss.put(SkillFactory.getSkill(110001512), new SkillEntry((byte) 0, (byte) 5, -1));
                 ss.put(SkillFactory.getSkill(110000513), new SkillEntry((byte) 0, (byte) 30, -1));
                 ss.put(SkillFactory.getSkill(110000515), new SkillEntry((byte) 0, (byte) 10, -1));
+                ss.put(SkillFactory.getSkill(110001501), new SkillEntry((byte) 1, (byte) 1, -1));
+                ss.put(SkillFactory.getSkill(110001502), new SkillEntry((byte) 1, (byte) 1, -1));
+                ss.put(SkillFactory.getSkill(110001503), new SkillEntry((byte) 1, (byte) 1, -1));
+                ss.put(SkillFactory.getSkill(110001504), new SkillEntry((byte) 1, (byte) 1, -1));
             }
-            if (job == JobType.Resistance){ // hacky fix for mech.
+            if (job == JobType.Resistance) { // hacky fix for mech.
                 ss.put(SkillFactory.getSkill(35120000), new SkillEntry((byte) 1, (byte) 10, -1));
-            }
-            if (job == JobType.Kaiser) {
-                ss.put(SkillFactory.getSkill(60001218), new SkillEntry((byte) 1, (byte) 1, -1));
-                ss.put(SkillFactory.getSkill(60001217), new SkillEntry((byte) 1, (byte) 1, -1));
-                ss.put(SkillFactory.getSkill(60001216), new SkillEntry((byte) 1, (byte) 1, -1));
-                ss.put(SkillFactory.getSkill(60000219), new SkillEntry((byte) 1, (byte) 1, -1));
-
-
-
             }
             newchar.changeSkillLevel_Skip(ss, false);
         }
-        int[][] guidebooks = new int[][]{{4161001, 0}, {4161047, 1}, {4161048, 2000}, {4161052, 2001}, {4161054, 3}, {4161079, 2002}};
+        int[][] guidebooks = new int[][] { { 4161001, 0 }, { 4161047, 1 }, { 4161048, 2000 }, { 4161052, 2001 },
+                { 4161054, 3 }, { 4161079, 2002 } };
         int guidebook = 0;
         for (int[] i : guidebooks) {
             if (newchar.getJob() == i[1]) {
@@ -499,7 +500,77 @@ public class CharLoginHandler {
         if (guidebook > 0) {
             newchar.getInventory(MapleInventoryType.ETC).addItem(new Item(guidebook, (byte) 0, (short) 1, (byte) 0));
         }
-        if (MapleCharacterUtil.canCreateChar(name, c.isGm()) && (!LoginInformationProvider.getInstance().isForbiddenName(name) || c.isGm()) && (c.isGm() || c.canMakeCharacter(c.getWorld()))) {
+        if (job == JobType.Zero) {
+            newchar.setLevel((short) 100);
+            newchar.getStat().str = 518;
+            newchar.getStat().maxhp = 6910;
+            newchar.getStat().hp = 6910;
+            newchar.getStat().maxmp = 100;
+            newchar.getStat().mp = 100;
+            newchar.setRemainingSp(3, 0); // alpha
+            newchar.setRemainingSp(3, 1); // beta
+        }
+        if (job == JobType.BeastTamer) {
+            newchar.setJob((short) 11212);
+            newchar.setLevel((short) 10);
+            newchar.getStat().maxhp = 567;
+            newchar.getStat().hp = 551;
+            newchar.getStat().maxmp = 270;
+            newchar.getStat().mp = 263;
+            newchar.setRemainingAp(45);
+            newchar.setRemainingSp(3, 0);
+        }
+        if (job == JobType.Luminous) {
+            newchar.setJob((short) 2700);
+            newchar.setLevel((short) 10);
+            newchar.getStat().str = 4;
+            newchar.getStat().int_ = 57;
+            newchar.getStat().maxhp = 500;
+            newchar.getStat().hp = 500;
+            newchar.getStat().maxmp = 1000;
+            newchar.getStat().mp = 1000;
+            newchar.setRemainingSp(3);
+        }
+        int[] StarterItems = { 1102041, 1102042, 1082146 };
+        if (job == JobType.Luminous) {
+            StarterItems = new int[] { 1212001, 1352400, 1102041, 1102042, 1082146 };
+        }
+        if (job == JobType.Adventurer || job == JobType.UltimateAdventurer || job == JobType.Resistance
+                || job == JobType.Aran || job == JobType.Cygnus || job == JobType.Demon || job == JobType.Evan
+                || job == JobType.Jett || job == JobType.Mihile) {
+            StarterItems = new int[] { 1442071, 1442050, 1402053, 1412035, 1422039, 1302033, 1372046, 1382062, 1452062,
+                    1462056, 1332081, 1472077, 1482029, 1492000, 1102041, 1102042, 1082146 };// Just
+            // every
+            // possibly
+            // needed
+            // EQ
+        }
+        if (job == JobType.AngelicBuster) {
+            StarterItems = new int[] { 1222062, 1352601, 1102041, 1102042, 1082146 };
+        }
+        if (job == JobType.Cannoneer) {
+            StarterItems = new int[] { 1532000, 1102041, 1102042, 1082146 };
+        }
+        if (job == JobType.DualBlade) {
+            StarterItems = new int[] { 1332081, 1342047, 1102041, 1102042, 1082146 };
+        }
+        if (job == JobType.Mercedes) {
+            StarterItems = new int[] { 1352000, 1522000, 1102041, 1102042, 1082146 };
+        }
+        if (job == JobType.Phantom) {
+            StarterItems = new int[] { 1362000, 1352100, 1102041, 1102042, 1082146 };
+        }
+        if (job == JobType.Xenon) {
+            StarterItems = new int[] { 1242001, 1102041, 1102042, 1082146 };
+        }
+        for (int i = 0; i < StarterItems.length; i++) {
+            item = li.getEquipById(StarterItems[i]);
+            item.setPosition((byte) (i + 1));// Ain't no slot 0, only a slot 1
+            newchar.getInventory(MapleInventoryType.EQUIP).addFromDB(item);
+        }
+        if (MapleCharacterUtil.canCreateChar(name, c.isGm())
+                && (!LoginInformationProvider.getInstance().isForbiddenName(name) || c.isGm())
+                && (c.isGm() || c.canMakeCharacter(c.getWorld()))) {
             MapleCharacter.saveNewCharToDB(newchar, job, subcategory);
             c.getSession().write(LoginPacket.addNewCharEntry(newchar, true));
             c.createdChar(newchar.getId());

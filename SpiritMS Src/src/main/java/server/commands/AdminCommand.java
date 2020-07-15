@@ -523,4 +523,12 @@ public class AdminCommand {
             return 1;
         }
     }
+
+    public static class GetJob extends CommandExecute {
+        @Override
+        public int execute(MapleClient c, String[] args){
+            c.getPlayer().dropMessage(6, "Job ID: " + c.getPlayer().getJob());
+            return 1;
+        }
+    }
 }

@@ -147,6 +147,10 @@ function action(mode, type, selection) {
 	}
 	else if(status == 4 && optionSelected == 0 && isWeapon)
 	{
+	    if(cm.getEquipInventory(cm.getChar()).getNumFreeSlot() <= 0){
+                cm.sendOk("Your inventory is full.");
+                return cm.dispose();
+         }
 		if(cm.getQuantityOfItem(mapleLeaf) < 2500){
 			cm.sendOk("You do not have enough maple leaves, come back again later.");
 			return cm.dispose();
@@ -164,6 +168,10 @@ function action(mode, type, selection) {
 	}
 	else if(status == 4 && optionSelected == 0 && !isWeapon)
 	{
+	    if(cm.getEquipInventory(cm.getChar()).getNumFreeSlot() <= 0){
+                cm.sendOk("Your inventory is full.");
+                return cm.dispose();
+         }
 		if(cm.getQuantityOfItem(mapleLeaf) < 2500){
 			cm.sendOk("You do not have enough maple leaves, come back again later.");
 			return cm.dispose();
@@ -229,6 +237,10 @@ function action(mode, type, selection) {
 	}
 	else if(status == 4 && optionSelected == 1 && isWeapon)
 	{
+	    if(cm.getEquipInventory(cm.getChar()).getNumFreeSlot() <= 0){
+                cm.sendOk("Your inventory is full.");
+                return cm.dispose();
+         }
 		if(cm.getQuantityOfItem(mapleLeaf) < 5000){
 			cm.sendOk("You do not have enough maple leaves, come back again later.");
 			return cm.dispose();
@@ -253,6 +265,10 @@ function action(mode, type, selection) {
 	}
 	else if(status == 4 && optionSelected == 1 && !isWeapon)
 	{
+	    if(cm.getEquipInventory(cm.getChar()).getNumFreeSlot() <= 0){
+                cm.sendOk("Your inventory is full.");
+                return cm.dispose();
+         }
 		if(cm.getQuantityOfItem(mapleLeaf) < 5000){
 			cm.sendOk("You do not have enough maple leaves, come back again later.");
 			return cm.dispose();

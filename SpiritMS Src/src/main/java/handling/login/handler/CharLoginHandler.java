@@ -531,6 +531,17 @@ public class CharLoginHandler {
             newchar.getStat().mp = 1000;
             newchar.setRemainingSp(3);
         }
+
+        if (job == JobType.DualBlade) {
+            newchar.setSubcategory(1);
+        }
+        if (job == JobType.Cannoneer) {
+            newchar.setSubcategory(2);
+        }
+        if (job == JobType.Jett) {
+            newchar.setSubcategory(10);
+        }
+
         int[] StarterItems = { 1102041, 1102042, 1082146 };
         if (job == JobType.Luminous) {
             StarterItems = new int[] { 1212001, 1352400, 1102041, 1102042, 1082146 };

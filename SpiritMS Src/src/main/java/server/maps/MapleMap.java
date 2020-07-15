@@ -585,6 +585,11 @@ public final class MapleMap {
                             }
                         }
                     }
+                    if(randGain >= 4){
+                        final int range = Math.abs(de.Maximum - de.Minimum);
+                        idrop = new Item(4001126, (byte) 0, (short) (de.Maximum != 1 ? Randomizer.nextInt(range <= 0 ? 1 : range) + de.Minimum : 1), (byte) 0);
+                        spawnMobDrop(idrop, calcDropPos(pos, mob.getTruePosition()), mob, chr, droptype, de.questid);
+                    }
                     if (mesos > 0) {
                         spawnMobMesoDrop((int) (mesos * (chr.getStat().mesoBuff / 100.0) * chr.getDropMod() * cmServerrate), calcDropPos(pos, mob.getTruePosition()), mob, chr, false, droptype);
                         mesoDropped = true;

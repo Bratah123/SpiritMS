@@ -1,7 +1,7 @@
 # SpiritMS
-Repository of v146 Maplestory Source
+Repository of v146 Maplestory Source.
+Java Server Emulator.
 
-How to set up localhost server.
+Deprecated project in favor of a Swordie-Based source.
 
-1. DEPRECATED SOURCE. WE DO NOT RECOMMEND USING THIS SOURCE, most of the packet structures are wrong. for viewing purposes only.
-Authors: Brandon, Desc, QuantamSaba
+Developers: Brandon, Desc, QuantamSaba

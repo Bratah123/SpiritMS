@@ -1,8 +1,5 @@
 package bot.event;
 
-import client.MapleCharacter;
-import com.mysql.fabric.Server;
-import handling.channel.ChannelServer;
 import handling.world.World;
 import net.dv8tion.jda.api.Permission;
 import net.dv8tion.jda.api.events.message.guild.GuildMessageReceivedEvent;

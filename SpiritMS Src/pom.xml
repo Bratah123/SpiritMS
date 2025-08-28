@@ -23,10 +23,41 @@
             <artifactId>http-request</artifactId>
             <version>6.0</version>
         </dependency>
+        <!-- https://mvnrepository.com/artifact/com.github.MrPowerGamerBR/TemmieWebhook -->
         <dependency>
             <groupId>com.github.MrPowerGamerBR</groupId>
             <artifactId>TemmieWebhook</artifactId>
-            <version>-SNAPSHOT</version>
+            <version>59de40c3b6</version>
+        </dependency>
+        <!-- Add Apache MINA 1.x which exposes org.apache.mina.common.* -->
+        <dependency>
+            <groupId>org.apache.mina</groupId>
+            <artifactId>mina-core</artifactId>
+            <version>1.1.7</version>
+        </dependency>
+        <!-- SLF4J API required by MINA 1.x -->
+        <dependency>
+            <groupId>org.slf4j</groupId>
+            <artifactId>slf4j-api</artifactId>
+            <version>1.7.36</version>
+        </dependency>
+        <!-- https://mvnrepository.com/artifact/mysql/mysql-connector-java -->
+        <dependency>
+            <groupId>mysql</groupId>
+            <artifactId>mysql-connector-java</artifactId>
+            <version>8.0.33</version>
+        </dependency>
+        <!-- https://mvnrepository.com/artifact/io.netty/netty-all -->
+        <dependency>
+            <groupId>io.netty</groupId>
+            <artifactId>netty-all</artifactId>
+            <version>4.2.4.Final</version>
+        </dependency>
+        <!-- https://mvnrepository.com/artifact/net.jpountz.lz4/lz4 -->
+        <dependency>
+            <groupId>net.jpountz.lz4</groupId>
+            <artifactId>lz4</artifactId>
+            <version>1.3.0</version>
         </dependency>
     </dependencies>
     <repositories>
@@ -38,6 +69,15 @@
         <repository>
             <id>jitpack.io</id>
             <url>https://jitpack.io</url>
+        </repository>
+        <!-- Repository for legacy JDA artifacts -->
+        <repository>
+            <id>dv8tion</id>
+            <url>https://m2.dv8tion.net/releases</url>
+        </repository>
+        <repository>
+            <id>spring-milestones</id>
+            <url>https://repo.spring.io/libs-milestone/</url>
         </repository>
     </repositories>
     

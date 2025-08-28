@@ -1188,12 +1188,12 @@ public class MapleCharacter extends AnimatedMapleMapObject implements Serializab
 
     public static int getQuestKillCount(MapleCharacter chr, final int mobid) {
         try {
-            com.mysql.jdbc.Connection con = (com.mysql.jdbc.Connection) DatabaseConnection.getConnection();
-            com.mysql.jdbc.PreparedStatement pse;
-            try (com.mysql.jdbc.PreparedStatement ps = (com.mysql.jdbc.PreparedStatement) con.prepareStatement("SELECT queststatusid FROM queststatus WHERE characterid = ?")) {
+            Connection con = (Connection) DatabaseConnection.getConnection();
+            PreparedStatement pse;
+            try (PreparedStatement ps = (PreparedStatement) con.prepareStatement("SELECT queststatusid FROM queststatus WHERE characterid = ?")) {
                 ResultSet rse;
                 try (ResultSet rs = ps.executeQuery()) {
-                    pse = (com.mysql.jdbc.PreparedStatement) con.prepareStatement("SELECT count FROM queststatusmobs WHERE queststatusid = ?");
+                    pse = (PreparedStatement) con.prepareStatement("SELECT count FROM queststatusmobs WHERE queststatusid = ?");
                     rse = pse.executeQuery();
                     while (rs.next()) {
                         return rse.getInt("count");

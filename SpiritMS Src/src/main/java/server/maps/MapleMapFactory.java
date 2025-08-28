@@ -20,9 +20,9 @@
  */
 package server.maps;
 
-import com.mysql.jdbc.Connection;
 import java.awt.Point;
 import java.awt.Rectangle;
+import java.sql.Connection;
 import java.util.HashMap;
 import java.util.LinkedList;
 import java.util.List;
